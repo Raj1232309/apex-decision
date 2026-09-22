@@ -1,0 +1,12 @@
+benchmark_id,sample_count,correct,incorrect,invalid,abstained,accuracy,ci_95_low,ci_95_high,status
+smoke_production_integrity,8,8,0,0,0,100.0,67.56,100.0,PASS
+grounding_unseen_attribution,8,7,1,0,0,87.5,52.91,97.76,PASS
+hallucination_refusal,4,3,1,0,0,0.0,30.06,95.44,REVIEW
+typed_decisions_jev_contract,3,3,0,0,0,0.0,43.85,100.0,REVIEW
+reasoning_multihop_arithmetic,5,3,2,0,0,60.0,23.07,88.24,REVIEW
+reasoning_contradiction_scope,5,2,3,0,0,40.0,11.76,76.93,REVIEW
+multilingual_fixed_ood,30,23,7,0,0,76.67,59.07,88.21,REVIEW
+tools_orchestration_matrix,40,40,0,0,0,100.0,91.24,100.0,PASS
+long_context_scaling,3,0,3,0,0,0.0,0.0,56.15,REVIEW
+external_standard_evaluation,7,0,7,0,0,0.0,0.0,35.43,REVIEW
+performance_latency_profiling,10,0,10,0,0,0.0,0.0,27.75,REVIEW

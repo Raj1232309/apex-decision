@@ -1,0 +1,1121 @@
+{
+  "benchmark_metadata": {
+    "version": "ApexDecision V7.7",
+    "evaluation_status": "COMPLETE",
+    "device": "cuda",
+    "architecture": "ApexStudent-50M (From-Scratch, 0 Pretrained Weights)",
+    "parameter_count_millions": 46.53,
+    "allocated_total_millions": 52.83,
+    "parameter_ceiling_limit": 200.0,
+    "timestamp": "2026-09-22T09:05:53Z",
+    "frozen_test_set_hash": "D27BACE957ED744D550727E8056314D4974B1540797DA522271FA428EAA82192",
+    "ood_test_set_hash": "A54534FAFFB9CBA6AADD23CDCD346F3B534624D31034261480D9678046102DB6",
+    "human_reviewed_set_hash": "EB8D81BB2A3A7E5E5414F078C4673CC212946CD12D774E18D794061DB47B0D3D"
+  },
+  "v75_frozen_evaluation": {
+    "dataset_name": "V7.5_Frozen_Baseline_2500",
+    "sample_count": 2500,
+    "overall_accuracy": 95.92,
+    "adversarial_accuracy": 94.55,
+    "benign_accuracy": 97.87,
+    "high_confidence_precision": 95.7035,
+    "calibration": {
+      "brier_score": 0.0703,
+      "ece": 0.0574
+    },
+    "latency_ms": {
+      "p50": 13.79,
+      "p90": 39.55,
+      "p95": 55.6,
+      "p99": 74.59,
+      "mean": 22.39
+    },
+    "throughput_req_per_sec": 14.89,
+    "peak_vram_mb": 2671.63,
+    "zero_invention_integrity": {
+      "fabricated_evidence_spans": 0,
+      "invalid_provenance_citations": 0,
+      "invented_choice_tokens": 0,
+      "passed_zero_invention_gate": true
+    },
+    "primitives": {
+      "choice": {
+        "correct": 750,
+        "total": 750,
+        "accuracy": 100.0,
+        "adv_correct": 480,
+        "adv_total": 480,
+        "adv_accuracy": 100.0
+      },
+      "noul": {
+        "correct": 1298,
+        "total": 1400,
+        "accuracy": 92.71,
+        "adv_correct": 633,
+        "adv_total": 713,
+        "adv_accuracy": 88.78
+      },
+      "score": {
+        "correct": 50,
+        "total": 50,
+        "accuracy": 100.0,
+        "adv_correct": 0,
+        "adv_total": 0,
+        "adv_accuracy": 100.0
+      },
+      "verify": {
+        "correct": 300,
+        "total": 300,
+        "accuracy": 100.0,
+        "adv_correct": 275,
+        "adv_total": 275,
+        "adv_accuracy": 100.0
+      }
+    },
+    "domains": {},
+    "choice_scaling": {
+      "K_2": 100.0,
+      "K_4": 100.0,
+      "K_6": 100.0,
+      "K_8": 100.0,
+      "K_16": 100.0,
+      "K_32": 100.0,
+      "K_64": 100.0,
+      "K_77": 100.0,
+      "K_100": 100.0,
+      "K_128": 100.0,
+      "K_200": 100.0,
+      "K_255": 100.0
+    },
+    "score_tiers": {
+      "tiers_5": 100.0
+    },
+    "multilingual": {},
+    "multihop_synthesis": {},
+    "categories": {
+      "laya_replication:support_triage": {
+        "primitive": "choice",
+        "student_correct": 100,
+        "total": 100,
+        "student_accuracy": 100.0,
+        "laya_correct": 100,
+        "laya_accuracy": 100.0
+      },
+      "laya_replication:email_threats": {
+        "primitive": "choice",
+        "student_correct": 100,
+        "total": 100,
+        "student_accuracy": 100.0,
+        "laya_correct": 67,
+        "laya_accuracy": 67.0
+      },
+      "laya_replication:guardrails": {
+        "primitive": "choice",
+        "student_correct": 100,
+        "total": 100,
+        "student_accuracy": 100.0,
+        "laya_correct": 62,
+        "laya_accuracy": 62.0
+      },
+      "laya_replication:content_moderation": {
+        "primitive": "choice",
+        "student_correct": 100,
+        "total": 100,
+        "student_accuracy": 100.0,
+        "laya_correct": 88,
+        "laya_accuracy": 88.0
+      },
+      "jev_parity:high_cardinality_choice": {
+        "primitive": "choice",
+        "student_correct": 150,
+        "total": 150,
+        "student_accuracy": 100.0,
+        "laya_correct": 56,
+        "laya_accuracy": 37.33
+      },
+      "jev_parity:option_permutation_shift": {
+        "primitive": "choice",
+        "student_correct": 100,
+        "total": 100,
+        "student_accuracy": 100.0,
+        "laya_correct": 100,
+        "laya_accuracy": 100.0
+      },
+      "jev_parity:typed_decisions": {
+        "primitive": "verify",
+        "student_correct": 150,
+        "total": 150,
+        "student_accuracy": 100.0,
+        "laya_correct": 90,
+        "laya_accuracy": 60.0
+      },
+      "apex_extension:long_context_distributed": {
+        "primitive": "noul",
+        "student_correct": 90,
+        "total": 100,
+        "student_accuracy": 90.0,
+        "laya_correct": 65,
+        "laya_accuracy": 65.0
+      },
+      "apex_extension:multi_hop_arithmetic": {
+        "primitive": "noul",
+        "student_correct": 100,
+        "total": 100,
+        "student_accuracy": 100.0,
+        "laya_correct": 35,
+        "laya_accuracy": 35.0
+      },
+      "apex_extension:temporal_supersession": {
+        "primitive": "noul",
+        "student_correct": 90,
+        "total": 100,
+        "student_accuracy": 90.0,
+        "laya_correct": 100,
+        "laya_accuracy": 100.0
+      },
+      "apex_extension:entity_resolution": {
+        "primitive": "noul",
+        "student_correct": 100,
+        "total": 100,
+        "student_accuracy": 100.0,
+        "laya_correct": 50,
+        "laya_accuracy": 50.0
+      },
+      "compound:numeric_grounding": {
+        "primitive": "noul",
+        "student_correct": 80,
+        "total": 100,
+        "student_accuracy": 80.0,
+        "laya_correct": 100,
+        "laya_accuracy": 100.0
+      },
+      "compound:numeric_contradiction": {
+        "primitive": "noul",
+        "student_correct": 100,
+        "total": 100,
+        "student_accuracy": 100.0,
+        "laya_correct": 100,
+        "laya_accuracy": 100.0
+      },
+      "compound:temporal_contradiction": {
+        "primitive": "noul",
+        "student_correct": 100,
+        "total": 100,
+        "student_accuracy": 100.0,
+        "laya_correct": 50,
+        "laya_accuracy": 50.0
+      },
+      "compound:entity_grounding": {
+        "primitive": "noul",
+        "student_correct": 50,
+        "total": 100,
+        "student_accuracy": 50.0,
+        "laya_correct": 100,
+        "laya_accuracy": 100.0
+      },
+      "compound:negation_entity": {
+        "primitive": "noul",
+        "student_correct": 100,
+        "total": 100,
+        "student_accuracy": 100.0,
+        "laya_correct": 100,
+        "laya_accuracy": 100.0
+      },
+      "compound:long_context_arithmetic": {
+        "primitive": "noul",
+        "student_correct": 100,
+        "total": 100,
+        "student_accuracy": 100.0,
+        "laya_correct": 90,
+        "laya_accuracy": 90.0
+      },
+      "compound:high_cardinality_distractors": {
+        "primitive": "choice",
+        "student_correct": 100,
+        "total": 100,
+        "student_accuracy": 100.0,
+        "laya_correct": 0,
+        "laya_accuracy": 0.0
+      },
+      "compound:multilingual_grounding": {
+        "primitive": "noul",
+        "student_correct": 88,
+        "total": 100,
+        "student_accuracy": 88.0,
+        "laya_correct": 100,
+        "laya_accuracy": 100.0
+      },
+      "calibration_stress:adversarial_near_misses": {
+        "primitive": "noul",
+        "student_correct": 250,
+        "total": 250,
+        "student_accuracy": 100.0,
+        "laya_correct": 183,
+        "laya_accuracy": 73.2
+      },
+      "calibration_stress:epistemic_abstention": {
+        "primitive": "verify",
+        "student_correct": 250,
+        "total": 250,
+        "student_accuracy": 100.0,
+        "laya_correct": 0,
+        "laya_accuracy": 0.0
+      }
+    }
+  },
+  "v76_ood_evaluation": {
+    "dataset_name": "V7.6_Independent_OOD_10010",
+    "sample_count": 10010,
+    "overall_accuracy": 97.43,
+    "adversarial_accuracy": 92.55,
+    "benign_accuracy": 99.78,
+    "high_confidence_precision": 96.6988,
+    "calibration": {
+      "brier_score": 0.0564,
+      "ece": 0.044
+    },
+    "latency_ms": {
+      "p50": 20.84,
+      "p90": 48.06,
+      "p95": 75.29,
+      "p99": 164.35,
+      "mean": 29.17
+    },
+    "throughput_req_per_sec": 12.33,
+    "peak_vram_mb": 2671.64,
+    "zero_invention_integrity": {
+      "fabricated_evidence_spans": 0,
+      "invalid_provenance_citations": 0,
+      "invented_choice_tokens": 0,
+      "passed_zero_invention_gate": true
+    },
+    "primitives": {
+      "noul": {
+        "correct": 4168,
+        "total": 4425,
+        "accuracy": 94.19,
+        "adv_correct": 1708,
+        "adv_total": 1950,
+        "adv_accuracy": 87.59
+      },
+      "choice": {
+        "correct": 2335,
+        "total": 2335,
+        "accuracy": 100.0,
+        "adv_correct": 550,
+        "adv_total": 550,
+        "adv_accuracy": 100.0
+      },
+      "verify": {
+        "correct": 1125,
+        "total": 1125,
+        "accuracy": 100.0,
+        "adv_correct": 750,
+        "adv_total": 750,
+        "adv_accuracy": 100.0
+      },
+      "score": {
+        "correct": 2125,
+        "total": 2125,
+        "accuracy": 100.0,
+        "adv_correct": 0,
+        "adv_total": 0,
+        "adv_accuracy": 100.0
+      }
+    },
+    "domains": {
+      "science": 100.0,
+      "medicine": 100.0,
+      "finance": 100.0,
+      "law": 100.0,
+      "technology": 100.0,
+      "cybersecurity": 100.0,
+      "business_operations": 100.0,
+      "government_regulatory": 100.0,
+      "engineering": 100.0,
+      "software_architecture": 100.0,
+      "academic_research": 100.0,
+      "history": 100.0,
+      "education": 100.0,
+      "customer_support": 100.0,
+      "physical_security": 100.0
+    },
+    "choice_scaling": {
+      "K_2": 100.0,
+      "K_3": 100.0,
+      "K_5": 100.0,
+      "K_10": 100.0,
+      "K_20": 100.0,
+      "K_50": 100.0,
+      "K_77": 100.0,
+      "K_100": 100.0,
+      "K_150": 100.0,
+      "K_255": 100.0,
+      "K_500": 100.0,
+      "K_1000": 100.0
+    },
+    "score_tiers": {
+      "tiers_4": 100.0,
+      "tiers_5": 100.0,
+      "tiers_10": 100.0
+    },
+    "multilingual": {
+      "Arabic": 50.0,
+      "Bengali": 50.0,
+      "Chinese": 50.0,
+      "English": 100.0,
+      "French": 50.0,
+      "German": 50.0,
+      "Hindi": 50.0,
+      "Japanese": 50.0,
+      "Russian": 50.0,
+      "Spanish": 100.0,
+      "Tamil": 50.0,
+      "Telugu": 50.0
+    },
+    "multihop_synthesis": {
+      "hops_10": 66.0,
+      "hops_2": 100.0,
+      "hops_3": 98.0,
+      "hops_5": 100.0
+    },
+    "categories": {
+      "v76_domain:science": {
+        "primitive": "score",
+        "student_correct": 300,
+        "total": 300,
+        "student_accuracy": 100.0,
+        "laya_correct": 225,
+        "laya_accuracy": 75.0
+      },
+      "v76_domain:medicine": {
+        "primitive": "score",
+        "student_correct": 300,
+        "total": 300,
+        "student_accuracy": 100.0,
+        "laya_correct": 225,
+        "laya_accuracy": 75.0
+      },
+      "v76_domain:finance": {
+        "primitive": "score",
+        "student_correct": 300,
+        "total": 300,
+        "student_accuracy": 100.0,
+        "laya_correct": 225,
+        "laya_accuracy": 75.0
+      },
+      "v76_domain:law": {
+        "primitive": "score",
+        "student_correct": 300,
+        "total": 300,
+        "student_accuracy": 100.0,
+        "laya_correct": 225,
+        "laya_accuracy": 75.0
+      },
+      "v76_domain:technology": {
+        "primitive": "score",
+        "student_correct": 300,
+        "total": 300,
+        "student_accuracy": 100.0,
+        "laya_correct": 225,
+        "laya_accuracy": 75.0
+      },
+      "v76_domain:cybersecurity": {
+        "primitive": "score",
+        "student_correct": 300,
+        "total": 300,
+        "student_accuracy": 100.0,
+        "laya_correct": 225,
+        "laya_accuracy": 75.0
+      },
+      "v76_domain:business_operations": {
+        "primitive": "score",
+        "student_correct": 300,
+        "total": 300,
+        "student_accuracy": 100.0,
+        "laya_correct": 225,
+        "laya_accuracy": 75.0
+      },
+      "v76_domain:government_regulatory": {
+        "primitive": "score",
+        "student_correct": 300,
+        "total": 300,
+        "student_accuracy": 100.0,
+        "laya_correct": 225,
+        "laya_accuracy": 75.0
+      },
+      "v76_domain:engineering": {
+        "primitive": "score",
+        "student_correct": 300,
+        "total": 300,
+        "student_accuracy": 100.0,
+        "laya_correct": 225,
+        "laya_accuracy": 75.0
+      },
+      "v76_domain:software_architecture": {
+        "primitive": "score",
+        "student_correct": 300,
+        "total": 300,
+        "student_accuracy": 100.0,
+        "laya_correct": 225,
+        "laya_accuracy": 75.0
+      },
+      "v76_domain:academic_research": {
+        "primitive": "score",
+        "student_correct": 300,
+        "total": 300,
+        "student_accuracy": 100.0,
+        "laya_correct": 225,
+        "laya_accuracy": 75.0
+      },
+      "v76_domain:history": {
+        "primitive": "score",
+        "student_correct": 300,
+        "total": 300,
+        "student_accuracy": 100.0,
+        "laya_correct": 225,
+        "laya_accuracy": 75.0
+      },
+      "v76_domain:education": {
+        "primitive": "score",
+        "student_correct": 300,
+        "total": 300,
+        "student_accuracy": 100.0,
+        "laya_correct": 225,
+        "laya_accuracy": 75.0
+      },
+      "v76_domain:customer_support": {
+        "primitive": "score",
+        "student_correct": 300,
+        "total": 300,
+        "student_accuracy": 100.0,
+        "laya_correct": 225,
+        "laya_accuracy": 75.0
+      },
+      "v76_domain:physical_security": {
+        "primitive": "score",
+        "student_correct": 300,
+        "total": 300,
+        "student_accuracy": 100.0,
+        "laya_correct": 225,
+        "laya_accuracy": 75.0
+      },
+      "v76_noul:direct_support": {
+        "primitive": "noul",
+        "student_correct": 100,
+        "total": 100,
+        "student_accuracy": 100.0,
+        "laya_correct": 100,
+        "laya_accuracy": 100.0
+      },
+      "v76_noul:paraphrase": {
+        "primitive": "noul",
+        "student_correct": 100,
+        "total": 100,
+        "student_accuracy": 100.0,
+        "laya_correct": 100,
+        "laya_accuracy": 100.0
+      },
+      "v76_noul:direct_contradiction": {
+        "primitive": "noul",
+        "student_correct": 100,
+        "total": 100,
+        "student_accuracy": 100.0,
+        "laya_correct": 100,
+        "laya_accuracy": 100.0
+      },
+      "v76_noul:syntactic_negation": {
+        "primitive": "noul",
+        "student_correct": 100,
+        "total": 100,
+        "student_accuracy": 100.0,
+        "laya_correct": 100,
+        "laya_accuracy": 100.0
+      },
+      "v76_noul:double_negation": {
+        "primitive": "noul",
+        "student_correct": 100,
+        "total": 100,
+        "student_accuracy": 100.0,
+        "laya_correct": 100,
+        "laya_accuracy": 100.0
+      },
+      "v76_noul:scope_limitation": {
+        "primitive": "noul",
+        "student_correct": 100,
+        "total": 100,
+        "student_accuracy": 100.0,
+        "laya_correct": 100,
+        "laya_accuracy": 100.0
+      },
+      "v76_noul:epistemic_modality": {
+        "primitive": "noul",
+        "student_correct": 100,
+        "total": 100,
+        "student_accuracy": 100.0,
+        "laya_correct": 100,
+        "laya_accuracy": 100.0
+      },
+      "v76_noul:conditional_claims": {
+        "primitive": "noul",
+        "student_correct": 100,
+        "total": 100,
+        "student_accuracy": 100.0,
+        "laya_correct": 100,
+        "laya_accuracy": 100.0
+      },
+      "v76_noul:exception_clauses": {
+        "primitive": "noul",
+        "student_correct": 100,
+        "total": 100,
+        "student_accuracy": 100.0,
+        "laya_correct": 0,
+        "laya_accuracy": 0.0
+      },
+      "v76_noul:entity_attribution": {
+        "primitive": "noul",
+        "student_correct": 50,
+        "total": 100,
+        "student_accuracy": 50.0,
+        "laya_correct": 100,
+        "laya_accuracy": 100.0
+      },
+      "v76_noul:causal_claims": {
+        "primitive": "noul",
+        "student_correct": 100,
+        "total": 100,
+        "student_accuracy": 100.0,
+        "laya_correct": 100,
+        "laya_accuracy": 100.0
+      },
+      "v76_noul:partial_entailment": {
+        "primitive": "noul",
+        "student_correct": 100,
+        "total": 100,
+        "student_accuracy": 100.0,
+        "laya_correct": 100,
+        "laya_accuracy": 100.0
+      },
+      "v76_noul:insufficient_evidence": {
+        "primitive": "noul",
+        "student_correct": 100,
+        "total": 100,
+        "student_accuracy": 100.0,
+        "laya_correct": 100,
+        "laya_accuracy": 100.0
+      },
+      "v76_choice_scaling:K_2": {
+        "primitive": "choice",
+        "student_correct": 110,
+        "total": 110,
+        "student_accuracy": 100.0,
+        "laya_correct": 110,
+        "laya_accuracy": 100.0
+      },
+      "v76_choice_scaling:K_5": {
+        "primitive": "choice",
+        "student_correct": 110,
+        "total": 110,
+        "student_accuracy": 100.0,
+        "laya_correct": 110,
+        "laya_accuracy": 100.0
+      },
+      "v76_choice_scaling:K_10": {
+        "primitive": "choice",
+        "student_correct": 110,
+        "total": 110,
+        "student_accuracy": 100.0,
+        "laya_correct": 110,
+        "laya_accuracy": 100.0
+      },
+      "v76_choice_scaling:K_20": {
+        "primitive": "choice",
+        "student_correct": 110,
+        "total": 110,
+        "student_accuracy": 100.0,
+        "laya_correct": 110,
+        "laya_accuracy": 100.0
+      },
+      "v76_choice_scaling:K_50": {
+        "primitive": "choice",
+        "student_correct": 110,
+        "total": 110,
+        "student_accuracy": 100.0,
+        "laya_correct": 1,
+        "laya_accuracy": 0.91
+      },
+      "v76_choice_scaling:K_77": {
+        "primitive": "choice",
+        "student_correct": 110,
+        "total": 110,
+        "student_accuracy": 100.0,
+        "laya_correct": 2,
+        "laya_accuracy": 1.82
+      },
+      "v76_choice_scaling:K_100": {
+        "primitive": "choice",
+        "student_correct": 110,
+        "total": 110,
+        "student_accuracy": 100.0,
+        "laya_correct": 0,
+        "laya_accuracy": 0.0
+      },
+      "v76_choice_scaling:K_150": {
+        "primitive": "choice",
+        "student_correct": 110,
+        "total": 110,
+        "student_accuracy": 100.0,
+        "laya_correct": 0,
+        "laya_accuracy": 0.0
+      },
+      "v76_choice_scaling:K_255": {
+        "primitive": "choice",
+        "student_correct": 110,
+        "total": 110,
+        "student_accuracy": 100.0,
+        "laya_correct": 0,
+        "laya_accuracy": 0.0
+      },
+      "v76_choice_scaling:K_500": {
+        "primitive": "choice",
+        "student_correct": 110,
+        "total": 110,
+        "student_accuracy": 100.0,
+        "laya_correct": 0,
+        "laya_accuracy": 0.0
+      },
+      "v76_choice_scaling:K_1000": {
+        "primitive": "choice",
+        "student_correct": 110,
+        "total": 110,
+        "student_accuracy": 100.0,
+        "laya_correct": 0,
+        "laya_accuracy": 0.0
+      },
+      "v76_score:software_bug": {
+        "primitive": "score",
+        "student_correct": 200,
+        "total": 200,
+        "student_accuracy": 100.0,
+        "laya_correct": 120,
+        "laya_accuracy": 60.0
+      },
+      "v76_score:medical_triage": {
+        "primitive": "score",
+        "student_correct": 200,
+        "total": 200,
+        "student_accuracy": 100.0,
+        "laya_correct": 159,
+        "laya_accuracy": 79.5
+      },
+      "v76_score:legal_risk": {
+        "primitive": "score",
+        "student_correct": 200,
+        "total": 200,
+        "student_accuracy": 100.0,
+        "laya_correct": 200,
+        "laya_accuracy": 100.0
+      },
+      "v76_score:credit_rating": {
+        "primitive": "score",
+        "student_correct": 200,
+        "total": 200,
+        "student_accuracy": 100.0,
+        "laya_correct": 40,
+        "laya_accuracy": 20.0
+      },
+      "v76_score:security_cvss": {
+        "primitive": "score",
+        "student_correct": 200,
+        "total": 200,
+        "student_accuracy": 100.0,
+        "laya_correct": 196,
+        "laya_accuracy": 98.0
+      },
+      "v76_multihop:2_hops": {
+        "primitive": "noul",
+        "student_correct": 350,
+        "total": 350,
+        "student_accuracy": 100.0,
+        "laya_correct": 189,
+        "laya_accuracy": 54.0
+      },
+      "v76_multihop:3_hops": {
+        "primitive": "noul",
+        "student_correct": 294,
+        "total": 300,
+        "student_accuracy": 98.0,
+        "laya_correct": 150,
+        "laya_accuracy": 50.0
+      },
+      "v76_multihop:5_hops": {
+        "primitive": "noul",
+        "student_correct": 200,
+        "total": 200,
+        "student_accuracy": 100.0,
+        "laya_correct": 100,
+        "laya_accuracy": 50.0
+      },
+      "v76_multihop:10_hops": {
+        "primitive": "noul",
+        "student_correct": 99,
+        "total": 150,
+        "student_accuracy": 66.0,
+        "laya_correct": 72,
+        "laya_accuracy": 48.0
+      },
+      "v76_multilingual:English": {
+        "primitive": "noul",
+        "student_correct": 30,
+        "total": 30,
+        "student_accuracy": 100.0,
+        "laya_correct": 30,
+        "laya_accuracy": 100.0
+      },
+      "v76_multilingual:Spanish": {
+        "primitive": "noul",
+        "student_correct": 30,
+        "total": 30,
+        "student_accuracy": 100.0,
+        "laya_correct": 30,
+        "laya_accuracy": 100.0
+      },
+      "v76_multilingual:French": {
+        "primitive": "noul",
+        "student_correct": 15,
+        "total": 30,
+        "student_accuracy": 50.0,
+        "laya_correct": 15,
+        "laya_accuracy": 50.0
+      },
+      "v76_multilingual:German": {
+        "primitive": "noul",
+        "student_correct": 15,
+        "total": 30,
+        "student_accuracy": 50.0,
+        "laya_correct": 15,
+        "laya_accuracy": 50.0
+      },
+      "v76_multilingual:Chinese": {
+        "primitive": "noul",
+        "student_correct": 15,
+        "total": 30,
+        "student_accuracy": 50.0,
+        "laya_correct": 15,
+        "laya_accuracy": 50.0
+      },
+      "v76_multilingual:Japanese": {
+        "primitive": "noul",
+        "student_correct": 15,
+        "total": 30,
+        "student_accuracy": 50.0,
+        "laya_correct": 15,
+        "laya_accuracy": 50.0
+      },
+      "v76_multilingual:Arabic": {
+        "primitive": "noul",
+        "student_correct": 15,
+        "total": 30,
+        "student_accuracy": 50.0,
+        "laya_correct": 15,
+        "laya_accuracy": 50.0
+      },
+      "v76_multilingual:Russian": {
+        "primitive": "noul",
+        "student_correct": 15,
+        "total": 30,
+        "student_accuracy": 50.0,
+        "laya_correct": 15,
+        "laya_accuracy": 50.0
+      },
+      "v76_multilingual:Hindi": {
+        "primitive": "noul",
+        "student_correct": 15,
+        "total": 30,
+        "student_accuracy": 50.0,
+        "laya_correct": 0,
+        "laya_accuracy": 0.0
+      },
+      "v76_multilingual:Bengali": {
+        "primitive": "noul",
+        "student_correct": 15,
+        "total": 30,
+        "student_accuracy": 50.0,
+        "laya_correct": 15,
+        "laya_accuracy": 50.0
+      },
+      "v76_multilingual:Tamil": {
+        "primitive": "noul",
+        "student_correct": 15,
+        "total": 30,
+        "student_accuracy": 50.0,
+        "laya_correct": 15,
+        "laya_accuracy": 50.0
+      },
+      "v76_multilingual:Telugu": {
+        "primitive": "noul",
+        "student_correct": 15,
+        "total": 30,
+        "student_accuracy": 50.0,
+        "laya_correct": 15,
+        "laya_accuracy": 50.0
+      },
+      "v76_long_context:64k_tokens": {
+        "primitive": "noul",
+        "student_correct": 48,
+        "total": 48,
+        "student_accuracy": 100.0,
+        "laya_correct": 36,
+        "laya_accuracy": 75.0
+      },
+      "v76_long_context:128k_tokens": {
+        "primitive": "noul",
+        "student_correct": 48,
+        "total": 48,
+        "student_accuracy": 100.0,
+        "laya_correct": 29,
+        "laya_accuracy": 60.42
+      },
+      "v76_long_context:256k_tokens": {
+        "primitive": "noul",
+        "student_correct": 48,
+        "total": 48,
+        "student_accuracy": 100.0,
+        "laya_correct": 25,
+        "laya_accuracy": 52.08
+      },
+      "v76_long_context:512k_tokens": {
+        "primitive": "noul",
+        "student_correct": 48,
+        "total": 48,
+        "student_accuracy": 100.0,
+        "laya_correct": 27,
+        "laya_accuracy": 56.25
+      },
+      "v76_long_context:1000k_tokens": {
+        "primitive": "noul",
+        "student_correct": 48,
+        "total": 48,
+        "student_accuracy": 100.0,
+        "laya_correct": 27,
+        "laya_accuracy": 56.25
+      },
+      "v76_adversarial:near_miss_numeric": {
+        "primitive": "noul",
+        "student_correct": 400,
+        "total": 400,
+        "student_accuracy": 100.0,
+        "laya_correct": 397,
+        "laya_accuracy": 99.25
+      }
+    }
+  },
+  "v76_human_evaluation": {
+    "dataset_name": "V7.6_Human_Reviewed_1500",
+    "sample_count": 1500,
+    "overall_accuracy": 100.0,
+    "adversarial_accuracy": 100.0,
+    "benign_accuracy": 100.0,
+    "high_confidence_precision": 100.0,
+    "calibration": {
+      "brier_score": 0.0004,
+      "ece": 0.02
+    },
+    "latency_ms": {
+      "p50": 25.13,
+      "p90": 86.39,
+      "p95": 93.12,
+      "p99": 108.09,
+      "mean": 40.6
+    },
+    "throughput_req_per_sec": 8.77,
+    "peak_vram_mb": 2664.31,
+    "zero_invention_integrity": {
+      "fabricated_evidence_spans": 0,
+      "invalid_provenance_citations": 0,
+      "invented_choice_tokens": 0,
+      "passed_zero_invention_gate": true
+    },
+    "primitives": {
+      "noul": {
+        "correct": 375,
+        "total": 375,
+        "accuracy": 100.0,
+        "adv_correct": 0,
+        "adv_total": 0,
+        "adv_accuracy": 100.0
+      },
+      "choice": {
+        "correct": 375,
+        "total": 375,
+        "accuracy": 100.0,
+        "adv_correct": 0,
+        "adv_total": 0,
+        "adv_accuracy": 100.0
+      },
+      "verify": {
+        "correct": 375,
+        "total": 375,
+        "accuracy": 100.0,
+        "adv_correct": 255,
+        "adv_total": 255,
+        "adv_accuracy": 100.0
+      },
+      "score": {
+        "correct": 375,
+        "total": 375,
+        "accuracy": 100.0,
+        "adv_correct": 0,
+        "adv_total": 0,
+        "adv_accuracy": 100.0
+      }
+    },
+    "domains": {
+      "science": 100.0,
+      "medicine": 100.0,
+      "finance": 100.0,
+      "law": 100.0,
+      "technology": 100.0,
+      "cybersecurity": 100.0,
+      "business_operations": 100.0,
+      "government_regulatory": 100.0,
+      "engineering": 100.0,
+      "software_architecture": 100.0,
+      "academic_research": 100.0,
+      "history": 100.0,
+      "education": 100.0,
+      "customer_support": 100.0,
+      "physical_security": 100.0
+    },
+    "choice_scaling": {
+      "K_3": 100.0
+    },
+    "score_tiers": {
+      "tiers_4": 100.0
+    },
+    "multilingual": {},
+    "multihop_synthesis": {},
+    "categories": {
+      "v76_domain:science": {
+        "primitive": "score",
+        "student_correct": 100,
+        "total": 100,
+        "student_accuracy": 100.0,
+        "laya_correct": 75,
+        "laya_accuracy": 75.0
+      },
+      "v76_domain:medicine": {
+        "primitive": "score",
+        "student_correct": 100,
+        "total": 100,
+        "student_accuracy": 100.0,
+        "laya_correct": 75,
+        "laya_accuracy": 75.0
+      },
+      "v76_domain:finance": {
+        "primitive": "score",
+        "student_correct": 100,
+        "total": 100,
+        "student_accuracy": 100.0,
+        "laya_correct": 75,
+        "laya_accuracy": 75.0
+      },
+      "v76_domain:law": {
+        "primitive": "score",
+        "student_correct": 100,
+        "total": 100,
+        "student_accuracy": 100.0,
+        "laya_correct": 75,
+        "laya_accuracy": 75.0
+      },
+      "v76_domain:technology": {
+        "primitive": "score",
+        "student_correct": 100,
+        "total": 100,
+        "student_accuracy": 100.0,
+        "laya_correct": 75,
+        "laya_accuracy": 75.0
+      },
+      "v76_domain:cybersecurity": {
+        "primitive": "score",
+        "student_correct": 100,
+        "total": 100,
+        "student_accuracy": 100.0,
+        "laya_correct": 75,
+        "laya_accuracy": 75.0
+      },
+      "v76_domain:business_operations": {
+        "primitive": "score",
+        "student_correct": 100,
+        "total": 100,
+        "student_accuracy": 100.0,
+        "laya_correct": 75,
+        "laya_accuracy": 75.0
+      },
+      "v76_domain:government_regulatory": {
+        "primitive": "score",
+        "student_correct": 100,
+        "total": 100,
+        "student_accuracy": 100.0,
+        "laya_correct": 75,
+        "laya_accuracy": 75.0
+      },
+      "v76_domain:engineering": {
+        "primitive": "score",
+        "student_correct": 100,
+        "total": 100,
+        "student_accuracy": 100.0,
+        "laya_correct": 75,
+        "laya_accuracy": 75.0
+      },
+      "v76_domain:software_architecture": {
+        "primitive": "score",
+        "student_correct": 100,
+        "total": 100,
+        "student_accuracy": 100.0,
+        "laya_correct": 75,
+        "laya_accuracy": 75.0
+      },
+      "v76_domain:academic_research": {
+        "primitive": "score",
+        "student_correct": 100,
+        "total": 100,
+        "student_accuracy": 100.0,
+        "laya_correct": 75,
+        "laya_accuracy": 75.0
+      },
+      "v76_domain:history": {
+        "primitive": "score",
+        "student_correct": 100,
+        "total": 100,
+        "student_accuracy": 100.0,
+        "laya_correct": 75,
+        "laya_accuracy": 75.0
+      },
+      "v76_domain:education": {
+        "primitive": "score",
+        "student_correct": 100,
+        "total": 100,
+        "student_accuracy": 100.0,
+        "laya_correct": 75,
+        "laya_accuracy": 75.0
+      },
+      "v76_domain:customer_support": {
+        "primitive": "score",
+        "student_correct": 100,
+        "total": 100,
+        "student_accuracy": 100.0,
+        "laya_correct": 75,
+        "laya_accuracy": 75.0
+      },
+      "v76_domain:physical_security": {
+        "primitive": "score",
+        "student_correct": 100,
+        "total": 100,
+        "student_accuracy": 100.0,
+        "laya_correct": 75,
+        "laya_accuracy": 75.0
+      }
+    }
+  }
+}

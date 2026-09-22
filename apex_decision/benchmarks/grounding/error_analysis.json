@@ -1,0 +1,340 @@
+{
+  "summary": {
+    "total_examples": 600,
+    "total_errors": 41,
+    "false_positives_count": 0,
+    "false_negatives_count": 41,
+    "top_vulnerable_failure_mode": "direct_entailment"
+  },
+  "error_rates_by_failure_mode": [
+    {
+      "failure_mode": "direct_entailment",
+      "errors": 34,
+      "total": 234,
+      "error_rate": 0.1453
+    },
+    {
+      "failure_mode": "double_negation",
+      "errors": 5,
+      "total": 35,
+      "error_rate": 0.1429
+    },
+    {
+      "failure_mode": "multi_sentence_reasoning",
+      "errors": 2,
+      "total": 35,
+      "error_rate": 0.0571
+    },
+    {
+      "failure_mode": "scope_mismatch",
+      "errors": 0,
+      "total": 20,
+      "error_rate": 0.0
+    },
+    {
+      "failure_mode": "quantifier_mismatch",
+      "errors": 0,
+      "total": 20,
+      "error_rate": 0.0
+    },
+    {
+      "failure_mode": "comparative_claim_mismatch",
+      "errors": 0,
+      "total": 20,
+      "error_rate": 0.0
+    },
+    {
+      "failure_mode": "temporal_ordering_error",
+      "errors": 0,
+      "total": 20,
+      "error_rate": 0.0
+    },
+    {
+      "failure_mode": "attribution_mismatch",
+      "errors": 0,
+      "total": 20,
+      "error_rate": 0.0
+    },
+    {
+      "failure_mode": "partial_support_claim",
+      "errors": 0,
+      "total": 20,
+      "error_rate": 0.0
+    },
+    {
+      "failure_mode": "lexical_overlap_unsupported",
+      "errors": 0,
+      "total": 20,
+      "error_rate": 0.0
+    },
+    {
+      "failure_mode": "direct_contradiction",
+      "errors": 0,
+      "total": 16,
+      "error_rate": 0.0
+    },
+    {
+      "failure_mode": "negation_reversal",
+      "errors": 0,
+      "total": 16,
+      "error_rate": 0.0
+    },
+    {
+      "failure_mode": "entity_substitution",
+      "errors": 0,
+      "total": 16,
+      "error_rate": 0.0
+    },
+    {
+      "failure_mode": "number_mismatch",
+      "errors": 0,
+      "total": 16,
+      "error_rate": 0.0
+    },
+    {
+      "failure_mode": "unit_mismatch",
+      "errors": 0,
+      "total": 16,
+      "error_rate": 0.0
+    },
+    {
+      "failure_mode": "date_time_mismatch",
+      "errors": 0,
+      "total": 16,
+      "error_rate": 0.0
+    },
+    {
+      "failure_mode": "population_mismatch",
+      "errors": 0,
+      "total": 16,
+      "error_rate": 0.0
+    },
+    {
+      "failure_mode": "causal_overclaim",
+      "errors": 0,
+      "total": 16,
+      "error_rate": 0.0
+    },
+    {
+      "failure_mode": "correlation_vs_causation",
+      "errors": 0,
+      "total": 16,
+      "error_rate": 0.0
+    },
+    {
+      "failure_mode": "unsupported_claim",
+      "errors": 0,
+      "total": 12,
+      "error_rate": 0.0
+    }
+  ],
+  "error_rates_by_domain": [
+    {
+      "domain": "medicine",
+      "errors": 34,
+      "total": 186,
+      "error_rate": 0.1828
+    },
+    {
+      "domain": "science",
+      "errors": 7,
+      "total": 186,
+      "error_rate": 0.0376
+    },
+    {
+      "domain": "finance",
+      "errors": 0,
+      "total": 186,
+      "error_rate": 0.0
+    },
+    {
+      "domain": "technology",
+      "errors": 0,
+      "total": 42,
+      "error_rate": 0.0
+    }
+  ],
+  "top_false_positives": [],
+  "top_false_negatives": [
+    {
+      "id": "b_sci_b_03_v0_fm01",
+      "domain": "science",
+      "failure_mode": "direct_entailment",
+      "difficulty_tier": 1,
+      "source_snippet": "Photosystem II catalyzes the light-driven oxidation of water to molecular oxygen in cyanobacteria, algae, and plants. Th...",
+      "claim": "the catalytic oxygen-evolving complex contains a manganese-calcium cluster with chemical formula Mn4CaO5",
+      "ground_truth": "SUPPORTED",
+      "predicted": "NOT_SUPPORTED",
+      "predicted_probability": 0.0,
+      "latency_us": 39702
+    },
+    {
+      "id": "b_sci_b_03_v0_sup09",
+      "domain": "science",
+      "failure_mode": "direct_entailment",
+      "difficulty_tier": 3,
+      "source_snippet": "Photosystem II catalyzes the light-driven oxidation of water to molecular oxygen in cyanobacteria, algae, and plants. Th...",
+      "claim": "for the target subjects analyzed under Photosystem II, the catalytic oxygen-evolving complex contains a manganese-calcium cluster with chemical formula Mn4CaO5",
+      "ground_truth": "SUPPORTED",
+      "predicted": "NOT_SUPPORTED",
+      "predicted_probability": 0.0,
+      "latency_us": 39136
+    },
+    {
+      "id": "b_sci_b_03_v1_fm01",
+      "domain": "science",
+      "failure_mode": "direct_entailment",
+      "difficulty_tier": 1,
+      "source_snippet": "Photosystem II catalyzes the light-driven oxidation of water to molecular oxygen in cyanobacteria, algae, and plants. Th...",
+      "claim": "Regarding Photosystem II, the catalytic oxygen-evolving complex contains a manganese-calcium cluster with chemical formula Mn4CaO5",
+      "ground_truth": "SUPPORTED",
+      "predicted": "NOT_SUPPORTED",
+      "predicted_probability": 0.0,
+      "latency_us": 43606
+    },
+    {
+      "id": "b_med_b_01_v1_sup09",
+      "domain": "medicine",
+      "failure_mode": "direct_entailment",
+      "difficulty_tier": 3,
+      "source_snippet": "In a multicenter trial of 1,800 ischemic stroke patients presenting between 4.5 and 24 hours from symptom onset, endovas...",
+      "claim": "Regarding endovascular thrombectomy, for the target subjects analyzed under endovascular thrombectomy, functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone",
+      "ground_truth": "SUPPORTED",
+      "predicted": "NOT_SUPPORTED",
+      "predicted_probability": 0.0,
+      "latency_us": 55188
+    },
+    {
+      "id": "b_med_b_01_v1_sup10",
+      "domain": "medicine",
+      "failure_mode": "direct_entailment",
+      "difficulty_tier": 3,
+      "source_snippet": "In a multicenter trial of 1,800 ischemic stroke patients presenting between 4.5 and 24 hours from symptom onset, endovas...",
+      "claim": "Regarding endovascular thrombectomy, within the documented context for endovascular thrombectomy, functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone",
+      "ground_truth": "SUPPORTED",
+      "predicted": "NOT_SUPPORTED",
+      "predicted_probability": 0.0,
+      "latency_us": 50293
+    },
+    {
+      "id": "b_med_b_03_v0_fm01",
+      "domain": "medicine",
+      "failure_mode": "direct_entailment",
+      "difficulty_tier": 1,
+      "source_snippet": "A phase 2 clinical trial of donanemab in early symptomatic Alzheimer's disease slowed clinical progression by 35% on the...",
+      "claim": "slowed clinical progression by 35% on the integrated Alzheimer's Disease Rating Scale (iADRS)",
+      "ground_truth": "SUPPORTED",
+      "predicted": "NOT_SUPPORTED",
+      "predicted_probability": 0.0,
+      "latency_us": 40930
+    },
+    {
+      "id": "b_med_b_03_v0_fm05",
+      "domain": "medicine",
+      "failure_mode": "double_negation",
+      "difficulty_tier": 4,
+      "source_snippet": "A phase 2 clinical trial of donanemab in early symptomatic Alzheimer's disease slowed clinical progression by 35% on the...",
+      "claim": "there exists no evidence concerning donanemab trial indicating that it is untrue that slowed clinical progression by 35% on the integrated Alzheimer's Disease Rating Scale (iADRS)",
+      "ground_truth": "SUPPORTED",
+      "predicted": "NOT_SUPPORTED",
+      "predicted_probability": 0.0,
+      "latency_us": 43103
+    },
+    {
+      "id": "b_med_b_03_v0_sup01",
+      "domain": "medicine",
+      "failure_mode": "direct_entailment",
+      "difficulty_tier": 2,
+      "source_snippet": "A phase 2 clinical trial of donanemab in early symptomatic Alzheimer's disease slowed clinical progression by 35% on the...",
+      "claim": "empirical observations regarding donanemab trial align with the finding that slowed clinical progression by 35% on the integrated Alzheimer's Disease Rating Scale (iADRS)",
+      "ground_truth": "SUPPORTED",
+      "predicted": "NOT_SUPPORTED",
+      "predicted_probability": 0.0,
+      "latency_us": 50395
+    },
+    {
+      "id": "b_med_b_03_v0_sup02",
+      "domain": "medicine",
+      "failure_mode": "direct_entailment",
+      "difficulty_tier": 2,
+      "source_snippet": "A phase 2 clinical trial of donanemab in early symptomatic Alzheimer's disease slowed clinical progression by 35% on the...",
+      "claim": "investigators corroborated that slowed clinical progression by 35% on the integrated Alzheimer's Disease Rating Scale (iADRS) in verified context 1.",
+      "ground_truth": "SUPPORTED",
+      "predicted": "NOT_SUPPORTED",
+      "predicted_probability": 0.0,
+      "latency_us": 45930
+    },
+    {
+      "id": "b_med_b_03_v0_sup03",
+      "domain": "medicine",
+      "failure_mode": "direct_entailment",
+      "difficulty_tier": 1,
+      "source_snippet": "A phase 2 clinical trial of donanemab in early symptomatic Alzheimer's disease slowed clinical progression by 35% on the...",
+      "claim": "telemetry for donanemab trial demonstrates that slowed clinical progression by 35% on the integrated Alzheimer's Disease Rating Scale (iADRS)",
+      "ground_truth": "SUPPORTED",
+      "predicted": "NOT_SUPPORTED",
+      "predicted_probability": 0.0,
+      "latency_us": 44329
+    },
+    {
+      "id": "b_med_b_03_v0_sup04",
+      "domain": "medicine",
+      "failure_mode": "direct_entailment",
+      "difficulty_tier": 1,
+      "source_snippet": "A phase 2 clinical trial of donanemab in early symptomatic Alzheimer's disease slowed clinical progression by 35% on the...",
+      "claim": "the primary documentation confirms slowed clinical progression by 35% on the integrated Alzheimer's Disease Rating Scale (iADRS)",
+      "ground_truth": "SUPPORTED",
+      "predicted": "NOT_SUPPORTED",
+      "predicted_probability": 0.0,
+      "latency_us": 42966
+    },
+    {
+      "id": "b_med_b_03_v0_sup05",
+      "domain": "medicine",
+      "failure_mode": "direct_entailment",
+      "difficulty_tier": 3,
+      "source_snippet": "A phase 2 clinical trial of donanemab in early symptomatic Alzheimer's disease slowed clinical progression by 35% on the...",
+      "claim": "donanemab trial is substantiated in the records as showing that slowed clinical progression by 35% on the integrated Alzheimer's Disease Rating Scale (iADRS)",
+      "ground_truth": "SUPPORTED",
+      "predicted": "NOT_SUPPORTED",
+      "predicted_probability": 0.0,
+      "latency_us": 40842
+    },
+    {
+      "id": "b_med_b_03_v0_sup06",
+      "domain": "medicine",
+      "failure_mode": "direct_entailment",
+      "difficulty_tier": 3,
+      "source_snippet": "A phase 2 clinical trial of donanemab in early symptomatic Alzheimer's disease slowed clinical progression by 35% on the...",
+      "claim": "the measured quantities specified for donanemab trial reflect the finding that slowed clinical progression by 35% on the integrated Alzheimer's Disease Rating Scale (iADRS)",
+      "ground_truth": "SUPPORTED",
+      "predicted": "NOT_SUPPORTED",
+      "predicted_probability": 0.0,
+      "latency_us": 42880
+    },
+    {
+      "id": "b_med_b_03_v0_sup07",
+      "domain": "medicine",
+      "failure_mode": "direct_entailment",
+      "difficulty_tier": 3,
+      "source_snippet": "A phase 2 clinical trial of donanemab in early symptomatic Alzheimer's disease slowed clinical progression by 35% on the...",
+      "claim": "evaluation metrics cited for donanemab trial establish that slowed clinical progression by 35% on the integrated Alzheimer's Disease Rating Scale (iADRS)",
+      "ground_truth": "SUPPORTED",
+      "predicted": "NOT_SUPPORTED",
+      "predicted_probability": 0.0,
+      "latency_us": 52096
+    },
+    {
+      "id": "b_med_b_03_v0_sup08",
+      "domain": "medicine",
+      "failure_mode": "direct_entailment",
+      "difficulty_tier": 3,
+      "source_snippet": "A phase 2 clinical trial of donanemab in early symptomatic Alzheimer's disease slowed clinical progression by 35% on the...",
+      "claim": "chronological sequencing for donanemab trial records that slowed clinical progression by 35% on the integrated Alzheimer's Disease Rating Scale (iADRS)",
+      "ground_truth": "SUPPORTED",
+      "predicted": "NOT_SUPPORTED",
+      "predicted_probability": 0.0,
+      "latency_us": 46248
+    }
+  ]
+}

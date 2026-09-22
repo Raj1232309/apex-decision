@@ -1,0 +1,176 @@
+suite_name: "ApexDecision External Benchmark Suite"
+suite_version: "8.0.0"
+target_architecture: "ApexStudent-50M (Production Frozen, 46.53M Active Parameters)"
+frozen_parameter_ceiling: 200000000
+
+test_set_separation:
+  dev:
+    description: "Development tests used for diagnostic assertions and boundary verification"
+    immutable: true
+  val:
+    description: "Validation sets for hyperparameter-free calibration and regression gating"
+    immutable: true
+  frozen_final:
+    description: "Cryptographically frozen final evaluation assets untouched during iteration"
+    immutable: true
+
+benchmarks:
+  # ---------------------------------------------------------------------------
+  # Core Smoke & Contract Tests
+  # ---------------------------------------------------------------------------
+  - id: "smoke_production_integrity"
+    name: "Production System 1 & Schema Smoke Tests"
+    suite: "core"
+    split: "dev"
+    task_type: "contract_verification"
+    sample_count: 8
+    target_metric: "pass_rate"
+    pass_threshold: 100.0
+    source: "independent_synthetic"
+    description: "Validates model load, typed schema output, zero spans fabrication, timeout and memory safety."
+
+  - id: "typed_decisions_jev_contract"
+    name: "Jev Wire-Compatible Schema & Typed Decision Contract"
+    suite: "core"
+    split: "frozen_final"
+    task_type: "typed_decision_contract"
+    sample_count: 4
+    target_metric: "schema_compliance"
+    pass_threshold: 100.0
+    source: "documented_public"
+    description: "Validates exact wire compatibility with Jev SystemOne specifications across Noul, Choice, and Score."
+
+  - id: "grounding_unseen_attribution"
+    name: "Independent Grounding & Attribution Benchmark"
+    suite: "core"
+    split: "frozen_final"
+    task_type: "evidence_attribution"
+    sample_count: 50
+    target_metric: "accuracy"
+    pass_threshold: 95.0
+    source: "independent_synthetic"
+    description: "Evaluates factual entailment over unseen documents, entities, negative evidence, and distractors."
+
+  - id: "hallucination_refusal"
+    name: "Hallucination & Insufficient Evidence Refusal Benchmark"
+    suite: "core"
+    split: "frozen_final"
+    task_type: "hallucination_defense"
+    sample_count: 40
+    target_metric: "refusal_precision"
+    pass_threshold: 98.0
+    source: "independent_synthetic"
+    description: "Evaluates zero-invention guarantees and proper refusal when evidence is absent or fabricated."
+
+  # ---------------------------------------------------------------------------
+  # Reasoning Suite
+  # ---------------------------------------------------------------------------
+  - id: "reasoning_multihop_arithmetic"
+    name: "Multi-Hop Dependency & Structured Arithmetic Benchmark"
+    suite: "reasoning"
+    split: "frozen_final"
+    task_type: "structured_arithmetic"
+    sample_count: 60
+    target_metric: "exact_match"
+    pass_threshold: 95.0
+    source: "independent_synthetic"
+    description: "Evaluates DAG dependency chain resolution across 5-hop, 10-hop, and 20-hop structured arithmetic."
+
+  - id: "reasoning_contradiction_scope"
+    name: "Temporal Contradiction, Negation & Entity Disambiguation"
+    suite: "reasoning"
+    split: "frozen_final"
+    task_type: "logical_consistency"
+    sample_count: 50
+    target_metric: "accuracy"
+    pass_threshold: 95.0
+    source: "independent_synthetic"
+    description: "Evaluates minimal-pair counterfactuals, double negation, passing mentions, and temporal supersession."
+
+  # ---------------------------------------------------------------------------
+  # Multilingual Suite
+  # ---------------------------------------------------------------------------
+  - id: "multilingual_fixed_ood"
+    name: "Fixed Independent Multilingual OOD Benchmark"
+    suite: "multilingual"
+    split: "frozen_final"
+    task_type: "multilingual_grounding"
+    dataset_file: "evaluation/multilingual_ood_v8.json"
+    sha256: "001A8379B8C5DE7D8FE9B02157B5FD0EB7DE19F732733979C1D7150C6A5CE4F4"
+    sample_count: 360
+    target_metric: "accuracy"
+    pass_threshold: 98.0
+    supported_languages: 90
+    script_families: 18
+    source: "independent_synthetic"
+    description: "Evaluates non-Latin scripts, CJK, Cyrillic, Arabic, Devanagari, Greek, Hebrew with 0 token ID overflows."
+
+  # ---------------------------------------------------------------------------
+  # Native Tool Orchestration Suite
+  # ---------------------------------------------------------------------------
+  - id: "tools_orchestration_matrix"
+    name: "Native Tool Orchestration & Security Gate Benchmark"
+    suite: "tools"
+    split: "frozen_final"
+    task_type: "tool_orchestration"
+    dataset_file: "evaluation/v8_tool_benchmark.json"
+    sample_count: 2100
+    target_metric: "decision_accuracy"
+    pass_threshold: 99.0
+    categories_count: 20
+    source: "independent_synthetic"
+    description: "Evaluates Stages A-H: tool need, tool selection, argument extraction, permission gates, loop guards, injection defense."
+
+  # ---------------------------------------------------------------------------
+  # Long Context Suite
+  # ---------------------------------------------------------------------------
+  - id: "long_context_scaling"
+    name: "Hierarchical Long-Context Scaling Benchmark (32K to 1M Tokens)"
+    suite: "long_context"
+    split: "frozen_final"
+    task_type: "context_retrieval_reasoning"
+    sample_count: 24
+    target_metric: "retrieval_accuracy"
+    pass_threshold: 95.0
+    tested_depths: ["32K", "64K", "128K", "256K", "512K", "1M"]
+    source: "independent_synthetic"
+    description: "Measures needle-in-haystack retrieval and multi-hop reasoning degradation from 32K to 1M tokens."
+
+  # ---------------------------------------------------------------------------
+  # Standard External Adapter Suite
+  # ---------------------------------------------------------------------------
+  - id: "external_eleuther_adapter"
+    name: "EleutherAI LM-Evaluation Harness Interface Adapter"
+    suite: "external"
+    split: "val"
+    task_type: "external_multiple_choice"
+    sample_count: 20
+    target_metric: "accuracy"
+    pass_threshold: 80.0
+    source: "public_external"
+    description: "Standard model adapter mapping multiple-choice benchmark schemas to ApexDecision choice decisions."
+
+  - id: "external_opencompass_adapter"
+    name: "OpenCompass Classification / Grounding Adapter"
+    suite: "external"
+    split: "val"
+    task_type: "external_classification"
+    sample_count: 20
+    target_metric: "accuracy"
+    pass_threshold: 80.0
+    source: "public_external"
+    description: "Evaluates applicability of classification tasks; explicitly logs NOT_APPLICABLE for generative chat tasks."
+
+  # ---------------------------------------------------------------------------
+  # Performance Suite
+  # ---------------------------------------------------------------------------
+  - id: "performance_latency_profiling"
+    name: "Latency, VRAM & Throughput Performance Profiling"
+    suite: "performance"
+    split: "dev"
+    task_type: "hardware_profiling"
+    sample_count: 50
+    target_metric: "latency_p50"
+    pass_threshold: 25.0
+    source: "measured_local"
+    description: "Profiles cold start, warm latency (P50, P90, P95, P99), throughput, peak GPU VRAM, and RAM usage."

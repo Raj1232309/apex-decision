@@ -1,0 +1,372 @@
+{
+  "summary": {
+    "validation_accuracy": 1.0,
+    "test_accuracy": 0.9316666666666666,
+    "gap": 0.06833333333333336,
+    "val_in_train_sources_pct": 0.25,
+    "test_in_train_sources_pct": 0.0
+  },
+  "source_overlap": {
+    "train_unique_sources": 17,
+    "val_unique_sources": 4,
+    "test_unique_sources": 10,
+    "val_in_train_sources": 1,
+    "test_in_train_sources": 0,
+    "test_in_val_sources": 0
+  },
+  "pair_overlap": {
+    "val_in_train_pairs": 0,
+    "test_in_train_pairs": 0,
+    "test_in_val_pairs": 0
+  },
+  "lexical_overlap_stats": {
+    "train": {
+      "mean": 0.2866136945499155,
+      "median": 0.34,
+      "std": 0.18591726019791577,
+      "min": 0.016666666666666666,
+      "max": 0.9795918367346939
+    },
+    "validation": {
+      "mean": 0.34248032277728524,
+      "median": 0.42857142857142855,
+      "std": 0.21312672703666752,
+      "min": 0.05,
+      "max": 0.9512195121951219
+    },
+    "test": {
+      "mean": 0.2754625792043514,
+      "median": 0.3392857142857143,
+      "std": 0.17345321006720846,
+      "min": 0.01694915254237288,
+      "max": 0.975609756097561
+    }
+  },
+  "length_stats": {
+    "train": {
+      "source_words": {
+        "mean": 43.94,
+        "median": 43.0,
+        "min": 37,
+        "max": 51
+      },
+      "claim_words": {
+        "mean": 27.92823529411765,
+        "median": 27.0,
+        "min": 11,
+        "max": 57
+      }
+    },
+    "validation": {
+      "source_words": {
+        "mean": 38.4,
+        "median": 37.0,
+        "min": 35,
+        "max": 44
+      },
+      "claim_words": {
+        "mean": 31.02166666666667,
+        "median": 31.0,
+        "min": 17,
+        "max": 49
+      }
+    },
+    "test": {
+      "source_words": {
+        "mean": 46.973333333333336,
+        "median": 46.0,
+        "min": 40,
+        "max": 55
+      },
+      "claim_words": {
+        "mean": 25.305,
+        "median": 24.0,
+        "min": 12,
+        "max": 58
+      }
+    }
+  },
+  "difficulty_tiers": {
+    "train": {
+      "tier_1": {
+        "count": 400,
+        "pct": 0.11764705882352941
+      },
+      "tier_2": {
+        "count": 300,
+        "pct": 0.08823529411764706
+      },
+      "tier_3": {
+        "count": 2100,
+        "pct": 0.6176470588235294
+      },
+      "tier_4": {
+        "count": 600,
+        "pct": 0.17647058823529413
+      }
+    },
+    "validation": {
+      "tier_1": {
+        "count": 70,
+        "pct": 0.11666666666666667
+      },
+      "tier_2": {
+        "count": 54,
+        "pct": 0.09
+      },
+      "tier_3": {
+        "count": 370,
+        "pct": 0.6166666666666667
+      },
+      "tier_4": {
+        "count": 106,
+        "pct": 0.17666666666666667
+      }
+    },
+    "test": {
+      "tier_1": {
+        "count": 64,
+        "pct": 0.10666666666666667
+      },
+      "tier_2": {
+        "count": 44,
+        "pct": 0.07333333333333333
+      },
+      "tier_3": {
+        "count": 390,
+        "pct": 0.65
+      },
+      "tier_4": {
+        "count": 102,
+        "pct": 0.17
+      }
+    }
+  },
+  "domain_distribution": {
+    "train": {
+      "science": 1020,
+      "medicine": 1020,
+      "finance": 1020,
+      "technology": 340
+    },
+    "validation": {
+      "technology": 600
+    },
+    "test": {
+      "science": 186,
+      "medicine": 186,
+      "finance": 186,
+      "technology": 42
+    }
+  },
+  "category_distribution": {
+    "train": {
+      "direct_entailment": 1300,
+      "direct_contradiction": 100,
+      "unsupported_claim": 100,
+      "negation_reversal": 100,
+      "double_negation": 200,
+      "entity_substitution": 100,
+      "number_mismatch": 100,
+      "unit_mismatch": 100,
+      "date_time_mismatch": 100,
+      "population_mismatch": 100,
+      "scope_mismatch": 100,
+      "quantifier_mismatch": 100,
+      "causal_overclaim": 100,
+      "correlation_vs_causation": 100,
+      "comparative_claim_mismatch": 100,
+      "temporal_ordering_error": 100,
+      "attribution_mismatch": 100,
+      "partial_support_claim": 100,
+      "multi_sentence_reasoning": 200,
+      "lexical_overlap_unsupported": 100
+    },
+    "validation": {
+      "direct_entailment": 224,
+      "direct_contradiction": 18,
+      "unsupported_claim": 18,
+      "negation_reversal": 18,
+      "double_negation": 35,
+      "entity_substitution": 18,
+      "number_mismatch": 18,
+      "unit_mismatch": 18,
+      "date_time_mismatch": 18,
+      "population_mismatch": 18,
+      "scope_mismatch": 18,
+      "quantifier_mismatch": 18,
+      "causal_overclaim": 18,
+      "correlation_vs_causation": 18,
+      "comparative_claim_mismatch": 18,
+      "temporal_ordering_error": 18,
+      "attribution_mismatch": 18,
+      "partial_support_claim": 18,
+      "multi_sentence_reasoning": 35,
+      "lexical_overlap_unsupported": 18
+    },
+    "test": {
+      "scope_mismatch": 20,
+      "quantifier_mismatch": 20,
+      "comparative_claim_mismatch": 20,
+      "temporal_ordering_error": 20,
+      "attribution_mismatch": 20,
+      "partial_support_claim": 20,
+      "lexical_overlap_unsupported": 20,
+      "direct_entailment": 234,
+      "multi_sentence_reasoning": 35,
+      "double_negation": 35,
+      "direct_contradiction": 16,
+      "negation_reversal": 16,
+      "entity_substitution": 16,
+      "number_mismatch": 16,
+      "unit_mismatch": 16,
+      "date_time_mismatch": 16,
+      "population_mismatch": 16,
+      "causal_overclaim": 16,
+      "correlation_vs_causation": 16,
+      "unsupported_claim": 12
+    }
+  },
+  "category_accuracy_comparison": {
+    "attribution_mismatch": {
+      "validation_accuracy": 1.0,
+      "test_accuracy": 1.0,
+      "drop": 0.0,
+      "val_count": 18,
+      "test_count": 20
+    },
+    "causal_overclaim": {
+      "validation_accuracy": 1.0,
+      "test_accuracy": 1.0,
+      "drop": 0.0,
+      "val_count": 18,
+      "test_count": 16
+    },
+    "comparative_claim_mismatch": {
+      "validation_accuracy": 1.0,
+      "test_accuracy": 1.0,
+      "drop": 0.0,
+      "val_count": 18,
+      "test_count": 20
+    },
+    "correlation_vs_causation": {
+      "validation_accuracy": 1.0,
+      "test_accuracy": 1.0,
+      "drop": 0.0,
+      "val_count": 18,
+      "test_count": 16
+    },
+    "date_time_mismatch": {
+      "validation_accuracy": 1.0,
+      "test_accuracy": 1.0,
+      "drop": 0.0,
+      "val_count": 18,
+      "test_count": 16
+    },
+    "direct_contradiction": {
+      "validation_accuracy": 1.0,
+      "test_accuracy": 1.0,
+      "drop": 0.0,
+      "val_count": 18,
+      "test_count": 16
+    },
+    "direct_entailment": {
+      "validation_accuracy": 1.0,
+      "test_accuracy": 0.8547008547008547,
+      "drop": 0.14529914529914534,
+      "val_count": 224,
+      "test_count": 234
+    },
+    "double_negation": {
+      "validation_accuracy": 1.0,
+      "test_accuracy": 0.8571428571428571,
+      "drop": 0.1428571428571429,
+      "val_count": 35,
+      "test_count": 35
+    },
+    "entity_substitution": {
+      "validation_accuracy": 1.0,
+      "test_accuracy": 1.0,
+      "drop": 0.0,
+      "val_count": 18,
+      "test_count": 16
+    },
+    "lexical_overlap_unsupported": {
+      "validation_accuracy": 1.0,
+      "test_accuracy": 1.0,
+      "drop": 0.0,
+      "val_count": 18,
+      "test_count": 20
+    },
+    "multi_sentence_reasoning": {
+      "validation_accuracy": 1.0,
+      "test_accuracy": 0.9428571428571428,
+      "drop": 0.05714285714285716,
+      "val_count": 35,
+      "test_count": 35
+    },
+    "negation_reversal": {
+      "validation_accuracy": 1.0,
+      "test_accuracy": 1.0,
+      "drop": 0.0,
+      "val_count": 18,
+      "test_count": 16
+    },
+    "number_mismatch": {
+      "validation_accuracy": 1.0,
+      "test_accuracy": 1.0,
+      "drop": 0.0,
+      "val_count": 18,
+      "test_count": 16
+    },
+    "partial_support_claim": {
+      "validation_accuracy": 1.0,
+      "test_accuracy": 1.0,
+      "drop": 0.0,
+      "val_count": 18,
+      "test_count": 20
+    },
+    "population_mismatch": {
+      "validation_accuracy": 1.0,
+      "test_accuracy": 1.0,
+      "drop": 0.0,
+      "val_count": 18,
+      "test_count": 16
+    },
+    "quantifier_mismatch": {
+      "validation_accuracy": 1.0,
+      "test_accuracy": 1.0,
+      "drop": 0.0,
+      "val_count": 18,
+      "test_count": 20
+    },
+    "scope_mismatch": {
+      "validation_accuracy": 1.0,
+      "test_accuracy": 1.0,
+      "drop": 0.0,
+      "val_count": 18,
+      "test_count": 20
+    },
+    "temporal_ordering_error": {
+      "validation_accuracy": 1.0,
+      "test_accuracy": 1.0,
+      "drop": 0.0,
+      "val_count": 18,
+      "test_count": 20
+    },
+    "unit_mismatch": {
+      "validation_accuracy": 1.0,
+      "test_accuracy": 1.0,
+      "drop": 0.0,
+      "val_count": 18,
+      "test_count": 16
+    },
+    "unsupported_claim": {
+      "validation_accuracy": 1.0,
+      "test_accuracy": 1.0,
+      "drop": 0.0,
+      "val_count": 18,
+      "test_count": 12
+    }
+  }
+}

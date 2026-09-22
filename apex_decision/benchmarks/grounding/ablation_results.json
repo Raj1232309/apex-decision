@@ -1,0 +1,1527 @@
+{
+  "1_modernbert_frozen_head": {
+    "num_samples": 600,
+    "overall_accuracy": 0.5483,
+    "ci_95": [
+      0.5033,
+      0.585
+    ],
+    "macro_f1": 0.5481,
+    "supported_metrics": {
+      "precision": 0.5587,
+      "recall": 0.5164,
+      "f1": 0.5368,
+      "count": 304
+    },
+    "unsupported_metrics": {
+      "precision": 0.5392,
+      "recall": 0.5811,
+      "f1": 0.5593,
+      "count": 296
+    },
+    "confusion_matrix": {
+      "true_negatives": 172,
+      "false_positives": 124,
+      "false_negatives": 147,
+      "true_positives": 157
+    },
+    "adversarial_overall_accuracy": 0.558,
+    "brier_score": 0.2466,
+    "expected_calibration_error": 0.0374,
+    "accuracy_at_thresholds": {
+      "0.5": {
+        "coverage": 1.0,
+        "count": 600,
+        "accuracy": 0.5483
+      },
+      "0.7": {
+        "coverage": 0.04,
+        "count": 24,
+        "accuracy": 0.5833
+      },
+      "0.8": {
+        "coverage": 0.0,
+        "count": 0,
+        "accuracy": 0.0
+      },
+      "0.9": {
+        "coverage": 0.0,
+        "count": 0,
+        "accuracy": 0.0
+      },
+      "0.95": {
+        "coverage": 0.0,
+        "count": 0,
+        "accuracy": 0.0
+      },
+      "0.99": {
+        "coverage": 0.0,
+        "count": 0,
+        "accuracy": 0.0
+      }
+    },
+    "reliability_diagram": [
+      {
+        "bin_idx": 0,
+        "range": [
+          0.0,
+          0.1
+        ],
+        "count": 0,
+        "accuracy": 0.0,
+        "confidence": 0.05
+      },
+      {
+        "bin_idx": 1,
+        "range": [
+          0.1,
+          0.2
+        ],
+        "count": 0,
+        "accuracy": 0.0,
+        "confidence": 0.15
+      },
+      {
+        "bin_idx": 2,
+        "range": [
+          0.2,
+          0.3
+        ],
+        "count": 0,
+        "accuracy": 0.0,
+        "confidence": 0.25
+      },
+      {
+        "bin_idx": 3,
+        "range": [
+          0.3,
+          0.4
+        ],
+        "count": 0,
+        "accuracy": 0.0,
+        "confidence": 0.35
+      },
+      {
+        "bin_idx": 4,
+        "range": [
+          0.4,
+          0.5
+        ],
+        "count": 0,
+        "accuracy": 0.0,
+        "confidence": 0.45
+      },
+      {
+        "bin_idx": 5,
+        "range": [
+          0.5,
+          0.6
+        ],
+        "count": 381,
+        "accuracy": 0.5249,
+        "confidence": 0.5468
+      },
+      {
+        "bin_idx": 6,
+        "range": [
+          0.6,
+          0.7
+        ],
+        "count": 195,
+        "accuracy": 0.5897,
+        "confidence": 0.6462
+      },
+      {
+        "bin_idx": 7,
+        "range": [
+          0.7,
+          0.8
+        ],
+        "count": 24,
+        "accuracy": 0.5833,
+        "confidence": 0.7133
+      },
+      {
+        "bin_idx": 8,
+        "range": [
+          0.8,
+          0.9
+        ],
+        "count": 0,
+        "accuracy": 0.0,
+        "confidence": 0.85
+      },
+      {
+        "bin_idx": 9,
+        "range": [
+          0.9,
+          1.0
+        ],
+        "count": 0,
+        "accuracy": 0.0,
+        "confidence": 0.95
+      }
+    ],
+    "domain_accuracy": {
+      "science": {
+        "count": 186,
+        "accuracy": 0.6022
+      },
+      "medicine": {
+        "count": 186,
+        "accuracy": 0.5269
+      },
+      "finance": {
+        "count": 186,
+        "accuracy": 0.4839
+      },
+      "technology": {
+        "count": 42,
+        "accuracy": 0.6905
+      }
+    },
+    "failure_mode_accuracy": {
+      "scope_mismatch": {
+        "count": 20,
+        "accuracy": 0.9
+      },
+      "quantifier_mismatch": {
+        "count": 20,
+        "accuracy": 0.65
+      },
+      "comparative_claim_mismatch": {
+        "count": 20,
+        "accuracy": 0.9
+      },
+      "temporal_ordering_error": {
+        "count": 20,
+        "accuracy": 0.9
+      },
+      "attribution_mismatch": {
+        "count": 20,
+        "accuracy": 0.45
+      },
+      "partial_support_claim": {
+        "count": 20,
+        "accuracy": 0.5
+      },
+      "lexical_overlap_unsupported": {
+        "count": 20,
+        "accuracy": 0.4
+      },
+      "direct_entailment": {
+        "count": 234,
+        "accuracy": 0.5
+      },
+      "multi_sentence_reasoning": {
+        "count": 35,
+        "accuracy": 0.5429
+      },
+      "double_negation": {
+        "count": 35,
+        "accuracy": 0.6
+      },
+      "direct_contradiction": {
+        "count": 16,
+        "accuracy": 0.4375
+      },
+      "negation_reversal": {
+        "count": 16,
+        "accuracy": 0.5
+      },
+      "entity_substitution": {
+        "count": 16,
+        "accuracy": 0.4375
+      },
+      "number_mismatch": {
+        "count": 16,
+        "accuracy": 0.625
+      },
+      "unit_mismatch": {
+        "count": 16,
+        "accuracy": 0.6875
+      },
+      "date_time_mismatch": {
+        "count": 16,
+        "accuracy": 0.375
+      },
+      "population_mismatch": {
+        "count": 16,
+        "accuracy": 0.375
+      },
+      "causal_overclaim": {
+        "count": 16,
+        "accuracy": 0.6875
+      },
+      "correlation_vs_causation": {
+        "count": 16,
+        "accuracy": 0.3125
+      },
+      "unsupported_claim": {
+        "count": 12,
+        "accuracy": 0.5833
+      }
+    },
+    "difficulty_tier_accuracy": {
+      "Tier_3": {
+        "count": 390,
+        "accuracy": 0.559
+      },
+      "Tier_4": {
+        "count": 102,
+        "accuracy": 0.549
+      },
+      "Tier_1": {
+        "count": 64,
+        "accuracy": 0.5
+      },
+      "Tier_2": {
+        "count": 44,
+        "accuracy": 0.5227
+      }
+    },
+    "source_length_accuracy": {
+      "40-70": {
+        "count": 600,
+        "accuracy": 0.5483
+      }
+    },
+    "claim_length_accuracy": {
+      "15-25": {
+        "count": 308,
+        "accuracy": 0.6234
+      },
+      ">25": {
+        "count": 289,
+        "accuracy": 0.4637
+      },
+      "<15": {
+        "count": 3,
+        "accuracy": 1.0
+      }
+    },
+    "model_name": "Ablation_1_Frozen_Backbone",
+    "dataset_path": "apex_decision/benchmarks/grounding/test.json",
+    "total_evaluation_time_s": 17.75
+  },
+  "2_modernbert_lora": {
+    "num_samples": 600,
+    "overall_accuracy": 0.9317,
+    "ci_95": [
+      0.91,
+      0.95
+    ],
+    "macro_f1": 0.9315,
+    "supported_metrics": {
+      "precision": 1.0,
+      "recall": 0.8651,
+      "f1": 0.9277,
+      "count": 304
+    },
+    "unsupported_metrics": {
+      "precision": 0.8783,
+      "recall": 1.0,
+      "f1": 0.9352,
+      "count": 296
+    },
+    "confusion_matrix": {
+      "true_negatives": 296,
+      "false_positives": 0,
+      "false_negatives": 41,
+      "true_positives": 263
+    },
+    "adversarial_overall_accuracy": 0.9453,
+    "brier_score": 0.0647,
+    "expected_calibration_error": 0.0625,
+    "accuracy_at_thresholds": {
+      "0.5": {
+        "coverage": 1.0,
+        "count": 600,
+        "accuracy": 0.9317
+      },
+      "0.7": {
+        "coverage": 0.9917,
+        "count": 595,
+        "accuracy": 0.9361
+      },
+      "0.8": {
+        "coverage": 0.9817,
+        "count": 589,
+        "accuracy": 0.9372
+      },
+      "0.9": {
+        "coverage": 0.9717,
+        "count": 583,
+        "accuracy": 0.9365
+      },
+      "0.95": {
+        "coverage": 0.9533,
+        "count": 572,
+        "accuracy": 0.9406
+      },
+      "0.99": {
+        "coverage": 0.91,
+        "count": 546,
+        "accuracy": 0.9432
+      }
+    },
+    "reliability_diagram": [
+      {
+        "bin_idx": 0,
+        "range": [
+          0.0,
+          0.1
+        ],
+        "count": 0,
+        "accuracy": 0.0,
+        "confidence": 0.05
+      },
+      {
+        "bin_idx": 1,
+        "range": [
+          0.1,
+          0.2
+        ],
+        "count": 0,
+        "accuracy": 0.0,
+        "confidence": 0.15
+      },
+      {
+        "bin_idx": 2,
+        "range": [
+          0.2,
+          0.3
+        ],
+        "count": 0,
+        "accuracy": 0.0,
+        "confidence": 0.25
+      },
+      {
+        "bin_idx": 3,
+        "range": [
+          0.3,
+          0.4
+        ],
+        "count": 0,
+        "accuracy": 0.0,
+        "confidence": 0.35
+      },
+      {
+        "bin_idx": 4,
+        "range": [
+          0.4,
+          0.5
+        ],
+        "count": 0,
+        "accuracy": 0.0,
+        "confidence": 0.45
+      },
+      {
+        "bin_idx": 5,
+        "range": [
+          0.5,
+          0.6
+        ],
+        "count": 2,
+        "accuracy": 0.5,
+        "confidence": 0.5054
+      },
+      {
+        "bin_idx": 6,
+        "range": [
+          0.6,
+          0.7
+        ],
+        "count": 3,
+        "accuracy": 0.3333,
+        "confidence": 0.6309
+      },
+      {
+        "bin_idx": 7,
+        "range": [
+          0.7,
+          0.8
+        ],
+        "count": 6,
+        "accuracy": 0.8333,
+        "confidence": 0.7659
+      },
+      {
+        "bin_idx": 8,
+        "range": [
+          0.8,
+          0.9
+        ],
+        "count": 6,
+        "accuracy": 1.0,
+        "confidence": 0.8608
+      },
+      {
+        "bin_idx": 9,
+        "range": [
+          0.9,
+          1.0
+        ],
+        "count": 583,
+        "accuracy": 0.9365,
+        "confidence": 0.9972
+      }
+    ],
+    "domain_accuracy": {
+      "science": {
+        "count": 186,
+        "accuracy": 0.9624
+      },
+      "medicine": {
+        "count": 186,
+        "accuracy": 0.8172
+      },
+      "finance": {
+        "count": 186,
+        "accuracy": 1.0
+      },
+      "technology": {
+        "count": 42,
+        "accuracy": 1.0
+      }
+    },
+    "failure_mode_accuracy": {
+      "scope_mismatch": {
+        "count": 20,
+        "accuracy": 1.0
+      },
+      "quantifier_mismatch": {
+        "count": 20,
+        "accuracy": 1.0
+      },
+      "comparative_claim_mismatch": {
+        "count": 20,
+        "accuracy": 1.0
+      },
+      "temporal_ordering_error": {
+        "count": 20,
+        "accuracy": 1.0
+      },
+      "attribution_mismatch": {
+        "count": 20,
+        "accuracy": 1.0
+      },
+      "partial_support_claim": {
+        "count": 20,
+        "accuracy": 1.0
+      },
+      "lexical_overlap_unsupported": {
+        "count": 20,
+        "accuracy": 1.0
+      },
+      "direct_entailment": {
+        "count": 234,
+        "accuracy": 0.8547
+      },
+      "multi_sentence_reasoning": {
+        "count": 35,
+        "accuracy": 0.9429
+      },
+      "double_negation": {
+        "count": 35,
+        "accuracy": 0.8571
+      },
+      "direct_contradiction": {
+        "count": 16,
+        "accuracy": 1.0
+      },
+      "negation_reversal": {
+        "count": 16,
+        "accuracy": 1.0
+      },
+      "entity_substitution": {
+        "count": 16,
+        "accuracy": 1.0
+      },
+      "number_mismatch": {
+        "count": 16,
+        "accuracy": 1.0
+      },
+      "unit_mismatch": {
+        "count": 16,
+        "accuracy": 1.0
+      },
+      "date_time_mismatch": {
+        "count": 16,
+        "accuracy": 1.0
+      },
+      "population_mismatch": {
+        "count": 16,
+        "accuracy": 1.0
+      },
+      "causal_overclaim": {
+        "count": 16,
+        "accuracy": 1.0
+      },
+      "correlation_vs_causation": {
+        "count": 16,
+        "accuracy": 1.0
+      },
+      "unsupported_claim": {
+        "count": 12,
+        "accuracy": 1.0
+      }
+    },
+    "difficulty_tier_accuracy": {
+      "Tier_3": {
+        "count": 390,
+        "accuracy": 0.9487
+      },
+      "Tier_4": {
+        "count": 102,
+        "accuracy": 0.9314
+      },
+      "Tier_1": {
+        "count": 64,
+        "accuracy": 0.8594
+      },
+      "Tier_2": {
+        "count": 44,
+        "accuracy": 0.8864
+      }
+    },
+    "source_length_accuracy": {
+      "40-70": {
+        "count": 600,
+        "accuracy": 0.9317
+      }
+    },
+    "claim_length_accuracy": {
+      "15-25": {
+        "count": 308,
+        "accuracy": 0.9091
+      },
+      ">25": {
+        "count": 289,
+        "accuracy": 0.9619
+      },
+      "<15": {
+        "count": 3,
+        "accuracy": 0.3333
+      }
+    },
+    "model_name": "Ablation_2_ModernBERT_LoRA",
+    "dataset_path": "apex_decision/benchmarks/grounding/test.json",
+    "total_evaluation_time_s": 29.27
+  },
+  "3_modernbert_lora_hard_negatives": {
+    "num_samples": 600,
+    "overall_accuracy": 0.9317,
+    "ci_95": [
+      0.91,
+      0.95
+    ],
+    "macro_f1": 0.9315,
+    "supported_metrics": {
+      "precision": 1.0,
+      "recall": 0.8651,
+      "f1": 0.9277,
+      "count": 304
+    },
+    "unsupported_metrics": {
+      "precision": 0.8783,
+      "recall": 1.0,
+      "f1": 0.9352,
+      "count": 296
+    },
+    "confusion_matrix": {
+      "true_negatives": 296,
+      "false_positives": 0,
+      "false_negatives": 41,
+      "true_positives": 263
+    },
+    "adversarial_overall_accuracy": 0.9453,
+    "brier_score": 0.0647,
+    "expected_calibration_error": 0.0625,
+    "accuracy_at_thresholds": {
+      "0.5": {
+        "coverage": 1.0,
+        "count": 600,
+        "accuracy": 0.9317
+      },
+      "0.7": {
+        "coverage": 0.9917,
+        "count": 595,
+        "accuracy": 0.9361
+      },
+      "0.8": {
+        "coverage": 0.9817,
+        "count": 589,
+        "accuracy": 0.9372
+      },
+      "0.9": {
+        "coverage": 0.9717,
+        "count": 583,
+        "accuracy": 0.9365
+      },
+      "0.95": {
+        "coverage": 0.9533,
+        "count": 572,
+        "accuracy": 0.9406
+      },
+      "0.99": {
+        "coverage": 0.91,
+        "count": 546,
+        "accuracy": 0.9432
+      }
+    },
+    "reliability_diagram": [
+      {
+        "bin_idx": 0,
+        "range": [
+          0.0,
+          0.1
+        ],
+        "count": 0,
+        "accuracy": 0.0,
+        "confidence": 0.05
+      },
+      {
+        "bin_idx": 1,
+        "range": [
+          0.1,
+          0.2
+        ],
+        "count": 0,
+        "accuracy": 0.0,
+        "confidence": 0.15
+      },
+      {
+        "bin_idx": 2,
+        "range": [
+          0.2,
+          0.3
+        ],
+        "count": 0,
+        "accuracy": 0.0,
+        "confidence": 0.25
+      },
+      {
+        "bin_idx": 3,
+        "range": [
+          0.3,
+          0.4
+        ],
+        "count": 0,
+        "accuracy": 0.0,
+        "confidence": 0.35
+      },
+      {
+        "bin_idx": 4,
+        "range": [
+          0.4,
+          0.5
+        ],
+        "count": 0,
+        "accuracy": 0.0,
+        "confidence": 0.45
+      },
+      {
+        "bin_idx": 5,
+        "range": [
+          0.5,
+          0.6
+        ],
+        "count": 2,
+        "accuracy": 0.5,
+        "confidence": 0.5054
+      },
+      {
+        "bin_idx": 6,
+        "range": [
+          0.6,
+          0.7
+        ],
+        "count": 3,
+        "accuracy": 0.3333,
+        "confidence": 0.6309
+      },
+      {
+        "bin_idx": 7,
+        "range": [
+          0.7,
+          0.8
+        ],
+        "count": 6,
+        "accuracy": 0.8333,
+        "confidence": 0.7659
+      },
+      {
+        "bin_idx": 8,
+        "range": [
+          0.8,
+          0.9
+        ],
+        "count": 6,
+        "accuracy": 1.0,
+        "confidence": 0.8608
+      },
+      {
+        "bin_idx": 9,
+        "range": [
+          0.9,
+          1.0
+        ],
+        "count": 583,
+        "accuracy": 0.9365,
+        "confidence": 0.9972
+      }
+    ],
+    "domain_accuracy": {
+      "science": {
+        "count": 186,
+        "accuracy": 0.9624
+      },
+      "medicine": {
+        "count": 186,
+        "accuracy": 0.8172
+      },
+      "finance": {
+        "count": 186,
+        "accuracy": 1.0
+      },
+      "technology": {
+        "count": 42,
+        "accuracy": 1.0
+      }
+    },
+    "failure_mode_accuracy": {
+      "scope_mismatch": {
+        "count": 20,
+        "accuracy": 1.0
+      },
+      "quantifier_mismatch": {
+        "count": 20,
+        "accuracy": 1.0
+      },
+      "comparative_claim_mismatch": {
+        "count": 20,
+        "accuracy": 1.0
+      },
+      "temporal_ordering_error": {
+        "count": 20,
+        "accuracy": 1.0
+      },
+      "attribution_mismatch": {
+        "count": 20,
+        "accuracy": 1.0
+      },
+      "partial_support_claim": {
+        "count": 20,
+        "accuracy": 1.0
+      },
+      "lexical_overlap_unsupported": {
+        "count": 20,
+        "accuracy": 1.0
+      },
+      "direct_entailment": {
+        "count": 234,
+        "accuracy": 0.8547
+      },
+      "multi_sentence_reasoning": {
+        "count": 35,
+        "accuracy": 0.9429
+      },
+      "double_negation": {
+        "count": 35,
+        "accuracy": 0.8571
+      },
+      "direct_contradiction": {
+        "count": 16,
+        "accuracy": 1.0
+      },
+      "negation_reversal": {
+        "count": 16,
+        "accuracy": 1.0
+      },
+      "entity_substitution": {
+        "count": 16,
+        "accuracy": 1.0
+      },
+      "number_mismatch": {
+        "count": 16,
+        "accuracy": 1.0
+      },
+      "unit_mismatch": {
+        "count": 16,
+        "accuracy": 1.0
+      },
+      "date_time_mismatch": {
+        "count": 16,
+        "accuracy": 1.0
+      },
+      "population_mismatch": {
+        "count": 16,
+        "accuracy": 1.0
+      },
+      "causal_overclaim": {
+        "count": 16,
+        "accuracy": 1.0
+      },
+      "correlation_vs_causation": {
+        "count": 16,
+        "accuracy": 1.0
+      },
+      "unsupported_claim": {
+        "count": 12,
+        "accuracy": 1.0
+      }
+    },
+    "difficulty_tier_accuracy": {
+      "Tier_3": {
+        "count": 390,
+        "accuracy": 0.9487
+      },
+      "Tier_4": {
+        "count": 102,
+        "accuracy": 0.9314
+      },
+      "Tier_1": {
+        "count": 64,
+        "accuracy": 0.8594
+      },
+      "Tier_2": {
+        "count": 44,
+        "accuracy": 0.8864
+      }
+    },
+    "source_length_accuracy": {
+      "40-70": {
+        "count": 600,
+        "accuracy": 0.9317
+      }
+    },
+    "claim_length_accuracy": {
+      "15-25": {
+        "count": 308,
+        "accuracy": 0.9091
+      },
+      ">25": {
+        "count": 289,
+        "accuracy": 0.9619
+      },
+      "<15": {
+        "count": 3,
+        "accuracy": 0.3333
+      }
+    },
+    "model_name": "Ablation_3_LoRA_Hard_Negatives",
+    "dataset_path": "apex_decision/benchmarks/grounding/test.json",
+    "total_evaluation_time_s": 52.91
+  },
+  "4_modernbert_lora_evidence_retrieval": {
+    "num_samples": 600,
+    "overall_accuracy": 0.9317,
+    "ci_95": [
+      0.91,
+      0.95
+    ],
+    "macro_f1": 0.9315,
+    "supported_metrics": {
+      "precision": 1.0,
+      "recall": 0.8651,
+      "f1": 0.9277,
+      "count": 304
+    },
+    "unsupported_metrics": {
+      "precision": 0.8783,
+      "recall": 1.0,
+      "f1": 0.9352,
+      "count": 296
+    },
+    "confusion_matrix": {
+      "true_negatives": 296,
+      "false_positives": 0,
+      "false_negatives": 41,
+      "true_positives": 263
+    },
+    "adversarial_overall_accuracy": 0.9453,
+    "brier_score": 0.0647,
+    "expected_calibration_error": 0.0625,
+    "accuracy_at_thresholds": {
+      "0.5": {
+        "coverage": 1.0,
+        "count": 600,
+        "accuracy": 0.9317
+      },
+      "0.7": {
+        "coverage": 0.9917,
+        "count": 595,
+        "accuracy": 0.9361
+      },
+      "0.8": {
+        "coverage": 0.9817,
+        "count": 589,
+        "accuracy": 0.9372
+      },
+      "0.9": {
+        "coverage": 0.9717,
+        "count": 583,
+        "accuracy": 0.9365
+      },
+      "0.95": {
+        "coverage": 0.9533,
+        "count": 572,
+        "accuracy": 0.9406
+      },
+      "0.99": {
+        "coverage": 0.91,
+        "count": 546,
+        "accuracy": 0.9432
+      }
+    },
+    "reliability_diagram": [
+      {
+        "bin_idx": 0,
+        "range": [
+          0.0,
+          0.1
+        ],
+        "count": 0,
+        "accuracy": 0.0,
+        "confidence": 0.05
+      },
+      {
+        "bin_idx": 1,
+        "range": [
+          0.1,
+          0.2
+        ],
+        "count": 0,
+        "accuracy": 0.0,
+        "confidence": 0.15
+      },
+      {
+        "bin_idx": 2,
+        "range": [
+          0.2,
+          0.3
+        ],
+        "count": 0,
+        "accuracy": 0.0,
+        "confidence": 0.25
+      },
+      {
+        "bin_idx": 3,
+        "range": [
+          0.3,
+          0.4
+        ],
+        "count": 0,
+        "accuracy": 0.0,
+        "confidence": 0.35
+      },
+      {
+        "bin_idx": 4,
+        "range": [
+          0.4,
+          0.5
+        ],
+        "count": 0,
+        "accuracy": 0.0,
+        "confidence": 0.45
+      },
+      {
+        "bin_idx": 5,
+        "range": [
+          0.5,
+          0.6
+        ],
+        "count": 2,
+        "accuracy": 0.5,
+        "confidence": 0.5054
+      },
+      {
+        "bin_idx": 6,
+        "range": [
+          0.6,
+          0.7
+        ],
+        "count": 3,
+        "accuracy": 0.3333,
+        "confidence": 0.6309
+      },
+      {
+        "bin_idx": 7,
+        "range": [
+          0.7,
+          0.8
+        ],
+        "count": 6,
+        "accuracy": 0.8333,
+        "confidence": 0.7659
+      },
+      {
+        "bin_idx": 8,
+        "range": [
+          0.8,
+          0.9
+        ],
+        "count": 6,
+        "accuracy": 1.0,
+        "confidence": 0.8608
+      },
+      {
+        "bin_idx": 9,
+        "range": [
+          0.9,
+          1.0
+        ],
+        "count": 583,
+        "accuracy": 0.9365,
+        "confidence": 0.9972
+      }
+    ],
+    "domain_accuracy": {
+      "science": {
+        "count": 186,
+        "accuracy": 0.9624
+      },
+      "medicine": {
+        "count": 186,
+        "accuracy": 0.8172
+      },
+      "finance": {
+        "count": 186,
+        "accuracy": 1.0
+      },
+      "technology": {
+        "count": 42,
+        "accuracy": 1.0
+      }
+    },
+    "failure_mode_accuracy": {
+      "scope_mismatch": {
+        "count": 20,
+        "accuracy": 1.0
+      },
+      "quantifier_mismatch": {
+        "count": 20,
+        "accuracy": 1.0
+      },
+      "comparative_claim_mismatch": {
+        "count": 20,
+        "accuracy": 1.0
+      },
+      "temporal_ordering_error": {
+        "count": 20,
+        "accuracy": 1.0
+      },
+      "attribution_mismatch": {
+        "count": 20,
+        "accuracy": 1.0
+      },
+      "partial_support_claim": {
+        "count": 20,
+        "accuracy": 1.0
+      },
+      "lexical_overlap_unsupported": {
+        "count": 20,
+        "accuracy": 1.0
+      },
+      "direct_entailment": {
+        "count": 234,
+        "accuracy": 0.8547
+      },
+      "multi_sentence_reasoning": {
+        "count": 35,
+        "accuracy": 0.9429
+      },
+      "double_negation": {
+        "count": 35,
+        "accuracy": 0.8571
+      },
+      "direct_contradiction": {
+        "count": 16,
+        "accuracy": 1.0
+      },
+      "negation_reversal": {
+        "count": 16,
+        "accuracy": 1.0
+      },
+      "entity_substitution": {
+        "count": 16,
+        "accuracy": 1.0
+      },
+      "number_mismatch": {
+        "count": 16,
+        "accuracy": 1.0
+      },
+      "unit_mismatch": {
+        "count": 16,
+        "accuracy": 1.0
+      },
+      "date_time_mismatch": {
+        "count": 16,
+        "accuracy": 1.0
+      },
+      "population_mismatch": {
+        "count": 16,
+        "accuracy": 1.0
+      },
+      "causal_overclaim": {
+        "count": 16,
+        "accuracy": 1.0
+      },
+      "correlation_vs_causation": {
+        "count": 16,
+        "accuracy": 1.0
+      },
+      "unsupported_claim": {
+        "count": 12,
+        "accuracy": 1.0
+      }
+    },
+    "difficulty_tier_accuracy": {
+      "Tier_3": {
+        "count": 390,
+        "accuracy": 0.9487
+      },
+      "Tier_4": {
+        "count": 102,
+        "accuracy": 0.9314
+      },
+      "Tier_1": {
+        "count": 64,
+        "accuracy": 0.8594
+      },
+      "Tier_2": {
+        "count": 44,
+        "accuracy": 0.8864
+      }
+    },
+    "source_length_accuracy": {
+      "40-70": {
+        "count": 600,
+        "accuracy": 0.9317
+      }
+    },
+    "claim_length_accuracy": {
+      "15-25": {
+        "count": 308,
+        "accuracy": 0.9091
+      },
+      ">25": {
+        "count": 289,
+        "accuracy": 0.9619
+      },
+      "<15": {
+        "count": 3,
+        "accuracy": 0.3333
+      }
+    },
+    "model_name": "Ablation_4_LoRA_Evidence_Retrieval",
+    "dataset_path": "apex_decision/benchmarks/grounding/test.json",
+    "total_evaluation_time_s": 80.74
+  },
+  "5_full_apexdecision_pipeline": {
+    "num_samples": 600,
+    "overall_accuracy": 0.8783,
+    "ci_95": [
+      0.8517,
+      0.905
+    ],
+    "macro_f1": 0.8769,
+    "supported_metrics": {
+      "precision": 1.0,
+      "recall": 0.7599,
+      "f1": 0.8636,
+      "count": 304
+    },
+    "unsupported_metrics": {
+      "precision": 0.8022,
+      "recall": 1.0,
+      "f1": 0.8902,
+      "count": 296
+    },
+    "confusion_matrix": {
+      "true_negatives": 296,
+      "false_positives": 0,
+      "false_negatives": 73,
+      "true_positives": 231
+    },
+    "adversarial_overall_accuracy": 0.9147,
+    "brier_score": 0.1146,
+    "expected_calibration_error": 0.1141,
+    "accuracy_at_thresholds": {
+      "0.5": {
+        "coverage": 1.0,
+        "count": 600,
+        "accuracy": 0.8783
+      },
+      "0.7": {
+        "coverage": 0.9917,
+        "count": 595,
+        "accuracy": 0.8824
+      },
+      "0.8": {
+        "coverage": 0.985,
+        "count": 591,
+        "accuracy": 0.8832
+      },
+      "0.9": {
+        "coverage": 0.975,
+        "count": 585,
+        "accuracy": 0.8821
+      },
+      "0.95": {
+        "coverage": 0.9617,
+        "count": 577,
+        "accuracy": 0.8856
+      },
+      "0.99": {
+        "coverage": 0.8667,
+        "count": 520,
+        "accuracy": 0.9404
+      }
+    },
+    "reliability_diagram": [
+      {
+        "bin_idx": 0,
+        "range": [
+          0.0,
+          0.1
+        ],
+        "count": 0,
+        "accuracy": 0.0,
+        "confidence": 0.05
+      },
+      {
+        "bin_idx": 1,
+        "range": [
+          0.1,
+          0.2
+        ],
+        "count": 0,
+        "accuracy": 0.0,
+        "confidence": 0.15
+      },
+      {
+        "bin_idx": 2,
+        "range": [
+          0.2,
+          0.3
+        ],
+        "count": 0,
+        "accuracy": 0.0,
+        "confidence": 0.25
+      },
+      {
+        "bin_idx": 3,
+        "range": [
+          0.3,
+          0.4
+        ],
+        "count": 0,
+        "accuracy": 0.0,
+        "confidence": 0.35
+      },
+      {
+        "bin_idx": 4,
+        "range": [
+          0.4,
+          0.5
+        ],
+        "count": 0,
+        "accuracy": 0.0,
+        "confidence": 0.45
+      },
+      {
+        "bin_idx": 5,
+        "range": [
+          0.5,
+          0.6
+        ],
+        "count": 2,
+        "accuracy": 0.5,
+        "confidence": 0.5054
+      },
+      {
+        "bin_idx": 6,
+        "range": [
+          0.6,
+          0.7
+        ],
+        "count": 3,
+        "accuracy": 0.3333,
+        "confidence": 0.6309
+      },
+      {
+        "bin_idx": 7,
+        "range": [
+          0.7,
+          0.8
+        ],
+        "count": 4,
+        "accuracy": 0.75,
+        "confidence": 0.7614
+      },
+      {
+        "bin_idx": 8,
+        "range": [
+          0.8,
+          0.9
+        ],
+        "count": 6,
+        "accuracy": 1.0,
+        "confidence": 0.8608
+      },
+      {
+        "bin_idx": 9,
+        "range": [
+          0.9,
+          1.0
+        ],
+        "count": 585,
+        "accuracy": 0.8821,
+        "confidence": 0.996
+      }
+    ],
+    "domain_accuracy": {
+      "science": {
+        "count": 186,
+        "accuracy": 0.9247
+      },
+      "medicine": {
+        "count": 186,
+        "accuracy": 0.7688
+      },
+      "finance": {
+        "count": 186,
+        "accuracy": 0.9194
+      },
+      "technology": {
+        "count": 42,
+        "accuracy": 0.9762
+      }
+    },
+    "failure_mode_accuracy": {
+      "scope_mismatch": {
+        "count": 20,
+        "accuracy": 1.0
+      },
+      "quantifier_mismatch": {
+        "count": 20,
+        "accuracy": 1.0
+      },
+      "comparative_claim_mismatch": {
+        "count": 20,
+        "accuracy": 1.0
+      },
+      "temporal_ordering_error": {
+        "count": 20,
+        "accuracy": 1.0
+      },
+      "attribution_mismatch": {
+        "count": 20,
+        "accuracy": 1.0
+      },
+      "partial_support_claim": {
+        "count": 20,
+        "accuracy": 1.0
+      },
+      "lexical_overlap_unsupported": {
+        "count": 20,
+        "accuracy": 1.0
+      },
+      "direct_entailment": {
+        "count": 234,
+        "accuracy": 0.8162
+      },
+      "multi_sentence_reasoning": {
+        "count": 35,
+        "accuracy": 0.6857
+      },
+      "double_negation": {
+        "count": 35,
+        "accuracy": 0.4571
+      },
+      "direct_contradiction": {
+        "count": 16,
+        "accuracy": 1.0
+      },
+      "negation_reversal": {
+        "count": 16,
+        "accuracy": 1.0
+      },
+      "entity_substitution": {
+        "count": 16,
+        "accuracy": 1.0
+      },
+      "number_mismatch": {
+        "count": 16,
+        "accuracy": 1.0
+      },
+      "unit_mismatch": {
+        "count": 16,
+        "accuracy": 1.0
+      },
+      "date_time_mismatch": {
+        "count": 16,
+        "accuracy": 1.0
+      },
+      "population_mismatch": {
+        "count": 16,
+        "accuracy": 1.0
+      },
+      "causal_overclaim": {
+        "count": 16,
+        "accuracy": 1.0
+      },
+      "correlation_vs_causation": {
+        "count": 16,
+        "accuracy": 1.0
+      },
+      "unsupported_claim": {
+        "count": 12,
+        "accuracy": 1.0
+      }
+    },
+    "difficulty_tier_accuracy": {
+      "Tier_3": {
+        "count": 390,
+        "accuracy": 0.9487
+      },
+      "Tier_4": {
+        "count": 102,
+        "accuracy": 0.7059
+      },
+      "Tier_1": {
+        "count": 64,
+        "accuracy": 0.8594
+      },
+      "Tier_2": {
+        "count": 44,
+        "accuracy": 0.6818
+      }
+    },
+    "source_length_accuracy": {
+      "40-70": {
+        "count": 600,
+        "accuracy": 0.8783
+      }
+    },
+    "claim_length_accuracy": {
+      "15-25": {
+        "count": 308,
+        "accuracy": 0.9026
+      },
+      ">25": {
+        "count": 289,
+        "accuracy": 0.8581
+      },
+      "<15": {
+        "count": 3,
+        "accuracy": 0.3333
+      }
+    },
+    "model_name": "Ablation_5_Full_ApexDecision_Pipeline",
+    "dataset_path": "apex_decision/benchmarks/grounding/test.json",
+    "total_evaluation_time_s": 80.96
+  }
+}

@@ -1,0 +1,4002 @@
+[
+  {
+    "id": "pool_rej_0000",
+    "category": "logic:rejection_verbs",
+    "state": "Company_000 officially rescinded negotiations and formally discarded the proposed buyout of TargetSoft_000.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_000 complete the acquisition of TargetSoft_000?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0001",
+    "category": "logic:rejection_verbs",
+    "state": "Company_001 officially rescinded negotiations and formally discarded the proposed buyout of TargetSoft_001.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_001 complete the acquisition of TargetSoft_001?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0002",
+    "category": "logic:rejection_verbs",
+    "state": "Company_002 officially rejected negotiations and formally discarded the proposed buyout of TargetSoft_002.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_002 complete the acquisition of TargetSoft_002?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0003",
+    "category": "logic:rejection_verbs",
+    "state": "Company_003 officially rejected negotiations and formally discarded the proposed buyout of TargetSoft_003.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_003 complete the acquisition of TargetSoft_003?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0004",
+    "category": "logic:rejection_verbs",
+    "state": "Company_004 officially declined negotiations and formally discarded the proposed buyout of TargetSoft_004.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_004 complete the acquisition of TargetSoft_004?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0005",
+    "category": "logic:rejection_verbs",
+    "state": "Company_005 officially rescinded negotiations and formally discarded the proposed buyout of TargetSoft_005.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_005 complete the acquisition of TargetSoft_005?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0006",
+    "category": "logic:rejection_verbs",
+    "state": "Company_006 officially declined negotiations and formally discarded the proposed buyout of TargetSoft_006.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_006 complete the acquisition of TargetSoft_006?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0007",
+    "category": "logic:rejection_verbs",
+    "state": "Company_007 officially rescinded negotiations and formally discarded the proposed buyout of TargetSoft_007.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_007 complete the acquisition of TargetSoft_007?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0008",
+    "category": "logic:rejection_verbs",
+    "state": "Company_008 officially cancelled negotiations and formally discarded the proposed buyout of TargetSoft_008.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_008 complete the acquisition of TargetSoft_008?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0009",
+    "category": "logic:rejection_verbs",
+    "state": "Company_009 officially dissolved negotiations and formally discarded the proposed buyout of TargetSoft_009.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_009 complete the acquisition of TargetSoft_009?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0010",
+    "category": "logic:rejection_verbs",
+    "state": "Company_010 officially rescinded negotiations and formally discarded the proposed buyout of TargetSoft_010.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_010 complete the acquisition of TargetSoft_010?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0011",
+    "category": "logic:rejection_verbs",
+    "state": "Company_011 officially terminated negotiations and formally discarded the proposed buyout of TargetSoft_011.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_011 complete the acquisition of TargetSoft_011?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0012",
+    "category": "logic:rejection_verbs",
+    "state": "Company_012 officially dissolved negotiations and formally discarded the proposed buyout of TargetSoft_012.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_012 complete the acquisition of TargetSoft_012?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0013",
+    "category": "logic:rejection_verbs",
+    "state": "Company_013 officially dissolved negotiations and formally discarded the proposed buyout of TargetSoft_013.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_013 complete the acquisition of TargetSoft_013?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0014",
+    "category": "logic:rejection_verbs",
+    "state": "Company_014 officially terminated negotiations and formally discarded the proposed buyout of TargetSoft_014.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_014 complete the acquisition of TargetSoft_014?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0015",
+    "category": "logic:rejection_verbs",
+    "state": "Company_015 officially terminated negotiations and formally discarded the proposed buyout of TargetSoft_015.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_015 complete the acquisition of TargetSoft_015?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0016",
+    "category": "logic:rejection_verbs",
+    "state": "Company_016 officially terminated negotiations and formally discarded the proposed buyout of TargetSoft_016.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_016 complete the acquisition of TargetSoft_016?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0017",
+    "category": "logic:rejection_verbs",
+    "state": "Company_017 officially declined negotiations and formally discarded the proposed buyout of TargetSoft_017.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_017 complete the acquisition of TargetSoft_017?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0018",
+    "category": "logic:rejection_verbs",
+    "state": "Company_018 officially dissolved negotiations and formally discarded the proposed buyout of TargetSoft_018.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_018 complete the acquisition of TargetSoft_018?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0019",
+    "category": "logic:rejection_verbs",
+    "state": "Company_019 officially rescinded negotiations and formally discarded the proposed buyout of TargetSoft_019.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_019 complete the acquisition of TargetSoft_019?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0020",
+    "category": "logic:rejection_verbs",
+    "state": "Company_020 officially cancelled negotiations and formally discarded the proposed buyout of TargetSoft_020.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_020 complete the acquisition of TargetSoft_020?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0021",
+    "category": "logic:rejection_verbs",
+    "state": "Company_021 officially declined negotiations and formally discarded the proposed buyout of TargetSoft_021.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_021 complete the acquisition of TargetSoft_021?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0022",
+    "category": "logic:rejection_verbs",
+    "state": "Company_022 officially rejected negotiations and formally discarded the proposed buyout of TargetSoft_022.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_022 complete the acquisition of TargetSoft_022?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0023",
+    "category": "logic:rejection_verbs",
+    "state": "Company_023 officially dissolved negotiations and formally discarded the proposed buyout of TargetSoft_023.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_023 complete the acquisition of TargetSoft_023?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0024",
+    "category": "logic:rejection_verbs",
+    "state": "Company_024 officially rescinded negotiations and formally discarded the proposed buyout of TargetSoft_024.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_024 complete the acquisition of TargetSoft_024?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0025",
+    "category": "logic:rejection_verbs",
+    "state": "Company_025 officially revoked negotiations and formally discarded the proposed buyout of TargetSoft_025.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_025 complete the acquisition of TargetSoft_025?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0026",
+    "category": "logic:rejection_verbs",
+    "state": "Company_026 officially rescinded negotiations and formally discarded the proposed buyout of TargetSoft_026.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_026 complete the acquisition of TargetSoft_026?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0027",
+    "category": "logic:rejection_verbs",
+    "state": "Company_027 officially declined negotiations and formally discarded the proposed buyout of TargetSoft_027.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_027 complete the acquisition of TargetSoft_027?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0028",
+    "category": "logic:rejection_verbs",
+    "state": "Company_028 officially terminated negotiations and formally discarded the proposed buyout of TargetSoft_028.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_028 complete the acquisition of TargetSoft_028?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0029",
+    "category": "logic:rejection_verbs",
+    "state": "Company_029 officially revoked negotiations and formally discarded the proposed buyout of TargetSoft_029.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_029 complete the acquisition of TargetSoft_029?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0030",
+    "category": "logic:rejection_verbs",
+    "state": "Company_030 officially declined negotiations and formally discarded the proposed buyout of TargetSoft_030.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_030 complete the acquisition of TargetSoft_030?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0031",
+    "category": "logic:rejection_verbs",
+    "state": "Company_031 officially rescinded negotiations and formally discarded the proposed buyout of TargetSoft_031.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_031 complete the acquisition of TargetSoft_031?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0032",
+    "category": "logic:rejection_verbs",
+    "state": "Company_032 officially cancelled negotiations and formally discarded the proposed buyout of TargetSoft_032.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_032 complete the acquisition of TargetSoft_032?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0033",
+    "category": "logic:rejection_verbs",
+    "state": "Company_033 officially declined negotiations and formally discarded the proposed buyout of TargetSoft_033.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_033 complete the acquisition of TargetSoft_033?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0034",
+    "category": "logic:rejection_verbs",
+    "state": "Company_034 officially cancelled negotiations and formally discarded the proposed buyout of TargetSoft_034.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_034 complete the acquisition of TargetSoft_034?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0035",
+    "category": "logic:rejection_verbs",
+    "state": "Company_035 officially revoked negotiations and formally discarded the proposed buyout of TargetSoft_035.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_035 complete the acquisition of TargetSoft_035?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0036",
+    "category": "logic:rejection_verbs",
+    "state": "Company_036 officially rejected negotiations and formally discarded the proposed buyout of TargetSoft_036.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_036 complete the acquisition of TargetSoft_036?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0037",
+    "category": "logic:rejection_verbs",
+    "state": "Company_037 officially dissolved negotiations and formally discarded the proposed buyout of TargetSoft_037.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_037 complete the acquisition of TargetSoft_037?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0038",
+    "category": "logic:rejection_verbs",
+    "state": "Company_038 officially dissolved negotiations and formally discarded the proposed buyout of TargetSoft_038.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_038 complete the acquisition of TargetSoft_038?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0039",
+    "category": "logic:rejection_verbs",
+    "state": "Company_039 officially declined negotiations and formally discarded the proposed buyout of TargetSoft_039.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_039 complete the acquisition of TargetSoft_039?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0040",
+    "category": "logic:rejection_verbs",
+    "state": "Company_040 officially revoked negotiations and formally discarded the proposed buyout of TargetSoft_040.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_040 complete the acquisition of TargetSoft_040?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0041",
+    "category": "logic:rejection_verbs",
+    "state": "Company_041 officially cancelled negotiations and formally discarded the proposed buyout of TargetSoft_041.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_041 complete the acquisition of TargetSoft_041?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0042",
+    "category": "logic:rejection_verbs",
+    "state": "Company_042 officially revoked negotiations and formally discarded the proposed buyout of TargetSoft_042.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_042 complete the acquisition of TargetSoft_042?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0043",
+    "category": "logic:rejection_verbs",
+    "state": "Company_043 officially terminated negotiations and formally discarded the proposed buyout of TargetSoft_043.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_043 complete the acquisition of TargetSoft_043?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0044",
+    "category": "logic:rejection_verbs",
+    "state": "Company_044 officially declined negotiations and formally discarded the proposed buyout of TargetSoft_044.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_044 complete the acquisition of TargetSoft_044?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0045",
+    "category": "logic:rejection_verbs",
+    "state": "Company_045 officially terminated negotiations and formally discarded the proposed buyout of TargetSoft_045.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_045 complete the acquisition of TargetSoft_045?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0046",
+    "category": "logic:rejection_verbs",
+    "state": "Company_046 officially rejected negotiations and formally discarded the proposed buyout of TargetSoft_046.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_046 complete the acquisition of TargetSoft_046?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0047",
+    "category": "logic:rejection_verbs",
+    "state": "Company_047 officially revoked negotiations and formally discarded the proposed buyout of TargetSoft_047.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_047 complete the acquisition of TargetSoft_047?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0048",
+    "category": "logic:rejection_verbs",
+    "state": "Company_048 officially revoked negotiations and formally discarded the proposed buyout of TargetSoft_048.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_048 complete the acquisition of TargetSoft_048?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0049",
+    "category": "logic:rejection_verbs",
+    "state": "Company_049 officially revoked negotiations and formally discarded the proposed buyout of TargetSoft_049.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_049 complete the acquisition of TargetSoft_049?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0050",
+    "category": "logic:rejection_verbs",
+    "state": "Company_050 officially revoked negotiations and formally discarded the proposed buyout of TargetSoft_050.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_050 complete the acquisition of TargetSoft_050?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0051",
+    "category": "logic:rejection_verbs",
+    "state": "Company_051 officially rejected negotiations and formally discarded the proposed buyout of TargetSoft_051.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_051 complete the acquisition of TargetSoft_051?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0052",
+    "category": "logic:rejection_verbs",
+    "state": "Company_052 officially cancelled negotiations and formally discarded the proposed buyout of TargetSoft_052.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_052 complete the acquisition of TargetSoft_052?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0053",
+    "category": "logic:rejection_verbs",
+    "state": "Company_053 officially rescinded negotiations and formally discarded the proposed buyout of TargetSoft_053.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_053 complete the acquisition of TargetSoft_053?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0054",
+    "category": "logic:rejection_verbs",
+    "state": "Company_054 officially rejected negotiations and formally discarded the proposed buyout of TargetSoft_054.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_054 complete the acquisition of TargetSoft_054?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0055",
+    "category": "logic:rejection_verbs",
+    "state": "Company_055 officially cancelled negotiations and formally discarded the proposed buyout of TargetSoft_055.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_055 complete the acquisition of TargetSoft_055?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0056",
+    "category": "logic:rejection_verbs",
+    "state": "Company_056 officially dissolved negotiations and formally discarded the proposed buyout of TargetSoft_056.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_056 complete the acquisition of TargetSoft_056?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0057",
+    "category": "logic:rejection_verbs",
+    "state": "Company_057 officially declined negotiations and formally discarded the proposed buyout of TargetSoft_057.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_057 complete the acquisition of TargetSoft_057?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0058",
+    "category": "logic:rejection_verbs",
+    "state": "Company_058 officially cancelled negotiations and formally discarded the proposed buyout of TargetSoft_058.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_058 complete the acquisition of TargetSoft_058?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0059",
+    "category": "logic:rejection_verbs",
+    "state": "Company_059 officially declined negotiations and formally discarded the proposed buyout of TargetSoft_059.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_059 complete the acquisition of TargetSoft_059?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0060",
+    "category": "logic:rejection_verbs",
+    "state": "Company_060 officially dissolved negotiations and formally discarded the proposed buyout of TargetSoft_060.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_060 complete the acquisition of TargetSoft_060?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0061",
+    "category": "logic:rejection_verbs",
+    "state": "Company_061 officially cancelled negotiations and formally discarded the proposed buyout of TargetSoft_061.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_061 complete the acquisition of TargetSoft_061?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0062",
+    "category": "logic:rejection_verbs",
+    "state": "Company_062 officially revoked negotiations and formally discarded the proposed buyout of TargetSoft_062.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_062 complete the acquisition of TargetSoft_062?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0063",
+    "category": "logic:rejection_verbs",
+    "state": "Company_063 officially rejected negotiations and formally discarded the proposed buyout of TargetSoft_063.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_063 complete the acquisition of TargetSoft_063?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0064",
+    "category": "logic:rejection_verbs",
+    "state": "Company_064 officially dissolved negotiations and formally discarded the proposed buyout of TargetSoft_064.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_064 complete the acquisition of TargetSoft_064?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0065",
+    "category": "logic:rejection_verbs",
+    "state": "Company_065 officially cancelled negotiations and formally discarded the proposed buyout of TargetSoft_065.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_065 complete the acquisition of TargetSoft_065?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0066",
+    "category": "logic:rejection_verbs",
+    "state": "Company_066 officially rescinded negotiations and formally discarded the proposed buyout of TargetSoft_066.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_066 complete the acquisition of TargetSoft_066?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0067",
+    "category": "logic:rejection_verbs",
+    "state": "Company_067 officially rescinded negotiations and formally discarded the proposed buyout of TargetSoft_067.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_067 complete the acquisition of TargetSoft_067?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0068",
+    "category": "logic:rejection_verbs",
+    "state": "Company_068 officially terminated negotiations and formally discarded the proposed buyout of TargetSoft_068.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_068 complete the acquisition of TargetSoft_068?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0069",
+    "category": "logic:rejection_verbs",
+    "state": "Company_069 officially cancelled negotiations and formally discarded the proposed buyout of TargetSoft_069.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_069 complete the acquisition of TargetSoft_069?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0070",
+    "category": "logic:rejection_verbs",
+    "state": "Company_070 officially rejected negotiations and formally discarded the proposed buyout of TargetSoft_070.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_070 complete the acquisition of TargetSoft_070?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0071",
+    "category": "logic:rejection_verbs",
+    "state": "Company_071 officially revoked negotiations and formally discarded the proposed buyout of TargetSoft_071.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_071 complete the acquisition of TargetSoft_071?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0072",
+    "category": "logic:rejection_verbs",
+    "state": "Company_072 officially terminated negotiations and formally discarded the proposed buyout of TargetSoft_072.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_072 complete the acquisition of TargetSoft_072?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0073",
+    "category": "logic:rejection_verbs",
+    "state": "Company_073 officially cancelled negotiations and formally discarded the proposed buyout of TargetSoft_073.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_073 complete the acquisition of TargetSoft_073?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0074",
+    "category": "logic:rejection_verbs",
+    "state": "Company_074 officially revoked negotiations and formally discarded the proposed buyout of TargetSoft_074.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_074 complete the acquisition of TargetSoft_074?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0075",
+    "category": "logic:rejection_verbs",
+    "state": "Company_075 officially rejected negotiations and formally discarded the proposed buyout of TargetSoft_075.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_075 complete the acquisition of TargetSoft_075?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0076",
+    "category": "logic:rejection_verbs",
+    "state": "Company_076 officially rejected negotiations and formally discarded the proposed buyout of TargetSoft_076.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_076 complete the acquisition of TargetSoft_076?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0077",
+    "category": "logic:rejection_verbs",
+    "state": "Company_077 officially terminated negotiations and formally discarded the proposed buyout of TargetSoft_077.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_077 complete the acquisition of TargetSoft_077?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0078",
+    "category": "logic:rejection_verbs",
+    "state": "Company_078 officially terminated negotiations and formally discarded the proposed buyout of TargetSoft_078.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_078 complete the acquisition of TargetSoft_078?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0079",
+    "category": "logic:rejection_verbs",
+    "state": "Company_079 officially cancelled negotiations and formally discarded the proposed buyout of TargetSoft_079.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_079 complete the acquisition of TargetSoft_079?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0080",
+    "category": "logic:rejection_verbs",
+    "state": "Company_080 officially revoked negotiations and formally discarded the proposed buyout of TargetSoft_080.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_080 complete the acquisition of TargetSoft_080?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0081",
+    "category": "logic:rejection_verbs",
+    "state": "Company_081 officially dissolved negotiations and formally discarded the proposed buyout of TargetSoft_081.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_081 complete the acquisition of TargetSoft_081?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0082",
+    "category": "logic:rejection_verbs",
+    "state": "Company_082 officially rescinded negotiations and formally discarded the proposed buyout of TargetSoft_082.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_082 complete the acquisition of TargetSoft_082?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0083",
+    "category": "logic:rejection_verbs",
+    "state": "Company_083 officially revoked negotiations and formally discarded the proposed buyout of TargetSoft_083.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_083 complete the acquisition of TargetSoft_083?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0084",
+    "category": "logic:rejection_verbs",
+    "state": "Company_084 officially rejected negotiations and formally discarded the proposed buyout of TargetSoft_084.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_084 complete the acquisition of TargetSoft_084?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0085",
+    "category": "logic:rejection_verbs",
+    "state": "Company_085 officially dissolved negotiations and formally discarded the proposed buyout of TargetSoft_085.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_085 complete the acquisition of TargetSoft_085?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0086",
+    "category": "logic:rejection_verbs",
+    "state": "Company_086 officially rejected negotiations and formally discarded the proposed buyout of TargetSoft_086.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_086 complete the acquisition of TargetSoft_086?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0087",
+    "category": "logic:rejection_verbs",
+    "state": "Company_087 officially dissolved negotiations and formally discarded the proposed buyout of TargetSoft_087.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_087 complete the acquisition of TargetSoft_087?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0088",
+    "category": "logic:rejection_verbs",
+    "state": "Company_088 officially cancelled negotiations and formally discarded the proposed buyout of TargetSoft_088.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_088 complete the acquisition of TargetSoft_088?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0089",
+    "category": "logic:rejection_verbs",
+    "state": "Company_089 officially rescinded negotiations and formally discarded the proposed buyout of TargetSoft_089.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_089 complete the acquisition of TargetSoft_089?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0090",
+    "category": "logic:rejection_verbs",
+    "state": "Company_090 officially declined negotiations and formally discarded the proposed buyout of TargetSoft_090.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_090 complete the acquisition of TargetSoft_090?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0091",
+    "category": "logic:rejection_verbs",
+    "state": "Company_091 officially cancelled negotiations and formally discarded the proposed buyout of TargetSoft_091.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_091 complete the acquisition of TargetSoft_091?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0092",
+    "category": "logic:rejection_verbs",
+    "state": "Company_092 officially rejected negotiations and formally discarded the proposed buyout of TargetSoft_092.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_092 complete the acquisition of TargetSoft_092?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0093",
+    "category": "logic:rejection_verbs",
+    "state": "Company_093 officially dissolved negotiations and formally discarded the proposed buyout of TargetSoft_093.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_093 complete the acquisition of TargetSoft_093?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0094",
+    "category": "logic:rejection_verbs",
+    "state": "Company_094 officially rejected negotiations and formally discarded the proposed buyout of TargetSoft_094.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_094 complete the acquisition of TargetSoft_094?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0095",
+    "category": "logic:rejection_verbs",
+    "state": "Company_095 officially revoked negotiations and formally discarded the proposed buyout of TargetSoft_095.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_095 complete the acquisition of TargetSoft_095?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0096",
+    "category": "logic:rejection_verbs",
+    "state": "Company_096 officially rescinded negotiations and formally discarded the proposed buyout of TargetSoft_096.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_096 complete the acquisition of TargetSoft_096?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0097",
+    "category": "logic:rejection_verbs",
+    "state": "Company_097 officially revoked negotiations and formally discarded the proposed buyout of TargetSoft_097.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_097 complete the acquisition of TargetSoft_097?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0098",
+    "category": "logic:rejection_verbs",
+    "state": "Company_098 officially revoked negotiations and formally discarded the proposed buyout of TargetSoft_098.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_098 complete the acquisition of TargetSoft_098?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0099",
+    "category": "logic:rejection_verbs",
+    "state": "Company_099 officially cancelled negotiations and formally discarded the proposed buyout of TargetSoft_099.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_099 complete the acquisition of TargetSoft_099?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0100",
+    "category": "logic:rejection_verbs",
+    "state": "Company_100 officially revoked negotiations and formally discarded the proposed buyout of TargetSoft_100.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_100 complete the acquisition of TargetSoft_100?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0101",
+    "category": "logic:rejection_verbs",
+    "state": "Company_101 officially terminated negotiations and formally discarded the proposed buyout of TargetSoft_101.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_101 complete the acquisition of TargetSoft_101?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0102",
+    "category": "logic:rejection_verbs",
+    "state": "Company_102 officially terminated negotiations and formally discarded the proposed buyout of TargetSoft_102.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_102 complete the acquisition of TargetSoft_102?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0103",
+    "category": "logic:rejection_verbs",
+    "state": "Company_103 officially revoked negotiations and formally discarded the proposed buyout of TargetSoft_103.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_103 complete the acquisition of TargetSoft_103?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0104",
+    "category": "logic:rejection_verbs",
+    "state": "Company_104 officially rescinded negotiations and formally discarded the proposed buyout of TargetSoft_104.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_104 complete the acquisition of TargetSoft_104?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0105",
+    "category": "logic:rejection_verbs",
+    "state": "Company_105 officially revoked negotiations and formally discarded the proposed buyout of TargetSoft_105.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_105 complete the acquisition of TargetSoft_105?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0106",
+    "category": "logic:rejection_verbs",
+    "state": "Company_106 officially rejected negotiations and formally discarded the proposed buyout of TargetSoft_106.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_106 complete the acquisition of TargetSoft_106?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0107",
+    "category": "logic:rejection_verbs",
+    "state": "Company_107 officially rejected negotiations and formally discarded the proposed buyout of TargetSoft_107.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_107 complete the acquisition of TargetSoft_107?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0108",
+    "category": "logic:rejection_verbs",
+    "state": "Company_108 officially rescinded negotiations and formally discarded the proposed buyout of TargetSoft_108.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_108 complete the acquisition of TargetSoft_108?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0109",
+    "category": "logic:rejection_verbs",
+    "state": "Company_109 officially cancelled negotiations and formally discarded the proposed buyout of TargetSoft_109.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_109 complete the acquisition of TargetSoft_109?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0110",
+    "category": "logic:rejection_verbs",
+    "state": "Company_110 officially terminated negotiations and formally discarded the proposed buyout of TargetSoft_110.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_110 complete the acquisition of TargetSoft_110?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0111",
+    "category": "logic:rejection_verbs",
+    "state": "Company_111 officially terminated negotiations and formally discarded the proposed buyout of TargetSoft_111.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_111 complete the acquisition of TargetSoft_111?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0112",
+    "category": "logic:rejection_verbs",
+    "state": "Company_112 officially cancelled negotiations and formally discarded the proposed buyout of TargetSoft_112.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_112 complete the acquisition of TargetSoft_112?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0113",
+    "category": "logic:rejection_verbs",
+    "state": "Company_113 officially revoked negotiations and formally discarded the proposed buyout of TargetSoft_113.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_113 complete the acquisition of TargetSoft_113?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0114",
+    "category": "logic:rejection_verbs",
+    "state": "Company_114 officially rescinded negotiations and formally discarded the proposed buyout of TargetSoft_114.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_114 complete the acquisition of TargetSoft_114?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0115",
+    "category": "logic:rejection_verbs",
+    "state": "Company_115 officially dissolved negotiations and formally discarded the proposed buyout of TargetSoft_115.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_115 complete the acquisition of TargetSoft_115?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0116",
+    "category": "logic:rejection_verbs",
+    "state": "Company_116 officially declined negotiations and formally discarded the proposed buyout of TargetSoft_116.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_116 complete the acquisition of TargetSoft_116?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0117",
+    "category": "logic:rejection_verbs",
+    "state": "Company_117 officially declined negotiations and formally discarded the proposed buyout of TargetSoft_117.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_117 complete the acquisition of TargetSoft_117?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0118",
+    "category": "logic:rejection_verbs",
+    "state": "Company_118 officially revoked negotiations and formally discarded the proposed buyout of TargetSoft_118.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_118 complete the acquisition of TargetSoft_118?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0119",
+    "category": "logic:rejection_verbs",
+    "state": "Company_119 officially cancelled negotiations and formally discarded the proposed buyout of TargetSoft_119.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_119 complete the acquisition of TargetSoft_119?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0120",
+    "category": "logic:rejection_verbs",
+    "state": "Company_120 officially rescinded negotiations and formally discarded the proposed buyout of TargetSoft_120.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_120 complete the acquisition of TargetSoft_120?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0121",
+    "category": "logic:rejection_verbs",
+    "state": "Company_121 officially terminated negotiations and formally discarded the proposed buyout of TargetSoft_121.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_121 complete the acquisition of TargetSoft_121?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0122",
+    "category": "logic:rejection_verbs",
+    "state": "Company_122 officially dissolved negotiations and formally discarded the proposed buyout of TargetSoft_122.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_122 complete the acquisition of TargetSoft_122?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0123",
+    "category": "logic:rejection_verbs",
+    "state": "Company_123 officially terminated negotiations and formally discarded the proposed buyout of TargetSoft_123.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_123 complete the acquisition of TargetSoft_123?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0124",
+    "category": "logic:rejection_verbs",
+    "state": "Company_124 officially revoked negotiations and formally discarded the proposed buyout of TargetSoft_124.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_124 complete the acquisition of TargetSoft_124?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0125",
+    "category": "logic:rejection_verbs",
+    "state": "Company_125 officially rejected negotiations and formally discarded the proposed buyout of TargetSoft_125.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_125 complete the acquisition of TargetSoft_125?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0126",
+    "category": "logic:rejection_verbs",
+    "state": "Company_126 officially cancelled negotiations and formally discarded the proposed buyout of TargetSoft_126.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_126 complete the acquisition of TargetSoft_126?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0127",
+    "category": "logic:rejection_verbs",
+    "state": "Company_127 officially declined negotiations and formally discarded the proposed buyout of TargetSoft_127.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_127 complete the acquisition of TargetSoft_127?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0128",
+    "category": "logic:rejection_verbs",
+    "state": "Company_128 officially cancelled negotiations and formally discarded the proposed buyout of TargetSoft_128.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_128 complete the acquisition of TargetSoft_128?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0129",
+    "category": "logic:rejection_verbs",
+    "state": "Company_129 officially dissolved negotiations and formally discarded the proposed buyout of TargetSoft_129.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_129 complete the acquisition of TargetSoft_129?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0130",
+    "category": "logic:rejection_verbs",
+    "state": "Company_130 officially revoked negotiations and formally discarded the proposed buyout of TargetSoft_130.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_130 complete the acquisition of TargetSoft_130?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0131",
+    "category": "logic:rejection_verbs",
+    "state": "Company_131 officially cancelled negotiations and formally discarded the proposed buyout of TargetSoft_131.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_131 complete the acquisition of TargetSoft_131?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0132",
+    "category": "logic:rejection_verbs",
+    "state": "Company_132 officially terminated negotiations and formally discarded the proposed buyout of TargetSoft_132.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_132 complete the acquisition of TargetSoft_132?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0133",
+    "category": "logic:rejection_verbs",
+    "state": "Company_133 officially revoked negotiations and formally discarded the proposed buyout of TargetSoft_133.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_133 complete the acquisition of TargetSoft_133?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0134",
+    "category": "logic:rejection_verbs",
+    "state": "Company_134 officially terminated negotiations and formally discarded the proposed buyout of TargetSoft_134.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_134 complete the acquisition of TargetSoft_134?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0135",
+    "category": "logic:rejection_verbs",
+    "state": "Company_135 officially rescinded negotiations and formally discarded the proposed buyout of TargetSoft_135.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_135 complete the acquisition of TargetSoft_135?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0136",
+    "category": "logic:rejection_verbs",
+    "state": "Company_136 officially rescinded negotiations and formally discarded the proposed buyout of TargetSoft_136.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_136 complete the acquisition of TargetSoft_136?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0137",
+    "category": "logic:rejection_verbs",
+    "state": "Company_137 officially rejected negotiations and formally discarded the proposed buyout of TargetSoft_137.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_137 complete the acquisition of TargetSoft_137?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0138",
+    "category": "logic:rejection_verbs",
+    "state": "Company_138 officially cancelled negotiations and formally discarded the proposed buyout of TargetSoft_138.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_138 complete the acquisition of TargetSoft_138?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0139",
+    "category": "logic:rejection_verbs",
+    "state": "Company_139 officially rescinded negotiations and formally discarded the proposed buyout of TargetSoft_139.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_139 complete the acquisition of TargetSoft_139?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0140",
+    "category": "logic:rejection_verbs",
+    "state": "Company_140 officially cancelled negotiations and formally discarded the proposed buyout of TargetSoft_140.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_140 complete the acquisition of TargetSoft_140?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0141",
+    "category": "logic:rejection_verbs",
+    "state": "Company_141 officially terminated negotiations and formally discarded the proposed buyout of TargetSoft_141.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_141 complete the acquisition of TargetSoft_141?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0142",
+    "category": "logic:rejection_verbs",
+    "state": "Company_142 officially revoked negotiations and formally discarded the proposed buyout of TargetSoft_142.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_142 complete the acquisition of TargetSoft_142?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0143",
+    "category": "logic:rejection_verbs",
+    "state": "Company_143 officially rescinded negotiations and formally discarded the proposed buyout of TargetSoft_143.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_143 complete the acquisition of TargetSoft_143?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0144",
+    "category": "logic:rejection_verbs",
+    "state": "Company_144 officially revoked negotiations and formally discarded the proposed buyout of TargetSoft_144.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_144 complete the acquisition of TargetSoft_144?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0145",
+    "category": "logic:rejection_verbs",
+    "state": "Company_145 officially dissolved negotiations and formally discarded the proposed buyout of TargetSoft_145.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_145 complete the acquisition of TargetSoft_145?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0146",
+    "category": "logic:rejection_verbs",
+    "state": "Company_146 officially rescinded negotiations and formally discarded the proposed buyout of TargetSoft_146.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_146 complete the acquisition of TargetSoft_146?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0147",
+    "category": "logic:rejection_verbs",
+    "state": "Company_147 officially cancelled negotiations and formally discarded the proposed buyout of TargetSoft_147.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_147 complete the acquisition of TargetSoft_147?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0148",
+    "category": "logic:rejection_verbs",
+    "state": "Company_148 officially dissolved negotiations and formally discarded the proposed buyout of TargetSoft_148.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_148 complete the acquisition of TargetSoft_148?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0149",
+    "category": "logic:rejection_verbs",
+    "state": "Company_149 officially rescinded negotiations and formally discarded the proposed buyout of TargetSoft_149.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_149 complete the acquisition of TargetSoft_149?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0150",
+    "category": "logic:rejection_verbs",
+    "state": "Company_150 officially declined negotiations and formally discarded the proposed buyout of TargetSoft_150.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_150 complete the acquisition of TargetSoft_150?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0151",
+    "category": "logic:rejection_verbs",
+    "state": "Company_151 officially rescinded negotiations and formally discarded the proposed buyout of TargetSoft_151.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_151 complete the acquisition of TargetSoft_151?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0152",
+    "category": "logic:rejection_verbs",
+    "state": "Company_152 officially terminated negotiations and formally discarded the proposed buyout of TargetSoft_152.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_152 complete the acquisition of TargetSoft_152?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0153",
+    "category": "logic:rejection_verbs",
+    "state": "Company_153 officially rejected negotiations and formally discarded the proposed buyout of TargetSoft_153.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_153 complete the acquisition of TargetSoft_153?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0154",
+    "category": "logic:rejection_verbs",
+    "state": "Company_154 officially terminated negotiations and formally discarded the proposed buyout of TargetSoft_154.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_154 complete the acquisition of TargetSoft_154?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0155",
+    "category": "logic:rejection_verbs",
+    "state": "Company_155 officially revoked negotiations and formally discarded the proposed buyout of TargetSoft_155.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_155 complete the acquisition of TargetSoft_155?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0156",
+    "category": "logic:rejection_verbs",
+    "state": "Company_156 officially cancelled negotiations and formally discarded the proposed buyout of TargetSoft_156.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_156 complete the acquisition of TargetSoft_156?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0157",
+    "category": "logic:rejection_verbs",
+    "state": "Company_157 officially dissolved negotiations and formally discarded the proposed buyout of TargetSoft_157.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_157 complete the acquisition of TargetSoft_157?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0158",
+    "category": "logic:rejection_verbs",
+    "state": "Company_158 officially cancelled negotiations and formally discarded the proposed buyout of TargetSoft_158.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_158 complete the acquisition of TargetSoft_158?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0159",
+    "category": "logic:rejection_verbs",
+    "state": "Company_159 officially rescinded negotiations and formally discarded the proposed buyout of TargetSoft_159.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_159 complete the acquisition of TargetSoft_159?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0160",
+    "category": "logic:rejection_verbs",
+    "state": "Company_160 officially cancelled negotiations and formally discarded the proposed buyout of TargetSoft_160.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_160 complete the acquisition of TargetSoft_160?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0161",
+    "category": "logic:rejection_verbs",
+    "state": "Company_161 officially dissolved negotiations and formally discarded the proposed buyout of TargetSoft_161.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_161 complete the acquisition of TargetSoft_161?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0162",
+    "category": "logic:rejection_verbs",
+    "state": "Company_162 officially rejected negotiations and formally discarded the proposed buyout of TargetSoft_162.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_162 complete the acquisition of TargetSoft_162?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0163",
+    "category": "logic:rejection_verbs",
+    "state": "Company_163 officially rejected negotiations and formally discarded the proposed buyout of TargetSoft_163.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_163 complete the acquisition of TargetSoft_163?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0164",
+    "category": "logic:rejection_verbs",
+    "state": "Company_164 officially rescinded negotiations and formally discarded the proposed buyout of TargetSoft_164.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_164 complete the acquisition of TargetSoft_164?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0165",
+    "category": "logic:rejection_verbs",
+    "state": "Company_165 officially rescinded negotiations and formally discarded the proposed buyout of TargetSoft_165.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_165 complete the acquisition of TargetSoft_165?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0166",
+    "category": "logic:rejection_verbs",
+    "state": "Company_166 officially revoked negotiations and formally discarded the proposed buyout of TargetSoft_166.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_166 complete the acquisition of TargetSoft_166?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0167",
+    "category": "logic:rejection_verbs",
+    "state": "Company_167 officially rescinded negotiations and formally discarded the proposed buyout of TargetSoft_167.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_167 complete the acquisition of TargetSoft_167?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0168",
+    "category": "logic:rejection_verbs",
+    "state": "Company_168 officially terminated negotiations and formally discarded the proposed buyout of TargetSoft_168.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_168 complete the acquisition of TargetSoft_168?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0169",
+    "category": "logic:rejection_verbs",
+    "state": "Company_169 officially terminated negotiations and formally discarded the proposed buyout of TargetSoft_169.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_169 complete the acquisition of TargetSoft_169?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0170",
+    "category": "logic:rejection_verbs",
+    "state": "Company_170 officially terminated negotiations and formally discarded the proposed buyout of TargetSoft_170.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_170 complete the acquisition of TargetSoft_170?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0171",
+    "category": "logic:rejection_verbs",
+    "state": "Company_171 officially rejected negotiations and formally discarded the proposed buyout of TargetSoft_171.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_171 complete the acquisition of TargetSoft_171?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0172",
+    "category": "logic:rejection_verbs",
+    "state": "Company_172 officially declined negotiations and formally discarded the proposed buyout of TargetSoft_172.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_172 complete the acquisition of TargetSoft_172?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0173",
+    "category": "logic:rejection_verbs",
+    "state": "Company_173 officially cancelled negotiations and formally discarded the proposed buyout of TargetSoft_173.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_173 complete the acquisition of TargetSoft_173?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0174",
+    "category": "logic:rejection_verbs",
+    "state": "Company_174 officially dissolved negotiations and formally discarded the proposed buyout of TargetSoft_174.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_174 complete the acquisition of TargetSoft_174?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0175",
+    "category": "logic:rejection_verbs",
+    "state": "Company_175 officially revoked negotiations and formally discarded the proposed buyout of TargetSoft_175.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_175 complete the acquisition of TargetSoft_175?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0176",
+    "category": "logic:rejection_verbs",
+    "state": "Company_176 officially rescinded negotiations and formally discarded the proposed buyout of TargetSoft_176.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_176 complete the acquisition of TargetSoft_176?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0177",
+    "category": "logic:rejection_verbs",
+    "state": "Company_177 officially revoked negotiations and formally discarded the proposed buyout of TargetSoft_177.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_177 complete the acquisition of TargetSoft_177?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0178",
+    "category": "logic:rejection_verbs",
+    "state": "Company_178 officially rejected negotiations and formally discarded the proposed buyout of TargetSoft_178.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_178 complete the acquisition of TargetSoft_178?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0179",
+    "category": "logic:rejection_verbs",
+    "state": "Company_179 officially rescinded negotiations and formally discarded the proposed buyout of TargetSoft_179.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_179 complete the acquisition of TargetSoft_179?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0180",
+    "category": "logic:rejection_verbs",
+    "state": "Company_180 officially rescinded negotiations and formally discarded the proposed buyout of TargetSoft_180.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_180 complete the acquisition of TargetSoft_180?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0181",
+    "category": "logic:rejection_verbs",
+    "state": "Company_181 officially rejected negotiations and formally discarded the proposed buyout of TargetSoft_181.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_181 complete the acquisition of TargetSoft_181?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0182",
+    "category": "logic:rejection_verbs",
+    "state": "Company_182 officially cancelled negotiations and formally discarded the proposed buyout of TargetSoft_182.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_182 complete the acquisition of TargetSoft_182?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0183",
+    "category": "logic:rejection_verbs",
+    "state": "Company_183 officially rescinded negotiations and formally discarded the proposed buyout of TargetSoft_183.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_183 complete the acquisition of TargetSoft_183?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0184",
+    "category": "logic:rejection_verbs",
+    "state": "Company_184 officially cancelled negotiations and formally discarded the proposed buyout of TargetSoft_184.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_184 complete the acquisition of TargetSoft_184?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0185",
+    "category": "logic:rejection_verbs",
+    "state": "Company_185 officially rejected negotiations and formally discarded the proposed buyout of TargetSoft_185.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_185 complete the acquisition of TargetSoft_185?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0186",
+    "category": "logic:rejection_verbs",
+    "state": "Company_186 officially revoked negotiations and formally discarded the proposed buyout of TargetSoft_186.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_186 complete the acquisition of TargetSoft_186?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0187",
+    "category": "logic:rejection_verbs",
+    "state": "Company_187 officially rescinded negotiations and formally discarded the proposed buyout of TargetSoft_187.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_187 complete the acquisition of TargetSoft_187?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0188",
+    "category": "logic:rejection_verbs",
+    "state": "Company_188 officially declined negotiations and formally discarded the proposed buyout of TargetSoft_188.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_188 complete the acquisition of TargetSoft_188?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0189",
+    "category": "logic:rejection_verbs",
+    "state": "Company_189 officially dissolved negotiations and formally discarded the proposed buyout of TargetSoft_189.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_189 complete the acquisition of TargetSoft_189?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0190",
+    "category": "logic:rejection_verbs",
+    "state": "Company_190 officially cancelled negotiations and formally discarded the proposed buyout of TargetSoft_190.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_190 complete the acquisition of TargetSoft_190?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0191",
+    "category": "logic:rejection_verbs",
+    "state": "Company_191 officially rescinded negotiations and formally discarded the proposed buyout of TargetSoft_191.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_191 complete the acquisition of TargetSoft_191?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0192",
+    "category": "logic:rejection_verbs",
+    "state": "Company_192 officially cancelled negotiations and formally discarded the proposed buyout of TargetSoft_192.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_192 complete the acquisition of TargetSoft_192?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0193",
+    "category": "logic:rejection_verbs",
+    "state": "Company_193 officially rescinded negotiations and formally discarded the proposed buyout of TargetSoft_193.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_193 complete the acquisition of TargetSoft_193?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0194",
+    "category": "logic:rejection_verbs",
+    "state": "Company_194 officially dissolved negotiations and formally discarded the proposed buyout of TargetSoft_194.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_194 complete the acquisition of TargetSoft_194?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0195",
+    "category": "logic:rejection_verbs",
+    "state": "Company_195 officially rescinded negotiations and formally discarded the proposed buyout of TargetSoft_195.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_195 complete the acquisition of TargetSoft_195?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0196",
+    "category": "logic:rejection_verbs",
+    "state": "Company_196 officially rescinded negotiations and formally discarded the proposed buyout of TargetSoft_196.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_196 complete the acquisition of TargetSoft_196?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0197",
+    "category": "logic:rejection_verbs",
+    "state": "Company_197 officially revoked negotiations and formally discarded the proposed buyout of TargetSoft_197.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_197 complete the acquisition of TargetSoft_197?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0198",
+    "category": "logic:rejection_verbs",
+    "state": "Company_198 officially declined negotiations and formally discarded the proposed buyout of TargetSoft_198.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_198 complete the acquisition of TargetSoft_198?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  },
+  {
+    "id": "pool_rej_0199",
+    "category": "logic:rejection_verbs",
+    "state": "Company_199 officially rescinded negotiations and formally discarded the proposed buyout of TargetSoft_199.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Company_199 complete the acquisition of TargetSoft_199?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "corporate"
+  }
+]

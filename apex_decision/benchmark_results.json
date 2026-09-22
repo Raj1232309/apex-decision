@@ -1,0 +1,33 @@
+{
+  "model": "ApexDecision (ModernBERT-base + LoRA r=16)",
+  "device": "cuda",
+  "gpu_name": "NVIDIA GeForce RTX 2050",
+  "intelligence_metrics": {
+    "binary_assertion_accuracy": 100.0,
+    "categorical_routing_accuracy": 100.0,
+    "composite_accuracy": 100.0,
+    "hard_test_ece": 0.0,
+    "calibrated": true
+  },
+  "latency_metrics": {
+    "p50_ms": 43.36947250366211,
+    "p95_ms": 54.39767189025879,
+    "p99_ms": 63.951318168640135,
+    "mean_ms": 44.415163230896,
+    "throughput_qps": 22.51483338699928
+  },
+  "comparisons": {
+    "typesafe_jev": {
+      "accuracy": 67.8,
+      "p50_ms": 120.0,
+      "p99_ms": 480.0,
+      "speedup": 2.766923208251316
+    },
+    "gpt_5_6_terra": {
+      "accuracy": 71.4,
+      "p50_ms": 2000.0,
+      "p99_ms": 4500.0,
+      "speedup": 46.1153868041886
+    }
+  }
+}

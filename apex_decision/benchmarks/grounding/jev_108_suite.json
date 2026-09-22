@@ -1,0 +1,1867 @@
+[
+  {
+    "id": "b_sci_b_01_v0_fm01",
+    "domain": "science",
+    "source": "The Event Horizon Telescope (EHT) collaboration released the first image of Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses. The image revealed a bright emission ring of 52 microarcseconds diameter surrounding a dark central region known as the black hole shadow.",
+    "claim": "sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses.",
+    "label": "SUPPORTED",
+    "failure_mode": "direct_entailment",
+    "difficulty_tier": 1,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses."
+    ],
+    "metadata": {
+      "source_id": "sci_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_sci_b_01_v0_fm02",
+    "domain": "science",
+    "source": "The Event Horizon Telescope (EHT) collaboration released the first image of Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses. The image revealed a bright emission ring of 52 microarcseconds diameter surrounding a dark central region known as the black hole shadow.",
+    "claim": "it is not the case regarding Sagittarius A* that sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "direct_contradiction",
+    "difficulty_tier": 1,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses."
+    ],
+    "metadata": {
+      "source_id": "sci_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_sci_b_01_v0_sup03",
+    "domain": "science",
+    "source": "The Event Horizon Telescope (EHT) collaboration released the first image of Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses. The image revealed a bright emission ring of 52 microarcseconds diameter surrounding a dark central region known as the black hole shadow.",
+    "claim": "telemetry for Sagittarius A* demonstrates that sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses.",
+    "label": "SUPPORTED",
+    "failure_mode": "direct_entailment",
+    "difficulty_tier": 1,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses."
+    ],
+    "metadata": {
+      "source_id": "sci_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_sci_b_01_v0_sup04",
+    "domain": "science",
+    "source": "The Event Horizon Telescope (EHT) collaboration released the first image of Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses. The image revealed a bright emission ring of 52 microarcseconds diameter surrounding a dark central region known as the black hole shadow.",
+    "claim": "the primary documentation confirms sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses.",
+    "label": "SUPPORTED",
+    "failure_mode": "direct_entailment",
+    "difficulty_tier": 1,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses."
+    ],
+    "metadata": {
+      "source_id": "sci_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_sci_b_01_v0_fm03",
+    "domain": "science",
+    "source": "The Event Horizon Telescope (EHT) collaboration released the first image of Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses. The image revealed a bright emission ring of 52 microarcseconds diameter surrounding a dark central region known as the black hole shadow.",
+    "claim": "all primary research initiatives regarding Sagittarius A* were entirely suspended and relocated permanently to sector 1 in 2014.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "unsupported_claim",
+    "difficulty_tier": 2,
+    "is_adversarial": false,
+    "evidence_spans": [],
+    "metadata": {
+      "source_id": "sci_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_sci_b_01_v0_sup01",
+    "domain": "science",
+    "source": "The Event Horizon Telescope (EHT) collaboration released the first image of Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses. The image revealed a bright emission ring of 52 microarcseconds diameter surrounding a dark central region known as the black hole shadow.",
+    "claim": "empirical observations regarding Sagittarius A* align with the finding that sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses.",
+    "label": "SUPPORTED",
+    "failure_mode": "direct_entailment",
+    "difficulty_tier": 2,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses."
+    ],
+    "metadata": {
+      "source_id": "sci_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_sci_b_01_v0_sup02",
+    "domain": "science",
+    "source": "The Event Horizon Telescope (EHT) collaboration released the first image of Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses. The image revealed a bright emission ring of 52 microarcseconds diameter surrounding a dark central region known as the black hole shadow.",
+    "claim": "investigators corroborated that sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses. in verified context 1.",
+    "label": "SUPPORTED",
+    "failure_mode": "direct_entailment",
+    "difficulty_tier": 2,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses."
+    ],
+    "metadata": {
+      "source_id": "sci_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_sci_b_01_v1_fm03",
+    "domain": "science",
+    "source": "The Event Horizon Telescope (EHT) collaboration released the first image of Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses. The image revealed a bright emission ring of 52 microarcseconds diameter surrounding a dark central region known as the black hole shadow.",
+    "claim": "Regarding Sagittarius A*, all primary research initiatives regarding Sagittarius A* were entirely suspended and relocated permanently to sector 2 in 2014.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "unsupported_claim",
+    "difficulty_tier": 2,
+    "is_adversarial": false,
+    "evidence_spans": [],
+    "metadata": {
+      "source_id": "sci_b_01",
+      "variant": 1
+    }
+  },
+  {
+    "id": "b_sci_b_01_v0_fm04",
+    "domain": "science",
+    "source": "The Event Horizon Telescope (EHT) collaboration released the first image of Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses. The image revealed a bright emission ring of 52 microarcseconds diameter surrounding a dark central region known as the black hole shadow.",
+    "claim": "the documentation for Sagittarius A* verifies that sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses. never actually occurred in iteration 1.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "negation_reversal",
+    "difficulty_tier": 3,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses."
+    ],
+    "metadata": {
+      "source_id": "sci_b_01",
+      "adversarial_type": "negation_reversal",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_sci_b_01_v0_fm06",
+    "domain": "science",
+    "source": "The Event Horizon Telescope (EHT) collaboration released the first image of Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses. The image revealed a bright emission ring of 52 microarcseconds diameter surrounding a dark central region known as the black hole shadow.",
+    "claim": "the published record identifies AlternativeEntity_SCIENCE_1 rather than Sagittarius A* as the sole entity responsible for the reported outcomes.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "entity_substitution",
+    "difficulty_tier": 3,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses."
+    ],
+    "metadata": {
+      "source_id": "sci_b_01",
+      "adversarial_type": "entity_substitution",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_sci_b_01_v0_fm07",
+    "domain": "science",
+    "source": "The Event Horizon Telescope (EHT) collaboration released the first image of Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses. The image revealed a bright emission ring of 52 microarcseconds diameter surrounding a dark central region known as the black hole shadow.",
+    "claim": "in the case of Sagittarius A*, exactly 100.4% of all measured quantities were determined to be non-operational.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "number_mismatch",
+    "difficulty_tier": 3,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses."
+    ],
+    "metadata": {
+      "source_id": "sci_b_01",
+      "adversarial_type": "number_mismatch",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_sci_b_01_v0_fm08",
+    "domain": "science",
+    "source": "The Event Horizon Telescope (EHT) collaboration released the first image of Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses. The image revealed a bright emission ring of 52 microarcseconds diameter surrounding a dark central region known as the black hole shadow.",
+    "claim": "all quantitative assessments for Sagittarius A* were recorded exclusively in microvolts rather than standard operational metrics.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "unit_mismatch",
+    "difficulty_tier": 3,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses."
+    ],
+    "metadata": {
+      "source_id": "sci_b_01",
+      "adversarial_type": "unit_mismatch",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_sci_b_01_v0_fm09",
+    "domain": "science",
+    "source": "The Event Horizon Telescope (EHT) collaboration released the first image of Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses. The image revealed a bright emission ring of 52 microarcseconds diameter surrounding a dark central region known as the black hole shadow.",
+    "claim": "the events regarding Sagittarius A* were finalized and cataloged in October 1984 prior to any subsequent reviews.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "date_time_mismatch",
+    "difficulty_tier": 3,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses."
+    ],
+    "metadata": {
+      "source_id": "sci_b_01",
+      "adversarial_type": "date_time_mismatch"
+    }
+  },
+  {
+    "id": "b_sci_b_01_v0_fm10",
+    "domain": "science",
+    "source": "The Event Horizon Telescope (EHT) collaboration released the first image of Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses. The image revealed a bright emission ring of 52 microarcseconds diameter surrounding a dark central region known as the black hole shadow.",
+    "claim": "the empirical conclusions regarding Sagittarius A* apply solely to deep-sea oceanic organisms living in controlled habitats.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "population_mismatch",
+    "difficulty_tier": 3,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses."
+    ],
+    "metadata": {
+      "source_id": "sci_b_01",
+      "adversarial_type": "population_mismatch",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_sci_b_01_v0_fm05",
+    "domain": "science",
+    "source": "The Event Horizon Telescope (EHT) collaboration released the first image of Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses. The image revealed a bright emission ring of 52 microarcseconds diameter surrounding a dark central region known as the black hole shadow.",
+    "claim": "there exists no evidence concerning Sagittarius A* indicating that it is untrue that sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses.",
+    "label": "SUPPORTED",
+    "failure_mode": "double_negation",
+    "difficulty_tier": 4,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses."
+    ],
+    "metadata": {
+      "source_id": "sci_b_01",
+      "adversarial_type": "double_negation",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_sci_b_01_v0_fm13",
+    "domain": "science",
+    "source": "The Event Horizon Telescope (EHT) collaboration released the first image of Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses. The image revealed a bright emission ring of 52 microarcseconds diameter surrounding a dark central region known as the black hole shadow.",
+    "claim": "the results documented in Sagittarius A* (cycle 1) were solely and directly caused by geomagnetic solar storms occurring that month.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "causal_overclaim",
+    "difficulty_tier": 4,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses."
+    ],
+    "metadata": {
+      "source_id": "sci_b_01",
+      "adversarial_type": "causal_overclaim",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_sci_b_01_v0_fm14",
+    "domain": "science",
+    "source": "The Event Horizon Telescope (EHT) collaboration released the first image of Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses. The image revealed a bright emission ring of 52 microarcseconds diameter surrounding a dark central region known as the black hole shadow.",
+    "claim": "because secondary conditions accompanied Sagittarius A* in trial 1, Sagittarius A* was proven to be the sole driving mechanism behind all secondary conditions.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "correlation_vs_causation",
+    "difficulty_tier": 4,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses."
+    ],
+    "metadata": {
+      "source_id": "sci_b_01",
+      "adversarial_type": "correlation_vs_causation",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_sci_b_01_v0_fm19",
+    "domain": "science",
+    "source": "The Event Horizon Telescope (EHT) collaboration released the first image of Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses. The image revealed a bright emission ring of 52 microarcseconds diameter surrounding a dark central region known as the black hole shadow.",
+    "claim": "the Event Horizon Telescope (EHT) collaboration released the first image of Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4, and furthermore 3 million solar masses.",
+    "label": "SUPPORTED",
+    "failure_mode": "multi_sentence_reasoning",
+    "difficulty_tier": 4,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "The Event Horizon Telescope (EHT) collaboration released the first image of Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4",
+      "3 million solar masses"
+    ],
+    "metadata": {
+      "source_id": "sci_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_med_b_01_v0_fm01",
+    "domain": "medicine",
+    "source": "In a multicenter trial of 1,800 ischemic stroke patients presenting between 4.5 and 24 hours from symptom onset, endovascular thrombectomy plus standard medical care resulted in functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone (p < 0.001). Intracranial hemorrhage rates were not significantly different.",
+    "claim": "functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone",
+    "label": "SUPPORTED",
+    "failure_mode": "direct_entailment",
+    "difficulty_tier": 1,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone"
+    ],
+    "metadata": {
+      "source_id": "med_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_med_b_01_v0_fm02",
+    "domain": "medicine",
+    "source": "In a multicenter trial of 1,800 ischemic stroke patients presenting between 4.5 and 24 hours from symptom onset, endovascular thrombectomy plus standard medical care resulted in functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone (p < 0.001). Intracranial hemorrhage rates were not significantly different.",
+    "claim": "it is not the case regarding endovascular thrombectomy that functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "direct_contradiction",
+    "difficulty_tier": 1,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone"
+    ],
+    "metadata": {
+      "source_id": "med_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_med_b_01_v0_sup03",
+    "domain": "medicine",
+    "source": "In a multicenter trial of 1,800 ischemic stroke patients presenting between 4.5 and 24 hours from symptom onset, endovascular thrombectomy plus standard medical care resulted in functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone (p < 0.001). Intracranial hemorrhage rates were not significantly different.",
+    "claim": "telemetry for endovascular thrombectomy demonstrates that functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone",
+    "label": "SUPPORTED",
+    "failure_mode": "direct_entailment",
+    "difficulty_tier": 1,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone"
+    ],
+    "metadata": {
+      "source_id": "med_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_med_b_01_v0_sup04",
+    "domain": "medicine",
+    "source": "In a multicenter trial of 1,800 ischemic stroke patients presenting between 4.5 and 24 hours from symptom onset, endovascular thrombectomy plus standard medical care resulted in functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone (p < 0.001). Intracranial hemorrhage rates were not significantly different.",
+    "claim": "the primary documentation confirms functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone",
+    "label": "SUPPORTED",
+    "failure_mode": "direct_entailment",
+    "difficulty_tier": 1,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone"
+    ],
+    "metadata": {
+      "source_id": "med_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_med_b_01_v0_fm03",
+    "domain": "medicine",
+    "source": "In a multicenter trial of 1,800 ischemic stroke patients presenting between 4.5 and 24 hours from symptom onset, endovascular thrombectomy plus standard medical care resulted in functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone (p < 0.001). Intracranial hemorrhage rates were not significantly different.",
+    "claim": "all primary research initiatives regarding endovascular thrombectomy were entirely suspended and relocated permanently to sector 1 in 2014.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "unsupported_claim",
+    "difficulty_tier": 2,
+    "is_adversarial": false,
+    "evidence_spans": [],
+    "metadata": {
+      "source_id": "med_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_med_b_01_v0_sup01",
+    "domain": "medicine",
+    "source": "In a multicenter trial of 1,800 ischemic stroke patients presenting between 4.5 and 24 hours from symptom onset, endovascular thrombectomy plus standard medical care resulted in functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone (p < 0.001). Intracranial hemorrhage rates were not significantly different.",
+    "claim": "empirical observations regarding endovascular thrombectomy align with the finding that functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone",
+    "label": "SUPPORTED",
+    "failure_mode": "direct_entailment",
+    "difficulty_tier": 2,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone"
+    ],
+    "metadata": {
+      "source_id": "med_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_med_b_01_v0_sup02",
+    "domain": "medicine",
+    "source": "In a multicenter trial of 1,800 ischemic stroke patients presenting between 4.5 and 24 hours from symptom onset, endovascular thrombectomy plus standard medical care resulted in functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone (p < 0.001). Intracranial hemorrhage rates were not significantly different.",
+    "claim": "investigators corroborated that functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone in verified context 1.",
+    "label": "SUPPORTED",
+    "failure_mode": "direct_entailment",
+    "difficulty_tier": 2,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone"
+    ],
+    "metadata": {
+      "source_id": "med_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_med_b_01_v1_fm03",
+    "domain": "medicine",
+    "source": "In a multicenter trial of 1,800 ischemic stroke patients presenting between 4.5 and 24 hours from symptom onset, endovascular thrombectomy plus standard medical care resulted in functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone (p < 0.001). Intracranial hemorrhage rates were not significantly different.",
+    "claim": "Regarding endovascular thrombectomy, all primary research initiatives regarding endovascular thrombectomy were entirely suspended and relocated permanently to sector 2 in 2014.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "unsupported_claim",
+    "difficulty_tier": 2,
+    "is_adversarial": false,
+    "evidence_spans": [],
+    "metadata": {
+      "source_id": "med_b_01",
+      "variant": 1
+    }
+  },
+  {
+    "id": "b_med_b_01_v0_fm04",
+    "domain": "medicine",
+    "source": "In a multicenter trial of 1,800 ischemic stroke patients presenting between 4.5 and 24 hours from symptom onset, endovascular thrombectomy plus standard medical care resulted in functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone (p < 0.001). Intracranial hemorrhage rates were not significantly different.",
+    "claim": "the documentation for endovascular thrombectomy verifies that functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone never actually occurred in iteration 1.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "negation_reversal",
+    "difficulty_tier": 3,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone"
+    ],
+    "metadata": {
+      "source_id": "med_b_01",
+      "adversarial_type": "negation_reversal",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_med_b_01_v0_fm06",
+    "domain": "medicine",
+    "source": "In a multicenter trial of 1,800 ischemic stroke patients presenting between 4.5 and 24 hours from symptom onset, endovascular thrombectomy plus standard medical care resulted in functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone (p < 0.001). Intracranial hemorrhage rates were not significantly different.",
+    "claim": "the published record identifies AlternativeEntity_MEDICINE_1 rather than endovascular thrombectomy as the sole entity responsible for the reported outcomes.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "entity_substitution",
+    "difficulty_tier": 3,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone"
+    ],
+    "metadata": {
+      "source_id": "med_b_01",
+      "adversarial_type": "entity_substitution",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_med_b_01_v0_fm07",
+    "domain": "medicine",
+    "source": "In a multicenter trial of 1,800 ischemic stroke patients presenting between 4.5 and 24 hours from symptom onset, endovascular thrombectomy plus standard medical care resulted in functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone (p < 0.001). Intracranial hemorrhage rates were not significantly different.",
+    "claim": "in the case of endovascular thrombectomy, exactly 100.4% of all measured quantities were determined to be non-operational.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "number_mismatch",
+    "difficulty_tier": 3,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone"
+    ],
+    "metadata": {
+      "source_id": "med_b_01",
+      "adversarial_type": "number_mismatch",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_med_b_01_v0_fm08",
+    "domain": "medicine",
+    "source": "In a multicenter trial of 1,800 ischemic stroke patients presenting between 4.5 and 24 hours from symptom onset, endovascular thrombectomy plus standard medical care resulted in functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone (p < 0.001). Intracranial hemorrhage rates were not significantly different.",
+    "claim": "all quantitative assessments for endovascular thrombectomy were recorded exclusively in microvolts rather than standard operational metrics.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "unit_mismatch",
+    "difficulty_tier": 3,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone"
+    ],
+    "metadata": {
+      "source_id": "med_b_01",
+      "adversarial_type": "unit_mismatch",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_med_b_01_v0_fm09",
+    "domain": "medicine",
+    "source": "In a multicenter trial of 1,800 ischemic stroke patients presenting between 4.5 and 24 hours from symptom onset, endovascular thrombectomy plus standard medical care resulted in functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone (p < 0.001). Intracranial hemorrhage rates were not significantly different.",
+    "claim": "the events regarding endovascular thrombectomy were finalized and cataloged in October 1984 prior to any subsequent reviews.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "date_time_mismatch",
+    "difficulty_tier": 3,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone"
+    ],
+    "metadata": {
+      "source_id": "med_b_01",
+      "adversarial_type": "date_time_mismatch"
+    }
+  },
+  {
+    "id": "b_med_b_01_v0_fm10",
+    "domain": "medicine",
+    "source": "In a multicenter trial of 1,800 ischemic stroke patients presenting between 4.5 and 24 hours from symptom onset, endovascular thrombectomy plus standard medical care resulted in functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone (p < 0.001). Intracranial hemorrhage rates were not significantly different.",
+    "claim": "the empirical conclusions regarding endovascular thrombectomy apply solely to deep-sea oceanic organisms living in controlled habitats.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "population_mismatch",
+    "difficulty_tier": 3,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone"
+    ],
+    "metadata": {
+      "source_id": "med_b_01",
+      "adversarial_type": "population_mismatch",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_med_b_01_v0_fm05",
+    "domain": "medicine",
+    "source": "In a multicenter trial of 1,800 ischemic stroke patients presenting between 4.5 and 24 hours from symptom onset, endovascular thrombectomy plus standard medical care resulted in functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone (p < 0.001). Intracranial hemorrhage rates were not significantly different.",
+    "claim": "there exists no evidence concerning endovascular thrombectomy indicating that it is untrue that functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone",
+    "label": "SUPPORTED",
+    "failure_mode": "double_negation",
+    "difficulty_tier": 4,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone"
+    ],
+    "metadata": {
+      "source_id": "med_b_01",
+      "adversarial_type": "double_negation",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_med_b_01_v0_fm13",
+    "domain": "medicine",
+    "source": "In a multicenter trial of 1,800 ischemic stroke patients presenting between 4.5 and 24 hours from symptom onset, endovascular thrombectomy plus standard medical care resulted in functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone (p < 0.001). Intracranial hemorrhage rates were not significantly different.",
+    "claim": "the results documented in endovascular thrombectomy (cycle 1) were solely and directly caused by geomagnetic solar storms occurring that month.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "causal_overclaim",
+    "difficulty_tier": 4,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone"
+    ],
+    "metadata": {
+      "source_id": "med_b_01",
+      "adversarial_type": "causal_overclaim",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_med_b_01_v0_fm14",
+    "domain": "medicine",
+    "source": "In a multicenter trial of 1,800 ischemic stroke patients presenting between 4.5 and 24 hours from symptom onset, endovascular thrombectomy plus standard medical care resulted in functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone (p < 0.001). Intracranial hemorrhage rates were not significantly different.",
+    "claim": "because secondary conditions accompanied endovascular thrombectomy in trial 1, endovascular thrombectomy was proven to be the sole driving mechanism behind all secondary conditions.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "correlation_vs_causation",
+    "difficulty_tier": 4,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone"
+    ],
+    "metadata": {
+      "source_id": "med_b_01",
+      "adversarial_type": "correlation_vs_causation",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_med_b_01_v0_fm19",
+    "domain": "medicine",
+    "source": "In a multicenter trial of 1,800 ischemic stroke patients presenting between 4.5 and 24 hours from symptom onset, endovascular thrombectomy plus standard medical care resulted in functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone (p < 0.001). Intracranial hemorrhage rates were not significantly different.",
+    "claim": "in a multicenter trial of 1,800 ischemic stroke patients presenting between 4, and furthermore 5 and 24 hours from symptom onset, endovascular thrombectomy plus standard medical care resulted in functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone (p < 0.",
+    "label": "SUPPORTED",
+    "failure_mode": "multi_sentence_reasoning",
+    "difficulty_tier": 4,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "In a multicenter trial of 1,800 ischemic stroke patients presenting between 4",
+      "5 and 24 hours from symptom onset, endovascular thrombectomy plus standard medical care resulted in functional independence at 90 days in 45% of patients, compared to 17% receiving standard medical care alone (p < 0"
+    ],
+    "metadata": {
+      "source_id": "med_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_fin_b_01_v0_fm01",
+    "domain": "finance",
+    "source": "Fintech platform Stripe processed over $1.0 trillion in total payment volume in 2023, representing a 25% increase over 2022. The company announced that businesses running on Stripe experienced an aggregate uptime of 99.999% during Black Friday and Cyber Monday peak transaction windows.",
+    "claim": "processed over $1.0 trillion in total payment volume in 2023, representing a 25% increase over 2022.",
+    "label": "SUPPORTED",
+    "failure_mode": "direct_entailment",
+    "difficulty_tier": 1,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "processed over $1.0 trillion in total payment volume in 2023, representing a 25% increase over 2022."
+    ],
+    "metadata": {
+      "source_id": "fin_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_fin_b_01_v0_fm02",
+    "domain": "finance",
+    "source": "Fintech platform Stripe processed over $1.0 trillion in total payment volume in 2023, representing a 25% increase over 2022. The company announced that businesses running on Stripe experienced an aggregate uptime of 99.999% during Black Friday and Cyber Monday peak transaction windows.",
+    "claim": "it is not the case regarding Stripe volume that processed over $1.0 trillion in total payment volume in 2023, representing a 25% increase over 2022.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "direct_contradiction",
+    "difficulty_tier": 1,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "processed over $1.0 trillion in total payment volume in 2023, representing a 25% increase over 2022."
+    ],
+    "metadata": {
+      "source_id": "fin_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_fin_b_01_v0_sup03",
+    "domain": "finance",
+    "source": "Fintech platform Stripe processed over $1.0 trillion in total payment volume in 2023, representing a 25% increase over 2022. The company announced that businesses running on Stripe experienced an aggregate uptime of 99.999% during Black Friday and Cyber Monday peak transaction windows.",
+    "claim": "telemetry for Stripe volume demonstrates that processed over $1.0 trillion in total payment volume in 2023, representing a 25% increase over 2022.",
+    "label": "SUPPORTED",
+    "failure_mode": "direct_entailment",
+    "difficulty_tier": 1,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "processed over $1.0 trillion in total payment volume in 2023, representing a 25% increase over 2022."
+    ],
+    "metadata": {
+      "source_id": "fin_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_fin_b_01_v0_sup04",
+    "domain": "finance",
+    "source": "Fintech platform Stripe processed over $1.0 trillion in total payment volume in 2023, representing a 25% increase over 2022. The company announced that businesses running on Stripe experienced an aggregate uptime of 99.999% during Black Friday and Cyber Monday peak transaction windows.",
+    "claim": "the primary documentation confirms processed over $1.0 trillion in total payment volume in 2023, representing a 25% increase over 2022.",
+    "label": "SUPPORTED",
+    "failure_mode": "direct_entailment",
+    "difficulty_tier": 1,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "processed over $1.0 trillion in total payment volume in 2023, representing a 25% increase over 2022."
+    ],
+    "metadata": {
+      "source_id": "fin_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_fin_b_01_v0_fm03",
+    "domain": "finance",
+    "source": "Fintech platform Stripe processed over $1.0 trillion in total payment volume in 2023, representing a 25% increase over 2022. The company announced that businesses running on Stripe experienced an aggregate uptime of 99.999% during Black Friday and Cyber Monday peak transaction windows.",
+    "claim": "all primary research initiatives regarding Stripe volume were entirely suspended and relocated permanently to sector 1 in 2014.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "unsupported_claim",
+    "difficulty_tier": 2,
+    "is_adversarial": false,
+    "evidence_spans": [],
+    "metadata": {
+      "source_id": "fin_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_fin_b_01_v0_sup01",
+    "domain": "finance",
+    "source": "Fintech platform Stripe processed over $1.0 trillion in total payment volume in 2023, representing a 25% increase over 2022. The company announced that businesses running on Stripe experienced an aggregate uptime of 99.999% during Black Friday and Cyber Monday peak transaction windows.",
+    "claim": "empirical observations regarding Stripe volume align with the finding that processed over $1.0 trillion in total payment volume in 2023, representing a 25% increase over 2022.",
+    "label": "SUPPORTED",
+    "failure_mode": "direct_entailment",
+    "difficulty_tier": 2,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "processed over $1.0 trillion in total payment volume in 2023, representing a 25% increase over 2022."
+    ],
+    "metadata": {
+      "source_id": "fin_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_fin_b_01_v0_sup02",
+    "domain": "finance",
+    "source": "Fintech platform Stripe processed over $1.0 trillion in total payment volume in 2023, representing a 25% increase over 2022. The company announced that businesses running on Stripe experienced an aggregate uptime of 99.999% during Black Friday and Cyber Monday peak transaction windows.",
+    "claim": "investigators corroborated that processed over $1.0 trillion in total payment volume in 2023, representing a 25% increase over 2022. in verified context 1.",
+    "label": "SUPPORTED",
+    "failure_mode": "direct_entailment",
+    "difficulty_tier": 2,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "processed over $1.0 trillion in total payment volume in 2023, representing a 25% increase over 2022."
+    ],
+    "metadata": {
+      "source_id": "fin_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_fin_b_01_v1_fm03",
+    "domain": "finance",
+    "source": "Fintech platform Stripe processed over $1.0 trillion in total payment volume in 2023, representing a 25% increase over 2022. The company announced that businesses running on Stripe experienced an aggregate uptime of 99.999% during Black Friday and Cyber Monday peak transaction windows.",
+    "claim": "Regarding Stripe volume, all primary research initiatives regarding Stripe volume were entirely suspended and relocated permanently to sector 2 in 2014.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "unsupported_claim",
+    "difficulty_tier": 2,
+    "is_adversarial": false,
+    "evidence_spans": [],
+    "metadata": {
+      "source_id": "fin_b_01",
+      "variant": 1
+    }
+  },
+  {
+    "id": "b_fin_b_01_v0_fm04",
+    "domain": "finance",
+    "source": "Fintech platform Stripe processed over $1.0 trillion in total payment volume in 2023, representing a 25% increase over 2022. The company announced that businesses running on Stripe experienced an aggregate uptime of 99.999% during Black Friday and Cyber Monday peak transaction windows.",
+    "claim": "the documentation for Stripe volume verifies that processed over $1.0 trillion in total payment volume in 2023, representing a 25% increase over 2022. never actually occurred in iteration 1.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "negation_reversal",
+    "difficulty_tier": 3,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "processed over $1.0 trillion in total payment volume in 2023, representing a 25% increase over 2022."
+    ],
+    "metadata": {
+      "source_id": "fin_b_01",
+      "adversarial_type": "negation_reversal",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_fin_b_01_v0_fm06",
+    "domain": "finance",
+    "source": "Fintech platform Stripe processed over $1.0 trillion in total payment volume in 2023, representing a 25% increase over 2022. The company announced that businesses running on Stripe experienced an aggregate uptime of 99.999% during Black Friday and Cyber Monday peak transaction windows.",
+    "claim": "the published record identifies AlternativeEntity_FINANCE_1 rather than Stripe volume as the sole entity responsible for the reported outcomes.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "entity_substitution",
+    "difficulty_tier": 3,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "processed over $1.0 trillion in total payment volume in 2023, representing a 25% increase over 2022."
+    ],
+    "metadata": {
+      "source_id": "fin_b_01",
+      "adversarial_type": "entity_substitution",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_fin_b_01_v0_fm07",
+    "domain": "finance",
+    "source": "Fintech platform Stripe processed over $1.0 trillion in total payment volume in 2023, representing a 25% increase over 2022. The company announced that businesses running on Stripe experienced an aggregate uptime of 99.999% during Black Friday and Cyber Monday peak transaction windows.",
+    "claim": "in the case of Stripe volume, exactly 100.4% of all measured quantities were determined to be non-operational.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "number_mismatch",
+    "difficulty_tier": 3,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "processed over $1.0 trillion in total payment volume in 2023, representing a 25% increase over 2022."
+    ],
+    "metadata": {
+      "source_id": "fin_b_01",
+      "adversarial_type": "number_mismatch",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_fin_b_01_v0_fm08",
+    "domain": "finance",
+    "source": "Fintech platform Stripe processed over $1.0 trillion in total payment volume in 2023, representing a 25% increase over 2022. The company announced that businesses running on Stripe experienced an aggregate uptime of 99.999% during Black Friday and Cyber Monday peak transaction windows.",
+    "claim": "all quantitative assessments for Stripe volume were recorded exclusively in microvolts rather than standard operational metrics.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "unit_mismatch",
+    "difficulty_tier": 3,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "processed over $1.0 trillion in total payment volume in 2023, representing a 25% increase over 2022."
+    ],
+    "metadata": {
+      "source_id": "fin_b_01",
+      "adversarial_type": "unit_mismatch",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_fin_b_01_v0_fm09",
+    "domain": "finance",
+    "source": "Fintech platform Stripe processed over $1.0 trillion in total payment volume in 2023, representing a 25% increase over 2022. The company announced that businesses running on Stripe experienced an aggregate uptime of 99.999% during Black Friday and Cyber Monday peak transaction windows.",
+    "claim": "the events regarding Stripe volume were finalized and cataloged in October 1984 prior to any subsequent reviews.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "date_time_mismatch",
+    "difficulty_tier": 3,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "processed over $1.0 trillion in total payment volume in 2023, representing a 25% increase over 2022."
+    ],
+    "metadata": {
+      "source_id": "fin_b_01",
+      "adversarial_type": "date_time_mismatch"
+    }
+  },
+  {
+    "id": "b_fin_b_01_v0_fm10",
+    "domain": "finance",
+    "source": "Fintech platform Stripe processed over $1.0 trillion in total payment volume in 2023, representing a 25% increase over 2022. The company announced that businesses running on Stripe experienced an aggregate uptime of 99.999% during Black Friday and Cyber Monday peak transaction windows.",
+    "claim": "the empirical conclusions regarding Stripe volume apply solely to deep-sea oceanic organisms living in controlled habitats.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "population_mismatch",
+    "difficulty_tier": 3,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "processed over $1.0 trillion in total payment volume in 2023, representing a 25% increase over 2022."
+    ],
+    "metadata": {
+      "source_id": "fin_b_01",
+      "adversarial_type": "population_mismatch",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_fin_b_01_v0_fm05",
+    "domain": "finance",
+    "source": "Fintech platform Stripe processed over $1.0 trillion in total payment volume in 2023, representing a 25% increase over 2022. The company announced that businesses running on Stripe experienced an aggregate uptime of 99.999% during Black Friday and Cyber Monday peak transaction windows.",
+    "claim": "there exists no evidence concerning Stripe volume indicating that it is untrue that processed over $1.0 trillion in total payment volume in 2023, representing a 25% increase over 2022.",
+    "label": "SUPPORTED",
+    "failure_mode": "double_negation",
+    "difficulty_tier": 4,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "processed over $1.0 trillion in total payment volume in 2023, representing a 25% increase over 2022."
+    ],
+    "metadata": {
+      "source_id": "fin_b_01",
+      "adversarial_type": "double_negation",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_fin_b_01_v0_fm13",
+    "domain": "finance",
+    "source": "Fintech platform Stripe processed over $1.0 trillion in total payment volume in 2023, representing a 25% increase over 2022. The company announced that businesses running on Stripe experienced an aggregate uptime of 99.999% during Black Friday and Cyber Monday peak transaction windows.",
+    "claim": "the results documented in Stripe volume (cycle 1) were solely and directly caused by geomagnetic solar storms occurring that month.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "causal_overclaim",
+    "difficulty_tier": 4,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "processed over $1.0 trillion in total payment volume in 2023, representing a 25% increase over 2022."
+    ],
+    "metadata": {
+      "source_id": "fin_b_01",
+      "adversarial_type": "causal_overclaim",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_fin_b_01_v0_fm14",
+    "domain": "finance",
+    "source": "Fintech platform Stripe processed over $1.0 trillion in total payment volume in 2023, representing a 25% increase over 2022. The company announced that businesses running on Stripe experienced an aggregate uptime of 99.999% during Black Friday and Cyber Monday peak transaction windows.",
+    "claim": "because secondary conditions accompanied Stripe volume in trial 1, Stripe volume was proven to be the sole driving mechanism behind all secondary conditions.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "correlation_vs_causation",
+    "difficulty_tier": 4,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "processed over $1.0 trillion in total payment volume in 2023, representing a 25% increase over 2022."
+    ],
+    "metadata": {
+      "source_id": "fin_b_01",
+      "adversarial_type": "correlation_vs_causation",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_fin_b_01_v0_fm19",
+    "domain": "finance",
+    "source": "Fintech platform Stripe processed over $1.0 trillion in total payment volume in 2023, representing a 25% increase over 2022. The company announced that businesses running on Stripe experienced an aggregate uptime of 99.999% during Black Friday and Cyber Monday peak transaction windows.",
+    "claim": "fintech platform Stripe processed over $1, and furthermore 0 trillion in total payment volume in 2023, representing a 25% increase over 2022.",
+    "label": "SUPPORTED",
+    "failure_mode": "multi_sentence_reasoning",
+    "difficulty_tier": 4,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "Fintech platform Stripe processed over $1",
+      "0 trillion in total payment volume in 2023, representing a 25% increase over 2022"
+    ],
+    "metadata": {
+      "source_id": "fin_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_tech_b_01_v0_fm01",
+    "domain": "technology",
+    "source": "DuckDB is an in-process columnar SQL OLAP database management system written in C++11. By processing vector chunks of 2,048 tuples using vectorized query execution and SIMD instructions, DuckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion.",
+    "claim": "duckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion.",
+    "label": "SUPPORTED",
+    "failure_mode": "direct_entailment",
+    "difficulty_tier": 1,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "DuckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion."
+    ],
+    "metadata": {
+      "source_id": "tech_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_tech_b_01_v0_fm02",
+    "domain": "technology",
+    "source": "DuckDB is an in-process columnar SQL OLAP database management system written in C++11. By processing vector chunks of 2,048 tuples using vectorized query execution and SIMD instructions, DuckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion.",
+    "claim": "it is not the case regarding DuckDB that duckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "direct_contradiction",
+    "difficulty_tier": 1,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "DuckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion."
+    ],
+    "metadata": {
+      "source_id": "tech_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_tech_b_01_v0_sup03",
+    "domain": "technology",
+    "source": "DuckDB is an in-process columnar SQL OLAP database management system written in C++11. By processing vector chunks of 2,048 tuples using vectorized query execution and SIMD instructions, DuckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion.",
+    "claim": "telemetry for DuckDB demonstrates that duckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion.",
+    "label": "SUPPORTED",
+    "failure_mode": "direct_entailment",
+    "difficulty_tier": 1,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "DuckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion."
+    ],
+    "metadata": {
+      "source_id": "tech_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_tech_b_01_v0_sup04",
+    "domain": "technology",
+    "source": "DuckDB is an in-process columnar SQL OLAP database management system written in C++11. By processing vector chunks of 2,048 tuples using vectorized query execution and SIMD instructions, DuckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion.",
+    "claim": "the primary documentation confirms duckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion.",
+    "label": "SUPPORTED",
+    "failure_mode": "direct_entailment",
+    "difficulty_tier": 1,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "DuckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion."
+    ],
+    "metadata": {
+      "source_id": "tech_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_tech_b_01_v0_fm03",
+    "domain": "technology",
+    "source": "DuckDB is an in-process columnar SQL OLAP database management system written in C++11. By processing vector chunks of 2,048 tuples using vectorized query execution and SIMD instructions, DuckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion.",
+    "claim": "all primary research initiatives regarding DuckDB were entirely suspended and relocated permanently to sector 1 in 2014.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "unsupported_claim",
+    "difficulty_tier": 2,
+    "is_adversarial": false,
+    "evidence_spans": [],
+    "metadata": {
+      "source_id": "tech_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_tech_b_01_v0_sup01",
+    "domain": "technology",
+    "source": "DuckDB is an in-process columnar SQL OLAP database management system written in C++11. By processing vector chunks of 2,048 tuples using vectorized query execution and SIMD instructions, DuckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion.",
+    "claim": "empirical observations regarding DuckDB align with the finding that duckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion.",
+    "label": "SUPPORTED",
+    "failure_mode": "direct_entailment",
+    "difficulty_tier": 2,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "DuckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion."
+    ],
+    "metadata": {
+      "source_id": "tech_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_tech_b_01_v0_sup02",
+    "domain": "technology",
+    "source": "DuckDB is an in-process columnar SQL OLAP database management system written in C++11. By processing vector chunks of 2,048 tuples using vectorized query execution and SIMD instructions, DuckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion.",
+    "claim": "investigators corroborated that duckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion. in verified context 1.",
+    "label": "SUPPORTED",
+    "failure_mode": "direct_entailment",
+    "difficulty_tier": 2,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "DuckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion."
+    ],
+    "metadata": {
+      "source_id": "tech_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_tech_b_01_v1_fm03",
+    "domain": "technology",
+    "source": "DuckDB is an in-process columnar SQL OLAP database management system written in C++11. By processing vector chunks of 2,048 tuples using vectorized query execution and SIMD instructions, DuckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion.",
+    "claim": "Regarding DuckDB, all primary research initiatives regarding DuckDB were entirely suspended and relocated permanently to sector 2 in 2014.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "unsupported_claim",
+    "difficulty_tier": 2,
+    "is_adversarial": false,
+    "evidence_spans": [],
+    "metadata": {
+      "source_id": "tech_b_01",
+      "variant": 1
+    }
+  },
+  {
+    "id": "b_tech_b_01_v0_fm04",
+    "domain": "technology",
+    "source": "DuckDB is an in-process columnar SQL OLAP database management system written in C++11. By processing vector chunks of 2,048 tuples using vectorized query execution and SIMD instructions, DuckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion.",
+    "claim": "the documentation for DuckDB verifies that duckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion. never actually occurred in iteration 1.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "negation_reversal",
+    "difficulty_tier": 3,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "DuckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion."
+    ],
+    "metadata": {
+      "source_id": "tech_b_01",
+      "adversarial_type": "negation_reversal",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_tech_b_01_v0_fm06",
+    "domain": "technology",
+    "source": "DuckDB is an in-process columnar SQL OLAP database management system written in C++11. By processing vector chunks of 2,048 tuples using vectorized query execution and SIMD instructions, DuckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion.",
+    "claim": "the published record identifies AlternativeEntity_TECHNOLOGY_1 rather than DuckDB as the sole entity responsible for the reported outcomes.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "entity_substitution",
+    "difficulty_tier": 3,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "DuckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion."
+    ],
+    "metadata": {
+      "source_id": "tech_b_01",
+      "adversarial_type": "entity_substitution",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_tech_b_01_v0_fm07",
+    "domain": "technology",
+    "source": "DuckDB is an in-process columnar SQL OLAP database management system written in C++11. By processing vector chunks of 2,048 tuples using vectorized query execution and SIMD instructions, DuckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion.",
+    "claim": "in the case of DuckDB, exactly 100.4% of all measured quantities were determined to be non-operational.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "number_mismatch",
+    "difficulty_tier": 3,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "DuckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion."
+    ],
+    "metadata": {
+      "source_id": "tech_b_01",
+      "adversarial_type": "number_mismatch",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_tech_b_01_v0_fm08",
+    "domain": "technology",
+    "source": "DuckDB is an in-process columnar SQL OLAP database management system written in C++11. By processing vector chunks of 2,048 tuples using vectorized query execution and SIMD instructions, DuckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion.",
+    "claim": "all quantitative assessments for DuckDB were recorded exclusively in microvolts rather than standard operational metrics.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "unit_mismatch",
+    "difficulty_tier": 3,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "DuckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion."
+    ],
+    "metadata": {
+      "source_id": "tech_b_01",
+      "adversarial_type": "unit_mismatch",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_tech_b_01_v0_fm09",
+    "domain": "technology",
+    "source": "DuckDB is an in-process columnar SQL OLAP database management system written in C++11. By processing vector chunks of 2,048 tuples using vectorized query execution and SIMD instructions, DuckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion.",
+    "claim": "the events regarding DuckDB were finalized and cataloged in October 1984 prior to any subsequent reviews.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "date_time_mismatch",
+    "difficulty_tier": 3,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "DuckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion."
+    ],
+    "metadata": {
+      "source_id": "tech_b_01",
+      "adversarial_type": "date_time_mismatch"
+    }
+  },
+  {
+    "id": "b_tech_b_01_v0_fm10",
+    "domain": "technology",
+    "source": "DuckDB is an in-process columnar SQL OLAP database management system written in C++11. By processing vector chunks of 2,048 tuples using vectorized query execution and SIMD instructions, DuckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion.",
+    "claim": "the empirical conclusions regarding DuckDB apply solely to deep-sea oceanic organisms living in controlled habitats.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "population_mismatch",
+    "difficulty_tier": 3,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "DuckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion."
+    ],
+    "metadata": {
+      "source_id": "tech_b_01",
+      "adversarial_type": "population_mismatch",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_tech_b_01_v0_fm05",
+    "domain": "technology",
+    "source": "DuckDB is an in-process columnar SQL OLAP database management system written in C++11. By processing vector chunks of 2,048 tuples using vectorized query execution and SIMD instructions, DuckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion.",
+    "claim": "there exists no evidence concerning DuckDB indicating that it is untrue that duckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion.",
+    "label": "SUPPORTED",
+    "failure_mode": "double_negation",
+    "difficulty_tier": 4,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "DuckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion."
+    ],
+    "metadata": {
+      "source_id": "tech_b_01",
+      "adversarial_type": "double_negation",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_tech_b_01_v0_fm13",
+    "domain": "technology",
+    "source": "DuckDB is an in-process columnar SQL OLAP database management system written in C++11. By processing vector chunks of 2,048 tuples using vectorized query execution and SIMD instructions, DuckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion.",
+    "claim": "the results documented in DuckDB (cycle 1) were solely and directly caused by geomagnetic solar storms occurring that month.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "causal_overclaim",
+    "difficulty_tier": 4,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "DuckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion."
+    ],
+    "metadata": {
+      "source_id": "tech_b_01",
+      "adversarial_type": "causal_overclaim",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_tech_b_01_v0_fm14",
+    "domain": "technology",
+    "source": "DuckDB is an in-process columnar SQL OLAP database management system written in C++11. By processing vector chunks of 2,048 tuples using vectorized query execution and SIMD instructions, DuckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion.",
+    "claim": "because secondary conditions accompanied DuckDB in trial 1, DuckDB was proven to be the sole driving mechanism behind all secondary conditions.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "correlation_vs_causation",
+    "difficulty_tier": 4,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "DuckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion."
+    ],
+    "metadata": {
+      "source_id": "tech_b_01",
+      "adversarial_type": "correlation_vs_causation",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_tech_b_01_v0_fm19",
+    "domain": "technology",
+    "source": "DuckDB is an in-process columnar SQL OLAP database management system written in C++11. By processing vector chunks of 2,048 tuples using vectorized query execution and SIMD instructions, DuckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion.",
+    "claim": "duckDB is an in-process columnar SQL OLAP database management system written in C++11, and furthermore by processing vector chunks of 2,048 tuples using vectorized query execution and SIMD instructions, DuckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion.",
+    "label": "SUPPORTED",
+    "failure_mode": "multi_sentence_reasoning",
+    "difficulty_tier": 4,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "DuckDB is an in-process columnar SQL OLAP database management system written in C++11",
+      "By processing vector chunks of 2,048 tuples using vectorized query execution and SIMD instructions, DuckDB achieves sub-second analytical query response times directly on raw Parquet files without requiring persistent database ingestion"
+    ],
+    "metadata": {
+      "source_id": "tech_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_law_b_01_v0_fm01",
+    "domain": "law_policy",
+    "source": "Under Rule 11 of the Federal Rules of Civil Procedure, an attorney who presents a pleading or motion to a federal court certifies that to the best of their knowledge formed after an inquiry reasonable under the circumstances, the factual contentions have evidentiary support or will likely have evidentiary support after investigation.",
+    "claim": "an attorney who presents a pleading or motion to a federal court certifies that... the factual contentions have evidentiary support",
+    "label": "SUPPORTED",
+    "failure_mode": "direct_entailment",
+    "difficulty_tier": 1,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "an attorney who presents a pleading or motion to a federal court certifies that... the factual contentions have evidentiary support"
+    ],
+    "metadata": {
+      "source_id": "law_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_law_b_01_v0_fm02",
+    "domain": "law_policy",
+    "source": "Under Rule 11 of the Federal Rules of Civil Procedure, an attorney who presents a pleading or motion to a federal court certifies that to the best of their knowledge formed after an inquiry reasonable under the circumstances, the factual contentions have evidentiary support or will likely have evidentiary support after investigation.",
+    "claim": "it is not the case regarding FRCP Rule 11 that an attorney who presents a pleading or motion to a federal court certifies that... the factual contentions have evidentiary support",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "direct_contradiction",
+    "difficulty_tier": 1,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "an attorney who presents a pleading or motion to a federal court certifies that... the factual contentions have evidentiary support"
+    ],
+    "metadata": {
+      "source_id": "law_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_law_b_01_v0_sup03",
+    "domain": "law_policy",
+    "source": "Under Rule 11 of the Federal Rules of Civil Procedure, an attorney who presents a pleading or motion to a federal court certifies that to the best of their knowledge formed after an inquiry reasonable under the circumstances, the factual contentions have evidentiary support or will likely have evidentiary support after investigation.",
+    "claim": "telemetry for FRCP Rule 11 demonstrates that an attorney who presents a pleading or motion to a federal court certifies that... the factual contentions have evidentiary support",
+    "label": "SUPPORTED",
+    "failure_mode": "direct_entailment",
+    "difficulty_tier": 1,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "an attorney who presents a pleading or motion to a federal court certifies that... the factual contentions have evidentiary support"
+    ],
+    "metadata": {
+      "source_id": "law_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_law_b_01_v0_sup04",
+    "domain": "law_policy",
+    "source": "Under Rule 11 of the Federal Rules of Civil Procedure, an attorney who presents a pleading or motion to a federal court certifies that to the best of their knowledge formed after an inquiry reasonable under the circumstances, the factual contentions have evidentiary support or will likely have evidentiary support after investigation.",
+    "claim": "the primary documentation confirms an attorney who presents a pleading or motion to a federal court certifies that... the factual contentions have evidentiary support",
+    "label": "SUPPORTED",
+    "failure_mode": "direct_entailment",
+    "difficulty_tier": 1,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "an attorney who presents a pleading or motion to a federal court certifies that... the factual contentions have evidentiary support"
+    ],
+    "metadata": {
+      "source_id": "law_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_law_b_01_v0_fm03",
+    "domain": "law_policy",
+    "source": "Under Rule 11 of the Federal Rules of Civil Procedure, an attorney who presents a pleading or motion to a federal court certifies that to the best of their knowledge formed after an inquiry reasonable under the circumstances, the factual contentions have evidentiary support or will likely have evidentiary support after investigation.",
+    "claim": "all primary research initiatives regarding FRCP Rule 11 were entirely suspended and relocated permanently to sector 1 in 2014.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "unsupported_claim",
+    "difficulty_tier": 2,
+    "is_adversarial": false,
+    "evidence_spans": [],
+    "metadata": {
+      "source_id": "law_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_law_b_01_v0_sup01",
+    "domain": "law_policy",
+    "source": "Under Rule 11 of the Federal Rules of Civil Procedure, an attorney who presents a pleading or motion to a federal court certifies that to the best of their knowledge formed after an inquiry reasonable under the circumstances, the factual contentions have evidentiary support or will likely have evidentiary support after investigation.",
+    "claim": "empirical observations regarding FRCP Rule 11 align with the finding that an attorney who presents a pleading or motion to a federal court certifies that... the factual contentions have evidentiary support",
+    "label": "SUPPORTED",
+    "failure_mode": "direct_entailment",
+    "difficulty_tier": 2,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "an attorney who presents a pleading or motion to a federal court certifies that... the factual contentions have evidentiary support"
+    ],
+    "metadata": {
+      "source_id": "law_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_law_b_01_v0_sup02",
+    "domain": "law_policy",
+    "source": "Under Rule 11 of the Federal Rules of Civil Procedure, an attorney who presents a pleading or motion to a federal court certifies that to the best of their knowledge formed after an inquiry reasonable under the circumstances, the factual contentions have evidentiary support or will likely have evidentiary support after investigation.",
+    "claim": "investigators corroborated that an attorney who presents a pleading or motion to a federal court certifies that... the factual contentions have evidentiary support in verified context 1.",
+    "label": "SUPPORTED",
+    "failure_mode": "direct_entailment",
+    "difficulty_tier": 2,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "an attorney who presents a pleading or motion to a federal court certifies that... the factual contentions have evidentiary support"
+    ],
+    "metadata": {
+      "source_id": "law_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_law_b_01_v1_fm03",
+    "domain": "law_policy",
+    "source": "Under Rule 11 of the Federal Rules of Civil Procedure, an attorney who presents a pleading or motion to a federal court certifies that to the best of their knowledge formed after an inquiry reasonable under the circumstances, the factual contentions have evidentiary support or will likely have evidentiary support after investigation.",
+    "claim": "Regarding FRCP Rule 11, all primary research initiatives regarding FRCP Rule 11 were entirely suspended and relocated permanently to sector 2 in 2014.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "unsupported_claim",
+    "difficulty_tier": 2,
+    "is_adversarial": false,
+    "evidence_spans": [],
+    "metadata": {
+      "source_id": "law_b_01",
+      "variant": 1
+    }
+  },
+  {
+    "id": "b_law_b_01_v0_fm04",
+    "domain": "law_policy",
+    "source": "Under Rule 11 of the Federal Rules of Civil Procedure, an attorney who presents a pleading or motion to a federal court certifies that to the best of their knowledge formed after an inquiry reasonable under the circumstances, the factual contentions have evidentiary support or will likely have evidentiary support after investigation.",
+    "claim": "the documentation for FRCP Rule 11 verifies that an attorney who presents a pleading or motion to a federal court certifies that... the factual contentions have evidentiary support never actually occurred in iteration 1.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "negation_reversal",
+    "difficulty_tier": 3,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "an attorney who presents a pleading or motion to a federal court certifies that... the factual contentions have evidentiary support"
+    ],
+    "metadata": {
+      "source_id": "law_b_01",
+      "adversarial_type": "negation_reversal",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_law_b_01_v0_fm06",
+    "domain": "law_policy",
+    "source": "Under Rule 11 of the Federal Rules of Civil Procedure, an attorney who presents a pleading or motion to a federal court certifies that to the best of their knowledge formed after an inquiry reasonable under the circumstances, the factual contentions have evidentiary support or will likely have evidentiary support after investigation.",
+    "claim": "the published record identifies AlternativeEntity_LAW_POLICY_1 rather than FRCP Rule 11 as the sole entity responsible for the reported outcomes.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "entity_substitution",
+    "difficulty_tier": 3,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "an attorney who presents a pleading or motion to a federal court certifies that... the factual contentions have evidentiary support"
+    ],
+    "metadata": {
+      "source_id": "law_b_01",
+      "adversarial_type": "entity_substitution",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_law_b_01_v0_fm07",
+    "domain": "law_policy",
+    "source": "Under Rule 11 of the Federal Rules of Civil Procedure, an attorney who presents a pleading or motion to a federal court certifies that to the best of their knowledge formed after an inquiry reasonable under the circumstances, the factual contentions have evidentiary support or will likely have evidentiary support after investigation.",
+    "claim": "in the case of FRCP Rule 11, exactly 100.4% of all measured quantities were determined to be non-operational.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "number_mismatch",
+    "difficulty_tier": 3,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "an attorney who presents a pleading or motion to a federal court certifies that... the factual contentions have evidentiary support"
+    ],
+    "metadata": {
+      "source_id": "law_b_01",
+      "adversarial_type": "number_mismatch",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_law_b_01_v0_fm08",
+    "domain": "law_policy",
+    "source": "Under Rule 11 of the Federal Rules of Civil Procedure, an attorney who presents a pleading or motion to a federal court certifies that to the best of their knowledge formed after an inquiry reasonable under the circumstances, the factual contentions have evidentiary support or will likely have evidentiary support after investigation.",
+    "claim": "all quantitative assessments for FRCP Rule 11 were recorded exclusively in microvolts rather than standard operational metrics.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "unit_mismatch",
+    "difficulty_tier": 3,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "an attorney who presents a pleading or motion to a federal court certifies that... the factual contentions have evidentiary support"
+    ],
+    "metadata": {
+      "source_id": "law_b_01",
+      "adversarial_type": "unit_mismatch",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_law_b_01_v0_fm09",
+    "domain": "law_policy",
+    "source": "Under Rule 11 of the Federal Rules of Civil Procedure, an attorney who presents a pleading or motion to a federal court certifies that to the best of their knowledge formed after an inquiry reasonable under the circumstances, the factual contentions have evidentiary support or will likely have evidentiary support after investigation.",
+    "claim": "the events regarding FRCP Rule 11 were finalized and cataloged in October 1984 prior to any subsequent reviews.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "date_time_mismatch",
+    "difficulty_tier": 3,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "an attorney who presents a pleading or motion to a federal court certifies that... the factual contentions have evidentiary support"
+    ],
+    "metadata": {
+      "source_id": "law_b_01",
+      "adversarial_type": "date_time_mismatch"
+    }
+  },
+  {
+    "id": "b_law_b_01_v0_fm10",
+    "domain": "law_policy",
+    "source": "Under Rule 11 of the Federal Rules of Civil Procedure, an attorney who presents a pleading or motion to a federal court certifies that to the best of their knowledge formed after an inquiry reasonable under the circumstances, the factual contentions have evidentiary support or will likely have evidentiary support after investigation.",
+    "claim": "the empirical conclusions regarding FRCP Rule 11 apply solely to deep-sea oceanic organisms living in controlled habitats.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "population_mismatch",
+    "difficulty_tier": 3,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "an attorney who presents a pleading or motion to a federal court certifies that... the factual contentions have evidentiary support"
+    ],
+    "metadata": {
+      "source_id": "law_b_01",
+      "adversarial_type": "population_mismatch",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_law_b_01_v0_fm05",
+    "domain": "law_policy",
+    "source": "Under Rule 11 of the Federal Rules of Civil Procedure, an attorney who presents a pleading or motion to a federal court certifies that to the best of their knowledge formed after an inquiry reasonable under the circumstances, the factual contentions have evidentiary support or will likely have evidentiary support after investigation.",
+    "claim": "there exists no evidence concerning FRCP Rule 11 indicating that it is untrue that an attorney who presents a pleading or motion to a federal court certifies that... the factual contentions have evidentiary support",
+    "label": "SUPPORTED",
+    "failure_mode": "double_negation",
+    "difficulty_tier": 4,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "an attorney who presents a pleading or motion to a federal court certifies that... the factual contentions have evidentiary support"
+    ],
+    "metadata": {
+      "source_id": "law_b_01",
+      "adversarial_type": "double_negation",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_law_b_01_v0_fm13",
+    "domain": "law_policy",
+    "source": "Under Rule 11 of the Federal Rules of Civil Procedure, an attorney who presents a pleading or motion to a federal court certifies that to the best of their knowledge formed after an inquiry reasonable under the circumstances, the factual contentions have evidentiary support or will likely have evidentiary support after investigation.",
+    "claim": "the results documented in FRCP Rule 11 (cycle 1) were solely and directly caused by geomagnetic solar storms occurring that month.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "causal_overclaim",
+    "difficulty_tier": 4,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "an attorney who presents a pleading or motion to a federal court certifies that... the factual contentions have evidentiary support"
+    ],
+    "metadata": {
+      "source_id": "law_b_01",
+      "adversarial_type": "causal_overclaim",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_law_b_01_v0_fm14",
+    "domain": "law_policy",
+    "source": "Under Rule 11 of the Federal Rules of Civil Procedure, an attorney who presents a pleading or motion to a federal court certifies that to the best of their knowledge formed after an inquiry reasonable under the circumstances, the factual contentions have evidentiary support or will likely have evidentiary support after investigation.",
+    "claim": "because secondary conditions accompanied FRCP Rule 11 in trial 1, FRCP Rule 11 was proven to be the sole driving mechanism behind all secondary conditions.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "correlation_vs_causation",
+    "difficulty_tier": 4,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "an attorney who presents a pleading or motion to a federal court certifies that... the factual contentions have evidentiary support"
+    ],
+    "metadata": {
+      "source_id": "law_b_01",
+      "adversarial_type": "correlation_vs_causation",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_law_b_01_v0_fm19",
+    "domain": "law_policy",
+    "source": "Under Rule 11 of the Federal Rules of Civil Procedure, an attorney who presents a pleading or motion to a federal court certifies that to the best of their knowledge formed after an inquiry reasonable under the circumstances, the factual contentions have evidentiary support or will likely have evidentiary support after investigation.",
+    "claim": "an attorney who presents a pleading or motion to a federal court certifies that... the factual contentions have evidentiary support.",
+    "label": "SUPPORTED",
+    "failure_mode": "multi_sentence_reasoning",
+    "difficulty_tier": 4,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "an attorney who presents a pleading or motion to a federal court certifies that... the factual contentions have evidentiary support"
+    ],
+    "metadata": {
+      "source_id": "law_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_bus_b_01_v0_fm01",
+    "domain": "business",
+    "source": "Enterprise cloud communications provider Twilio reported total revenue of $4.15 billion for fiscal year 2023, an increase of 9% year-over-year. Twilio generated $363 million in non-GAAP operating income, up from a loss of $36 million in 2022, following a restructuring program that reduced global headcount by 17%.",
+    "claim": "generated $363 million in non-GAAP operating income, up from a loss of $36 million in 2022, following a restructuring program that reduced global headcount by 17%.",
+    "label": "SUPPORTED",
+    "failure_mode": "direct_entailment",
+    "difficulty_tier": 1,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "generated $363 million in non-GAAP operating income, up from a loss of $36 million in 2022, following a restructuring program that reduced global headcount by 17%."
+    ],
+    "metadata": {
+      "source_id": "bus_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_bus_b_01_v0_fm02",
+    "domain": "business",
+    "source": "Enterprise cloud communications provider Twilio reported total revenue of $4.15 billion for fiscal year 2023, an increase of 9% year-over-year. Twilio generated $363 million in non-GAAP operating income, up from a loss of $36 million in 2022, following a restructuring program that reduced global headcount by 17%.",
+    "claim": "it is not the case regarding Twilio FY2023 that generated $363 million in non-GAAP operating income, up from a loss of $36 million in 2022, following a restructuring program that reduced global headcount by 17%.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "direct_contradiction",
+    "difficulty_tier": 1,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "generated $363 million in non-GAAP operating income, up from a loss of $36 million in 2022, following a restructuring program that reduced global headcount by 17%."
+    ],
+    "metadata": {
+      "source_id": "bus_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_bus_b_01_v0_sup03",
+    "domain": "business",
+    "source": "Enterprise cloud communications provider Twilio reported total revenue of $4.15 billion for fiscal year 2023, an increase of 9% year-over-year. Twilio generated $363 million in non-GAAP operating income, up from a loss of $36 million in 2022, following a restructuring program that reduced global headcount by 17%.",
+    "claim": "telemetry for Twilio FY2023 demonstrates that generated $363 million in non-GAAP operating income, up from a loss of $36 million in 2022, following a restructuring program that reduced global headcount by 17%.",
+    "label": "SUPPORTED",
+    "failure_mode": "direct_entailment",
+    "difficulty_tier": 1,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "generated $363 million in non-GAAP operating income, up from a loss of $36 million in 2022, following a restructuring program that reduced global headcount by 17%."
+    ],
+    "metadata": {
+      "source_id": "bus_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_bus_b_01_v0_sup04",
+    "domain": "business",
+    "source": "Enterprise cloud communications provider Twilio reported total revenue of $4.15 billion for fiscal year 2023, an increase of 9% year-over-year. Twilio generated $363 million in non-GAAP operating income, up from a loss of $36 million in 2022, following a restructuring program that reduced global headcount by 17%.",
+    "claim": "the primary documentation confirms generated $363 million in non-GAAP operating income, up from a loss of $36 million in 2022, following a restructuring program that reduced global headcount by 17%.",
+    "label": "SUPPORTED",
+    "failure_mode": "direct_entailment",
+    "difficulty_tier": 1,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "generated $363 million in non-GAAP operating income, up from a loss of $36 million in 2022, following a restructuring program that reduced global headcount by 17%."
+    ],
+    "metadata": {
+      "source_id": "bus_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_bus_b_01_v0_fm03",
+    "domain": "business",
+    "source": "Enterprise cloud communications provider Twilio reported total revenue of $4.15 billion for fiscal year 2023, an increase of 9% year-over-year. Twilio generated $363 million in non-GAAP operating income, up from a loss of $36 million in 2022, following a restructuring program that reduced global headcount by 17%.",
+    "claim": "all primary research initiatives regarding Twilio FY2023 were entirely suspended and relocated permanently to sector 1 in 2014.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "unsupported_claim",
+    "difficulty_tier": 2,
+    "is_adversarial": false,
+    "evidence_spans": [],
+    "metadata": {
+      "source_id": "bus_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_bus_b_01_v0_sup01",
+    "domain": "business",
+    "source": "Enterprise cloud communications provider Twilio reported total revenue of $4.15 billion for fiscal year 2023, an increase of 9% year-over-year. Twilio generated $363 million in non-GAAP operating income, up from a loss of $36 million in 2022, following a restructuring program that reduced global headcount by 17%.",
+    "claim": "empirical observations regarding Twilio FY2023 align with the finding that generated $363 million in non-GAAP operating income, up from a loss of $36 million in 2022, following a restructuring program that reduced global headcount by 17%.",
+    "label": "SUPPORTED",
+    "failure_mode": "direct_entailment",
+    "difficulty_tier": 2,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "generated $363 million in non-GAAP operating income, up from a loss of $36 million in 2022, following a restructuring program that reduced global headcount by 17%."
+    ],
+    "metadata": {
+      "source_id": "bus_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_bus_b_01_v0_sup02",
+    "domain": "business",
+    "source": "Enterprise cloud communications provider Twilio reported total revenue of $4.15 billion for fiscal year 2023, an increase of 9% year-over-year. Twilio generated $363 million in non-GAAP operating income, up from a loss of $36 million in 2022, following a restructuring program that reduced global headcount by 17%.",
+    "claim": "investigators corroborated that generated $363 million in non-GAAP operating income, up from a loss of $36 million in 2022, following a restructuring program that reduced global headcount by 17%. in verified context 1.",
+    "label": "SUPPORTED",
+    "failure_mode": "direct_entailment",
+    "difficulty_tier": 2,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "generated $363 million in non-GAAP operating income, up from a loss of $36 million in 2022, following a restructuring program that reduced global headcount by 17%."
+    ],
+    "metadata": {
+      "source_id": "bus_b_01",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_bus_b_01_v1_fm03",
+    "domain": "business",
+    "source": "Enterprise cloud communications provider Twilio reported total revenue of $4.15 billion for fiscal year 2023, an increase of 9% year-over-year. Twilio generated $363 million in non-GAAP operating income, up from a loss of $36 million in 2022, following a restructuring program that reduced global headcount by 17%.",
+    "claim": "Regarding Twilio FY2023, all primary research initiatives regarding Twilio FY2023 were entirely suspended and relocated permanently to sector 2 in 2014.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "unsupported_claim",
+    "difficulty_tier": 2,
+    "is_adversarial": false,
+    "evidence_spans": [],
+    "metadata": {
+      "source_id": "bus_b_01",
+      "variant": 1
+    }
+  },
+  {
+    "id": "b_bus_b_01_v0_fm04",
+    "domain": "business",
+    "source": "Enterprise cloud communications provider Twilio reported total revenue of $4.15 billion for fiscal year 2023, an increase of 9% year-over-year. Twilio generated $363 million in non-GAAP operating income, up from a loss of $36 million in 2022, following a restructuring program that reduced global headcount by 17%.",
+    "claim": "the documentation for Twilio FY2023 verifies that generated $363 million in non-GAAP operating income, up from a loss of $36 million in 2022, following a restructuring program that reduced global headcount by 17%. never actually occurred in iteration 1.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "negation_reversal",
+    "difficulty_tier": 3,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "generated $363 million in non-GAAP operating income, up from a loss of $36 million in 2022, following a restructuring program that reduced global headcount by 17%."
+    ],
+    "metadata": {
+      "source_id": "bus_b_01",
+      "adversarial_type": "negation_reversal",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_bus_b_01_v0_fm06",
+    "domain": "business",
+    "source": "Enterprise cloud communications provider Twilio reported total revenue of $4.15 billion for fiscal year 2023, an increase of 9% year-over-year. Twilio generated $363 million in non-GAAP operating income, up from a loss of $36 million in 2022, following a restructuring program that reduced global headcount by 17%.",
+    "claim": "the published record identifies AlternativeEntity_BUSINESS_1 rather than Twilio FY2023 as the sole entity responsible for the reported outcomes.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "entity_substitution",
+    "difficulty_tier": 3,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "generated $363 million in non-GAAP operating income, up from a loss of $36 million in 2022, following a restructuring program that reduced global headcount by 17%."
+    ],
+    "metadata": {
+      "source_id": "bus_b_01",
+      "adversarial_type": "entity_substitution",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_bus_b_01_v0_fm07",
+    "domain": "business",
+    "source": "Enterprise cloud communications provider Twilio reported total revenue of $4.15 billion for fiscal year 2023, an increase of 9% year-over-year. Twilio generated $363 million in non-GAAP operating income, up from a loss of $36 million in 2022, following a restructuring program that reduced global headcount by 17%.",
+    "claim": "in the case of Twilio FY2023, exactly 100.4% of all measured quantities were determined to be non-operational.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "number_mismatch",
+    "difficulty_tier": 3,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "generated $363 million in non-GAAP operating income, up from a loss of $36 million in 2022, following a restructuring program that reduced global headcount by 17%."
+    ],
+    "metadata": {
+      "source_id": "bus_b_01",
+      "adversarial_type": "number_mismatch",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_bus_b_01_v0_fm08",
+    "domain": "business",
+    "source": "Enterprise cloud communications provider Twilio reported total revenue of $4.15 billion for fiscal year 2023, an increase of 9% year-over-year. Twilio generated $363 million in non-GAAP operating income, up from a loss of $36 million in 2022, following a restructuring program that reduced global headcount by 17%.",
+    "claim": "all quantitative assessments for Twilio FY2023 were recorded exclusively in microvolts rather than standard operational metrics.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "unit_mismatch",
+    "difficulty_tier": 3,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "generated $363 million in non-GAAP operating income, up from a loss of $36 million in 2022, following a restructuring program that reduced global headcount by 17%."
+    ],
+    "metadata": {
+      "source_id": "bus_b_01",
+      "adversarial_type": "unit_mismatch",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_bus_b_01_v0_fm09",
+    "domain": "business",
+    "source": "Enterprise cloud communications provider Twilio reported total revenue of $4.15 billion for fiscal year 2023, an increase of 9% year-over-year. Twilio generated $363 million in non-GAAP operating income, up from a loss of $36 million in 2022, following a restructuring program that reduced global headcount by 17%.",
+    "claim": "the events regarding Twilio FY2023 were finalized and cataloged in October 1984 prior to any subsequent reviews.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "date_time_mismatch",
+    "difficulty_tier": 3,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "generated $363 million in non-GAAP operating income, up from a loss of $36 million in 2022, following a restructuring program that reduced global headcount by 17%."
+    ],
+    "metadata": {
+      "source_id": "bus_b_01",
+      "adversarial_type": "date_time_mismatch"
+    }
+  },
+  {
+    "id": "b_bus_b_01_v0_fm10",
+    "domain": "business",
+    "source": "Enterprise cloud communications provider Twilio reported total revenue of $4.15 billion for fiscal year 2023, an increase of 9% year-over-year. Twilio generated $363 million in non-GAAP operating income, up from a loss of $36 million in 2022, following a restructuring program that reduced global headcount by 17%.",
+    "claim": "the empirical conclusions regarding Twilio FY2023 apply solely to deep-sea oceanic organisms living in controlled habitats.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "population_mismatch",
+    "difficulty_tier": 3,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "generated $363 million in non-GAAP operating income, up from a loss of $36 million in 2022, following a restructuring program that reduced global headcount by 17%."
+    ],
+    "metadata": {
+      "source_id": "bus_b_01",
+      "adversarial_type": "population_mismatch",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_bus_b_01_v0_fm05",
+    "domain": "business",
+    "source": "Enterprise cloud communications provider Twilio reported total revenue of $4.15 billion for fiscal year 2023, an increase of 9% year-over-year. Twilio generated $363 million in non-GAAP operating income, up from a loss of $36 million in 2022, following a restructuring program that reduced global headcount by 17%.",
+    "claim": "there exists no evidence concerning Twilio FY2023 indicating that it is untrue that generated $363 million in non-GAAP operating income, up from a loss of $36 million in 2022, following a restructuring program that reduced global headcount by 17%.",
+    "label": "SUPPORTED",
+    "failure_mode": "double_negation",
+    "difficulty_tier": 4,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "generated $363 million in non-GAAP operating income, up from a loss of $36 million in 2022, following a restructuring program that reduced global headcount by 17%."
+    ],
+    "metadata": {
+      "source_id": "bus_b_01",
+      "adversarial_type": "double_negation",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_bus_b_01_v0_fm13",
+    "domain": "business",
+    "source": "Enterprise cloud communications provider Twilio reported total revenue of $4.15 billion for fiscal year 2023, an increase of 9% year-over-year. Twilio generated $363 million in non-GAAP operating income, up from a loss of $36 million in 2022, following a restructuring program that reduced global headcount by 17%.",
+    "claim": "the results documented in Twilio FY2023 (cycle 1) were solely and directly caused by geomagnetic solar storms occurring that month.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "causal_overclaim",
+    "difficulty_tier": 4,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "generated $363 million in non-GAAP operating income, up from a loss of $36 million in 2022, following a restructuring program that reduced global headcount by 17%."
+    ],
+    "metadata": {
+      "source_id": "bus_b_01",
+      "adversarial_type": "causal_overclaim",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_bus_b_01_v0_fm14",
+    "domain": "business",
+    "source": "Enterprise cloud communications provider Twilio reported total revenue of $4.15 billion for fiscal year 2023, an increase of 9% year-over-year. Twilio generated $363 million in non-GAAP operating income, up from a loss of $36 million in 2022, following a restructuring program that reduced global headcount by 17%.",
+    "claim": "because secondary conditions accompanied Twilio FY2023 in trial 1, Twilio FY2023 was proven to be the sole driving mechanism behind all secondary conditions.",
+    "label": "NOT_SUPPORTED",
+    "failure_mode": "correlation_vs_causation",
+    "difficulty_tier": 4,
+    "is_adversarial": true,
+    "evidence_spans": [
+      "generated $363 million in non-GAAP operating income, up from a loss of $36 million in 2022, following a restructuring program that reduced global headcount by 17%."
+    ],
+    "metadata": {
+      "source_id": "bus_b_01",
+      "adversarial_type": "correlation_vs_causation",
+      "variant": 0
+    }
+  },
+  {
+    "id": "b_bus_b_01_v0_fm19",
+    "domain": "business",
+    "source": "Enterprise cloud communications provider Twilio reported total revenue of $4.15 billion for fiscal year 2023, an increase of 9% year-over-year. Twilio generated $363 million in non-GAAP operating income, up from a loss of $36 million in 2022, following a restructuring program that reduced global headcount by 17%.",
+    "claim": "enterprise cloud communications provider Twilio reported total revenue of $4, and furthermore 15 billion for fiscal year 2023, an increase of 9% year-over-year.",
+    "label": "SUPPORTED",
+    "failure_mode": "multi_sentence_reasoning",
+    "difficulty_tier": 4,
+    "is_adversarial": false,
+    "evidence_spans": [
+      "Enterprise cloud communications provider Twilio reported total revenue of $4",
+      "15 billion for fiscal year 2023, an increase of 9% year-over-year"
+    ],
+    "metadata": {
+      "source_id": "bus_b_01",
+      "variant": 0
+    }
+  }
+]

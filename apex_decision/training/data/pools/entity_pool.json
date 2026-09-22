@@ -1,0 +1,6002 @@
+[
+  {
+    "id": "pool_entity_0000",
+    "category": "semantic:entity_resolution",
+    "state": "Big Blue announced deployment of its newest quantum computing processor across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did IBM announce a quantum computing processor?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0000",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported ARR of $120M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did annualized recurring revenue reach $120 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0001",
+    "category": "semantic:entity_resolution",
+    "state": "Alphabet announced deployment of its newest cloud infrastructure across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Google announce a cloud infrastructure?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0001",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported GAAP of $15M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did generally accepted accounting principles reach $15 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0002",
+    "category": "semantic:entity_resolution",
+    "state": "Redmond announced deployment of its newest operating system kernel across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Microsoft announce a operating system kernel?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0002",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported EBITDA of $85M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did earnings before interest, taxes, depreciation, and amortization reach $85 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0003",
+    "category": "semantic:entity_resolution",
+    "state": "Solaris Corp announced deployment of its newest patented solar cell across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Solaris Corp's subsidiary Lumina Labs announce a patented solar cell?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0003",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported MFA of $5M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did multi-factor authentication reach $5 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0004",
+    "category": "semantic:entity_resolution",
+    "state": "Big Blue announced deployment of its newest quantum computing processor across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did IBM announce a quantum computing processor?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0004",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported ARR of $120M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did annualized recurring revenue reach $120 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0005",
+    "category": "semantic:entity_resolution",
+    "state": "Alphabet announced deployment of its newest cloud infrastructure across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Google announce a cloud infrastructure?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0005",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported GAAP of $15M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did generally accepted accounting principles reach $15 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0006",
+    "category": "semantic:entity_resolution",
+    "state": "Redmond announced deployment of its newest operating system kernel across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Microsoft announce a operating system kernel?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0006",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported EBITDA of $85M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did earnings before interest, taxes, depreciation, and amortization reach $85 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0007",
+    "category": "semantic:entity_resolution",
+    "state": "Solaris Corp announced deployment of its newest patented solar cell across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Solaris Corp's subsidiary Lumina Labs announce a patented solar cell?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0007",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported MFA of $5M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did multi-factor authentication reach $5 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0008",
+    "category": "semantic:entity_resolution",
+    "state": "Big Blue announced deployment of its newest quantum computing processor across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did IBM announce a quantum computing processor?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0008",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported ARR of $120M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did annualized recurring revenue reach $120 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0009",
+    "category": "semantic:entity_resolution",
+    "state": "Alphabet announced deployment of its newest cloud infrastructure across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Google announce a cloud infrastructure?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0009",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported GAAP of $15M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did generally accepted accounting principles reach $15 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0010",
+    "category": "semantic:entity_resolution",
+    "state": "Redmond announced deployment of its newest operating system kernel across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Microsoft announce a operating system kernel?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0010",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported EBITDA of $85M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did earnings before interest, taxes, depreciation, and amortization reach $85 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0011",
+    "category": "semantic:entity_resolution",
+    "state": "Solaris Corp announced deployment of its newest patented solar cell across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Solaris Corp's subsidiary Lumina Labs announce a patented solar cell?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0011",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported MFA of $5M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did multi-factor authentication reach $5 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0012",
+    "category": "semantic:entity_resolution",
+    "state": "Big Blue announced deployment of its newest quantum computing processor across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did IBM announce a quantum computing processor?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0012",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported ARR of $120M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did annualized recurring revenue reach $120 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0013",
+    "category": "semantic:entity_resolution",
+    "state": "Alphabet announced deployment of its newest cloud infrastructure across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Google announce a cloud infrastructure?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0013",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported GAAP of $15M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did generally accepted accounting principles reach $15 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0014",
+    "category": "semantic:entity_resolution",
+    "state": "Redmond announced deployment of its newest operating system kernel across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Microsoft announce a operating system kernel?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0014",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported EBITDA of $85M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did earnings before interest, taxes, depreciation, and amortization reach $85 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0015",
+    "category": "semantic:entity_resolution",
+    "state": "Solaris Corp announced deployment of its newest patented solar cell across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Solaris Corp's subsidiary Lumina Labs announce a patented solar cell?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0015",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported MFA of $5M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did multi-factor authentication reach $5 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0016",
+    "category": "semantic:entity_resolution",
+    "state": "Big Blue announced deployment of its newest quantum computing processor across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did IBM announce a quantum computing processor?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0016",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported ARR of $120M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did annualized recurring revenue reach $120 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0017",
+    "category": "semantic:entity_resolution",
+    "state": "Alphabet announced deployment of its newest cloud infrastructure across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Google announce a cloud infrastructure?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0017",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported GAAP of $15M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did generally accepted accounting principles reach $15 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0018",
+    "category": "semantic:entity_resolution",
+    "state": "Redmond announced deployment of its newest operating system kernel across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Microsoft announce a operating system kernel?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0018",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported EBITDA of $85M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did earnings before interest, taxes, depreciation, and amortization reach $85 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0019",
+    "category": "semantic:entity_resolution",
+    "state": "Solaris Corp announced deployment of its newest patented solar cell across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Solaris Corp's subsidiary Lumina Labs announce a patented solar cell?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0019",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported MFA of $5M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did multi-factor authentication reach $5 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0020",
+    "category": "semantic:entity_resolution",
+    "state": "Big Blue announced deployment of its newest quantum computing processor across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did IBM announce a quantum computing processor?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0020",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported ARR of $120M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did annualized recurring revenue reach $120 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0021",
+    "category": "semantic:entity_resolution",
+    "state": "Alphabet announced deployment of its newest cloud infrastructure across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Google announce a cloud infrastructure?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0021",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported GAAP of $15M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did generally accepted accounting principles reach $15 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0022",
+    "category": "semantic:entity_resolution",
+    "state": "Redmond announced deployment of its newest operating system kernel across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Microsoft announce a operating system kernel?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0022",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported EBITDA of $85M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did earnings before interest, taxes, depreciation, and amortization reach $85 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0023",
+    "category": "semantic:entity_resolution",
+    "state": "Solaris Corp announced deployment of its newest patented solar cell across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Solaris Corp's subsidiary Lumina Labs announce a patented solar cell?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0023",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported MFA of $5M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did multi-factor authentication reach $5 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0024",
+    "category": "semantic:entity_resolution",
+    "state": "Big Blue announced deployment of its newest quantum computing processor across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did IBM announce a quantum computing processor?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0024",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported ARR of $120M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did annualized recurring revenue reach $120 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0025",
+    "category": "semantic:entity_resolution",
+    "state": "Alphabet announced deployment of its newest cloud infrastructure across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Google announce a cloud infrastructure?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0025",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported GAAP of $15M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did generally accepted accounting principles reach $15 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0026",
+    "category": "semantic:entity_resolution",
+    "state": "Redmond announced deployment of its newest operating system kernel across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Microsoft announce a operating system kernel?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0026",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported EBITDA of $85M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did earnings before interest, taxes, depreciation, and amortization reach $85 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0027",
+    "category": "semantic:entity_resolution",
+    "state": "Solaris Corp announced deployment of its newest patented solar cell across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Solaris Corp's subsidiary Lumina Labs announce a patented solar cell?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0027",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported MFA of $5M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did multi-factor authentication reach $5 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0028",
+    "category": "semantic:entity_resolution",
+    "state": "Big Blue announced deployment of its newest quantum computing processor across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did IBM announce a quantum computing processor?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0028",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported ARR of $120M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did annualized recurring revenue reach $120 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0029",
+    "category": "semantic:entity_resolution",
+    "state": "Alphabet announced deployment of its newest cloud infrastructure across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Google announce a cloud infrastructure?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0029",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported GAAP of $15M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did generally accepted accounting principles reach $15 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0030",
+    "category": "semantic:entity_resolution",
+    "state": "Redmond announced deployment of its newest operating system kernel across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Microsoft announce a operating system kernel?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0030",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported EBITDA of $85M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did earnings before interest, taxes, depreciation, and amortization reach $85 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0031",
+    "category": "semantic:entity_resolution",
+    "state": "Solaris Corp announced deployment of its newest patented solar cell across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Solaris Corp's subsidiary Lumina Labs announce a patented solar cell?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0031",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported MFA of $5M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did multi-factor authentication reach $5 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0032",
+    "category": "semantic:entity_resolution",
+    "state": "Big Blue announced deployment of its newest quantum computing processor across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did IBM announce a quantum computing processor?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0032",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported ARR of $120M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did annualized recurring revenue reach $120 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0033",
+    "category": "semantic:entity_resolution",
+    "state": "Alphabet announced deployment of its newest cloud infrastructure across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Google announce a cloud infrastructure?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0033",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported GAAP of $15M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did generally accepted accounting principles reach $15 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0034",
+    "category": "semantic:entity_resolution",
+    "state": "Redmond announced deployment of its newest operating system kernel across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Microsoft announce a operating system kernel?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0034",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported EBITDA of $85M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did earnings before interest, taxes, depreciation, and amortization reach $85 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0035",
+    "category": "semantic:entity_resolution",
+    "state": "Solaris Corp announced deployment of its newest patented solar cell across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Solaris Corp's subsidiary Lumina Labs announce a patented solar cell?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0035",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported MFA of $5M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did multi-factor authentication reach $5 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0036",
+    "category": "semantic:entity_resolution",
+    "state": "Big Blue announced deployment of its newest quantum computing processor across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did IBM announce a quantum computing processor?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0036",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported ARR of $120M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did annualized recurring revenue reach $120 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0037",
+    "category": "semantic:entity_resolution",
+    "state": "Alphabet announced deployment of its newest cloud infrastructure across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Google announce a cloud infrastructure?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0037",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported GAAP of $15M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did generally accepted accounting principles reach $15 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0038",
+    "category": "semantic:entity_resolution",
+    "state": "Redmond announced deployment of its newest operating system kernel across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Microsoft announce a operating system kernel?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0038",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported EBITDA of $85M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did earnings before interest, taxes, depreciation, and amortization reach $85 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0039",
+    "category": "semantic:entity_resolution",
+    "state": "Solaris Corp announced deployment of its newest patented solar cell across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Solaris Corp's subsidiary Lumina Labs announce a patented solar cell?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0039",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported MFA of $5M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did multi-factor authentication reach $5 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0040",
+    "category": "semantic:entity_resolution",
+    "state": "Big Blue announced deployment of its newest quantum computing processor across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did IBM announce a quantum computing processor?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0040",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported ARR of $120M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did annualized recurring revenue reach $120 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0041",
+    "category": "semantic:entity_resolution",
+    "state": "Alphabet announced deployment of its newest cloud infrastructure across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Google announce a cloud infrastructure?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0041",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported GAAP of $15M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did generally accepted accounting principles reach $15 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0042",
+    "category": "semantic:entity_resolution",
+    "state": "Redmond announced deployment of its newest operating system kernel across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Microsoft announce a operating system kernel?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0042",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported EBITDA of $85M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did earnings before interest, taxes, depreciation, and amortization reach $85 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0043",
+    "category": "semantic:entity_resolution",
+    "state": "Solaris Corp announced deployment of its newest patented solar cell across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Solaris Corp's subsidiary Lumina Labs announce a patented solar cell?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0043",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported MFA of $5M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did multi-factor authentication reach $5 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0044",
+    "category": "semantic:entity_resolution",
+    "state": "Big Blue announced deployment of its newest quantum computing processor across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did IBM announce a quantum computing processor?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0044",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported ARR of $120M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did annualized recurring revenue reach $120 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0045",
+    "category": "semantic:entity_resolution",
+    "state": "Alphabet announced deployment of its newest cloud infrastructure across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Google announce a cloud infrastructure?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0045",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported GAAP of $15M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did generally accepted accounting principles reach $15 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0046",
+    "category": "semantic:entity_resolution",
+    "state": "Redmond announced deployment of its newest operating system kernel across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Microsoft announce a operating system kernel?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0046",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported EBITDA of $85M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did earnings before interest, taxes, depreciation, and amortization reach $85 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0047",
+    "category": "semantic:entity_resolution",
+    "state": "Solaris Corp announced deployment of its newest patented solar cell across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Solaris Corp's subsidiary Lumina Labs announce a patented solar cell?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0047",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported MFA of $5M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did multi-factor authentication reach $5 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0048",
+    "category": "semantic:entity_resolution",
+    "state": "Big Blue announced deployment of its newest quantum computing processor across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did IBM announce a quantum computing processor?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0048",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported ARR of $120M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did annualized recurring revenue reach $120 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0049",
+    "category": "semantic:entity_resolution",
+    "state": "Alphabet announced deployment of its newest cloud infrastructure across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Google announce a cloud infrastructure?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0049",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported GAAP of $15M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did generally accepted accounting principles reach $15 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0050",
+    "category": "semantic:entity_resolution",
+    "state": "Redmond announced deployment of its newest operating system kernel across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Microsoft announce a operating system kernel?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0050",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported EBITDA of $85M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did earnings before interest, taxes, depreciation, and amortization reach $85 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0051",
+    "category": "semantic:entity_resolution",
+    "state": "Solaris Corp announced deployment of its newest patented solar cell across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Solaris Corp's subsidiary Lumina Labs announce a patented solar cell?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0051",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported MFA of $5M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did multi-factor authentication reach $5 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0052",
+    "category": "semantic:entity_resolution",
+    "state": "Big Blue announced deployment of its newest quantum computing processor across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did IBM announce a quantum computing processor?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0052",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported ARR of $120M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did annualized recurring revenue reach $120 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0053",
+    "category": "semantic:entity_resolution",
+    "state": "Alphabet announced deployment of its newest cloud infrastructure across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Google announce a cloud infrastructure?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0053",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported GAAP of $15M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did generally accepted accounting principles reach $15 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0054",
+    "category": "semantic:entity_resolution",
+    "state": "Redmond announced deployment of its newest operating system kernel across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Microsoft announce a operating system kernel?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0054",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported EBITDA of $85M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did earnings before interest, taxes, depreciation, and amortization reach $85 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0055",
+    "category": "semantic:entity_resolution",
+    "state": "Solaris Corp announced deployment of its newest patented solar cell across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Solaris Corp's subsidiary Lumina Labs announce a patented solar cell?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0055",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported MFA of $5M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did multi-factor authentication reach $5 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0056",
+    "category": "semantic:entity_resolution",
+    "state": "Big Blue announced deployment of its newest quantum computing processor across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did IBM announce a quantum computing processor?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0056",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported ARR of $120M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did annualized recurring revenue reach $120 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0057",
+    "category": "semantic:entity_resolution",
+    "state": "Alphabet announced deployment of its newest cloud infrastructure across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Google announce a cloud infrastructure?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0057",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported GAAP of $15M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did generally accepted accounting principles reach $15 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0058",
+    "category": "semantic:entity_resolution",
+    "state": "Redmond announced deployment of its newest operating system kernel across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Microsoft announce a operating system kernel?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0058",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported EBITDA of $85M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did earnings before interest, taxes, depreciation, and amortization reach $85 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0059",
+    "category": "semantic:entity_resolution",
+    "state": "Solaris Corp announced deployment of its newest patented solar cell across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Solaris Corp's subsidiary Lumina Labs announce a patented solar cell?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0059",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported MFA of $5M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did multi-factor authentication reach $5 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0060",
+    "category": "semantic:entity_resolution",
+    "state": "Big Blue announced deployment of its newest quantum computing processor across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did IBM announce a quantum computing processor?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0060",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported ARR of $120M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did annualized recurring revenue reach $120 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0061",
+    "category": "semantic:entity_resolution",
+    "state": "Alphabet announced deployment of its newest cloud infrastructure across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Google announce a cloud infrastructure?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0061",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported GAAP of $15M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did generally accepted accounting principles reach $15 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0062",
+    "category": "semantic:entity_resolution",
+    "state": "Redmond announced deployment of its newest operating system kernel across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Microsoft announce a operating system kernel?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0062",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported EBITDA of $85M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did earnings before interest, taxes, depreciation, and amortization reach $85 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0063",
+    "category": "semantic:entity_resolution",
+    "state": "Solaris Corp announced deployment of its newest patented solar cell across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Solaris Corp's subsidiary Lumina Labs announce a patented solar cell?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0063",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported MFA of $5M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did multi-factor authentication reach $5 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0064",
+    "category": "semantic:entity_resolution",
+    "state": "Big Blue announced deployment of its newest quantum computing processor across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did IBM announce a quantum computing processor?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0064",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported ARR of $120M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did annualized recurring revenue reach $120 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0065",
+    "category": "semantic:entity_resolution",
+    "state": "Alphabet announced deployment of its newest cloud infrastructure across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Google announce a cloud infrastructure?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0065",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported GAAP of $15M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did generally accepted accounting principles reach $15 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0066",
+    "category": "semantic:entity_resolution",
+    "state": "Redmond announced deployment of its newest operating system kernel across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Microsoft announce a operating system kernel?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0066",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported EBITDA of $85M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did earnings before interest, taxes, depreciation, and amortization reach $85 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0067",
+    "category": "semantic:entity_resolution",
+    "state": "Solaris Corp announced deployment of its newest patented solar cell across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Solaris Corp's subsidiary Lumina Labs announce a patented solar cell?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0067",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported MFA of $5M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did multi-factor authentication reach $5 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0068",
+    "category": "semantic:entity_resolution",
+    "state": "Big Blue announced deployment of its newest quantum computing processor across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did IBM announce a quantum computing processor?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0068",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported ARR of $120M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did annualized recurring revenue reach $120 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0069",
+    "category": "semantic:entity_resolution",
+    "state": "Alphabet announced deployment of its newest cloud infrastructure across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Google announce a cloud infrastructure?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0069",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported GAAP of $15M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did generally accepted accounting principles reach $15 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0070",
+    "category": "semantic:entity_resolution",
+    "state": "Redmond announced deployment of its newest operating system kernel across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Microsoft announce a operating system kernel?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0070",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported EBITDA of $85M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did earnings before interest, taxes, depreciation, and amortization reach $85 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0071",
+    "category": "semantic:entity_resolution",
+    "state": "Solaris Corp announced deployment of its newest patented solar cell across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Solaris Corp's subsidiary Lumina Labs announce a patented solar cell?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0071",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported MFA of $5M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did multi-factor authentication reach $5 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0072",
+    "category": "semantic:entity_resolution",
+    "state": "Big Blue announced deployment of its newest quantum computing processor across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did IBM announce a quantum computing processor?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0072",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported ARR of $120M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did annualized recurring revenue reach $120 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0073",
+    "category": "semantic:entity_resolution",
+    "state": "Alphabet announced deployment of its newest cloud infrastructure across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Google announce a cloud infrastructure?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0073",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported GAAP of $15M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did generally accepted accounting principles reach $15 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0074",
+    "category": "semantic:entity_resolution",
+    "state": "Redmond announced deployment of its newest operating system kernel across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Microsoft announce a operating system kernel?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0074",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported EBITDA of $85M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did earnings before interest, taxes, depreciation, and amortization reach $85 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0075",
+    "category": "semantic:entity_resolution",
+    "state": "Solaris Corp announced deployment of its newest patented solar cell across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Solaris Corp's subsidiary Lumina Labs announce a patented solar cell?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0075",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported MFA of $5M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did multi-factor authentication reach $5 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0076",
+    "category": "semantic:entity_resolution",
+    "state": "Big Blue announced deployment of its newest quantum computing processor across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did IBM announce a quantum computing processor?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0076",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported ARR of $120M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did annualized recurring revenue reach $120 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0077",
+    "category": "semantic:entity_resolution",
+    "state": "Alphabet announced deployment of its newest cloud infrastructure across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Google announce a cloud infrastructure?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0077",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported GAAP of $15M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did generally accepted accounting principles reach $15 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0078",
+    "category": "semantic:entity_resolution",
+    "state": "Redmond announced deployment of its newest operating system kernel across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Microsoft announce a operating system kernel?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0078",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported EBITDA of $85M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did earnings before interest, taxes, depreciation, and amortization reach $85 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0079",
+    "category": "semantic:entity_resolution",
+    "state": "Solaris Corp announced deployment of its newest patented solar cell across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Solaris Corp's subsidiary Lumina Labs announce a patented solar cell?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0079",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported MFA of $5M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did multi-factor authentication reach $5 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0080",
+    "category": "semantic:entity_resolution",
+    "state": "Big Blue announced deployment of its newest quantum computing processor across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did IBM announce a quantum computing processor?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0080",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported ARR of $120M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did annualized recurring revenue reach $120 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0081",
+    "category": "semantic:entity_resolution",
+    "state": "Alphabet announced deployment of its newest cloud infrastructure across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Google announce a cloud infrastructure?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0081",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported GAAP of $15M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did generally accepted accounting principles reach $15 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0082",
+    "category": "semantic:entity_resolution",
+    "state": "Redmond announced deployment of its newest operating system kernel across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Microsoft announce a operating system kernel?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0082",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported EBITDA of $85M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did earnings before interest, taxes, depreciation, and amortization reach $85 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0083",
+    "category": "semantic:entity_resolution",
+    "state": "Solaris Corp announced deployment of its newest patented solar cell across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Solaris Corp's subsidiary Lumina Labs announce a patented solar cell?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0083",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported MFA of $5M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did multi-factor authentication reach $5 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0084",
+    "category": "semantic:entity_resolution",
+    "state": "Big Blue announced deployment of its newest quantum computing processor across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did IBM announce a quantum computing processor?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0084",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported ARR of $120M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did annualized recurring revenue reach $120 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0085",
+    "category": "semantic:entity_resolution",
+    "state": "Alphabet announced deployment of its newest cloud infrastructure across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Google announce a cloud infrastructure?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0085",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported GAAP of $15M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did generally accepted accounting principles reach $15 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0086",
+    "category": "semantic:entity_resolution",
+    "state": "Redmond announced deployment of its newest operating system kernel across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Microsoft announce a operating system kernel?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0086",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported EBITDA of $85M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did earnings before interest, taxes, depreciation, and amortization reach $85 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0087",
+    "category": "semantic:entity_resolution",
+    "state": "Solaris Corp announced deployment of its newest patented solar cell across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Solaris Corp's subsidiary Lumina Labs announce a patented solar cell?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0087",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported MFA of $5M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did multi-factor authentication reach $5 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0088",
+    "category": "semantic:entity_resolution",
+    "state": "Big Blue announced deployment of its newest quantum computing processor across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did IBM announce a quantum computing processor?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0088",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported ARR of $120M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did annualized recurring revenue reach $120 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0089",
+    "category": "semantic:entity_resolution",
+    "state": "Alphabet announced deployment of its newest cloud infrastructure across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Google announce a cloud infrastructure?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0089",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported GAAP of $15M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did generally accepted accounting principles reach $15 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0090",
+    "category": "semantic:entity_resolution",
+    "state": "Redmond announced deployment of its newest operating system kernel across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Microsoft announce a operating system kernel?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0090",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported EBITDA of $85M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did earnings before interest, taxes, depreciation, and amortization reach $85 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0091",
+    "category": "semantic:entity_resolution",
+    "state": "Solaris Corp announced deployment of its newest patented solar cell across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Solaris Corp's subsidiary Lumina Labs announce a patented solar cell?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0091",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported MFA of $5M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did multi-factor authentication reach $5 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0092",
+    "category": "semantic:entity_resolution",
+    "state": "Big Blue announced deployment of its newest quantum computing processor across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did IBM announce a quantum computing processor?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0092",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported ARR of $120M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did annualized recurring revenue reach $120 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0093",
+    "category": "semantic:entity_resolution",
+    "state": "Alphabet announced deployment of its newest cloud infrastructure across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Google announce a cloud infrastructure?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0093",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported GAAP of $15M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did generally accepted accounting principles reach $15 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0094",
+    "category": "semantic:entity_resolution",
+    "state": "Redmond announced deployment of its newest operating system kernel across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Microsoft announce a operating system kernel?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0094",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported EBITDA of $85M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did earnings before interest, taxes, depreciation, and amortization reach $85 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0095",
+    "category": "semantic:entity_resolution",
+    "state": "Solaris Corp announced deployment of its newest patented solar cell across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Solaris Corp's subsidiary Lumina Labs announce a patented solar cell?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0095",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported MFA of $5M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did multi-factor authentication reach $5 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0096",
+    "category": "semantic:entity_resolution",
+    "state": "Big Blue announced deployment of its newest quantum computing processor across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did IBM announce a quantum computing processor?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0096",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported ARR of $120M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did annualized recurring revenue reach $120 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0097",
+    "category": "semantic:entity_resolution",
+    "state": "Alphabet announced deployment of its newest cloud infrastructure across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Google announce a cloud infrastructure?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0097",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported GAAP of $15M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did generally accepted accounting principles reach $15 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0098",
+    "category": "semantic:entity_resolution",
+    "state": "Redmond announced deployment of its newest operating system kernel across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Microsoft announce a operating system kernel?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0098",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported EBITDA of $85M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did earnings before interest, taxes, depreciation, and amortization reach $85 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0099",
+    "category": "semantic:entity_resolution",
+    "state": "Solaris Corp announced deployment of its newest patented solar cell across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Solaris Corp's subsidiary Lumina Labs announce a patented solar cell?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0099",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported MFA of $5M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did multi-factor authentication reach $5 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0100",
+    "category": "semantic:entity_resolution",
+    "state": "Big Blue announced deployment of its newest quantum computing processor across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did IBM announce a quantum computing processor?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0100",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported ARR of $120M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did annualized recurring revenue reach $120 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0101",
+    "category": "semantic:entity_resolution",
+    "state": "Alphabet announced deployment of its newest cloud infrastructure across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Google announce a cloud infrastructure?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0101",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported GAAP of $15M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did generally accepted accounting principles reach $15 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0102",
+    "category": "semantic:entity_resolution",
+    "state": "Redmond announced deployment of its newest operating system kernel across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Microsoft announce a operating system kernel?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0102",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported EBITDA of $85M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did earnings before interest, taxes, depreciation, and amortization reach $85 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0103",
+    "category": "semantic:entity_resolution",
+    "state": "Solaris Corp announced deployment of its newest patented solar cell across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Solaris Corp's subsidiary Lumina Labs announce a patented solar cell?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0103",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported MFA of $5M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did multi-factor authentication reach $5 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0104",
+    "category": "semantic:entity_resolution",
+    "state": "Big Blue announced deployment of its newest quantum computing processor across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did IBM announce a quantum computing processor?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0104",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported ARR of $120M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did annualized recurring revenue reach $120 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0105",
+    "category": "semantic:entity_resolution",
+    "state": "Alphabet announced deployment of its newest cloud infrastructure across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Google announce a cloud infrastructure?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0105",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported GAAP of $15M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did generally accepted accounting principles reach $15 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0106",
+    "category": "semantic:entity_resolution",
+    "state": "Redmond announced deployment of its newest operating system kernel across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Microsoft announce a operating system kernel?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0106",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported EBITDA of $85M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did earnings before interest, taxes, depreciation, and amortization reach $85 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0107",
+    "category": "semantic:entity_resolution",
+    "state": "Solaris Corp announced deployment of its newest patented solar cell across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Solaris Corp's subsidiary Lumina Labs announce a patented solar cell?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0107",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported MFA of $5M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did multi-factor authentication reach $5 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0108",
+    "category": "semantic:entity_resolution",
+    "state": "Big Blue announced deployment of its newest quantum computing processor across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did IBM announce a quantum computing processor?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0108",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported ARR of $120M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did annualized recurring revenue reach $120 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0109",
+    "category": "semantic:entity_resolution",
+    "state": "Alphabet announced deployment of its newest cloud infrastructure across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Google announce a cloud infrastructure?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0109",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported GAAP of $15M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did generally accepted accounting principles reach $15 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0110",
+    "category": "semantic:entity_resolution",
+    "state": "Redmond announced deployment of its newest operating system kernel across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Microsoft announce a operating system kernel?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0110",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported EBITDA of $85M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did earnings before interest, taxes, depreciation, and amortization reach $85 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0111",
+    "category": "semantic:entity_resolution",
+    "state": "Solaris Corp announced deployment of its newest patented solar cell across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Solaris Corp's subsidiary Lumina Labs announce a patented solar cell?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0111",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported MFA of $5M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did multi-factor authentication reach $5 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0112",
+    "category": "semantic:entity_resolution",
+    "state": "Big Blue announced deployment of its newest quantum computing processor across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did IBM announce a quantum computing processor?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0112",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported ARR of $120M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did annualized recurring revenue reach $120 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0113",
+    "category": "semantic:entity_resolution",
+    "state": "Alphabet announced deployment of its newest cloud infrastructure across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Google announce a cloud infrastructure?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0113",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported GAAP of $15M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did generally accepted accounting principles reach $15 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0114",
+    "category": "semantic:entity_resolution",
+    "state": "Redmond announced deployment of its newest operating system kernel across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Microsoft announce a operating system kernel?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0114",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported EBITDA of $85M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did earnings before interest, taxes, depreciation, and amortization reach $85 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0115",
+    "category": "semantic:entity_resolution",
+    "state": "Solaris Corp announced deployment of its newest patented solar cell across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Solaris Corp's subsidiary Lumina Labs announce a patented solar cell?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0115",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported MFA of $5M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did multi-factor authentication reach $5 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0116",
+    "category": "semantic:entity_resolution",
+    "state": "Big Blue announced deployment of its newest quantum computing processor across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did IBM announce a quantum computing processor?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0116",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported ARR of $120M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did annualized recurring revenue reach $120 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0117",
+    "category": "semantic:entity_resolution",
+    "state": "Alphabet announced deployment of its newest cloud infrastructure across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Google announce a cloud infrastructure?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0117",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported GAAP of $15M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did generally accepted accounting principles reach $15 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0118",
+    "category": "semantic:entity_resolution",
+    "state": "Redmond announced deployment of its newest operating system kernel across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Microsoft announce a operating system kernel?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0118",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported EBITDA of $85M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did earnings before interest, taxes, depreciation, and amortization reach $85 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0119",
+    "category": "semantic:entity_resolution",
+    "state": "Solaris Corp announced deployment of its newest patented solar cell across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Solaris Corp's subsidiary Lumina Labs announce a patented solar cell?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0119",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported MFA of $5M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did multi-factor authentication reach $5 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0120",
+    "category": "semantic:entity_resolution",
+    "state": "Big Blue announced deployment of its newest quantum computing processor across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did IBM announce a quantum computing processor?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0120",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported ARR of $120M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did annualized recurring revenue reach $120 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0121",
+    "category": "semantic:entity_resolution",
+    "state": "Alphabet announced deployment of its newest cloud infrastructure across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Google announce a cloud infrastructure?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0121",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported GAAP of $15M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did generally accepted accounting principles reach $15 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0122",
+    "category": "semantic:entity_resolution",
+    "state": "Redmond announced deployment of its newest operating system kernel across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Microsoft announce a operating system kernel?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0122",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported EBITDA of $85M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did earnings before interest, taxes, depreciation, and amortization reach $85 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0123",
+    "category": "semantic:entity_resolution",
+    "state": "Solaris Corp announced deployment of its newest patented solar cell across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Solaris Corp's subsidiary Lumina Labs announce a patented solar cell?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0123",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported MFA of $5M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did multi-factor authentication reach $5 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0124",
+    "category": "semantic:entity_resolution",
+    "state": "Big Blue announced deployment of its newest quantum computing processor across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did IBM announce a quantum computing processor?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0124",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported ARR of $120M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did annualized recurring revenue reach $120 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0125",
+    "category": "semantic:entity_resolution",
+    "state": "Alphabet announced deployment of its newest cloud infrastructure across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Google announce a cloud infrastructure?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0125",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported GAAP of $15M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did generally accepted accounting principles reach $15 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0126",
+    "category": "semantic:entity_resolution",
+    "state": "Redmond announced deployment of its newest operating system kernel across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Microsoft announce a operating system kernel?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0126",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported EBITDA of $85M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did earnings before interest, taxes, depreciation, and amortization reach $85 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0127",
+    "category": "semantic:entity_resolution",
+    "state": "Solaris Corp announced deployment of its newest patented solar cell across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Solaris Corp's subsidiary Lumina Labs announce a patented solar cell?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0127",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported MFA of $5M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did multi-factor authentication reach $5 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0128",
+    "category": "semantic:entity_resolution",
+    "state": "Big Blue announced deployment of its newest quantum computing processor across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did IBM announce a quantum computing processor?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0128",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported ARR of $120M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did annualized recurring revenue reach $120 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0129",
+    "category": "semantic:entity_resolution",
+    "state": "Alphabet announced deployment of its newest cloud infrastructure across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Google announce a cloud infrastructure?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0129",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported GAAP of $15M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did generally accepted accounting principles reach $15 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0130",
+    "category": "semantic:entity_resolution",
+    "state": "Redmond announced deployment of its newest operating system kernel across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Microsoft announce a operating system kernel?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0130",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported EBITDA of $85M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did earnings before interest, taxes, depreciation, and amortization reach $85 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0131",
+    "category": "semantic:entity_resolution",
+    "state": "Solaris Corp announced deployment of its newest patented solar cell across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Solaris Corp's subsidiary Lumina Labs announce a patented solar cell?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0131",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported MFA of $5M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did multi-factor authentication reach $5 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0132",
+    "category": "semantic:entity_resolution",
+    "state": "Big Blue announced deployment of its newest quantum computing processor across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did IBM announce a quantum computing processor?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0132",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported ARR of $120M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did annualized recurring revenue reach $120 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0133",
+    "category": "semantic:entity_resolution",
+    "state": "Alphabet announced deployment of its newest cloud infrastructure across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Google announce a cloud infrastructure?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0133",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported GAAP of $15M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did generally accepted accounting principles reach $15 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0134",
+    "category": "semantic:entity_resolution",
+    "state": "Redmond announced deployment of its newest operating system kernel across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Microsoft announce a operating system kernel?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0134",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported EBITDA of $85M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did earnings before interest, taxes, depreciation, and amortization reach $85 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0135",
+    "category": "semantic:entity_resolution",
+    "state": "Solaris Corp announced deployment of its newest patented solar cell across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Solaris Corp's subsidiary Lumina Labs announce a patented solar cell?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0135",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported MFA of $5M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did multi-factor authentication reach $5 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0136",
+    "category": "semantic:entity_resolution",
+    "state": "Big Blue announced deployment of its newest quantum computing processor across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did IBM announce a quantum computing processor?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0136",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported ARR of $120M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did annualized recurring revenue reach $120 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0137",
+    "category": "semantic:entity_resolution",
+    "state": "Alphabet announced deployment of its newest cloud infrastructure across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Google announce a cloud infrastructure?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0137",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported GAAP of $15M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did generally accepted accounting principles reach $15 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0138",
+    "category": "semantic:entity_resolution",
+    "state": "Redmond announced deployment of its newest operating system kernel across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Microsoft announce a operating system kernel?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0138",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported EBITDA of $85M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did earnings before interest, taxes, depreciation, and amortization reach $85 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0139",
+    "category": "semantic:entity_resolution",
+    "state": "Solaris Corp announced deployment of its newest patented solar cell across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Solaris Corp's subsidiary Lumina Labs announce a patented solar cell?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0139",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported MFA of $5M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did multi-factor authentication reach $5 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0140",
+    "category": "semantic:entity_resolution",
+    "state": "Big Blue announced deployment of its newest quantum computing processor across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did IBM announce a quantum computing processor?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0140",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported ARR of $120M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did annualized recurring revenue reach $120 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0141",
+    "category": "semantic:entity_resolution",
+    "state": "Alphabet announced deployment of its newest cloud infrastructure across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Google announce a cloud infrastructure?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0141",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported GAAP of $15M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did generally accepted accounting principles reach $15 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0142",
+    "category": "semantic:entity_resolution",
+    "state": "Redmond announced deployment of its newest operating system kernel across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Microsoft announce a operating system kernel?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0142",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported EBITDA of $85M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did earnings before interest, taxes, depreciation, and amortization reach $85 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0143",
+    "category": "semantic:entity_resolution",
+    "state": "Solaris Corp announced deployment of its newest patented solar cell across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Solaris Corp's subsidiary Lumina Labs announce a patented solar cell?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0143",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported MFA of $5M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did multi-factor authentication reach $5 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0144",
+    "category": "semantic:entity_resolution",
+    "state": "Big Blue announced deployment of its newest quantum computing processor across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did IBM announce a quantum computing processor?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0144",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported ARR of $120M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did annualized recurring revenue reach $120 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0145",
+    "category": "semantic:entity_resolution",
+    "state": "Alphabet announced deployment of its newest cloud infrastructure across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Google announce a cloud infrastructure?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0145",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported GAAP of $15M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did generally accepted accounting principles reach $15 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0146",
+    "category": "semantic:entity_resolution",
+    "state": "Redmond announced deployment of its newest operating system kernel across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Microsoft announce a operating system kernel?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0146",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported EBITDA of $85M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did earnings before interest, taxes, depreciation, and amortization reach $85 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0147",
+    "category": "semantic:entity_resolution",
+    "state": "Solaris Corp announced deployment of its newest patented solar cell across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Solaris Corp's subsidiary Lumina Labs announce a patented solar cell?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0147",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported MFA of $5M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did multi-factor authentication reach $5 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0148",
+    "category": "semantic:entity_resolution",
+    "state": "Big Blue announced deployment of its newest quantum computing processor across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did IBM announce a quantum computing processor?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0148",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported ARR of $120M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did annualized recurring revenue reach $120 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  },
+  {
+    "id": "pool_entity_0149",
+    "category": "semantic:entity_resolution",
+    "state": "Alphabet announced deployment of its newest cloud infrastructure across global datacenters.",
+    "question": {
+      "t": "noul",
+      "ins": "Did Google announce a cloud infrastructure?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "technology"
+  },
+  {
+    "id": "pool_acronym_0149",
+    "category": "semantic:acronyms",
+    "state": "The enterprise reported GAAP of $15M in the annual regulatory filing.",
+    "question": {
+      "t": "noul",
+      "ins": "Did generally accepted accounting principles reach $15 million?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "finance"
+  }
+]

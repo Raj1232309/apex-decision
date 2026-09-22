@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ApexDecision External Benchmark Report - 2026-09-22T12:57:51Z</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f172a; color: #f8fafc; margin: 0; padding: 24px; }
+        .card { background: #1e293b; border-radius: 8px; padding: 20px; margin-bottom: 20px; border: 1px solid #334155; }
+        h1, h2, h3 { color: #38bdf8; margin-top: 0; }
+        table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+        th, td { padding: 10px 14px; text-align: left; border-bottom: 1px solid #334155; }
+        th { background: #0f172a; color: #94a3b8; font-size: 13px; text-transform: uppercase; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+        .stat-val { font-size: 28px; font-weight: 700; color: #38bdf8; }
+        .stat-lbl { font-size: 13px; color: #94a3b8; }
+        code { background: #0f172a; padding: 2px 6px; border-radius: 4px; color: #f1f5f9; }
+    </style>
+</head>
+<body>
+    <h1>ApexDecision External Benchmark Report</h1>
+    <p>Official reproducible evaluation of ApexStudent-50M production runtime. Verified zero-invention guarantees.</p>
+
+    <div class="grid card">
+        <div><div class="stat-val">72.36%</div><div class="stat-lbl">Aggregate Decision Accuracy</div></div>
+        <div><div class="stat-val">123</div><div class="stat-lbl">Total Evaluated Cases</div></div>
+        <div><div class="stat-val">46.53M</div><div class="stat-lbl">Active Model Weights</div></div>
+        <div><div class="stat-val">68.0s</div><div class="stat-lbl">Total Suite Runtime</div></div>
+    </div>
+
+    <div class="card">
+        <h2>Hardware & Environment Specifications</h2>
+        <p><strong>GPU:</strong> NVIDIA GeForce RTX 2050 (4095.5 MB VRAM) | <strong>PyTorch:</strong> 2.6.0+cu124 (CUDA 12.4)</p>
+        <p><strong>Model Checkpoint:</strong> <code>apex_decision\models\apex_student\scaling_checkpoints\student-50m-v8.pt</code> (SHA-256: <code>04317B9CD695CD70BC1BEB201A017ADF2640376406C18D58CD0F332A5318E15B</code>)</p>
+    </div>
+
+    <div class="card">
+        <h2>Benchmark Results Summary</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Benchmark</th>
+                    <th style="text-align:right">Samples</th>
+                    <th style="text-align:right">Correct</th>
+                    <th style="text-align:right">Incorrect</th>
+                    <th style="text-align:right">Accuracy</th>
+                    <th style="text-align:center">95% Wilson CI</th>
+                    <th style="text-align:center">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            <tr>
+                <td><code>smoke_production_integrity</code></td>
+                <td style="text-align:right">8</td>
+                <td style="text-align:right">8</td>
+                <td style="text-align:right">0</td>
+                <td style="text-align:right"><strong>100.00%</strong></td>
+                <td style="text-align:center">[67.6%, 100.0%]</td>
+                <td style="text-align:center"><span style="color:#22c55e;font-weight:600">PASS</span></td>
+            </tr>
+            
+            <tr>
+                <td><code>grounding_unseen_attribution</code></td>
+                <td style="text-align:right">8</td>
+                <td style="text-align:right">7</td>
+                <td style="text-align:right">1</td>
+                <td style="text-align:right"><strong>87.50%</strong></td>
+                <td style="text-align:center">[52.9%, 97.8%]</td>
+                <td style="text-align:center"><span style="color:#22c55e;font-weight:600">PASS</span></td>
+            </tr>
+            
+            <tr>
+                <td><code>hallucination_refusal</code></td>
+                <td style="text-align:right">4</td>
+                <td style="text-align:right">3</td>
+                <td style="text-align:right">1</td>
+                <td style="text-align:right"><strong>0.00%</strong></td>
+                <td style="text-align:center">[30.1%, 95.4%]</td>
+                <td style="text-align:center"><span style="color:#ef4444;font-weight:600">FAIL</span></td>
+            </tr>
+            
+            <tr>
+                <td><code>typed_decisions_jev_contract</code></td>
+                <td style="text-align:right">3</td>
+                <td style="text-align:right">3</td>
+                <td style="text-align:right">0</td>
+                <td style="text-align:right"><strong>0.00%</strong></td>
+                <td style="text-align:center">[43.9%, 100.0%]</td>
+                <td style="text-align:center"><span style="color:#ef4444;font-weight:600">FAIL</span></td>
+            </tr>
+            
+            <tr>
+                <td><code>reasoning_multihop_arithmetic</code></td>
+                <td style="text-align:right">5</td>
+                <td style="text-align:right">3</td>
+                <td style="text-align:right">2</td>
+                <td style="text-align:right"><strong>60.00%</strong></td>
+                <td style="text-align:center">[23.1%, 88.2%]</td>
+                <td style="text-align:center"><span style="color:#ef4444;font-weight:600">FAIL</span></td>
+            </tr>
+            
+            <tr>
+                <td><code>reasoning_contradiction_scope</code></td>
+                <td style="text-align:right">5</td>
+                <td style="text-align:right">2</td>
+                <td style="text-align:right">3</td>
+                <td style="text-align:right"><strong>40.00%</strong></td>
+                <td style="text-align:center">[11.8%, 76.9%]</td>
+                <td style="text-align:center"><span style="color:#ef4444;font-weight:600">FAIL</span></td>
+            </tr>
+            
+            <tr>
+                <td><code>multilingual_fixed_ood</code></td>
+                <td style="text-align:right">30</td>
+                <td style="text-align:right">23</td>
+                <td style="text-align:right">7</td>
+                <td style="text-align:right"><strong>76.67%</strong></td>
+                <td style="text-align:center">[59.1%, 88.2%]</td>
+                <td style="text-align:center"><span style="color:#ef4444;font-weight:600">FAIL</span></td>
+            </tr>
+            
+            <tr>
+                <td><code>tools_orchestration_matrix</code></td>
+                <td style="text-align:right">40</td>
+                <td style="text-align:right">40</td>
+                <td style="text-align:right">0</td>
+                <td style="text-align:right"><strong>100.00%</strong></td>
+                <td style="text-align:center">[91.2%, 100.0%]</td>
+                <td style="text-align:center"><span style="color:#22c55e;font-weight:600">PASS</span></td>
+            </tr>
+            
+            <tr>
+                <td><code>long_context_scaling</code></td>
+                <td style="text-align:right">3</td>
+                <td style="text-align:right">0</td>
+                <td style="text-align:right">3</td>
+                <td style="text-align:right"><strong>0.00%</strong></td>
+                <td style="text-align:center">[0.0%, 56.1%]</td>
+                <td style="text-align:center"><span style="color:#ef4444;font-weight:600">FAIL</span></td>
+            </tr>
+            
+            <tr>
+                <td><code>external_standard_evaluation</code></td>
+                <td style="text-align:right">7</td>
+                <td style="text-align:right">0</td>
+                <td style="text-align:right">7</td>
+                <td style="text-align:right"><strong>0.00%</strong></td>
+                <td style="text-align:center">[0.0%, 35.4%]</td>
+                <td style="text-align:center"><span style="color:#ef4444;font-weight:600">FAIL</span></td>
+            </tr>
+            
+            <tr>
+                <td><code>performance_latency_profiling</code></td>
+                <td style="text-align:right">10</td>
+                <td style="text-align:right">0</td>
+                <td style="text-align:right">10</td>
+                <td style="text-align:right"><strong>0.00%</strong></td>
+                <td style="text-align:center">[0.0%, 27.8%]</td>
+                <td style="text-align:center"><span style="color:#ef4444;font-weight:600">FAIL</span></td>
+            </tr>
+            
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

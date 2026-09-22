@@ -1,0 +1,157 @@
+{
+  "model_name": "ApexDecision_v2_ModernBERT_LoRA_MultiStage",
+  "dataset_path": "C:\\Users\\Shriyans\\Downloads\\dev\\apex_decision\\benchmarks\\grounding_v2\\test_frozen_10k.json",
+  "total_examples": 10000,
+  "overall_accuracy": 0.9998,
+  "ci_95": [
+    0.9995,
+    1.0
+  ],
+  "adversarial_accuracy": 0.999760047990402,
+  "direct_entailment_accuracy": 1.0,
+  "supported_precision": 0.9996001599360256,
+  "supported_recall": 1.0,
+  "supported_f1": 0.9998000399920016,
+  "unsupported_precision": 1.0,
+  "unsupported_recall": 0.9996,
+  "unsupported_f1": 0.9997999599919984,
+  "macro_f1": 0.999799999992,
+  "false_positive_rate": 0.0004,
+  "false_negative_rate": 0.0,
+  "confusion_matrix": {
+    "tp": 5000,
+    "fp": 2,
+    "tn": 4998,
+    "fn": 0
+  },
+  "total_errors": 2,
+  "expected_calibration_error": 0.0016135383572462904,
+  "brier_score": 0.0002888334723522129,
+  "latency_p50_ms": 0.025,
+  "latency_p95_ms": 128.64495,
+  "latency_p99_ms": 244.43484,
+  "throughput_samples_per_sec": 62.14126523367207,
+  "peak_vram_mb": 612.80078125,
+  "category_metrics": {
+    "attribution_mismatch": {
+      "total": 294,
+      "correct": 294,
+      "errors": 0,
+      "accuracy": 1.0
+    },
+    "causal_overclaim": {
+      "total": 294,
+      "correct": 294,
+      "errors": 0,
+      "accuracy": 1.0
+    },
+    "comparative_claim_mismatch": {
+      "total": 294,
+      "correct": 294,
+      "errors": 0,
+      "accuracy": 1.0
+    },
+    "correlation_vs_causation": {
+      "total": 294,
+      "correct": 294,
+      "errors": 0,
+      "accuracy": 1.0
+    },
+    "date_time_mismatch": {
+      "total": 294,
+      "correct": 294,
+      "errors": 0,
+      "accuracy": 1.0
+    },
+    "direct_contradiction": {
+      "total": 295,
+      "correct": 295,
+      "errors": 0,
+      "accuracy": 1.0
+    },
+    "direct_entailment": {
+      "total": 1665,
+      "correct": 1665,
+      "errors": 0,
+      "accuracy": 1.0
+    },
+    "double_negation": {
+      "total": 1676,
+      "correct": 1676,
+      "errors": 0,
+      "accuracy": 1.0
+    },
+    "entity_substitution": {
+      "total": 294,
+      "correct": 294,
+      "errors": 0,
+      "accuracy": 1.0
+    },
+    "lexical_overlap_unsupported": {
+      "total": 294,
+      "correct": 292,
+      "errors": 2,
+      "accuracy": 0.9931972789115646
+    },
+    "multi_sentence_reasoning": {
+      "total": 1659,
+      "correct": 1659,
+      "errors": 0,
+      "accuracy": 1.0
+    },
+    "negation_reversal": {
+      "total": 294,
+      "correct": 294,
+      "errors": 0,
+      "accuracy": 1.0
+    },
+    "number_mismatch": {
+      "total": 294,
+      "correct": 294,
+      "errors": 0,
+      "accuracy": 1.0
+    },
+    "partial_support_claim": {
+      "total": 294,
+      "correct": 294,
+      "errors": 0,
+      "accuracy": 1.0
+    },
+    "population_mismatch": {
+      "total": 294,
+      "correct": 294,
+      "errors": 0,
+      "accuracy": 1.0
+    },
+    "quantifier_mismatch": {
+      "total": 294,
+      "correct": 294,
+      "errors": 0,
+      "accuracy": 1.0
+    },
+    "scope_mismatch": {
+      "total": 294,
+      "correct": 294,
+      "errors": 0,
+      "accuracy": 1.0
+    },
+    "temporal_ordering_error": {
+      "total": 294,
+      "correct": 294,
+      "errors": 0,
+      "accuracy": 1.0
+    },
+    "unit_mismatch": {
+      "total": 294,
+      "correct": 294,
+      "errors": 0,
+      "accuracy": 1.0
+    },
+    "unsupported_claim": {
+      "total": 295,
+      "correct": 295,
+      "errors": 0,
+      "accuracy": 1.0
+    }
+  }
+}

@@ -1,0 +1,2402 @@
+[
+  {
+    "id": "pool_multi_0000",
+    "category": "multilingual:de",
+    "state": "Der Reingewinn des Unternehmens stieg im vierten Quartal um 12 Prozent auf 85 Millionen Euro.",
+    "question": {
+      "t": "noul",
+      "ins": "Stieg der Reingewinn um 12 Prozent?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0001",
+    "category": "multilingual:fr",
+    "state": "Le chiffre d'affaires annuel a atteint 150 millions d'euros avec une marge stable.",
+    "question": {
+      "t": "noul",
+      "ins": "Le chiffre d'affaires a-t-il atteint 150 millions d'euros?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0002",
+    "category": "multilingual:ru",
+    "state": "Выручка компании за третий квартал составила 45 миллиардов рублей.",
+    "question": {
+      "t": "noul",
+      "ins": "Составила ли выручка 45 миллиардов рублей?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0003",
+    "category": "multilingual:hi",
+    "state": "कंपनी का शुद्ध लाभ पिछले वर्ष की तुलना में 15 प्रतिशत बढ़ गया।",
+    "question": {
+      "t": "noul",
+      "ins": "क्या शुद्ध लाभ 15 प्रतिशत बढ़ गया?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0004",
+    "category": "multilingual:zh",
+    "state": "公司第四季度总收入达到五十亿元人民币，同比增长百分之八。",
+    "question": {
+      "t": "noul",
+      "ins": "第四季度总收入是否达到五十亿元？",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0005",
+    "category": "multilingual:ar",
+    "state": "أعلنت الشركة عن تحقيق أرباح صافية قدرها 20 مليون دولار خلال الربع الأول.",
+    "question": {
+      "t": "noul",
+      "ins": "هل بلغت الأرباح الصافية 20 مليون دولار؟",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0006",
+    "category": "multilingual:de",
+    "state": "Der Reingewinn des Unternehmens stieg im vierten Quartal um 12 Prozent auf 85 Millionen Euro.",
+    "question": {
+      "t": "noul",
+      "ins": "Stieg der Reingewinn um 12 Prozent?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0007",
+    "category": "multilingual:fr",
+    "state": "Le chiffre d'affaires annuel a atteint 150 millions d'euros avec une marge stable.",
+    "question": {
+      "t": "noul",
+      "ins": "Le chiffre d'affaires a-t-il atteint 150 millions d'euros?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0008",
+    "category": "multilingual:ru",
+    "state": "Выручка компании за третий квартал составила 45 миллиардов рублей.",
+    "question": {
+      "t": "noul",
+      "ins": "Составила ли выручка 45 миллиардов рублей?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0009",
+    "category": "multilingual:hi",
+    "state": "कंपनी का शुद्ध लाभ पिछले वर्ष की तुलना में 15 प्रतिशत बढ़ गया।",
+    "question": {
+      "t": "noul",
+      "ins": "क्या शुद्ध लाभ 15 प्रतिशत बढ़ गया?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0010",
+    "category": "multilingual:zh",
+    "state": "公司第四季度总收入达到五十亿元人民币，同比增长百分之八。",
+    "question": {
+      "t": "noul",
+      "ins": "第四季度总收入是否达到五十亿元？",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0011",
+    "category": "multilingual:ar",
+    "state": "أعلنت الشركة عن تحقيق أرباح صافية قدرها 20 مليون دولار خلال الربع الأول.",
+    "question": {
+      "t": "noul",
+      "ins": "هل بلغت الأرباح الصافية 20 مليون دولار؟",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0012",
+    "category": "multilingual:de",
+    "state": "Der Reingewinn des Unternehmens stieg im vierten Quartal um 12 Prozent auf 85 Millionen Euro.",
+    "question": {
+      "t": "noul",
+      "ins": "Stieg der Reingewinn um 12 Prozent?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0013",
+    "category": "multilingual:fr",
+    "state": "Le chiffre d'affaires annuel a atteint 150 millions d'euros avec une marge stable.",
+    "question": {
+      "t": "noul",
+      "ins": "Le chiffre d'affaires a-t-il atteint 150 millions d'euros?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0014",
+    "category": "multilingual:ru",
+    "state": "Выручка компании за третий квартал составила 45 миллиардов рублей.",
+    "question": {
+      "t": "noul",
+      "ins": "Составила ли выручка 45 миллиардов рублей?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0015",
+    "category": "multilingual:hi",
+    "state": "कंपनी का शुद्ध लाभ पिछले वर्ष की तुलना में 15 प्रतिशत बढ़ गया।",
+    "question": {
+      "t": "noul",
+      "ins": "क्या शुद्ध लाभ 15 प्रतिशत बढ़ गया?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0016",
+    "category": "multilingual:zh",
+    "state": "公司第四季度总收入达到五十亿元人民币，同比增长百分之八。",
+    "question": {
+      "t": "noul",
+      "ins": "第四季度总收入是否达到五十亿元？",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0017",
+    "category": "multilingual:ar",
+    "state": "أعلنت الشركة عن تحقيق أرباح صافية قدرها 20 مليون دولار خلال الربع الأول.",
+    "question": {
+      "t": "noul",
+      "ins": "هل بلغت الأرباح الصافية 20 مليون دولار؟",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0018",
+    "category": "multilingual:de",
+    "state": "Der Reingewinn des Unternehmens stieg im vierten Quartal um 12 Prozent auf 85 Millionen Euro.",
+    "question": {
+      "t": "noul",
+      "ins": "Stieg der Reingewinn um 12 Prozent?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0019",
+    "category": "multilingual:fr",
+    "state": "Le chiffre d'affaires annuel a atteint 150 millions d'euros avec une marge stable.",
+    "question": {
+      "t": "noul",
+      "ins": "Le chiffre d'affaires a-t-il atteint 150 millions d'euros?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0020",
+    "category": "multilingual:ru",
+    "state": "Выручка компании за третий квартал составила 45 миллиардов рублей.",
+    "question": {
+      "t": "noul",
+      "ins": "Составила ли выручка 45 миллиардов рублей?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0021",
+    "category": "multilingual:hi",
+    "state": "कंपनी का शुद्ध लाभ पिछले वर्ष की तुलना में 15 प्रतिशत बढ़ गया।",
+    "question": {
+      "t": "noul",
+      "ins": "क्या शुद्ध लाभ 15 प्रतिशत बढ़ गया?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0022",
+    "category": "multilingual:zh",
+    "state": "公司第四季度总收入达到五十亿元人民币，同比增长百分之八。",
+    "question": {
+      "t": "noul",
+      "ins": "第四季度总收入是否达到五十亿元？",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0023",
+    "category": "multilingual:ar",
+    "state": "أعلنت الشركة عن تحقيق أرباح صافية قدرها 20 مليون دولار خلال الربع الأول.",
+    "question": {
+      "t": "noul",
+      "ins": "هل بلغت الأرباح الصافية 20 مليون دولار؟",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0024",
+    "category": "multilingual:de",
+    "state": "Der Reingewinn des Unternehmens stieg im vierten Quartal um 12 Prozent auf 85 Millionen Euro.",
+    "question": {
+      "t": "noul",
+      "ins": "Stieg der Reingewinn um 12 Prozent?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0025",
+    "category": "multilingual:fr",
+    "state": "Le chiffre d'affaires annuel a atteint 150 millions d'euros avec une marge stable.",
+    "question": {
+      "t": "noul",
+      "ins": "Le chiffre d'affaires a-t-il atteint 150 millions d'euros?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0026",
+    "category": "multilingual:ru",
+    "state": "Выручка компании за третий квартал составила 45 миллиардов рублей.",
+    "question": {
+      "t": "noul",
+      "ins": "Составила ли выручка 45 миллиардов рублей?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0027",
+    "category": "multilingual:hi",
+    "state": "कंपनी का शुद्ध लाभ पिछले वर्ष की तुलना में 15 प्रतिशत बढ़ गया।",
+    "question": {
+      "t": "noul",
+      "ins": "क्या शुद्ध लाभ 15 प्रतिशत बढ़ गया?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0028",
+    "category": "multilingual:zh",
+    "state": "公司第四季度总收入达到五十亿元人民币，同比增长百分之八。",
+    "question": {
+      "t": "noul",
+      "ins": "第四季度总收入是否达到五十亿元？",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0029",
+    "category": "multilingual:ar",
+    "state": "أعلنت الشركة عن تحقيق أرباح صافية قدرها 20 مليون دولار خلال الربع الأول.",
+    "question": {
+      "t": "noul",
+      "ins": "هل بلغت الأرباح الصافية 20 مليون دولار؟",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0030",
+    "category": "multilingual:de",
+    "state": "Der Reingewinn des Unternehmens stieg im vierten Quartal um 12 Prozent auf 85 Millionen Euro.",
+    "question": {
+      "t": "noul",
+      "ins": "Stieg der Reingewinn um 12 Prozent?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0031",
+    "category": "multilingual:fr",
+    "state": "Le chiffre d'affaires annuel a atteint 150 millions d'euros avec une marge stable.",
+    "question": {
+      "t": "noul",
+      "ins": "Le chiffre d'affaires a-t-il atteint 150 millions d'euros?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0032",
+    "category": "multilingual:ru",
+    "state": "Выручка компании за третий квартал составила 45 миллиардов рублей.",
+    "question": {
+      "t": "noul",
+      "ins": "Составила ли выручка 45 миллиардов рублей?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0033",
+    "category": "multilingual:hi",
+    "state": "कंपनी का शुद्ध लाभ पिछले वर्ष की तुलना में 15 प्रतिशत बढ़ गया।",
+    "question": {
+      "t": "noul",
+      "ins": "क्या शुद्ध लाभ 15 प्रतिशत बढ़ गया?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0034",
+    "category": "multilingual:zh",
+    "state": "公司第四季度总收入达到五十亿元人民币，同比增长百分之八。",
+    "question": {
+      "t": "noul",
+      "ins": "第四季度总收入是否达到五十亿元？",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0035",
+    "category": "multilingual:ar",
+    "state": "أعلنت الشركة عن تحقيق أرباح صافية قدرها 20 مليون دولار خلال الربع الأول.",
+    "question": {
+      "t": "noul",
+      "ins": "هل بلغت الأرباح الصافية 20 مليون دولار؟",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0036",
+    "category": "multilingual:de",
+    "state": "Der Reingewinn des Unternehmens stieg im vierten Quartal um 12 Prozent auf 85 Millionen Euro.",
+    "question": {
+      "t": "noul",
+      "ins": "Stieg der Reingewinn um 12 Prozent?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0037",
+    "category": "multilingual:fr",
+    "state": "Le chiffre d'affaires annuel a atteint 150 millions d'euros avec une marge stable.",
+    "question": {
+      "t": "noul",
+      "ins": "Le chiffre d'affaires a-t-il atteint 150 millions d'euros?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0038",
+    "category": "multilingual:ru",
+    "state": "Выручка компании за третий квартал составила 45 миллиардов рублей.",
+    "question": {
+      "t": "noul",
+      "ins": "Составила ли выручка 45 миллиардов рублей?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0039",
+    "category": "multilingual:hi",
+    "state": "कंपनी का शुद्ध लाभ पिछले वर्ष की तुलना में 15 प्रतिशत बढ़ गया।",
+    "question": {
+      "t": "noul",
+      "ins": "क्या शुद्ध लाभ 15 प्रतिशत बढ़ गया?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0040",
+    "category": "multilingual:zh",
+    "state": "公司第四季度总收入达到五十亿元人民币，同比增长百分之八。",
+    "question": {
+      "t": "noul",
+      "ins": "第四季度总收入是否达到五十亿元？",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0041",
+    "category": "multilingual:ar",
+    "state": "أعلنت الشركة عن تحقيق أرباح صافية قدرها 20 مليون دولار خلال الربع الأول.",
+    "question": {
+      "t": "noul",
+      "ins": "هل بلغت الأرباح الصافية 20 مليون دولار؟",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0042",
+    "category": "multilingual:de",
+    "state": "Der Reingewinn des Unternehmens stieg im vierten Quartal um 12 Prozent auf 85 Millionen Euro.",
+    "question": {
+      "t": "noul",
+      "ins": "Stieg der Reingewinn um 12 Prozent?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0043",
+    "category": "multilingual:fr",
+    "state": "Le chiffre d'affaires annuel a atteint 150 millions d'euros avec une marge stable.",
+    "question": {
+      "t": "noul",
+      "ins": "Le chiffre d'affaires a-t-il atteint 150 millions d'euros?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0044",
+    "category": "multilingual:ru",
+    "state": "Выручка компании за третий квартал составила 45 миллиардов рублей.",
+    "question": {
+      "t": "noul",
+      "ins": "Составила ли выручка 45 миллиардов рублей?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0045",
+    "category": "multilingual:hi",
+    "state": "कंपनी का शुद्ध लाभ पिछले वर्ष की तुलना में 15 प्रतिशत बढ़ गया।",
+    "question": {
+      "t": "noul",
+      "ins": "क्या शुद्ध लाभ 15 प्रतिशत बढ़ गया?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0046",
+    "category": "multilingual:zh",
+    "state": "公司第四季度总收入达到五十亿元人民币，同比增长百分之八。",
+    "question": {
+      "t": "noul",
+      "ins": "第四季度总收入是否达到五十亿元？",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0047",
+    "category": "multilingual:ar",
+    "state": "أعلنت الشركة عن تحقيق أرباح صافية قدرها 20 مليون دولار خلال الربع الأول.",
+    "question": {
+      "t": "noul",
+      "ins": "هل بلغت الأرباح الصافية 20 مليون دولار؟",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0048",
+    "category": "multilingual:de",
+    "state": "Der Reingewinn des Unternehmens stieg im vierten Quartal um 12 Prozent auf 85 Millionen Euro.",
+    "question": {
+      "t": "noul",
+      "ins": "Stieg der Reingewinn um 12 Prozent?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0049",
+    "category": "multilingual:fr",
+    "state": "Le chiffre d'affaires annuel a atteint 150 millions d'euros avec une marge stable.",
+    "question": {
+      "t": "noul",
+      "ins": "Le chiffre d'affaires a-t-il atteint 150 millions d'euros?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0050",
+    "category": "multilingual:ru",
+    "state": "Выручка компании за третий квартал составила 45 миллиардов рублей.",
+    "question": {
+      "t": "noul",
+      "ins": "Составила ли выручка 45 миллиардов рублей?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0051",
+    "category": "multilingual:hi",
+    "state": "कंपनी का शुद्ध लाभ पिछले वर्ष की तुलना में 15 प्रतिशत बढ़ गया।",
+    "question": {
+      "t": "noul",
+      "ins": "क्या शुद्ध लाभ 15 प्रतिशत बढ़ गया?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0052",
+    "category": "multilingual:zh",
+    "state": "公司第四季度总收入达到五十亿元人民币，同比增长百分之八。",
+    "question": {
+      "t": "noul",
+      "ins": "第四季度总收入是否达到五十亿元？",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0053",
+    "category": "multilingual:ar",
+    "state": "أعلنت الشركة عن تحقيق أرباح صافية قدرها 20 مليون دولار خلال الربع الأول.",
+    "question": {
+      "t": "noul",
+      "ins": "هل بلغت الأرباح الصافية 20 مليون دولار؟",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0054",
+    "category": "multilingual:de",
+    "state": "Der Reingewinn des Unternehmens stieg im vierten Quartal um 12 Prozent auf 85 Millionen Euro.",
+    "question": {
+      "t": "noul",
+      "ins": "Stieg der Reingewinn um 12 Prozent?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0055",
+    "category": "multilingual:fr",
+    "state": "Le chiffre d'affaires annuel a atteint 150 millions d'euros avec une marge stable.",
+    "question": {
+      "t": "noul",
+      "ins": "Le chiffre d'affaires a-t-il atteint 150 millions d'euros?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0056",
+    "category": "multilingual:ru",
+    "state": "Выручка компании за третий квартал составила 45 миллиардов рублей.",
+    "question": {
+      "t": "noul",
+      "ins": "Составила ли выручка 45 миллиардов рублей?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0057",
+    "category": "multilingual:hi",
+    "state": "कंपनी का शुद्ध लाभ पिछले वर्ष की तुलना में 15 प्रतिशत बढ़ गया।",
+    "question": {
+      "t": "noul",
+      "ins": "क्या शुद्ध लाभ 15 प्रतिशत बढ़ गया?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0058",
+    "category": "multilingual:zh",
+    "state": "公司第四季度总收入达到五十亿元人民币，同比增长百分之八。",
+    "question": {
+      "t": "noul",
+      "ins": "第四季度总收入是否达到五十亿元？",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0059",
+    "category": "multilingual:ar",
+    "state": "أعلنت الشركة عن تحقيق أرباح صافية قدرها 20 مليون دولار خلال الربع الأول.",
+    "question": {
+      "t": "noul",
+      "ins": "هل بلغت الأرباح الصافية 20 مليون دولار؟",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0060",
+    "category": "multilingual:de",
+    "state": "Der Reingewinn des Unternehmens stieg im vierten Quartal um 12 Prozent auf 85 Millionen Euro.",
+    "question": {
+      "t": "noul",
+      "ins": "Stieg der Reingewinn um 12 Prozent?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0061",
+    "category": "multilingual:fr",
+    "state": "Le chiffre d'affaires annuel a atteint 150 millions d'euros avec une marge stable.",
+    "question": {
+      "t": "noul",
+      "ins": "Le chiffre d'affaires a-t-il atteint 150 millions d'euros?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0062",
+    "category": "multilingual:ru",
+    "state": "Выручка компании за третий квартал составила 45 миллиардов рублей.",
+    "question": {
+      "t": "noul",
+      "ins": "Составила ли выручка 45 миллиардов рублей?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0063",
+    "category": "multilingual:hi",
+    "state": "कंपनी का शुद्ध लाभ पिछले वर्ष की तुलना में 15 प्रतिशत बढ़ गया।",
+    "question": {
+      "t": "noul",
+      "ins": "क्या शुद्ध लाभ 15 प्रतिशत बढ़ गया?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0064",
+    "category": "multilingual:zh",
+    "state": "公司第四季度总收入达到五十亿元人民币，同比增长百分之八。",
+    "question": {
+      "t": "noul",
+      "ins": "第四季度总收入是否达到五十亿元？",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0065",
+    "category": "multilingual:ar",
+    "state": "أعلنت الشركة عن تحقيق أرباح صافية قدرها 20 مليون دولار خلال الربع الأول.",
+    "question": {
+      "t": "noul",
+      "ins": "هل بلغت الأرباح الصافية 20 مليون دولار؟",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0066",
+    "category": "multilingual:de",
+    "state": "Der Reingewinn des Unternehmens stieg im vierten Quartal um 12 Prozent auf 85 Millionen Euro.",
+    "question": {
+      "t": "noul",
+      "ins": "Stieg der Reingewinn um 12 Prozent?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0067",
+    "category": "multilingual:fr",
+    "state": "Le chiffre d'affaires annuel a atteint 150 millions d'euros avec une marge stable.",
+    "question": {
+      "t": "noul",
+      "ins": "Le chiffre d'affaires a-t-il atteint 150 millions d'euros?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0068",
+    "category": "multilingual:ru",
+    "state": "Выручка компании за третий квартал составила 45 миллиардов рублей.",
+    "question": {
+      "t": "noul",
+      "ins": "Составила ли выручка 45 миллиардов рублей?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0069",
+    "category": "multilingual:hi",
+    "state": "कंपनी का शुद्ध लाभ पिछले वर्ष की तुलना में 15 प्रतिशत बढ़ गया।",
+    "question": {
+      "t": "noul",
+      "ins": "क्या शुद्ध लाभ 15 प्रतिशत बढ़ गया?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0070",
+    "category": "multilingual:zh",
+    "state": "公司第四季度总收入达到五十亿元人民币，同比增长百分之八。",
+    "question": {
+      "t": "noul",
+      "ins": "第四季度总收入是否达到五十亿元？",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0071",
+    "category": "multilingual:ar",
+    "state": "أعلنت الشركة عن تحقيق أرباح صافية قدرها 20 مليون دولار خلال الربع الأول.",
+    "question": {
+      "t": "noul",
+      "ins": "هل بلغت الأرباح الصافية 20 مليون دولار؟",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0072",
+    "category": "multilingual:de",
+    "state": "Der Reingewinn des Unternehmens stieg im vierten Quartal um 12 Prozent auf 85 Millionen Euro.",
+    "question": {
+      "t": "noul",
+      "ins": "Stieg der Reingewinn um 12 Prozent?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0073",
+    "category": "multilingual:fr",
+    "state": "Le chiffre d'affaires annuel a atteint 150 millions d'euros avec une marge stable.",
+    "question": {
+      "t": "noul",
+      "ins": "Le chiffre d'affaires a-t-il atteint 150 millions d'euros?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0074",
+    "category": "multilingual:ru",
+    "state": "Выручка компании за третий квартал составила 45 миллиардов рублей.",
+    "question": {
+      "t": "noul",
+      "ins": "Составила ли выручка 45 миллиардов рублей?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0075",
+    "category": "multilingual:hi",
+    "state": "कंपनी का शुद्ध लाभ पिछले वर्ष की तुलना में 15 प्रतिशत बढ़ गया।",
+    "question": {
+      "t": "noul",
+      "ins": "क्या शुद्ध लाभ 15 प्रतिशत बढ़ गया?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0076",
+    "category": "multilingual:zh",
+    "state": "公司第四季度总收入达到五十亿元人民币，同比增长百分之八。",
+    "question": {
+      "t": "noul",
+      "ins": "第四季度总收入是否达到五十亿元？",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0077",
+    "category": "multilingual:ar",
+    "state": "أعلنت الشركة عن تحقيق أرباح صافية قدرها 20 مليون دولار خلال الربع الأول.",
+    "question": {
+      "t": "noul",
+      "ins": "هل بلغت الأرباح الصافية 20 مليون دولار؟",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0078",
+    "category": "multilingual:de",
+    "state": "Der Reingewinn des Unternehmens stieg im vierten Quartal um 12 Prozent auf 85 Millionen Euro.",
+    "question": {
+      "t": "noul",
+      "ins": "Stieg der Reingewinn um 12 Prozent?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0079",
+    "category": "multilingual:fr",
+    "state": "Le chiffre d'affaires annuel a atteint 150 millions d'euros avec une marge stable.",
+    "question": {
+      "t": "noul",
+      "ins": "Le chiffre d'affaires a-t-il atteint 150 millions d'euros?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0080",
+    "category": "multilingual:ru",
+    "state": "Выручка компании за третий квартал составила 45 миллиардов рублей.",
+    "question": {
+      "t": "noul",
+      "ins": "Составила ли выручка 45 миллиардов рублей?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0081",
+    "category": "multilingual:hi",
+    "state": "कंपनी का शुद्ध लाभ पिछले वर्ष की तुलना में 15 प्रतिशत बढ़ गया।",
+    "question": {
+      "t": "noul",
+      "ins": "क्या शुद्ध लाभ 15 प्रतिशत बढ़ गया?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0082",
+    "category": "multilingual:zh",
+    "state": "公司第四季度总收入达到五十亿元人民币，同比增长百分之八。",
+    "question": {
+      "t": "noul",
+      "ins": "第四季度总收入是否达到五十亿元？",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0083",
+    "category": "multilingual:ar",
+    "state": "أعلنت الشركة عن تحقيق أرباح صافية قدرها 20 مليون دولار خلال الربع الأول.",
+    "question": {
+      "t": "noul",
+      "ins": "هل بلغت الأرباح الصافية 20 مليون دولار؟",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0084",
+    "category": "multilingual:de",
+    "state": "Der Reingewinn des Unternehmens stieg im vierten Quartal um 12 Prozent auf 85 Millionen Euro.",
+    "question": {
+      "t": "noul",
+      "ins": "Stieg der Reingewinn um 12 Prozent?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0085",
+    "category": "multilingual:fr",
+    "state": "Le chiffre d'affaires annuel a atteint 150 millions d'euros avec une marge stable.",
+    "question": {
+      "t": "noul",
+      "ins": "Le chiffre d'affaires a-t-il atteint 150 millions d'euros?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0086",
+    "category": "multilingual:ru",
+    "state": "Выручка компании за третий квартал составила 45 миллиардов рублей.",
+    "question": {
+      "t": "noul",
+      "ins": "Составила ли выручка 45 миллиардов рублей?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0087",
+    "category": "multilingual:hi",
+    "state": "कंपनी का शुद्ध लाभ पिछले वर्ष की तुलना में 15 प्रतिशत बढ़ गया।",
+    "question": {
+      "t": "noul",
+      "ins": "क्या शुद्ध लाभ 15 प्रतिशत बढ़ गया?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0088",
+    "category": "multilingual:zh",
+    "state": "公司第四季度总收入达到五十亿元人民币，同比增长百分之八。",
+    "question": {
+      "t": "noul",
+      "ins": "第四季度总收入是否达到五十亿元？",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0089",
+    "category": "multilingual:ar",
+    "state": "أعلنت الشركة عن تحقيق أرباح صافية قدرها 20 مليون دولار خلال الربع الأول.",
+    "question": {
+      "t": "noul",
+      "ins": "هل بلغت الأرباح الصافية 20 مليون دولار؟",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0090",
+    "category": "multilingual:de",
+    "state": "Der Reingewinn des Unternehmens stieg im vierten Quartal um 12 Prozent auf 85 Millionen Euro.",
+    "question": {
+      "t": "noul",
+      "ins": "Stieg der Reingewinn um 12 Prozent?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0091",
+    "category": "multilingual:fr",
+    "state": "Le chiffre d'affaires annuel a atteint 150 millions d'euros avec une marge stable.",
+    "question": {
+      "t": "noul",
+      "ins": "Le chiffre d'affaires a-t-il atteint 150 millions d'euros?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0092",
+    "category": "multilingual:ru",
+    "state": "Выручка компании за третий квартал составила 45 миллиардов рублей.",
+    "question": {
+      "t": "noul",
+      "ins": "Составила ли выручка 45 миллиардов рублей?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0093",
+    "category": "multilingual:hi",
+    "state": "कंपनी का शुद्ध लाभ पिछले वर्ष की तुलना में 15 प्रतिशत बढ़ गया।",
+    "question": {
+      "t": "noul",
+      "ins": "क्या शुद्ध लाभ 15 प्रतिशत बढ़ गया?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0094",
+    "category": "multilingual:zh",
+    "state": "公司第四季度总收入达到五十亿元人民币，同比增长百分之八。",
+    "question": {
+      "t": "noul",
+      "ins": "第四季度总收入是否达到五十亿元？",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0095",
+    "category": "multilingual:ar",
+    "state": "أعلنت الشركة عن تحقيق أرباح صافية قدرها 20 مليون دولار خلال الربع الأول.",
+    "question": {
+      "t": "noul",
+      "ins": "هل بلغت الأرباح الصافية 20 مليون دولار؟",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0096",
+    "category": "multilingual:de",
+    "state": "Der Reingewinn des Unternehmens stieg im vierten Quartal um 12 Prozent auf 85 Millionen Euro.",
+    "question": {
+      "t": "noul",
+      "ins": "Stieg der Reingewinn um 12 Prozent?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0097",
+    "category": "multilingual:fr",
+    "state": "Le chiffre d'affaires annuel a atteint 150 millions d'euros avec une marge stable.",
+    "question": {
+      "t": "noul",
+      "ins": "Le chiffre d'affaires a-t-il atteint 150 millions d'euros?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0098",
+    "category": "multilingual:ru",
+    "state": "Выручка компании за третий квартал составила 45 миллиардов рублей.",
+    "question": {
+      "t": "noul",
+      "ins": "Составила ли выручка 45 миллиардов рублей?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0099",
+    "category": "multilingual:hi",
+    "state": "कंपनी का शुद्ध लाभ पिछले वर्ष की तुलना में 15 प्रतिशत बढ़ गया।",
+    "question": {
+      "t": "noul",
+      "ins": "क्या शुद्ध लाभ 15 प्रतिशत बढ़ गया?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0100",
+    "category": "multilingual:zh",
+    "state": "公司第四季度总收入达到五十亿元人民币，同比增长百分之八。",
+    "question": {
+      "t": "noul",
+      "ins": "第四季度总收入是否达到五十亿元？",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0101",
+    "category": "multilingual:ar",
+    "state": "أعلنت الشركة عن تحقيق أرباح صافية قدرها 20 مليون دولار خلال الربع الأول.",
+    "question": {
+      "t": "noul",
+      "ins": "هل بلغت الأرباح الصافية 20 مليون دولار؟",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0102",
+    "category": "multilingual:de",
+    "state": "Der Reingewinn des Unternehmens stieg im vierten Quartal um 12 Prozent auf 85 Millionen Euro.",
+    "question": {
+      "t": "noul",
+      "ins": "Stieg der Reingewinn um 12 Prozent?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0103",
+    "category": "multilingual:fr",
+    "state": "Le chiffre d'affaires annuel a atteint 150 millions d'euros avec une marge stable.",
+    "question": {
+      "t": "noul",
+      "ins": "Le chiffre d'affaires a-t-il atteint 150 millions d'euros?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0104",
+    "category": "multilingual:ru",
+    "state": "Выручка компании за третий квартал составила 45 миллиардов рублей.",
+    "question": {
+      "t": "noul",
+      "ins": "Составила ли выручка 45 миллиардов рублей?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0105",
+    "category": "multilingual:hi",
+    "state": "कंपनी का शुद्ध लाभ पिछले वर्ष की तुलना में 15 प्रतिशत बढ़ गया।",
+    "question": {
+      "t": "noul",
+      "ins": "क्या शुद्ध लाभ 15 प्रतिशत बढ़ गया?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0106",
+    "category": "multilingual:zh",
+    "state": "公司第四季度总收入达到五十亿元人民币，同比增长百分之八。",
+    "question": {
+      "t": "noul",
+      "ins": "第四季度总收入是否达到五十亿元？",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0107",
+    "category": "multilingual:ar",
+    "state": "أعلنت الشركة عن تحقيق أرباح صافية قدرها 20 مليون دولار خلال الربع الأول.",
+    "question": {
+      "t": "noul",
+      "ins": "هل بلغت الأرباح الصافية 20 مليون دولار؟",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0108",
+    "category": "multilingual:de",
+    "state": "Der Reingewinn des Unternehmens stieg im vierten Quartal um 12 Prozent auf 85 Millionen Euro.",
+    "question": {
+      "t": "noul",
+      "ins": "Stieg der Reingewinn um 12 Prozent?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0109",
+    "category": "multilingual:fr",
+    "state": "Le chiffre d'affaires annuel a atteint 150 millions d'euros avec une marge stable.",
+    "question": {
+      "t": "noul",
+      "ins": "Le chiffre d'affaires a-t-il atteint 150 millions d'euros?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0110",
+    "category": "multilingual:ru",
+    "state": "Выручка компании за третий квартал составила 45 миллиардов рублей.",
+    "question": {
+      "t": "noul",
+      "ins": "Составила ли выручка 45 миллиардов рублей?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0111",
+    "category": "multilingual:hi",
+    "state": "कंपनी का शुद्ध लाभ पिछले वर्ष की तुलना में 15 प्रतिशत बढ़ गया।",
+    "question": {
+      "t": "noul",
+      "ins": "क्या शुद्ध लाभ 15 प्रतिशत बढ़ गया?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0112",
+    "category": "multilingual:zh",
+    "state": "公司第四季度总收入达到五十亿元人民币，同比增长百分之八。",
+    "question": {
+      "t": "noul",
+      "ins": "第四季度总收入是否达到五十亿元？",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0113",
+    "category": "multilingual:ar",
+    "state": "أعلنت الشركة عن تحقيق أرباح صافية قدرها 20 مليون دولار خلال الربع الأول.",
+    "question": {
+      "t": "noul",
+      "ins": "هل بلغت الأرباح الصافية 20 مليون دولار؟",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0114",
+    "category": "multilingual:de",
+    "state": "Der Reingewinn des Unternehmens stieg im vierten Quartal um 12 Prozent auf 85 Millionen Euro.",
+    "question": {
+      "t": "noul",
+      "ins": "Stieg der Reingewinn um 12 Prozent?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0115",
+    "category": "multilingual:fr",
+    "state": "Le chiffre d'affaires annuel a atteint 150 millions d'euros avec une marge stable.",
+    "question": {
+      "t": "noul",
+      "ins": "Le chiffre d'affaires a-t-il atteint 150 millions d'euros?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0116",
+    "category": "multilingual:ru",
+    "state": "Выручка компании за третий квартал составила 45 миллиардов рублей.",
+    "question": {
+      "t": "noul",
+      "ins": "Составила ли выручка 45 миллиардов рублей?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0117",
+    "category": "multilingual:hi",
+    "state": "कंपनी का शुद्ध लाभ पिछले वर्ष की तुलना में 15 प्रतिशत बढ़ गया।",
+    "question": {
+      "t": "noul",
+      "ins": "क्या शुद्ध लाभ 15 प्रतिशत बढ़ गया?",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0118",
+    "category": "multilingual:zh",
+    "state": "公司第四季度总收入达到五十亿元人民币，同比增长百分之八。",
+    "question": {
+      "t": "noul",
+      "ins": "第四季度总收入是否达到五十亿元？",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  },
+  {
+    "id": "pool_multi_0119",
+    "category": "multilingual:ar",
+    "state": "أعلنت الشركة عن تحقيق أرباح صافية قدرها 20 مليون دولار خلال الربع الأول.",
+    "question": {
+      "t": "noul",
+      "ins": "هل بلغت الأرباح الصافية 20 مليون دولار؟",
+      "crit": {
+        "false": "unsupported",
+        "true": "supported"
+      }
+    },
+    "qtype": 2,
+    "hard_target": [
+      0.0,
+      1.0
+    ],
+    "should_abstain": 0,
+    "domain": "international"
+  }
+]

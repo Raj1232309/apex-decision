@@ -1,0 +1,49 @@
+{
+  "benchmark_name": "ApexDecision Grounding Frozen 10k Suite (v2)",
+  "version": "2.0.0",
+  "file_path": "apex_decision/benchmarks/grounding_v2/test_frozen_10k.json",
+  "sha256": "f4b5141a88db550d23beabe21f4200dde70a6b9c2d3a4931450a0116328c3aba",
+  "total_examples": 10000,
+  "supported_count": 5000,
+  "unsupported_count": 5000,
+  "adversarial_count": 8335,
+  "domains": {
+    "business": 1240,
+    "security": 1230,
+    "finance": 1260,
+    "medicine": 1260,
+    "technology": 1260,
+    "law_policy": 1260,
+    "science": 1260,
+    "general_knowledge": 1230
+  },
+  "failure_modes": {
+    "partial_support_claim": 294,
+    "multi_sentence_reasoning": 1659,
+    "quantifier_mismatch": 294,
+    "direct_entailment": 1665,
+    "negation_reversal": 294,
+    "attribution_mismatch": 294,
+    "temporal_ordering_error": 294,
+    "direct_contradiction": 295,
+    "causal_overclaim": 294,
+    "lexical_overlap_unsupported": 294,
+    "double_negation": 1676,
+    "date_time_mismatch": 294,
+    "scope_mismatch": 294,
+    "entity_substitution": 294,
+    "comparative_claim_mismatch": 294,
+    "population_mismatch": 294,
+    "number_mismatch": 294,
+    "unit_mismatch": 294,
+    "correlation_vs_causation": 294,
+    "unsupported_claim": 295
+  },
+  "difficulty_tiers": {
+    "3": 5678,
+    "4": 2657,
+    "2": 969,
+    "1": 696
+  },
+  "disjoint_source_check": "100% verified zero overlap with Pool A & Pool B"
+}

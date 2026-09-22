@@ -1,0 +1,224 @@
+{
+  "benchmark_name": "ApexDecision Scientific Grounding Benchmark",
+  "version": "1.0.0",
+  "split_sizes": {
+    "train": 3400,
+    "validation": 600,
+    "calibration": 600,
+    "test": 600,
+    "jev_style_eval": 108,
+    "total_benchmark_records": 5308
+  },
+  "leakage_verification": {
+    "shared_sources_train_vs_test": 0,
+    "shared_claims_train_vs_test": 0,
+    "cross_split_leakage_status": "CLEAN_ZERO_LEAKAGE"
+  },
+  "splits": {
+    "train": {
+      "total": 3400,
+      "label_distribution": {
+        "SUPPORTED": 1700,
+        "NOT_SUPPORTED": 1700
+      },
+      "domain_distribution": {
+        "science": 1020,
+        "medicine": 1020,
+        "finance": 1020,
+        "technology": 340
+      },
+      "adversarial_count": 2500,
+      "adversarial_percentage": 73.53,
+      "difficulty_tiers": {
+        "1": 400,
+        "2": 300,
+        "3": 2100,
+        "4": 600
+      },
+      "failure_modes": {
+        "direct_entailment": 1300,
+        "direct_contradiction": 100,
+        "unsupported_claim": 100,
+        "negation_reversal": 100,
+        "double_negation": 200,
+        "entity_substitution": 100,
+        "number_mismatch": 100,
+        "unit_mismatch": 100,
+        "date_time_mismatch": 100,
+        "population_mismatch": 100,
+        "scope_mismatch": 100,
+        "quantifier_mismatch": 100,
+        "causal_overclaim": 100,
+        "correlation_vs_causation": 100,
+        "comparative_claim_mismatch": 100,
+        "temporal_ordering_error": 100,
+        "attribution_mismatch": 100,
+        "partial_support_claim": 100,
+        "multi_sentence_reasoning": 200,
+        "lexical_overlap_unsupported": 100
+      }
+    },
+    "validation": {
+      "total": 600,
+      "label_distribution": {
+        "SUPPORTED": 294,
+        "NOT_SUPPORTED": 306
+      },
+      "domain_distribution": {
+        "technology": 600
+      },
+      "adversarial_count": 441,
+      "adversarial_percentage": 73.5,
+      "difficulty_tiers": {
+        "1": 70,
+        "2": 54,
+        "3": 370,
+        "4": 106
+      },
+      "failure_modes": {
+        "direct_entailment": 224,
+        "direct_contradiction": 18,
+        "unsupported_claim": 18,
+        "negation_reversal": 18,
+        "double_negation": 35,
+        "entity_substitution": 18,
+        "number_mismatch": 18,
+        "unit_mismatch": 18,
+        "date_time_mismatch": 18,
+        "population_mismatch": 18,
+        "scope_mismatch": 18,
+        "quantifier_mismatch": 18,
+        "causal_overclaim": 18,
+        "correlation_vs_causation": 18,
+        "comparative_claim_mismatch": 18,
+        "temporal_ordering_error": 18,
+        "attribution_mismatch": 18,
+        "partial_support_claim": 18,
+        "multi_sentence_reasoning": 35,
+        "lexical_overlap_unsupported": 18
+      }
+    },
+    "calibration": {
+      "total": 600,
+      "label_distribution": {
+        "SUPPORTED": 303,
+        "NOT_SUPPORTED": 297
+      },
+      "domain_distribution": {
+        "technology": 80,
+        "law_policy": 520
+      },
+      "adversarial_count": 441,
+      "adversarial_percentage": 73.5,
+      "difficulty_tiers": {
+        "1": 72,
+        "3": 371,
+        "4": 105,
+        "2": 52
+      },
+      "failure_modes": {
+        "direct_entailment": 232,
+        "multi_sentence_reasoning": 35,
+        "double_negation": 36,
+        "direct_contradiction": 18,
+        "unsupported_claim": 18,
+        "negation_reversal": 18,
+        "entity_substitution": 18,
+        "number_mismatch": 18,
+        "unit_mismatch": 18,
+        "date_time_mismatch": 18,
+        "population_mismatch": 18,
+        "scope_mismatch": 17,
+        "quantifier_mismatch": 17,
+        "causal_overclaim": 17,
+        "correlation_vs_causation": 17,
+        "comparative_claim_mismatch": 17,
+        "temporal_ordering_error": 17,
+        "attribution_mismatch": 17,
+        "partial_support_claim": 17,
+        "lexical_overlap_unsupported": 17
+      }
+    },
+    "test": {
+      "total": 600,
+      "label_distribution": {
+        "NOT_SUPPORTED": 296,
+        "SUPPORTED": 304
+      },
+      "domain_distribution": {
+        "science": 186,
+        "medicine": 186,
+        "finance": 186,
+        "technology": 42
+      },
+      "adversarial_count": 457,
+      "adversarial_percentage": 76.17,
+      "difficulty_tiers": {
+        "3": 390,
+        "4": 102,
+        "1": 64,
+        "2": 44
+      },
+      "failure_modes": {
+        "scope_mismatch": 20,
+        "quantifier_mismatch": 20,
+        "comparative_claim_mismatch": 20,
+        "temporal_ordering_error": 20,
+        "attribution_mismatch": 20,
+        "partial_support_claim": 20,
+        "lexical_overlap_unsupported": 20,
+        "direct_entailment": 234,
+        "multi_sentence_reasoning": 35,
+        "double_negation": 35,
+        "direct_contradiction": 16,
+        "negation_reversal": 16,
+        "entity_substitution": 16,
+        "number_mismatch": 16,
+        "unit_mismatch": 16,
+        "date_time_mismatch": 16,
+        "population_mismatch": 16,
+        "causal_overclaim": 16,
+        "correlation_vs_causation": 16,
+        "unsupported_claim": 12
+      }
+    },
+    "jev_style_eval": {
+      "total": 108,
+      "label_distribution": {
+        "SUPPORTED": 42,
+        "NOT_SUPPORTED": 66
+      },
+      "domain_distribution": {
+        "science": 18,
+        "medicine": 18,
+        "finance": 18,
+        "technology": 18,
+        "law_policy": 18,
+        "business": 18
+      },
+      "adversarial_count": 54,
+      "adversarial_percentage": 50.0,
+      "difficulty_tiers": {
+        "1": 24,
+        "2": 24,
+        "3": 36,
+        "4": 24
+      },
+      "failure_modes": {
+        "direct_entailment": 30,
+        "direct_contradiction": 6,
+        "unsupported_claim": 12,
+        "negation_reversal": 6,
+        "entity_substitution": 6,
+        "number_mismatch": 6,
+        "unit_mismatch": 6,
+        "date_time_mismatch": 6,
+        "population_mismatch": 6,
+        "double_negation": 6,
+        "causal_overclaim": 6,
+        "correlation_vs_causation": 6,
+        "multi_sentence_reasoning": 6
+      }
+    }
+  }
+}

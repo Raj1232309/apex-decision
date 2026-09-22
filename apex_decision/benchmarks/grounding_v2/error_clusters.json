@@ -1,0 +1,47 @@
+{
+  "benchmark": "ApexDecision Grounding Frozen 10k Suite (v2)",
+  "total_evaluated": 10000,
+  "total_correct": 9998,
+  "total_errors": 2,
+  "accuracy": 0.9998,
+  "false_positive_count": 2,
+  "false_negative_count": 0,
+  "error_clusters": [
+    {
+      "cluster_id": "EC-01",
+      "name": "High Lexical Overlap Chimera with Appended Refutation Clause",
+      "category": "lexical_overlap_unsupported",
+      "count": 2,
+      "percentage_of_errors": 100.0,
+      "percentage_of_dataset": 0.02,
+      "sample_ids": [
+        "v2_unsup_01955",
+        "v2_unsup_03995"
+      ],
+      "claim_pattern": "{Source_Prefix_Sentence_Fragment} was completely refuted and disproven by external peer reviews.",
+      "root_cause": "The claim copies 12 tokens verbatim from the source premise ('Asset Manager AM-5 released fiscal audit report #5, reporting total assets under'), achieving >= 80% lexical token overlap before structured rejection of the tail refutation predicate. The neural cross-encoder fallback assigned probability 0.89 due to the heavy leading token overlap.",
+      "remediation_strategy": "Incorporate explicit negative predicate detection for trailing ungrounded refutation clauses ('refuted and disproven', 'contradicted by external') in the structured lexical overlap calculator to reject chimera sentences before computing overlap percentages."
+    }
+  ],
+  "zero_error_categories": [
+    "direct_entailment",
+    "double_negation",
+    "multi_sentence_reasoning",
+    "direct_contradiction",
+    "number_mismatch",
+    "entity_substitution",
+    "date_time_mismatch",
+    "causal_overclaim",
+    "correlation_vs_causation",
+    "quantifier_mismatch",
+    "negation_reversal",
+    "attribution_mismatch",
+    "temporal_ordering_error",
+    "scope_mismatch",
+    "comparative_claim_mismatch",
+    "partial_support_claim",
+    "population_mismatch",
+    "unit_mismatch",
+    "unsupported_claim"
+  ]
+}

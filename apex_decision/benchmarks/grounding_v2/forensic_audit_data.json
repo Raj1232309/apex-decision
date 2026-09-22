@@ -1,0 +1,279 @@
+{
+  "timestamp": "2026-09-20 10:43:45 UTC",
+  "integrity_checks": {
+    "train_file": "apex_decision/benchmarks/grounding/train.json",
+    "train_augmented_file": "apex_decision/benchmarks/grounding/train_augmented.json",
+    "train_sha256": "19ee3ee801e6ca1dcc592208cbb9ce4c8afff523be3c7231ab41b460d1934f2a",
+    "train_augmented_sha256": "19ee3ee801e6ca1dcc592208cbb9ce4c8afff523be3c7231ab41b460d1934f2a",
+    "train_and_augmented_identical": true,
+    "lora_weights_hash": {
+      "README.md": "3d2da56c05343329a17ff1b079d2530c5b492a0649f71c6a8f42460403ca0049",
+      "adapter_config.json": "54063764f44274ee9eb46b6b7c0029d39ef4ffa38458ae77848c00dd92e68ede",
+      "adapter_model.safetensors": "204c28636f9b7608ac81428f6f08ad95893ab5022840aa2669faa4b26fa50c22",
+      "tokenizer.json": "a4285a69e0471620769dce979c70a6994eb7ff1554da8fb4bdbc7ad3eb5ad666",
+      "tokenizer_config.json": "8d895c33fed683bb7b70178097d5a50478c9803236f53631c60e55851f1ddbe6",
+      "training_metrics.json": "bc25fc733337d890fb3a171473d0c6f0fd7cd9c433f5380fa7d214c7177ef1d3"
+    },
+    "lora_hn_weights_hash": {
+      "README.md": "3d2da56c05343329a17ff1b079d2530c5b492a0649f71c6a8f42460403ca0049",
+      "adapter_config.json": "54063764f44274ee9eb46b6b7c0029d39ef4ffa38458ae77848c00dd92e68ede",
+      "adapter_model.safetensors": "204c28636f9b7608ac81428f6f08ad95893ab5022840aa2669faa4b26fa50c22",
+      "tokenizer.json": "a4285a69e0471620769dce979c70a6994eb7ff1554da8fb4bdbc7ad3eb5ad666",
+      "tokenizer_config.json": "8d895c33fed683bb7b70178097d5a50478c9803236f53631c60e55851f1ddbe6",
+      "training_metrics.json": "bc25fc733337d890fb3a171473d0c6f0fd7cd9c433f5380fa7d214c7177ef1d3"
+    },
+    "lora_and_hn_weights_identical": true
+  },
+  "retrieval_instrumentation": {
+    "total_test_examples": 600,
+    "sources_le_2_sentences": 600,
+    "sources_gt_2_sentences": 0,
+    "retrieved_context_differed_from_source_count": 0,
+    "tokenized_input_ids_differed_count": 0,
+    "retrieval_samples": [
+      {
+        "example_id": "b_sci_b_01_v0_fm11",
+        "domain": "science",
+        "category": "scope_mismatch",
+        "source_num_sents": 2,
+        "raw_source": "The Event Horizon Telescope (EHT) collaboration released the first image of Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses. The image revealed a bright emission ring of 52 microarcseconds diameter surrounding a dark central region known as the black hole shadow.",
+        "candidate_sentences": [
+          "The Event Horizon Telescope (EHT) collaboration released the first image of Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses.",
+          "The image revealed a bright emission ring of 52 microarcseconds diameter surrounding a dark central region known as the black hole shadow."
+        ],
+        "retrieved_evidence": [
+          "The Event Horizon Telescope (EHT) collaboration released the first image of Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses.",
+          "The image revealed a bright emission ring of 52 microarcseconds diameter surrounding a dark central region known as the black hole shadow."
+        ],
+        "retrieved_context": "The Event Horizon Telescope (EHT) collaboration released the first image of Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses. The image revealed a bright emission ring of 52 microarcseconds diameter surrounding a dark central region known as the black hole shadow.",
+        "claim": "the findings for Sagittarius A* (case scope 1) were proven to hold true universally across every single jurisdiction on Earth.",
+        "is_context_different": false,
+        "raw_token_count": 100,
+        "ret_token_count": 100,
+        "raw_token_ids_prefix": [
+          50281,
+          510,
+          11846,
+          44211,
+          43417,
+          313,
+          38,
+          5324,
+          10,
+          14448
+        ],
+        "ret_token_ids_prefix": [
+          50281,
+          510,
+          11846,
+          44211,
+          43417,
+          313,
+          38,
+          5324,
+          10,
+          14448
+        ]
+      },
+      {
+        "example_id": "b_sci_b_01_v0_fm12",
+        "domain": "science",
+        "category": "quantifier_mismatch",
+        "source_num_sents": 2,
+        "raw_source": "The Event Horizon Telescope (EHT) collaboration released the first image of Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses. The image revealed a bright emission ring of 52 microarcseconds diameter surrounding a dark central region known as the black hole shadow.",
+        "candidate_sentences": [
+          "The Event Horizon Telescope (EHT) collaboration released the first image of Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses.",
+          "The image revealed a bright emission ring of 52 microarcseconds diameter surrounding a dark central region known as the black hole shadow."
+        ],
+        "retrieved_evidence": [
+          "The Event Horizon Telescope (EHT) collaboration released the first image of Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses.",
+          "The image revealed a bright emission ring of 52 microarcseconds diameter surrounding a dark central region known as the black hole shadow."
+        ],
+        "retrieved_context": "The Event Horizon Telescope (EHT) collaboration released the first image of Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses. The image revealed a bright emission ring of 52 microarcseconds diameter surrounding a dark central region known as the black hole shadow.",
+        "claim": "without exception across batch 1, every single aspect of Sagittarius A* was completely discarded during the observation period.",
+        "is_context_different": false,
+        "raw_token_count": 97,
+        "ret_token_count": 97,
+        "raw_token_ids_prefix": [
+          50281,
+          510,
+          11846,
+          44211,
+          43417,
+          313,
+          38,
+          5324,
+          10,
+          14448
+        ],
+        "ret_token_ids_prefix": [
+          50281,
+          510,
+          11846,
+          44211,
+          43417,
+          313,
+          38,
+          5324,
+          10,
+          14448
+        ]
+      },
+      {
+        "example_id": "b_sci_b_01_v0_fm15",
+        "domain": "science",
+        "category": "comparative_claim_mismatch",
+        "source_num_sents": 2,
+        "raw_source": "The Event Horizon Telescope (EHT) collaboration released the first image of Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses. The image revealed a bright emission ring of 52 microarcseconds diameter surrounding a dark central region known as the black hole shadow.",
+        "candidate_sentences": [
+          "The Event Horizon Telescope (EHT) collaboration released the first image of Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses.",
+          "The image revealed a bright emission ring of 52 microarcseconds diameter surrounding a dark central region known as the black hole shadow."
+        ],
+        "retrieved_evidence": [
+          "The Event Horizon Telescope (EHT) collaboration released the first image of Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses.",
+          "The image revealed a bright emission ring of 52 microarcseconds diameter surrounding a dark central region known as the black hole shadow."
+        ],
+        "retrieved_context": "The Event Horizon Telescope (EHT) collaboration released the first image of Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses. The image revealed a bright emission ring of 52 microarcseconds diameter surrounding a dark central region known as the black hole shadow.",
+        "claim": "regarding Sagittarius A* (evaluation 1), legacy architectures were shown to dramatically surpass all reported outcomes in both speed and efficacy.",
+        "is_context_different": false,
+        "raw_token_count": 101,
+        "ret_token_count": 101,
+        "raw_token_ids_prefix": [
+          50281,
+          510,
+          11846,
+          44211,
+          43417,
+          313,
+          38,
+          5324,
+          10,
+          14448
+        ],
+        "ret_token_ids_prefix": [
+          50281,
+          510,
+          11846,
+          44211,
+          43417,
+          313,
+          38,
+          5324,
+          10,
+          14448
+        ]
+      },
+      {
+        "example_id": "b_sci_b_01_v0_fm16",
+        "domain": "science",
+        "category": "temporal_ordering_error",
+        "source_num_sents": 2,
+        "raw_source": "The Event Horizon Telescope (EHT) collaboration released the first image of Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses. The image revealed a bright emission ring of 52 microarcseconds diameter surrounding a dark central region known as the black hole shadow.",
+        "candidate_sentences": [
+          "The Event Horizon Telescope (EHT) collaboration released the first image of Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses.",
+          "The image revealed a bright emission ring of 52 microarcseconds diameter surrounding a dark central region known as the black hole shadow."
+        ],
+        "retrieved_evidence": [
+          "The Event Horizon Telescope (EHT) collaboration released the first image of Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses.",
+          "The image revealed a bright emission ring of 52 microarcseconds diameter surrounding a dark central region known as the black hole shadow."
+        ],
+        "retrieved_context": "The Event Horizon Telescope (EHT) collaboration released the first image of Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses. The image revealed a bright emission ring of 52 microarcseconds diameter surrounding a dark central region known as the black hole shadow.",
+        "claim": "the final results of Sagittarius A* in phase 1 were already concluded before any of the stated preconditions were initially carried out.",
+        "is_context_different": false,
+        "raw_token_count": 101,
+        "ret_token_count": 101,
+        "raw_token_ids_prefix": [
+          50281,
+          510,
+          11846,
+          44211,
+          43417,
+          313,
+          38,
+          5324,
+          10,
+          14448
+        ],
+        "ret_token_ids_prefix": [
+          50281,
+          510,
+          11846,
+          44211,
+          43417,
+          313,
+          38,
+          5324,
+          10,
+          14448
+        ]
+      },
+      {
+        "example_id": "b_sci_b_01_v0_fm17",
+        "domain": "science",
+        "category": "attribution_mismatch",
+        "source_num_sents": 2,
+        "raw_source": "The Event Horizon Telescope (EHT) collaboration released the first image of Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses. The image revealed a bright emission ring of 52 microarcseconds diameter surrounding a dark central region known as the black hole shadow.",
+        "candidate_sentences": [
+          "The Event Horizon Telescope (EHT) collaboration released the first image of Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses.",
+          "The image revealed a bright emission ring of 52 microarcseconds diameter surrounding a dark central region known as the black hole shadow."
+        ],
+        "retrieved_evidence": [
+          "The Event Horizon Telescope (EHT) collaboration released the first image of Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses.",
+          "The image revealed a bright emission ring of 52 microarcseconds diameter surrounding a dark central region known as the black hole shadow."
+        ],
+        "retrieved_context": "The Event Horizon Telescope (EHT) collaboration released the first image of Sagittarius A*, the supermassive black hole at the center of the Milky Way, with an estimated mass of 4.3 million solar masses. The image revealed a bright emission ring of 52 microarcseconds diameter surrounding a dark central region known as the black hole shadow.",
+        "claim": "the official findings for Sagittarius A* were formulated and registered exclusively by the Antarctic Research Commission.",
+        "is_context_different": false,
+        "raw_token_count": 94,
+        "ret_token_count": 94,
+        "raw_token_ids_prefix": [
+          50281,
+          510,
+          11846,
+          44211,
+          43417,
+          313,
+          38,
+          5324,
+          10,
+          14448
+        ],
+        "ret_token_ids_prefix": [
+          50281,
+          510,
+          11846,
+          44211,
+          43417,
+          313,
+          38,
+          5324,
+          10,
+          14448
+        ]
+      }
+    ]
+  },
+  "ablation_comparison": {
+    "ablation_2_lora": {
+      "checkpoint": "apex_decision/build/grounding_lora",
+      "prediction_hash": "ee64a61b36a57702bf9075ba3b63c74251c418ef0bac0d54ae6ff2b2720fd45b",
+      "accuracy": 0.9316666666666666
+    },
+    "ablation_3_lora_hn": {
+      "checkpoint": "apex_decision/build/grounding_lora_hn",
+      "prediction_hash": "ee64a61b36a57702bf9075ba3b63c74251c418ef0bac0d54ae6ff2b2720fd45b",
+      "differing_predictions_vs_abl2": 0,
+      "mean_abs_prob_diff_vs_abl2": 0.0,
+      "max_prob_diff_vs_abl2": 0.0,
+      "accuracy": 0.9316666666666666
+    },
+    "ablation_4_lora_retrieval": {
+      "checkpoint": "apex_decision/build/grounding_lora",
+      "prediction_hash": "ee64a61b36a57702bf9075ba3b63c74251c418ef0bac0d54ae6ff2b2720fd45b",
+      "differing_predictions_vs_abl2": 0,
+      "mean_abs_prob_diff_vs_abl2": 0.0,
+      "max_prob_diff_vs_abl2": 0.0,
+      "accuracy": 0.9316666666666666
+    }
+  }
+}

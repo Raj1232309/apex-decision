@@ -1,0 +1,3602 @@
+[
+  {
+    "id": "pool_choice_0000",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0001",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0002",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0003",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0004",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0005",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0006",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0007",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0008",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0009",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0010",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0011",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0012",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0013",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0014",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0015",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0016",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0017",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0018",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0019",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0020",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0021",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0022",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0023",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0024",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0025",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0026",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0027",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0028",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0029",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0030",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0031",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0032",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0033",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0034",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0035",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0036",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0037",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0038",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0039",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0040",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0041",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0042",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0043",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0044",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0045",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0046",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0047",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0048",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0049",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0050",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0051",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0052",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0053",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0054",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0055",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0056",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0057",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0058",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0059",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0060",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0061",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0062",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0063",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0064",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0065",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0066",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0067",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0068",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0069",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0070",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0071",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0072",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0073",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0074",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0075",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0076",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0077",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0078",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0079",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0080",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0081",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0082",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0083",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0084",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0085",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0086",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0087",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0088",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0089",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0090",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0091",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0092",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0093",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0094",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0095",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0096",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0097",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0098",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0099",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0100",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0101",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0102",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0103",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0104",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0105",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0106",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0107",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0108",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0109",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0110",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0111",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0112",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0113",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0114",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0115",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0116",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0117",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0118",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0119",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0120",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0121",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0122",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0123",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0124",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0125",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0126",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0127",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0128",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0129",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0130",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0131",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0132",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0133",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0134",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0135",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0136",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0137",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0138",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0139",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0140",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0141",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0142",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0143",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0144",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0145",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0146",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0147",
+    "category": "decision:choice",
+    "state": "User reports account locked due to five failed MFA attempts during morning shift.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0148",
+    "category": "decision:choice",
+    "state": "Customer states: 'The item arrived shattered in transit; please issue a refund to my Visa.'",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "request_exchange": "Customer wants a replacement unit",
+        "request_refund": "Customer wants monetary refund for damaged item",
+        "shipping_status": "Tracking delayed package",
+        "cancel_order": "Canceling unshipped order"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  },
+  {
+    "id": "pool_choice_0149",
+    "category": "decision:choice",
+    "state": "Database replication lag spiked to 45 seconds, causing read replicas to fall out of sync.",
+    "question": {
+      "t": "choice",
+      "ins": "Select the correct department queue or intent code.",
+      "crit": {
+        "billing_support": "Payments, invoices, and refunds",
+        "identity_security": "MFA, login locks, authentication failures",
+        "infrastructure_ops": "Server downtime, database replication, network latency",
+        "general_inquiry": "Non-technical product questions"
+      }
+    },
+    "qtype": 0,
+    "hard_target": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "should_abstain": 0,
+    "domain": "triage"
+  }
+]

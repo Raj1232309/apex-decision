@@ -1,0 +1,264 @@
+{
+  "candidate_c_validation": {
+    "model_name": "Candidate_C_NLI_DeBERTa_Val",
+    "total_examples": 600,
+    "overall_accuracy": 0.6016666666666667,
+    "ci_95": [
+      0.5633333333333334,
+      0.64
+    ],
+    "adversarial_accuracy": 0.6802721088435374,
+    "direct_entailment_accuracy": 0.20982142857142858,
+    "direct_contradiction_accuracy": 1.0,
+    "false_positive_rate": 0.0,
+    "false_negative_rate": 0.8129251700680272,
+    "false_positives": 0,
+    "false_negatives": 239,
+    "supported_precision": 1.0,
+    "supported_recall": 0.1870748299319728,
+    "supported_f1": 0.3151862464183381,
+    "macro_f1": 0.5171700914817895,
+    "expected_calibration_error": 0.39867780536413194,
+    "brier_score": 0.3931983315671667,
+    "latency_p50_ms": 85.8185,
+    "latency_p95_ms": 117.30149999999999,
+    "latency_p99_ms": 145.9684199999999,
+    "throughput": 10.708167086732528,
+    "peak_vram_mb": 903.6669921875,
+    "trainable_parameters": 184424451,
+    "total_parameters": 184424451,
+    "category_metrics": {
+      "attribution_mismatch": {
+        "total": 18,
+        "correct": 18,
+        "accuracy": 1.0
+      },
+      "causal_overclaim": {
+        "total": 18,
+        "correct": 18,
+        "accuracy": 1.0
+      },
+      "comparative_claim_mismatch": {
+        "total": 18,
+        "correct": 18,
+        "accuracy": 1.0
+      },
+      "correlation_vs_causation": {
+        "total": 18,
+        "correct": 18,
+        "accuracy": 1.0
+      },
+      "date_time_mismatch": {
+        "total": 18,
+        "correct": 18,
+        "accuracy": 1.0
+      },
+      "direct_contradiction": {
+        "total": 18,
+        "correct": 18,
+        "accuracy": 1.0
+      },
+      "direct_entailment": {
+        "total": 224,
+        "correct": 47,
+        "accuracy": 0.20982142857142858
+      },
+      "double_negation": {
+        "total": 35,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "entity_substitution": {
+        "total": 18,
+        "correct": 18,
+        "accuracy": 1.0
+      },
+      "lexical_overlap_unsupported": {
+        "total": 18,
+        "correct": 18,
+        "accuracy": 1.0
+      },
+      "multi_sentence_reasoning": {
+        "total": 35,
+        "correct": 8,
+        "accuracy": 0.22857142857142856
+      },
+      "negation_reversal": {
+        "total": 18,
+        "correct": 18,
+        "accuracy": 1.0
+      },
+      "number_mismatch": {
+        "total": 18,
+        "correct": 18,
+        "accuracy": 1.0
+      },
+      "partial_support_claim": {
+        "total": 18,
+        "correct": 18,
+        "accuracy": 1.0
+      },
+      "population_mismatch": {
+        "total": 18,
+        "correct": 18,
+        "accuracy": 1.0
+      },
+      "quantifier_mismatch": {
+        "total": 18,
+        "correct": 18,
+        "accuracy": 1.0
+      },
+      "scope_mismatch": {
+        "total": 18,
+        "correct": 18,
+        "accuracy": 1.0
+      },
+      "temporal_ordering_error": {
+        "total": 18,
+        "correct": 18,
+        "accuracy": 1.0
+      },
+      "unit_mismatch": {
+        "total": 18,
+        "correct": 18,
+        "accuracy": 1.0
+      },
+      "unsupported_claim": {
+        "total": 18,
+        "correct": 18,
+        "accuracy": 1.0
+      }
+    }
+  },
+  "candidate_c_test": {
+    "model_name": "Candidate_C_NLI_DeBERTa_Test",
+    "total_examples": 600,
+    "overall_accuracy": 0.675,
+    "ci_95": [
+      0.6383333333333333,
+      0.7116666666666667
+    ],
+    "adversarial_accuracy": 0.7461706783369803,
+    "direct_entailment_accuracy": 0.4230769230769231,
+    "direct_contradiction_accuracy": 0.875,
+    "false_positive_rate": 0.006756756756756757,
+    "false_negative_rate": 0.6348684210526315,
+    "false_positives": 2,
+    "false_negatives": 193,
+    "supported_precision": 0.9823008849557522,
+    "supported_recall": 0.3651315789473684,
+    "supported_f1": 0.5323741007194245,
+    "macro_f1": 0.6416659775627773,
+    "expected_calibration_error": 0.32241389006376264,
+    "brier_score": 0.31498748988062536,
+    "latency_p50_ms": 71.5,
+    "latency_p95_ms": 99.70809999999994,
+    "latency_p99_ms": 122.34649999999998,
+    "throughput": 12.77275682008073,
+    "peak_vram_mb": 905.759765625,
+    "trainable_parameters": 184424451,
+    "total_parameters": 184424451,
+    "category_metrics": {
+      "attribution_mismatch": {
+        "total": 20,
+        "correct": 20,
+        "accuracy": 1.0
+      },
+      "causal_overclaim": {
+        "total": 16,
+        "correct": 16,
+        "accuracy": 1.0
+      },
+      "comparative_claim_mismatch": {
+        "total": 20,
+        "correct": 20,
+        "accuracy": 1.0
+      },
+      "correlation_vs_causation": {
+        "total": 16,
+        "correct": 16,
+        "accuracy": 1.0
+      },
+      "date_time_mismatch": {
+        "total": 16,
+        "correct": 16,
+        "accuracy": 1.0
+      },
+      "direct_contradiction": {
+        "total": 16,
+        "correct": 14,
+        "accuracy": 0.875
+      },
+      "direct_entailment": {
+        "total": 234,
+        "correct": 99,
+        "accuracy": 0.4230769230769231
+      },
+      "double_negation": {
+        "total": 35,
+        "correct": 2,
+        "accuracy": 0.05714285714285714
+      },
+      "entity_substitution": {
+        "total": 16,
+        "correct": 16,
+        "accuracy": 1.0
+      },
+      "lexical_overlap_unsupported": {
+        "total": 20,
+        "correct": 20,
+        "accuracy": 1.0
+      },
+      "multi_sentence_reasoning": {
+        "total": 35,
+        "correct": 10,
+        "accuracy": 0.2857142857142857
+      },
+      "negation_reversal": {
+        "total": 16,
+        "correct": 16,
+        "accuracy": 1.0
+      },
+      "number_mismatch": {
+        "total": 16,
+        "correct": 16,
+        "accuracy": 1.0
+      },
+      "partial_support_claim": {
+        "total": 20,
+        "correct": 20,
+        "accuracy": 1.0
+      },
+      "population_mismatch": {
+        "total": 16,
+        "correct": 16,
+        "accuracy": 1.0
+      },
+      "quantifier_mismatch": {
+        "total": 20,
+        "correct": 20,
+        "accuracy": 1.0
+      },
+      "scope_mismatch": {
+        "total": 20,
+        "correct": 20,
+        "accuracy": 1.0
+      },
+      "temporal_ordering_error": {
+        "total": 20,
+        "correct": 20,
+        "accuracy": 1.0
+      },
+      "unit_mismatch": {
+        "total": 16,
+        "correct": 16,
+        "accuracy": 1.0
+      },
+      "unsupported_claim": {
+        "total": 12,
+        "correct": 12,
+        "accuracy": 1.0
+      }
+    }
+  }
+}

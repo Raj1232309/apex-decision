@@ -1,0 +1,849 @@
+{
+  "hardware": "NVIDIA GeForce RTX 2050 (4GB)",
+  "total_test_cases": 31,
+  "adversarial_test_cases": 12,
+  "overall_student_accuracy": 100.0,
+  "overall_laya_accuracy": 90.32,
+  "adversarial_student_accuracy": 100.0,
+  "adversarial_laya_accuracy": 75.0,
+  "student_avg_latency_ms": 23.21,
+  "laya_avg_latency_ms": 390.53,
+  "student_peak_vram_mb": 3998.9,
+  "laya_peak_vram_mb": 4713.6,
+  "category_summary": {
+    "decision:noul": {
+      "total": 2,
+      "student_correct": 2,
+      "laya_correct": 2,
+      "adversarial_total": 1,
+      "student_adv_correct": 1,
+      "laya_adv_correct": 1
+    },
+    "decision:choice": {
+      "total": 2,
+      "student_correct": 2,
+      "laya_correct": 2,
+      "adversarial_total": 1,
+      "student_adv_correct": 1,
+      "laya_adv_correct": 1
+    },
+    "decision:score": {
+      "total": 2,
+      "student_correct": 2,
+      "laya_correct": 1,
+      "adversarial_total": 1,
+      "student_adv_correct": 1,
+      "laya_adv_correct": 0
+    },
+    "decision:abstain": {
+      "total": 1,
+      "student_correct": 1,
+      "laya_correct": 1,
+      "adversarial_total": 1,
+      "student_adv_correct": 1,
+      "laya_adv_correct": 1
+    },
+    "semantic:entailment": {
+      "total": 1,
+      "student_correct": 1,
+      "laya_correct": 1,
+      "adversarial_total": 0,
+      "student_adv_correct": 0,
+      "laya_adv_correct": 0
+    },
+    "semantic:contradiction": {
+      "total": 1,
+      "student_correct": 1,
+      "laya_correct": 1,
+      "adversarial_total": 1,
+      "student_adv_correct": 1,
+      "laya_adv_correct": 1
+    },
+    "semantic:negation": {
+      "total": 2,
+      "student_correct": 2,
+      "laya_correct": 1,
+      "adversarial_total": 2,
+      "student_adv_correct": 2,
+      "laya_adv_correct": 1
+    },
+    "semantic:paraphrase": {
+      "total": 1,
+      "student_correct": 1,
+      "laya_correct": 1,
+      "adversarial_total": 0,
+      "student_adv_correct": 0,
+      "laya_adv_correct": 0
+    },
+    "semantic:synonymy": {
+      "total": 1,
+      "student_correct": 1,
+      "laya_correct": 1,
+      "adversarial_total": 0,
+      "student_adv_correct": 0,
+      "laya_adv_correct": 0
+    },
+    "semantic:acronyms": {
+      "total": 1,
+      "student_correct": 1,
+      "laya_correct": 1,
+      "adversarial_total": 0,
+      "student_adv_correct": 0,
+      "laya_adv_correct": 0
+    },
+    "semantic:entity_resolution": {
+      "total": 1,
+      "student_correct": 1,
+      "laya_correct": 1,
+      "adversarial_total": 0,
+      "student_adv_correct": 0,
+      "laya_adv_correct": 0
+    },
+    "semantic:temporal": {
+      "total": 2,
+      "student_correct": 2,
+      "laya_correct": 2,
+      "adversarial_total": 1,
+      "student_adv_correct": 1,
+      "laya_adv_correct": 1
+    },
+    "semantic:numeric": {
+      "total": 2,
+      "student_correct": 2,
+      "laya_correct": 2,
+      "adversarial_total": 1,
+      "student_adv_correct": 1,
+      "laya_adv_correct": 1
+    },
+    "semantic:percentages": {
+      "total": 1,
+      "student_correct": 1,
+      "laya_correct": 1,
+      "adversarial_total": 0,
+      "student_adv_correct": 0,
+      "laya_adv_correct": 0
+    },
+    "semantic:inequalities": {
+      "total": 2,
+      "student_correct": 2,
+      "laya_correct": 2,
+      "adversarial_total": 1,
+      "student_adv_correct": 1,
+      "laya_adv_correct": 1
+    },
+    "semantic:multihop": {
+      "total": 1,
+      "student_correct": 1,
+      "laya_correct": 1,
+      "adversarial_total": 0,
+      "student_adv_correct": 0,
+      "laya_adv_correct": 0
+    },
+    "semantic:distractor_resistance": {
+      "total": 1,
+      "student_correct": 1,
+      "laya_correct": 1,
+      "adversarial_total": 1,
+      "student_adv_correct": 1,
+      "laya_adv_correct": 1
+    },
+    "semantic:ambiguous_inputs": {
+      "total": 1,
+      "student_correct": 1,
+      "laya_correct": 0,
+      "adversarial_total": 1,
+      "student_adv_correct": 1,
+      "laya_adv_correct": 0
+    },
+    "multilingual:latin_extended": {
+      "total": 2,
+      "student_correct": 2,
+      "laya_correct": 2,
+      "adversarial_total": 0,
+      "student_adv_correct": 0,
+      "laya_adv_correct": 0
+    },
+    "multilingual:cyrillic": {
+      "total": 1,
+      "student_correct": 1,
+      "laya_correct": 1,
+      "adversarial_total": 0,
+      "student_adv_correct": 0,
+      "laya_adv_correct": 0
+    },
+    "multilingual:devanagari": {
+      "total": 1,
+      "student_correct": 1,
+      "laya_correct": 1,
+      "adversarial_total": 0,
+      "student_adv_correct": 0,
+      "laya_adv_correct": 0
+    },
+    "multilingual:cjk": {
+      "total": 1,
+      "student_correct": 1,
+      "laya_correct": 1,
+      "adversarial_total": 0,
+      "student_adv_correct": 0,
+      "laya_adv_correct": 0
+    },
+    "multilingual:arabic": {
+      "total": 1,
+      "student_correct": 1,
+      "laya_correct": 1,
+      "adversarial_total": 0,
+      "student_adv_correct": 0,
+      "laya_adv_correct": 0
+    }
+  },
+  "choice_scaling": {
+    "2": {
+      "options": 2,
+      "target": "opt_queue_routing_code_001",
+      "student_pred": "opt_queue_routing_code_001",
+      "student_correct": true,
+      "student_invented": false,
+      "laya_pred": "opt_queue_routing_code_001",
+      "laya_correct": true,
+      "laya_invented": false,
+      "laya_error": null
+    },
+    "5": {
+      "options": 5,
+      "target": "opt_queue_routing_code_004",
+      "student_pred": "opt_queue_routing_code_004",
+      "student_correct": true,
+      "student_invented": false,
+      "laya_pred": "opt_queue_routing_code_004",
+      "laya_correct": true,
+      "laya_invented": false,
+      "laya_error": null
+    },
+    "10": {
+      "options": 10,
+      "target": "opt_queue_routing_code_007",
+      "student_pred": "opt_queue_routing_code_007",
+      "student_correct": true,
+      "student_invented": false,
+      "laya_pred": "opt_queue_routing_code_007",
+      "laya_correct": true,
+      "laya_invented": false,
+      "laya_error": null
+    },
+    "20": {
+      "options": 20,
+      "target": "opt_queue_routing_code_007",
+      "student_pred": "opt_queue_routing_code_007",
+      "student_correct": true,
+      "student_invented": false,
+      "laya_pred": "opt_queue_routing_code_000",
+      "laya_correct": false,
+      "laya_invented": false,
+      "laya_error": null
+    },
+    "50": {
+      "options": 50,
+      "target": "opt_queue_routing_code_007",
+      "student_pred": "opt_queue_routing_code_007",
+      "student_correct": true,
+      "student_invented": false,
+      "laya_pred": "opt_queue_routing_code_000",
+      "laya_correct": false,
+      "laya_invented": false,
+      "laya_error": null
+    },
+    "77": {
+      "options": 77,
+      "target": "opt_queue_routing_code_007",
+      "student_pred": "opt_queue_routing_code_007",
+      "student_correct": true,
+      "student_invented": false,
+      "laya_pred": "opt_queue_routing_code_000",
+      "laya_correct": false,
+      "laya_invented": false,
+      "laya_error": null
+    },
+    "100": {
+      "options": 100,
+      "target": "opt_queue_routing_code_007",
+      "student_pred": "opt_queue_routing_code_007",
+      "student_correct": true,
+      "student_invented": false,
+      "laya_pred": "opt_queue_routing_code_098",
+      "laya_correct": false,
+      "laya_invented": false,
+      "laya_error": null
+    },
+    "255": {
+      "options": 255,
+      "target": "opt_queue_routing_code_007",
+      "student_pred": "opt_queue_routing_code_007",
+      "student_correct": true,
+      "student_invented": false,
+      "laya_pred": "ERROR: question 'q_scale' options exceed head_max_len=192",
+      "laya_correct": false,
+      "laya_invented": false,
+      "laya_error": "question 'q_scale' options exceed head_max_len=192"
+    }
+  },
+  "detailed_results": [
+    {
+      "id": "noul_supported_01",
+      "category": "decision:noul",
+      "is_adversarial": false,
+      "student": {
+        "pred": 1.0,
+        "confidence": 1.0,
+        "correct": true,
+        "latency_ms": 91.15
+      },
+      "laya": {
+        "pred": 1.0,
+        "confidence": 0.7182,
+        "correct": true,
+        "latency_ms": 616.18,
+        "error": null
+      }
+    },
+    {
+      "id": "noul_unsupported_01",
+      "category": "decision:noul",
+      "is_adversarial": true,
+      "student": {
+        "pred": 0.0,
+        "confidence": 0.99,
+        "correct": true,
+        "latency_ms": 14.77
+      },
+      "laya": {
+        "pred": 0.0,
+        "confidence": 0.9362,
+        "correct": true,
+        "latency_ms": 340.53,
+        "error": null
+      }
+    },
+    {
+      "id": "choice_triage_01",
+      "category": "decision:choice",
+      "is_adversarial": false,
+      "student": {
+        "pred": "identity_security",
+        "confidence": 1.0,
+        "correct": true,
+        "latency_ms": 21.05
+      },
+      "laya": {
+        "pred": "identity_security",
+        "confidence": 0.8721,
+        "correct": true,
+        "latency_ms": 370.46,
+        "error": null
+      }
+    },
+    {
+      "id": "choice_fine_grained_01",
+      "category": "decision:choice",
+      "is_adversarial": true,
+      "student": {
+        "pred": "request_refund",
+        "confidence": 1.0,
+        "correct": true,
+        "latency_ms": 8.87
+      },
+      "laya": {
+        "pred": "request_refund",
+        "confidence": 0.9323,
+        "correct": true,
+        "latency_ms": 356.3,
+        "error": null
+      }
+    },
+    {
+      "id": "score_severity_01",
+      "category": "decision:score",
+      "is_adversarial": false,
+      "student": {
+        "pred": 3,
+        "confidence": 0.0147,
+        "correct": true,
+        "latency_ms": 18.23
+      },
+      "laya": {
+        "pred": 3,
+        "confidence": 0.5018,
+        "correct": true,
+        "latency_ms": 351.88,
+        "error": null
+      }
+    },
+    {
+      "id": "score_sentiment_01",
+      "category": "decision:score",
+      "is_adversarial": true,
+      "student": {
+        "pred": 1,
+        "confidence": 0.0086,
+        "correct": true,
+        "latency_ms": 14.81
+      },
+      "laya": {
+        "pred": 2,
+        "confidence": 0.3447,
+        "correct": false,
+        "latency_ms": 344.86,
+        "error": null
+      }
+    },
+    {
+      "id": "verify_abstain_01",
+      "category": "decision:abstain",
+      "is_adversarial": true,
+      "student": {
+        "pred": 0.0,
+        "confidence": 0.99,
+        "correct": true,
+        "latency_ms": 8.36
+      },
+      "laya": {
+        "pred": 0.0,
+        "confidence": 0.5251,
+        "correct": true,
+        "latency_ms": 345.51,
+        "error": null
+      }
+    },
+    {
+      "id": "sem_entail_01",
+      "category": "semantic:entailment",
+      "is_adversarial": false,
+      "student": {
+        "pred": 1.0,
+        "confidence": 0.98,
+        "correct": true,
+        "latency_ms": 7.0
+      },
+      "laya": {
+        "pred": 1.0,
+        "confidence": 0.8968,
+        "correct": true,
+        "latency_ms": 326.82,
+        "error": null
+      }
+    },
+    {
+      "id": "sem_contradiction_01",
+      "category": "semantic:contradiction",
+      "is_adversarial": true,
+      "student": {
+        "pred": 0.0,
+        "confidence": 0.99,
+        "correct": true,
+        "latency_ms": 24.54
+      },
+      "laya": {
+        "pred": 0.0,
+        "confidence": 0.961,
+        "correct": true,
+        "latency_ms": 340.58,
+        "error": null
+      }
+    },
+    {
+      "id": "sem_negation_01",
+      "category": "semantic:negation",
+      "is_adversarial": true,
+      "student": {
+        "pred": 0.0,
+        "confidence": 0.99,
+        "correct": true,
+        "latency_ms": 7.49
+      },
+      "laya": {
+        "pred": 1.0,
+        "confidence": 0.7677,
+        "correct": false,
+        "latency_ms": 363.16,
+        "error": null
+      }
+    },
+    {
+      "id": "sem_negation_double_01",
+      "category": "semantic:negation",
+      "is_adversarial": true,
+      "student": {
+        "pred": 1.0,
+        "confidence": 0.98,
+        "correct": true,
+        "latency_ms": 8.53
+      },
+      "laya": {
+        "pred": 1.0,
+        "confidence": 0.8177,
+        "correct": true,
+        "latency_ms": 330.34,
+        "error": null
+      }
+    },
+    {
+      "id": "sem_paraphrase_01",
+      "category": "semantic:paraphrase",
+      "is_adversarial": false,
+      "student": {
+        "pred": 1.0,
+        "confidence": 0.98,
+        "correct": true,
+        "latency_ms": 13.44
+      },
+      "laya": {
+        "pred": 1.0,
+        "confidence": 0.8013,
+        "correct": true,
+        "latency_ms": 354.99,
+        "error": null
+      }
+    },
+    {
+      "id": "sem_synonym_01",
+      "category": "semantic:synonymy",
+      "is_adversarial": false,
+      "student": {
+        "pred": 1.0,
+        "confidence": 0.9998,
+        "correct": true,
+        "latency_ms": 7.02
+      },
+      "laya": {
+        "pred": 1.0,
+        "confidence": 0.7032,
+        "correct": true,
+        "latency_ms": 325.01,
+        "error": null
+      }
+    },
+    {
+      "id": "sem_acronym_01",
+      "category": "semantic:acronyms",
+      "is_adversarial": false,
+      "student": {
+        "pred": 1.0,
+        "confidence": 0.98,
+        "correct": true,
+        "latency_ms": 10.65
+      },
+      "laya": {
+        "pred": 1.0,
+        "confidence": 0.8634,
+        "correct": true,
+        "latency_ms": 315.62,
+        "error": null
+      }
+    },
+    {
+      "id": "sem_entity_01",
+      "category": "semantic:entity_resolution",
+      "is_adversarial": false,
+      "student": {
+        "pred": 1.0,
+        "confidence": 0.98,
+        "correct": true,
+        "latency_ms": 8.6
+      },
+      "laya": {
+        "pred": 1.0,
+        "confidence": 0.885,
+        "correct": true,
+        "latency_ms": 363.16,
+        "error": null
+      }
+    },
+    {
+      "id": "sem_temporal_before_01",
+      "category": "semantic:temporal",
+      "is_adversarial": false,
+      "student": {
+        "pred": 1.0,
+        "confidence": 0.98,
+        "correct": true,
+        "latency_ms": 11.7
+      },
+      "laya": {
+        "pred": 1.0,
+        "confidence": 0.8965,
+        "correct": true,
+        "latency_ms": 371.31,
+        "error": null
+      }
+    },
+    {
+      "id": "sem_temporal_adv_01",
+      "category": "semantic:temporal",
+      "is_adversarial": true,
+      "student": {
+        "pred": 0.0,
+        "confidence": 0.99,
+        "correct": true,
+        "latency_ms": 10.44
+      },
+      "laya": {
+        "pred": 0.0,
+        "confidence": 0.6052,
+        "correct": true,
+        "latency_ms": 357.66,
+        "error": null
+      }
+    },
+    {
+      "id": "sem_numeric_exact_01",
+      "category": "semantic:numeric",
+      "is_adversarial": false,
+      "student": {
+        "pred": 1.0,
+        "confidence": 1.0,
+        "correct": true,
+        "latency_ms": 9.88
+      },
+      "laya": {
+        "pred": 1.0,
+        "confidence": 0.7233,
+        "correct": true,
+        "latency_ms": 380.36,
+        "error": null
+      }
+    },
+    {
+      "id": "sem_numeric_near_miss_01",
+      "category": "semantic:numeric",
+      "is_adversarial": true,
+      "student": {
+        "pred": 0.0,
+        "confidence": 0.99,
+        "correct": true,
+        "latency_ms": 11.09
+      },
+      "laya": {
+        "pred": 0.0,
+        "confidence": 0.946,
+        "correct": true,
+        "latency_ms": 421.69,
+        "error": null
+      }
+    },
+    {
+      "id": "sem_percentage_01",
+      "category": "semantic:percentages",
+      "is_adversarial": false,
+      "student": {
+        "pred": 1.0,
+        "confidence": 0.9999,
+        "correct": true,
+        "latency_ms": 13.07
+      },
+      "laya": {
+        "pred": 1.0,
+        "confidence": 0.8813,
+        "correct": true,
+        "latency_ms": 364.83,
+        "error": null
+      }
+    },
+    {
+      "id": "sem_inequality_01",
+      "category": "semantic:inequalities",
+      "is_adversarial": false,
+      "student": {
+        "pred": 1.0,
+        "confidence": 0.98,
+        "correct": true,
+        "latency_ms": 10.28
+      },
+      "laya": {
+        "pred": 1.0,
+        "confidence": 0.9995,
+        "correct": true,
+        "latency_ms": 430.04,
+        "error": null
+      }
+    },
+    {
+      "id": "sem_inequality_adv_01",
+      "category": "semantic:inequalities",
+      "is_adversarial": true,
+      "student": {
+        "pred": 0.0,
+        "confidence": 0.99,
+        "correct": true,
+        "latency_ms": 17.61
+      },
+      "laya": {
+        "pred": 0.0,
+        "confidence": 0.9634,
+        "correct": true,
+        "latency_ms": 432.9,
+        "error": null
+      }
+    },
+    {
+      "id": "sem_multihop_01",
+      "category": "semantic:multihop",
+      "is_adversarial": false,
+      "student": {
+        "pred": 1.0,
+        "confidence": 0.98,
+        "correct": true,
+        "latency_ms": 16.55
+      },
+      "laya": {
+        "pred": 1.0,
+        "confidence": 0.8087,
+        "correct": true,
+        "latency_ms": 408.86,
+        "error": null
+      }
+    },
+    {
+      "id": "sem_distractor_01",
+      "category": "semantic:distractor_resistance",
+      "is_adversarial": true,
+      "student": {
+        "pred": 0.0,
+        "confidence": 0.99,
+        "correct": true,
+        "latency_ms": 14.61
+      },
+      "laya": {
+        "pred": 0.0,
+        "confidence": 0.9317,
+        "correct": true,
+        "latency_ms": 384.71,
+        "error": null
+      }
+    },
+    {
+      "id": "sem_ambiguous_01",
+      "category": "semantic:ambiguous_inputs",
+      "is_adversarial": true,
+      "student": {
+        "pred": 0.0,
+        "confidence": 0.6549,
+        "correct": true,
+        "latency_ms": 13.35
+      },
+      "laya": {
+        "pred": 1.0,
+        "confidence": 0.631,
+        "correct": false,
+        "latency_ms": 376.24,
+        "error": null
+      }
+    },
+    {
+      "id": "multi_german_01",
+      "category": "multilingual:latin_extended",
+      "is_adversarial": false,
+      "student": {
+        "pred": 1.0,
+        "confidence": 1.0,
+        "correct": true,
+        "latency_ms": 19.42
+      },
+      "laya": {
+        "pred": 1.0,
+        "confidence": 0.9625,
+        "correct": true,
+        "latency_ms": 419.91,
+        "error": null
+      }
+    },
+    {
+      "id": "multi_french_01",
+      "category": "multilingual:latin_extended",
+      "is_adversarial": false,
+      "student": {
+        "pred": 1.0,
+        "confidence": 0.98,
+        "correct": true,
+        "latency_ms": 11.04
+      },
+      "laya": {
+        "pred": 1.0,
+        "confidence": 0.7848,
+        "correct": true,
+        "latency_ms": 455.75,
+        "error": null
+      }
+    },
+    {
+      "id": "multi_russian_01",
+      "category": "multilingual:cyrillic",
+      "is_adversarial": false,
+      "student": {
+        "pred": 1.0,
+        "confidence": 0.9999,
+        "correct": true,
+        "latency_ms": 160.56
+      },
+      "laya": {
+        "pred": 1.0,
+        "confidence": 0.8215,
+        "correct": true,
+        "latency_ms": 500.47,
+        "error": null
+      }
+    },
+    {
+      "id": "multi_hindi_01",
+      "category": "multilingual:devanagari",
+      "is_adversarial": false,
+      "student": {
+        "pred": 1.0,
+        "confidence": 0.9998,
+        "correct": true,
+        "latency_ms": 60.09
+      },
+      "laya": {
+        "pred": 1.0,
+        "confidence": 0.9076,
+        "correct": true,
+        "latency_ms": 426.11,
+        "error": null
+      }
+    },
+    {
+      "id": "multi_chinese_01",
+      "category": "multilingual:cjk",
+      "is_adversarial": false,
+      "student": {
+        "pred": 1.0,
+        "confidence": 1.0,
+        "correct": true,
+        "latency_ms": 13.52
+      },
+      "laya": {
+        "pred": 1.0,
+        "confidence": 0.8141,
+        "correct": true,
+        "latency_ms": 499.77,
+        "error": null
+      }
+    },
+    {
+      "id": "multi_arabic_01",
+      "category": "multilingual:arabic",
+      "is_adversarial": false,
+      "student": {
+        "pred": 1.0,
+        "confidence": 0.9999,
+        "correct": true,
+        "latency_ms": 61.7
+      },
+      "laya": {
+        "pred": 1.0,
+        "confidence": 0.7253,
+        "correct": true,
+        "latency_ms": 430.34,
+        "error": null
+      }
+    }
+  ]
+}

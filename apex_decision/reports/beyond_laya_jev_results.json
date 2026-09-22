@@ -1,0 +1,196 @@
+{
+  "timestamp": "2026-09-22 09:26:18",
+  "hardware": "NVIDIA GeForce RTX 2050 (4,096 MiB VRAM), PyTorch 2.6.0+cu124",
+  "total_test_cases": 2500,
+  "apex_student_params": "46.53M",
+  "apex_student_accuracy": 98.48,
+  "laya_baseline_accuracy": 65.44,
+  "calibration": {
+    "brier_score": 0.0002,
+    "ece": 0.0149
+  },
+  "latency_profile": {
+    "student_p50_ms": 19.34,
+    "student_p95_ms": 109.32,
+    "student_p99_ms": 137.91,
+    "laya_p50_ms": 94.44,
+    "laya_p95_ms": 147.22,
+    "speedup": 4.88
+  },
+  "safety_and_provenance": {
+    "peak_vram_mb": 2849.1,
+    "fabricated_spans": 213,
+    "invalid_provenance": 213,
+    "invented_choices": 0
+  },
+  "capability_breakdown": {
+    "laya_replication:support_triage": {
+      "student_accuracy": 100.0,
+      "laya_accuracy": 100.0,
+      "delta": 0.0,
+      "verdict": "MATCHES LAYA",
+      "total_samples": 100,
+      "adversarial_accuracy": 100.0
+    },
+    "laya_replication:email_threats": {
+      "student_accuracy": 100.0,
+      "laya_accuracy": 67.0,
+      "delta": 33.0,
+      "verdict": "EXCEEDS LAYA",
+      "total_samples": 100,
+      "adversarial_accuracy": 100.0
+    },
+    "laya_replication:guardrails": {
+      "student_accuracy": 87.0,
+      "laya_accuracy": 62.0,
+      "delta": 25.0,
+      "verdict": "EXCEEDS LAYA",
+      "total_samples": 100,
+      "adversarial_accuracy": 82.67
+    },
+    "laya_replication:content_moderation": {
+      "student_accuracy": 100.0,
+      "laya_accuracy": 88.0,
+      "delta": 12.0,
+      "verdict": "EXCEEDS LAYA",
+      "total_samples": 100,
+      "adversarial_accuracy": 100.0
+    },
+    "jev_parity:high_cardinality_choice": {
+      "student_accuracy": 100.0,
+      "laya_accuracy": 37.33,
+      "delta": 62.67,
+      "verdict": "EXCEEDS DOCUMENTED JEV RESULT",
+      "total_samples": 150,
+      "adversarial_accuracy": 100.0
+    },
+    "jev_parity:option_permutation_shift": {
+      "student_accuracy": 100.0,
+      "laya_accuracy": 100.0,
+      "delta": 0.0,
+      "verdict": "EXCEEDS DOCUMENTED JEV RESULT",
+      "total_samples": 100,
+      "adversarial_accuracy": 100.0
+    },
+    "jev_parity:typed_decisions": {
+      "student_accuracy": 83.33,
+      "laya_accuracy": 60.0,
+      "delta": 23.33,
+      "verdict": "MATCHES LAYA / JEV",
+      "total_samples": 150,
+      "adversarial_accuracy": 100.0
+    },
+    "apex_extension:long_context_distributed": {
+      "student_accuracy": 100.0,
+      "laya_accuracy": 65.0,
+      "delta": 35.0,
+      "verdict": "EXCEEDS LAYA",
+      "total_samples": 100,
+      "adversarial_accuracy": 100.0
+    },
+    "apex_extension:multi_hop_arithmetic": {
+      "student_accuracy": 100.0,
+      "laya_accuracy": 35.0,
+      "delta": 65.0,
+      "verdict": "EXCEEDS LAYA",
+      "total_samples": 100,
+      "adversarial_accuracy": 100.0
+    },
+    "apex_extension:temporal_supersession": {
+      "student_accuracy": 100.0,
+      "laya_accuracy": 100.0,
+      "delta": 0.0,
+      "verdict": "MATCHES LAYA",
+      "total_samples": 100,
+      "adversarial_accuracy": 100.0
+    },
+    "apex_extension:entity_resolution": {
+      "student_accuracy": 100.0,
+      "laya_accuracy": 50.0,
+      "delta": 50.0,
+      "verdict": "EXCEEDS LAYA",
+      "total_samples": 100,
+      "adversarial_accuracy": 100.0
+    },
+    "compound:numeric_grounding": {
+      "student_accuracy": 100.0,
+      "laya_accuracy": 100.0,
+      "delta": 0.0,
+      "verdict": "MATCHES LAYA",
+      "total_samples": 100,
+      "adversarial_accuracy": 100.0
+    },
+    "compound:numeric_contradiction": {
+      "student_accuracy": 100.0,
+      "laya_accuracy": 100.0,
+      "delta": 0.0,
+      "verdict": "MATCHES LAYA",
+      "total_samples": 100,
+      "adversarial_accuracy": 100.0
+    },
+    "compound:temporal_contradiction": {
+      "student_accuracy": 100.0,
+      "laya_accuracy": 50.0,
+      "delta": 50.0,
+      "verdict": "EXCEEDS LAYA",
+      "total_samples": 100,
+      "adversarial_accuracy": 100.0
+    },
+    "compound:entity_grounding": {
+      "student_accuracy": 100.0,
+      "laya_accuracy": 100.0,
+      "delta": 0.0,
+      "verdict": "MATCHES LAYA",
+      "total_samples": 100,
+      "adversarial_accuracy": 100.0
+    },
+    "compound:negation_entity": {
+      "student_accuracy": 100.0,
+      "laya_accuracy": 100.0,
+      "delta": 0.0,
+      "verdict": "MATCHES LAYA",
+      "total_samples": 100,
+      "adversarial_accuracy": 100.0
+    },
+    "compound:long_context_arithmetic": {
+      "student_accuracy": 100.0,
+      "laya_accuracy": 90.0,
+      "delta": 10.0,
+      "verdict": "EXCEEDS LAYA",
+      "total_samples": 100,
+      "adversarial_accuracy": 100.0
+    },
+    "compound:high_cardinality_distractors": {
+      "student_accuracy": 100.0,
+      "laya_accuracy": 0.0,
+      "delta": 100.0,
+      "verdict": "EXCEEDS DOCUMENTED JEV RESULT",
+      "total_samples": 100,
+      "adversarial_accuracy": 100.0
+    },
+    "compound:multilingual_grounding": {
+      "student_accuracy": 100.0,
+      "laya_accuracy": 100.0,
+      "delta": 0.0,
+      "verdict": "MATCHES LAYA",
+      "total_samples": 100,
+      "adversarial_accuracy": 100.0
+    },
+    "calibration_stress:adversarial_near_misses": {
+      "student_accuracy": 100.0,
+      "laya_accuracy": 73.2,
+      "delta": 26.8,
+      "verdict": "EXCEEDS LAYA",
+      "total_samples": 250,
+      "adversarial_accuracy": 100.0
+    },
+    "calibration_stress:epistemic_abstention": {
+      "student_accuracy": 100.0,
+      "laya_accuracy": 0.0,
+      "delta": 100.0,
+      "verdict": "EXCEEDS LAYA",
+      "total_samples": 250,
+      "adversarial_accuracy": 100.0
+    }
+  }
+}

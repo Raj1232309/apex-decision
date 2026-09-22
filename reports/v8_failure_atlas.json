@@ -1,0 +1,4229 @@
+{
+  "version": "ApexDecision V8 Failure Atlas",
+  "total_failures": 242,
+  "baseline_tested_cases": 10010,
+  "baseline_accuracy": 97.58,
+  "failures": [
+    {
+      "index": 5401,
+      "id": "v76_noul_entity_attribution_001",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $105M, while its joint-venture partner Nova LLC posted $52M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $105M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5403,
+      "id": "v76_noul_entity_attribution_003",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $115M, while its joint-venture partner Nova LLC posted $57M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $115M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5405,
+      "id": "v76_noul_entity_attribution_005",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $125M, while its joint-venture partner Nova LLC posted $62M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $125M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5407,
+      "id": "v76_noul_entity_attribution_007",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $135M, while its joint-venture partner Nova LLC posted $67M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $135M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5409,
+      "id": "v76_noul_entity_attribution_009",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $145M, while its joint-venture partner Nova LLC posted $72M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $145M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5411,
+      "id": "v76_noul_entity_attribution_011",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $155M, while its joint-venture partner Nova LLC posted $77M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $155M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5413,
+      "id": "v76_noul_entity_attribution_013",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $165M, while its joint-venture partner Nova LLC posted $82M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $165M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5415,
+      "id": "v76_noul_entity_attribution_015",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $175M, while its joint-venture partner Nova LLC posted $87M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $175M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5417,
+      "id": "v76_noul_entity_attribution_017",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $185M, while its joint-venture partner Nova LLC posted $92M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $185M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5419,
+      "id": "v76_noul_entity_attribution_019",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $195M, while its joint-venture partner Nova LLC posted $97M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $195M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5421,
+      "id": "v76_noul_entity_attribution_021",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $205M, while its joint-venture partner Nova LLC posted $102M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $205M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5423,
+      "id": "v76_noul_entity_attribution_023",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $215M, while its joint-venture partner Nova LLC posted $107M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $215M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5425,
+      "id": "v76_noul_entity_attribution_025",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $225M, while its joint-venture partner Nova LLC posted $112M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $225M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5427,
+      "id": "v76_noul_entity_attribution_027",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $235M, while its joint-venture partner Nova LLC posted $117M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $235M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5429,
+      "id": "v76_noul_entity_attribution_029",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $245M, while its joint-venture partner Nova LLC posted $122M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $245M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5431,
+      "id": "v76_noul_entity_attribution_031",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $255M, while its joint-venture partner Nova LLC posted $127M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $255M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5433,
+      "id": "v76_noul_entity_attribution_033",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $265M, while its joint-venture partner Nova LLC posted $132M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $265M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5435,
+      "id": "v76_noul_entity_attribution_035",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $275M, while its joint-venture partner Nova LLC posted $137M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $275M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5437,
+      "id": "v76_noul_entity_attribution_037",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $285M, while its joint-venture partner Nova LLC posted $142M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $285M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5439,
+      "id": "v76_noul_entity_attribution_039",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $295M, while its joint-venture partner Nova LLC posted $147M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $295M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5441,
+      "id": "v76_noul_entity_attribution_041",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $305M, while its joint-venture partner Nova LLC posted $152M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $305M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5443,
+      "id": "v76_noul_entity_attribution_043",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $315M, while its joint-venture partner Nova LLC posted $157M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $315M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5445,
+      "id": "v76_noul_entity_attribution_045",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $325M, while its joint-venture partner Nova LLC posted $162M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $325M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5447,
+      "id": "v76_noul_entity_attribution_047",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $335M, while its joint-venture partner Nova LLC posted $167M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $335M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5449,
+      "id": "v76_noul_entity_attribution_049",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $345M, while its joint-venture partner Nova LLC posted $172M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $345M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5451,
+      "id": "v76_noul_entity_attribution_051",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $355M, while its joint-venture partner Nova LLC posted $177M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $355M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5453,
+      "id": "v76_noul_entity_attribution_053",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $365M, while its joint-venture partner Nova LLC posted $182M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $365M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5455,
+      "id": "v76_noul_entity_attribution_055",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $375M, while its joint-venture partner Nova LLC posted $187M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $375M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5457,
+      "id": "v76_noul_entity_attribution_057",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $385M, while its joint-venture partner Nova LLC posted $192M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $385M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5459,
+      "id": "v76_noul_entity_attribution_059",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $395M, while its joint-venture partner Nova LLC posted $197M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $395M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5461,
+      "id": "v76_noul_entity_attribution_061",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $405M, while its joint-venture partner Nova LLC posted $202M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $405M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5463,
+      "id": "v76_noul_entity_attribution_063",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $415M, while its joint-venture partner Nova LLC posted $207M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $415M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5465,
+      "id": "v76_noul_entity_attribution_065",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $425M, while its joint-venture partner Nova LLC posted $212M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $425M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5467,
+      "id": "v76_noul_entity_attribution_067",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $435M, while its joint-venture partner Nova LLC posted $217M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $435M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5469,
+      "id": "v76_noul_entity_attribution_069",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $445M, while its joint-venture partner Nova LLC posted $222M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $445M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5471,
+      "id": "v76_noul_entity_attribution_071",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $455M, while its joint-venture partner Nova LLC posted $227M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $455M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5473,
+      "id": "v76_noul_entity_attribution_073",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $465M, while its joint-venture partner Nova LLC posted $232M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $465M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5475,
+      "id": "v76_noul_entity_attribution_075",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $475M, while its joint-venture partner Nova LLC posted $237M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $475M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5477,
+      "id": "v76_noul_entity_attribution_077",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $485M, while its joint-venture partner Nova LLC posted $242M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $485M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5479,
+      "id": "v76_noul_entity_attribution_079",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $495M, while its joint-venture partner Nova LLC posted $247M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $495M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5481,
+      "id": "v76_noul_entity_attribution_081",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $505M, while its joint-venture partner Nova LLC posted $252M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $505M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5483,
+      "id": "v76_noul_entity_attribution_083",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $515M, while its joint-venture partner Nova LLC posted $257M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $515M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5485,
+      "id": "v76_noul_entity_attribution_085",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $525M, while its joint-venture partner Nova LLC posted $262M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $525M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5487,
+      "id": "v76_noul_entity_attribution_087",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $535M, while its joint-venture partner Nova LLC posted $267M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $535M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5489,
+      "id": "v76_noul_entity_attribution_089",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $545M, while its joint-venture partner Nova LLC posted $272M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $545M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5491,
+      "id": "v76_noul_entity_attribution_091",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $555M, while its joint-venture partner Nova LLC posted $277M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $555M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5493,
+      "id": "v76_noul_entity_attribution_093",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $565M, while its joint-venture partner Nova LLC posted $282M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $565M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5495,
+      "id": "v76_noul_entity_attribution_095",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $575M, while its joint-venture partner Nova LLC posted $287M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $575M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5497,
+      "id": "v76_noul_entity_attribution_097",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $585M, while its joint-venture partner Nova LLC posted $292M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $585M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 5499,
+      "id": "v76_noul_entity_attribution_099",
+      "category": "v76_noul:entity_attribution",
+      "primitive": "noul",
+      "tags": [
+        "noul",
+        "entity_confusion",
+        "distractor_confusion"
+      ],
+      "state_preview": "Enterprise Corp reported Q2 profit of $595M, while its joint-venture partner Nova LLC posted $297M....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did Nova LLC report Q2 profit of $595M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8389,
+      "id": "v76_multihop_3hops_029",
+      "category": "v76_multihop:3_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $16.00M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 3 subsidiary entities total $64.00M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8439,
+      "id": "v76_multihop_3hops_079",
+      "category": "v76_multihop:3_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $16.00M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 3 subsidiary entities total $64.00M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8489,
+      "id": "v76_multihop_3hops_129",
+      "category": "v76_multihop:3_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $16.00M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 3 subsidiary entities total $64.00M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8539,
+      "id": "v76_multihop_3hops_179",
+      "category": "v76_multihop:3_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $16.00M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 3 subsidiary entities total $64.00M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8589,
+      "id": "v76_multihop_3hops_229",
+      "category": "v76_multihop:3_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $16.00M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 3 subsidiary entities total $64.00M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8639,
+      "id": "v76_multihop_3hops_279",
+      "category": "v76_multihop:3_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $16.00M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 3 subsidiary entities total $64.00M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8861,
+      "id": "v76_multihop_10hops_001",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $11.50M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $245.00M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8863,
+      "id": "v76_multihop_10hops_003",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $14.50M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $275.00M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8867,
+      "id": "v76_multihop_10hops_007",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $20.50M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $260.00M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8869,
+      "id": "v76_multihop_10hops_009",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $23.50M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $290.00M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8873,
+      "id": "v76_multihop_10hops_013",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $29.50M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $275.00M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8875,
+      "id": "v76_multihop_10hops_015",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $32.50M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $305.00M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8879,
+      "id": "v76_multihop_10hops_019",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $38.50M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $290.00M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8881,
+      "id": "v76_multihop_10hops_021",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $41.50M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $320.00M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8883,
+      "id": "v76_multihop_10hops_023",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $44.50M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $275.00M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8885,
+      "id": "v76_multihop_10hops_025",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $10.00M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $267.50M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8889,
+      "id": "v76_multihop_10hops_029",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $16.00M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $252.50M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8891,
+      "id": "v76_multihop_10hops_031",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $19.00M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $282.50M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8895,
+      "id": "v76_multihop_10hops_035",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $25.00M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $267.50M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8897,
+      "id": "v76_multihop_10hops_037",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $28.00M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $297.50M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8901,
+      "id": "v76_multihop_10hops_041",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $34.00M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $282.50M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8903,
+      "id": "v76_multihop_10hops_043",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $37.00M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $312.50M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8907,
+      "id": "v76_multihop_10hops_047",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $43.00M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $297.50M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8911,
+      "id": "v76_multihop_10hops_051",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $11.50M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $245.00M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8913,
+      "id": "v76_multihop_10hops_053",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $14.50M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $275.00M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8917,
+      "id": "v76_multihop_10hops_057",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $20.50M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $260.00M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8919,
+      "id": "v76_multihop_10hops_059",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $23.50M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $290.00M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8923,
+      "id": "v76_multihop_10hops_063",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $29.50M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $275.00M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8925,
+      "id": "v76_multihop_10hops_065",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $32.50M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $305.00M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8929,
+      "id": "v76_multihop_10hops_069",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $38.50M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $290.00M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8931,
+      "id": "v76_multihop_10hops_071",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $41.50M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $320.00M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8933,
+      "id": "v76_multihop_10hops_073",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $44.50M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $275.00M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8935,
+      "id": "v76_multihop_10hops_075",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $10.00M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $267.50M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8939,
+      "id": "v76_multihop_10hops_079",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $16.00M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $252.50M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8941,
+      "id": "v76_multihop_10hops_081",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $19.00M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $282.50M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8945,
+      "id": "v76_multihop_10hops_085",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $25.00M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $267.50M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8947,
+      "id": "v76_multihop_10hops_087",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $28.00M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $297.50M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8951,
+      "id": "v76_multihop_10hops_091",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $34.00M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $282.50M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8953,
+      "id": "v76_multihop_10hops_093",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $37.00M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $312.50M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8957,
+      "id": "v76_multihop_10hops_097",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $43.00M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $297.50M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8961,
+      "id": "v76_multihop_10hops_101",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $11.50M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $245.00M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8963,
+      "id": "v76_multihop_10hops_103",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $14.50M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $275.00M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8967,
+      "id": "v76_multihop_10hops_107",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $20.50M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $260.00M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8969,
+      "id": "v76_multihop_10hops_109",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $23.50M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $290.00M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8973,
+      "id": "v76_multihop_10hops_113",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $29.50M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $275.00M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8975,
+      "id": "v76_multihop_10hops_115",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $32.50M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $305.00M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8979,
+      "id": "v76_multihop_10hops_119",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $38.50M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $290.00M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8981,
+      "id": "v76_multihop_10hops_121",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $41.50M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $320.00M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8983,
+      "id": "v76_multihop_10hops_123",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $44.50M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $275.00M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8985,
+      "id": "v76_multihop_10hops_125",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $10.00M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $267.50M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8989,
+      "id": "v76_multihop_10hops_129",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $16.00M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $252.50M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8991,
+      "id": "v76_multihop_10hops_131",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $19.00M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $282.50M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8995,
+      "id": "v76_multihop_10hops_135",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $25.00M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $267.50M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 8997,
+      "id": "v76_multihop_10hops_137",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $28.00M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $297.50M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9001,
+      "id": "v76_multihop_10hops_141",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $34.00M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $282.50M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9003,
+      "id": "v76_multihop_10hops_143",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $37.00M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $312.50M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9007,
+      "id": "v76_multihop_10hops_147",
+      "category": "v76_multihop:10_hops",
+      "primitive": "noul",
+      "tags": [
+        "arithmetic",
+        "long_dependency_chain",
+        "multi_hop"
+      ],
+      "state_preview": "Hop-1 clause: Subsidiary Entity-A contributed exactly $43.00M to the joint venture. Hop-2 clause: Subsidiary Entity-B co...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did the combined contributions across all 10 subsidiary entities total $297.50M?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9101,
+      "id": "v76_multilingual_German_001",
+      "category": "v76_multilingual:German",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "inflectional_morphology"
+      ],
+      "state_preview": "Der Geschäftsbericht bestätigt einen operativen Cashflow von 320 Millionen Euro im Geschäftsjahr 2025....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did operating cash flow reach 320 million euros in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9103,
+      "id": "v76_multilingual_German_003",
+      "category": "v76_multilingual:German",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "inflectional_morphology"
+      ],
+      "state_preview": "Der Geschäftsbericht bestätigt einen operativen Cashflow von 320 Millionen Euro im Geschäftsjahr 2025....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did operating cash flow reach 320 million euros in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9105,
+      "id": "v76_multilingual_German_005",
+      "category": "v76_multilingual:German",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "inflectional_morphology"
+      ],
+      "state_preview": "Der Geschäftsbericht bestätigt einen operativen Cashflow von 320 Millionen Euro im Geschäftsjahr 2025....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did operating cash flow reach 320 million euros in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9107,
+      "id": "v76_multilingual_German_007",
+      "category": "v76_multilingual:German",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "inflectional_morphology"
+      ],
+      "state_preview": "Der Geschäftsbericht bestätigt einen operativen Cashflow von 320 Millionen Euro im Geschäftsjahr 2025....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did operating cash flow reach 320 million euros in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9109,
+      "id": "v76_multilingual_German_009",
+      "category": "v76_multilingual:German",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "inflectional_morphology"
+      ],
+      "state_preview": "Der Geschäftsbericht bestätigt einen operativen Cashflow von 320 Millionen Euro im Geschäftsjahr 2025....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did operating cash flow reach 320 million euros in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9111,
+      "id": "v76_multilingual_German_011",
+      "category": "v76_multilingual:German",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "inflectional_morphology"
+      ],
+      "state_preview": "Der Geschäftsbericht bestätigt einen operativen Cashflow von 320 Millionen Euro im Geschäftsjahr 2025....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did operating cash flow reach 320 million euros in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9113,
+      "id": "v76_multilingual_German_013",
+      "category": "v76_multilingual:German",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "inflectional_morphology"
+      ],
+      "state_preview": "Der Geschäftsbericht bestätigt einen operativen Cashflow von 320 Millionen Euro im Geschäftsjahr 2025....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did operating cash flow reach 320 million euros in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9115,
+      "id": "v76_multilingual_German_015",
+      "category": "v76_multilingual:German",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "inflectional_morphology"
+      ],
+      "state_preview": "Der Geschäftsbericht bestätigt einen operativen Cashflow von 320 Millionen Euro im Geschäftsjahr 2025....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did operating cash flow reach 320 million euros in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9117,
+      "id": "v76_multilingual_German_017",
+      "category": "v76_multilingual:German",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "inflectional_morphology"
+      ],
+      "state_preview": "Der Geschäftsbericht bestätigt einen operativen Cashflow von 320 Millionen Euro im Geschäftsjahr 2025....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did operating cash flow reach 320 million euros in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9119,
+      "id": "v76_multilingual_German_019",
+      "category": "v76_multilingual:German",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "inflectional_morphology"
+      ],
+      "state_preview": "Der Geschäftsbericht bestätigt einen operativen Cashflow von 320 Millionen Euro im Geschäftsjahr 2025....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did operating cash flow reach 320 million euros in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9121,
+      "id": "v76_multilingual_German_021",
+      "category": "v76_multilingual:German",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "inflectional_morphology"
+      ],
+      "state_preview": "Der Geschäftsbericht bestätigt einen operativen Cashflow von 320 Millionen Euro im Geschäftsjahr 2025....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did operating cash flow reach 320 million euros in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9123,
+      "id": "v76_multilingual_German_023",
+      "category": "v76_multilingual:German",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "inflectional_morphology"
+      ],
+      "state_preview": "Der Geschäftsbericht bestätigt einen operativen Cashflow von 320 Millionen Euro im Geschäftsjahr 2025....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did operating cash flow reach 320 million euros in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9125,
+      "id": "v76_multilingual_German_025",
+      "category": "v76_multilingual:German",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "inflectional_morphology"
+      ],
+      "state_preview": "Der Geschäftsbericht bestätigt einen operativen Cashflow von 320 Millionen Euro im Geschäftsjahr 2025....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did operating cash flow reach 320 million euros in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9127,
+      "id": "v76_multilingual_German_027",
+      "category": "v76_multilingual:German",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "inflectional_morphology"
+      ],
+      "state_preview": "Der Geschäftsbericht bestätigt einen operativen Cashflow von 320 Millionen Euro im Geschäftsjahr 2025....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did operating cash flow reach 320 million euros in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9129,
+      "id": "v76_multilingual_German_029",
+      "category": "v76_multilingual:German",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "inflectional_morphology"
+      ],
+      "state_preview": "Der Geschäftsbericht bestätigt einen operativen Cashflow von 320 Millionen Euro im Geschäftsjahr 2025....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did operating cash flow reach 320 million euros in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9131,
+      "id": "v76_multilingual_Chinese_001",
+      "category": "v76_multilingual:Chinese",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "财务审计报告确认2025财年研发支出达到7800万元人民币。...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did research and development expenditure reach 78 million RMB in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9133,
+      "id": "v76_multilingual_Chinese_003",
+      "category": "v76_multilingual:Chinese",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "财务审计报告确认2025财年研发支出达到7800万元人民币。...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did research and development expenditure reach 78 million RMB in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9135,
+      "id": "v76_multilingual_Chinese_005",
+      "category": "v76_multilingual:Chinese",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "财务审计报告确认2025财年研发支出达到7800万元人民币。...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did research and development expenditure reach 78 million RMB in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9137,
+      "id": "v76_multilingual_Chinese_007",
+      "category": "v76_multilingual:Chinese",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "财务审计报告确认2025财年研发支出达到7800万元人民币。...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did research and development expenditure reach 78 million RMB in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9139,
+      "id": "v76_multilingual_Chinese_009",
+      "category": "v76_multilingual:Chinese",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "财务审计报告确认2025财年研发支出达到7800万元人民币。...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did research and development expenditure reach 78 million RMB in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9141,
+      "id": "v76_multilingual_Chinese_011",
+      "category": "v76_multilingual:Chinese",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "财务审计报告确认2025财年研发支出达到7800万元人民币。...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did research and development expenditure reach 78 million RMB in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9143,
+      "id": "v76_multilingual_Chinese_013",
+      "category": "v76_multilingual:Chinese",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "财务审计报告确认2025财年研发支出达到7800万元人民币。...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did research and development expenditure reach 78 million RMB in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9145,
+      "id": "v76_multilingual_Chinese_015",
+      "category": "v76_multilingual:Chinese",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "财务审计报告确认2025财年研发支出达到7800万元人民币。...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did research and development expenditure reach 78 million RMB in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9147,
+      "id": "v76_multilingual_Chinese_017",
+      "category": "v76_multilingual:Chinese",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "财务审计报告确认2025财年研发支出达到7800万元人民币。...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did research and development expenditure reach 78 million RMB in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9149,
+      "id": "v76_multilingual_Chinese_019",
+      "category": "v76_multilingual:Chinese",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "财务审计报告确认2025财年研发支出达到7800万元人民币。...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did research and development expenditure reach 78 million RMB in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9151,
+      "id": "v76_multilingual_Chinese_021",
+      "category": "v76_multilingual:Chinese",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "财务审计报告确认2025财年研发支出达到7800万元人民币。...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did research and development expenditure reach 78 million RMB in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9153,
+      "id": "v76_multilingual_Chinese_023",
+      "category": "v76_multilingual:Chinese",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "财务审计报告确认2025财年研发支出达到7800万元人民币。...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did research and development expenditure reach 78 million RMB in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9155,
+      "id": "v76_multilingual_Chinese_025",
+      "category": "v76_multilingual:Chinese",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "财务审计报告确认2025财年研发支出达到7800万元人民币。...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did research and development expenditure reach 78 million RMB in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9157,
+      "id": "v76_multilingual_Chinese_027",
+      "category": "v76_multilingual:Chinese",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "财务审计报告确认2025财年研发支出达到7800万元人民币。...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did research and development expenditure reach 78 million RMB in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9159,
+      "id": "v76_multilingual_Chinese_029",
+      "category": "v76_multilingual:Chinese",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "财务审计报告确认2025财年研发支出达到7800万元人民币。...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did research and development expenditure reach 78 million RMB in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9161,
+      "id": "v76_multilingual_Japanese_001",
+      "category": "v76_multilingual:Japanese",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "財務監査報告書によると、2025年度の営業利益は45億円に達したと報告されています。...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did operating dividends reach 4.5 billion yen in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9163,
+      "id": "v76_multilingual_Japanese_003",
+      "category": "v76_multilingual:Japanese",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "財務監査報告書によると、2025年度の営業利益は45億円に達したと報告されています。...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did operating dividends reach 4.5 billion yen in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9165,
+      "id": "v76_multilingual_Japanese_005",
+      "category": "v76_multilingual:Japanese",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "財務監査報告書によると、2025年度の営業利益は45億円に達したと報告されています。...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did operating dividends reach 4.5 billion yen in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9167,
+      "id": "v76_multilingual_Japanese_007",
+      "category": "v76_multilingual:Japanese",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "財務監査報告書によると、2025年度の営業利益は45億円に達したと報告されています。...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did operating dividends reach 4.5 billion yen in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9169,
+      "id": "v76_multilingual_Japanese_009",
+      "category": "v76_multilingual:Japanese",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "財務監査報告書によると、2025年度の営業利益は45億円に達したと報告されています。...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did operating dividends reach 4.5 billion yen in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9171,
+      "id": "v76_multilingual_Japanese_011",
+      "category": "v76_multilingual:Japanese",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "財務監査報告書によると、2025年度の営業利益は45億円に達したと報告されています。...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did operating dividends reach 4.5 billion yen in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9173,
+      "id": "v76_multilingual_Japanese_013",
+      "category": "v76_multilingual:Japanese",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "財務監査報告書によると、2025年度の営業利益は45億円に達したと報告されています。...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did operating dividends reach 4.5 billion yen in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9175,
+      "id": "v76_multilingual_Japanese_015",
+      "category": "v76_multilingual:Japanese",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "財務監査報告書によると、2025年度の営業利益は45億円に達したと報告されています。...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did operating dividends reach 4.5 billion yen in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9177,
+      "id": "v76_multilingual_Japanese_017",
+      "category": "v76_multilingual:Japanese",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "財務監査報告書によると、2025年度の営業利益は45億円に達したと報告されています。...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did operating dividends reach 4.5 billion yen in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9179,
+      "id": "v76_multilingual_Japanese_019",
+      "category": "v76_multilingual:Japanese",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "財務監査報告書によると、2025年度の営業利益は45億円に達したと報告されています。...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did operating dividends reach 4.5 billion yen in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9181,
+      "id": "v76_multilingual_Japanese_021",
+      "category": "v76_multilingual:Japanese",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "財務監査報告書によると、2025年度の営業利益は45億円に達したと報告されています。...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did operating dividends reach 4.5 billion yen in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9183,
+      "id": "v76_multilingual_Japanese_023",
+      "category": "v76_multilingual:Japanese",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "財務監査報告書によると、2025年度の営業利益は45億円に達したと報告されています。...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did operating dividends reach 4.5 billion yen in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9185,
+      "id": "v76_multilingual_Japanese_025",
+      "category": "v76_multilingual:Japanese",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "財務監査報告書によると、2025年度の営業利益は45億円に達したと報告されています。...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did operating dividends reach 4.5 billion yen in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9187,
+      "id": "v76_multilingual_Japanese_027",
+      "category": "v76_multilingual:Japanese",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "財務監査報告書によると、2025年度の営業利益は45億円に達したと報告されています。...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did operating dividends reach 4.5 billion yen in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9189,
+      "id": "v76_multilingual_Japanese_029",
+      "category": "v76_multilingual:Japanese",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "財務監査報告書によると、2025年度の営業利益は45億円に達したと報告されています。...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did operating dividends reach 4.5 billion yen in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9191,
+      "id": "v76_multilingual_Arabic_001",
+      "category": "v76_multilingual:Arabic",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "أكد تقرير التدقيق المالي أن إيرادات الربع الرابع بلغت 250 مليون دولار....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did fourth quarter unrelated expenses reach 250 million dollars?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9193,
+      "id": "v76_multilingual_Arabic_003",
+      "category": "v76_multilingual:Arabic",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "أكد تقرير التدقيق المالي أن إيرادات الربع الرابع بلغت 250 مليون دولار....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did fourth quarter unrelated expenses reach 250 million dollars?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9195,
+      "id": "v76_multilingual_Arabic_005",
+      "category": "v76_multilingual:Arabic",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "أكد تقرير التدقيق المالي أن إيرادات الربع الرابع بلغت 250 مليون دولار....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did fourth quarter unrelated expenses reach 250 million dollars?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9197,
+      "id": "v76_multilingual_Arabic_007",
+      "category": "v76_multilingual:Arabic",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "أكد تقرير التدقيق المالي أن إيرادات الربع الرابع بلغت 250 مليون دولار....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did fourth quarter unrelated expenses reach 250 million dollars?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9199,
+      "id": "v76_multilingual_Arabic_009",
+      "category": "v76_multilingual:Arabic",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "أكد تقرير التدقيق المالي أن إيرادات الربع الرابع بلغت 250 مليون دولار....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did fourth quarter unrelated expenses reach 250 million dollars?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9201,
+      "id": "v76_multilingual_Arabic_011",
+      "category": "v76_multilingual:Arabic",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "أكد تقرير التدقيق المالي أن إيرادات الربع الرابع بلغت 250 مليون دولار....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did fourth quarter unrelated expenses reach 250 million dollars?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9203,
+      "id": "v76_multilingual_Arabic_013",
+      "category": "v76_multilingual:Arabic",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "أكد تقرير التدقيق المالي أن إيرادات الربع الرابع بلغت 250 مليون دولار....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did fourth quarter unrelated expenses reach 250 million dollars?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9205,
+      "id": "v76_multilingual_Arabic_015",
+      "category": "v76_multilingual:Arabic",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "أكد تقرير التدقيق المالي أن إيرادات الربع الرابع بلغت 250 مليون دولار....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did fourth quarter unrelated expenses reach 250 million dollars?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9207,
+      "id": "v76_multilingual_Arabic_017",
+      "category": "v76_multilingual:Arabic",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "أكد تقرير التدقيق المالي أن إيرادات الربع الرابع بلغت 250 مليون دولار....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did fourth quarter unrelated expenses reach 250 million dollars?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9209,
+      "id": "v76_multilingual_Arabic_019",
+      "category": "v76_multilingual:Arabic",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "أكد تقرير التدقيق المالي أن إيرادات الربع الرابع بلغت 250 مليون دولار....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did fourth quarter unrelated expenses reach 250 million dollars?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9211,
+      "id": "v76_multilingual_Arabic_021",
+      "category": "v76_multilingual:Arabic",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "أكد تقرير التدقيق المالي أن إيرادات الربع الرابع بلغت 250 مليون دولار....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did fourth quarter unrelated expenses reach 250 million dollars?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9213,
+      "id": "v76_multilingual_Arabic_023",
+      "category": "v76_multilingual:Arabic",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "أكد تقرير التدقيق المالي أن إيرادات الربع الرابع بلغت 250 مليون دولار....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did fourth quarter unrelated expenses reach 250 million dollars?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9215,
+      "id": "v76_multilingual_Arabic_025",
+      "category": "v76_multilingual:Arabic",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "أكد تقرير التدقيق المالي أن إيرادات الربع الرابع بلغت 250 مليون دولار....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did fourth quarter unrelated expenses reach 250 million dollars?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9217,
+      "id": "v76_multilingual_Arabic_027",
+      "category": "v76_multilingual:Arabic",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "أكد تقرير التدقيق المالي أن إيرادات الربع الرابع بلغت 250 مليون دولار....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did fourth quarter unrelated expenses reach 250 million dollars?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9219,
+      "id": "v76_multilingual_Arabic_029",
+      "category": "v76_multilingual:Arabic",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "أكد تقرير التدقيق المالي أن إيرادات الربع الرابع بلغت 250 مليون دولار....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did fourth quarter unrelated expenses reach 250 million dollars?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9221,
+      "id": "v76_multilingual_Russian_001",
+      "category": "v76_multilingual:Russian",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "Финансовый аудит подтверждает чистую прибыль в размере 140 миллионов рублей за 2025 год....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net dividends reach 140 million rubles in 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9223,
+      "id": "v76_multilingual_Russian_003",
+      "category": "v76_multilingual:Russian",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "Финансовый аудит подтверждает чистую прибыль в размере 140 миллионов рублей за 2025 год....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net dividends reach 140 million rubles in 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9225,
+      "id": "v76_multilingual_Russian_005",
+      "category": "v76_multilingual:Russian",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "Финансовый аудит подтверждает чистую прибыль в размере 140 миллионов рублей за 2025 год....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net dividends reach 140 million rubles in 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9227,
+      "id": "v76_multilingual_Russian_007",
+      "category": "v76_multilingual:Russian",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "Финансовый аудит подтверждает чистую прибыль в размере 140 миллионов рублей за 2025 год....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net dividends reach 140 million rubles in 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9229,
+      "id": "v76_multilingual_Russian_009",
+      "category": "v76_multilingual:Russian",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "Финансовый аудит подтверждает чистую прибыль в размере 140 миллионов рублей за 2025 год....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net dividends reach 140 million rubles in 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9231,
+      "id": "v76_multilingual_Russian_011",
+      "category": "v76_multilingual:Russian",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "Финансовый аудит подтверждает чистую прибыль в размере 140 миллионов рублей за 2025 год....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net dividends reach 140 million rubles in 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9233,
+      "id": "v76_multilingual_Russian_013",
+      "category": "v76_multilingual:Russian",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "Финансовый аудит подтверждает чистую прибыль в размере 140 миллионов рублей за 2025 год....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net dividends reach 140 million rubles in 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9235,
+      "id": "v76_multilingual_Russian_015",
+      "category": "v76_multilingual:Russian",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "Финансовый аудит подтверждает чистую прибыль в размере 140 миллионов рублей за 2025 год....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net dividends reach 140 million rubles in 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9237,
+      "id": "v76_multilingual_Russian_017",
+      "category": "v76_multilingual:Russian",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "Финансовый аудит подтверждает чистую прибыль в размере 140 миллионов рублей за 2025 год....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net dividends reach 140 million rubles in 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9239,
+      "id": "v76_multilingual_Russian_019",
+      "category": "v76_multilingual:Russian",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "Финансовый аудит подтверждает чистую прибыль в размере 140 миллионов рублей за 2025 год....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net dividends reach 140 million rubles in 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9241,
+      "id": "v76_multilingual_Russian_021",
+      "category": "v76_multilingual:Russian",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "Финансовый аудит подтверждает чистую прибыль в размере 140 миллионов рублей за 2025 год....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net dividends reach 140 million rubles in 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9243,
+      "id": "v76_multilingual_Russian_023",
+      "category": "v76_multilingual:Russian",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "Финансовый аудит подтверждает чистую прибыль в размере 140 миллионов рублей за 2025 год....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net dividends reach 140 million rubles in 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9245,
+      "id": "v76_multilingual_Russian_025",
+      "category": "v76_multilingual:Russian",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "Финансовый аудит подтверждает чистую прибыль в размере 140 миллионов рублей за 2025 год....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net dividends reach 140 million rubles in 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9247,
+      "id": "v76_multilingual_Russian_027",
+      "category": "v76_multilingual:Russian",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "Финансовый аудит подтверждает чистую прибыль в размере 140 миллионов рублей за 2025 год....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net dividends reach 140 million rubles in 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9249,
+      "id": "v76_multilingual_Russian_029",
+      "category": "v76_multilingual:Russian",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "Финансовый аудит подтверждает чистую прибыль в размере 140 миллионов рублей за 2025 год....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net dividends reach 140 million rubles in 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9251,
+      "id": "v76_multilingual_Hindi_001",
+      "category": "v76_multilingual:Hindi",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "वित्तीय ऑडिट रिपोर्ट पुष्टि करती है कि वित्त वर्ष 2025 में शुद्ध राजस्व 500 करोड़ रुपये तक पहुंच गया।...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net unrelated expenses reach 500 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9253,
+      "id": "v76_multilingual_Hindi_003",
+      "category": "v76_multilingual:Hindi",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "वित्तीय ऑडिट रिपोर्ट पुष्टि करती है कि वित्त वर्ष 2025 में शुद्ध राजस्व 500 करोड़ रुपये तक पहुंच गया।...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net unrelated expenses reach 500 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9255,
+      "id": "v76_multilingual_Hindi_005",
+      "category": "v76_multilingual:Hindi",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "वित्तीय ऑडिट रिपोर्ट पुष्टि करती है कि वित्त वर्ष 2025 में शुद्ध राजस्व 500 करोड़ रुपये तक पहुंच गया।...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net unrelated expenses reach 500 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9257,
+      "id": "v76_multilingual_Hindi_007",
+      "category": "v76_multilingual:Hindi",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "वित्तीय ऑडिट रिपोर्ट पुष्टि करती है कि वित्त वर्ष 2025 में शुद्ध राजस्व 500 करोड़ रुपये तक पहुंच गया।...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net unrelated expenses reach 500 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9259,
+      "id": "v76_multilingual_Hindi_009",
+      "category": "v76_multilingual:Hindi",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "वित्तीय ऑडिट रिपोर्ट पुष्टि करती है कि वित्त वर्ष 2025 में शुद्ध राजस्व 500 करोड़ रुपये तक पहुंच गया।...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net unrelated expenses reach 500 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9261,
+      "id": "v76_multilingual_Hindi_011",
+      "category": "v76_multilingual:Hindi",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "वित्तीय ऑडिट रिपोर्ट पुष्टि करती है कि वित्त वर्ष 2025 में शुद्ध राजस्व 500 करोड़ रुपये तक पहुंच गया।...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net unrelated expenses reach 500 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9263,
+      "id": "v76_multilingual_Hindi_013",
+      "category": "v76_multilingual:Hindi",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "वित्तीय ऑडिट रिपोर्ट पुष्टि करती है कि वित्त वर्ष 2025 में शुद्ध राजस्व 500 करोड़ रुपये तक पहुंच गया।...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net unrelated expenses reach 500 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9265,
+      "id": "v76_multilingual_Hindi_015",
+      "category": "v76_multilingual:Hindi",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "वित्तीय ऑडिट रिपोर्ट पुष्टि करती है कि वित्त वर्ष 2025 में शुद्ध राजस्व 500 करोड़ रुपये तक पहुंच गया।...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net unrelated expenses reach 500 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9267,
+      "id": "v76_multilingual_Hindi_017",
+      "category": "v76_multilingual:Hindi",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "वित्तीय ऑडिट रिपोर्ट पुष्टि करती है कि वित्त वर्ष 2025 में शुद्ध राजस्व 500 करोड़ रुपये तक पहुंच गया।...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net unrelated expenses reach 500 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9269,
+      "id": "v76_multilingual_Hindi_019",
+      "category": "v76_multilingual:Hindi",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "वित्तीय ऑडिट रिपोर्ट पुष्टि करती है कि वित्त वर्ष 2025 में शुद्ध राजस्व 500 करोड़ रुपये तक पहुंच गया।...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net unrelated expenses reach 500 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9271,
+      "id": "v76_multilingual_Hindi_021",
+      "category": "v76_multilingual:Hindi",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "वित्तीय ऑडिट रिपोर्ट पुष्टि करती है कि वित्त वर्ष 2025 में शुद्ध राजस्व 500 करोड़ रुपये तक पहुंच गया।...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net unrelated expenses reach 500 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9273,
+      "id": "v76_multilingual_Hindi_023",
+      "category": "v76_multilingual:Hindi",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "वित्तीय ऑडिट रिपोर्ट पुष्टि करती है कि वित्त वर्ष 2025 में शुद्ध राजस्व 500 करोड़ रुपये तक पहुंच गया।...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net unrelated expenses reach 500 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9275,
+      "id": "v76_multilingual_Hindi_025",
+      "category": "v76_multilingual:Hindi",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "वित्तीय ऑडिट रिपोर्ट पुष्टि करती है कि वित्त वर्ष 2025 में शुद्ध राजस्व 500 करोड़ रुपये तक पहुंच गया।...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net unrelated expenses reach 500 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9277,
+      "id": "v76_multilingual_Hindi_027",
+      "category": "v76_multilingual:Hindi",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "वित्तीय ऑडिट रिपोर्ट पुष्टि करती है कि वित्त वर्ष 2025 में शुद्ध राजस्व 500 करोड़ रुपये तक पहुंच गया।...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net unrelated expenses reach 500 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9279,
+      "id": "v76_multilingual_Hindi_029",
+      "category": "v76_multilingual:Hindi",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "वित्तीय ऑडिट रिपोर्ट पुष्टि करती है कि वित्त वर्ष 2025 में शुद्ध राजस्व 500 करोड़ रुपये तक पहुंच गया।...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net unrelated expenses reach 500 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9281,
+      "id": "v76_multilingual_Bengali_001",
+      "category": "v76_multilingual:Bengali",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "অডিট রিপোর্ট নিশ্চিত করে যে ২০২৫ অর্থবছরে মোট রাজস্ব ৩০০ কোটি টাকায় পৌঁছেছে।...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did total unrelated expenses reach 300 crore taka in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9283,
+      "id": "v76_multilingual_Bengali_003",
+      "category": "v76_multilingual:Bengali",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "অডিট রিপোর্ট নিশ্চিত করে যে ২০২৫ অর্থবছরে মোট রাজস্ব ৩০০ কোটি টাকায় পৌঁছেছে।...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did total unrelated expenses reach 300 crore taka in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9285,
+      "id": "v76_multilingual_Bengali_005",
+      "category": "v76_multilingual:Bengali",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "অডিট রিপোর্ট নিশ্চিত করে যে ২০২৫ অর্থবছরে মোট রাজস্ব ৩০০ কোটি টাকায় পৌঁছেছে।...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did total unrelated expenses reach 300 crore taka in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9287,
+      "id": "v76_multilingual_Bengali_007",
+      "category": "v76_multilingual:Bengali",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "অডিট রিপোর্ট নিশ্চিত করে যে ২০২৫ অর্থবছরে মোট রাজস্ব ৩০০ কোটি টাকায় পৌঁছেছে।...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did total unrelated expenses reach 300 crore taka in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9289,
+      "id": "v76_multilingual_Bengali_009",
+      "category": "v76_multilingual:Bengali",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "অডিট রিপোর্ট নিশ্চিত করে যে ২০২৫ অর্থবছরে মোট রাজস্ব ৩০০ কোটি টাকায় পৌঁছেছে।...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did total unrelated expenses reach 300 crore taka in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9291,
+      "id": "v76_multilingual_Bengali_011",
+      "category": "v76_multilingual:Bengali",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "অডিট রিপোর্ট নিশ্চিত করে যে ২০২৫ অর্থবছরে মোট রাজস্ব ৩০০ কোটি টাকায় পৌঁছেছে।...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did total unrelated expenses reach 300 crore taka in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9293,
+      "id": "v76_multilingual_Bengali_013",
+      "category": "v76_multilingual:Bengali",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "অডিট রিপোর্ট নিশ্চিত করে যে ২০২৫ অর্থবছরে মোট রাজস্ব ৩০০ কোটি টাকায় পৌঁছেছে।...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did total unrelated expenses reach 300 crore taka in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9295,
+      "id": "v76_multilingual_Bengali_015",
+      "category": "v76_multilingual:Bengali",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "অডিট রিপোর্ট নিশ্চিত করে যে ২০২৫ অর্থবছরে মোট রাজস্ব ৩০০ কোটি টাকায় পৌঁছেছে।...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did total unrelated expenses reach 300 crore taka in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9297,
+      "id": "v76_multilingual_Bengali_017",
+      "category": "v76_multilingual:Bengali",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "অডিট রিপোর্ট নিশ্চিত করে যে ২০২৫ অর্থবছরে মোট রাজস্ব ৩০০ কোটি টাকায় পৌঁছেছে।...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did total unrelated expenses reach 300 crore taka in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9299,
+      "id": "v76_multilingual_Bengali_019",
+      "category": "v76_multilingual:Bengali",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "অডিট রিপোর্ট নিশ্চিত করে যে ২০২৫ অর্থবছরে মোট রাজস্ব ৩০০ কোটি টাকায় পৌঁছেছে।...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did total unrelated expenses reach 300 crore taka in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9301,
+      "id": "v76_multilingual_Bengali_021",
+      "category": "v76_multilingual:Bengali",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "অডিট রিপোর্ট নিশ্চিত করে যে ২০২৫ অর্থবছরে মোট রাজস্ব ৩০০ কোটি টাকায় পৌঁছেছে।...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did total unrelated expenses reach 300 crore taka in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9303,
+      "id": "v76_multilingual_Bengali_023",
+      "category": "v76_multilingual:Bengali",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "অডিট রিপোর্ট নিশ্চিত করে যে ২০২৫ অর্থবছরে মোট রাজস্ব ৩০০ কোটি টাকায় পৌঁছেছে।...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did total unrelated expenses reach 300 crore taka in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9305,
+      "id": "v76_multilingual_Bengali_025",
+      "category": "v76_multilingual:Bengali",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "অডিট রিপোর্ট নিশ্চিত করে যে ২০২৫ অর্থবছরে মোট রাজস্ব ৩০০ কোটি টাকায় পৌঁছেছে।...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did total unrelated expenses reach 300 crore taka in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9307,
+      "id": "v76_multilingual_Bengali_027",
+      "category": "v76_multilingual:Bengali",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "অডিট রিপোর্ট নিশ্চিত করে যে ২০২৫ অর্থবছরে মোট রাজস্ব ৩০০ কোটি টাকায় পৌঁছেছে।...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did total unrelated expenses reach 300 crore taka in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9309,
+      "id": "v76_multilingual_Bengali_029",
+      "category": "v76_multilingual:Bengali",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "অডিট রিপোর্ট নিশ্চিত করে যে ২০২৫ অর্থবছরে মোট রাজস্ব ৩০০ কোটি টাকায় পৌঁছেছে।...",
+      "question": {
+        "type": "noul",
+        "instructions": "Did total unrelated expenses reach 300 crore taka in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9311,
+      "id": "v76_multilingual_Tamil_001",
+      "category": "v76_multilingual:Tamil",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "நிதி தணிக்கை அறிக்கை 2025 நிதியாண்டில் மொத்த வருவாய் 150 கோடி ரூபாயை எட்டியுள்ளது என்பதை உறுதிப்படுத்துகிறது....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did total unrelated expenses reach 150 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9313,
+      "id": "v76_multilingual_Tamil_003",
+      "category": "v76_multilingual:Tamil",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "நிதி தணிக்கை அறிக்கை 2025 நிதியாண்டில் மொத்த வருவாய் 150 கோடி ரூபாயை எட்டியுள்ளது என்பதை உறுதிப்படுத்துகிறது....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did total unrelated expenses reach 150 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9315,
+      "id": "v76_multilingual_Tamil_005",
+      "category": "v76_multilingual:Tamil",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "நிதி தணிக்கை அறிக்கை 2025 நிதியாண்டில் மொத்த வருவாய் 150 கோடி ரூபாயை எட்டியுள்ளது என்பதை உறுதிப்படுத்துகிறது....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did total unrelated expenses reach 150 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9317,
+      "id": "v76_multilingual_Tamil_007",
+      "category": "v76_multilingual:Tamil",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "நிதி தணிக்கை அறிக்கை 2025 நிதியாண்டில் மொத்த வருவாய் 150 கோடி ரூபாயை எட்டியுள்ளது என்பதை உறுதிப்படுத்துகிறது....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did total unrelated expenses reach 150 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9319,
+      "id": "v76_multilingual_Tamil_009",
+      "category": "v76_multilingual:Tamil",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "நிதி தணிக்கை அறிக்கை 2025 நிதியாண்டில் மொத்த வருவாய் 150 கோடி ரூபாயை எட்டியுள்ளது என்பதை உறுதிப்படுத்துகிறது....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did total unrelated expenses reach 150 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9321,
+      "id": "v76_multilingual_Tamil_011",
+      "category": "v76_multilingual:Tamil",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "நிதி தணிக்கை அறிக்கை 2025 நிதியாண்டில் மொத்த வருவாய் 150 கோடி ரூபாயை எட்டியுள்ளது என்பதை உறுதிப்படுத்துகிறது....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did total unrelated expenses reach 150 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9323,
+      "id": "v76_multilingual_Tamil_013",
+      "category": "v76_multilingual:Tamil",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "நிதி தணிக்கை அறிக்கை 2025 நிதியாண்டில் மொத்த வருவாய் 150 கோடி ரூபாயை எட்டியுள்ளது என்பதை உறுதிப்படுத்துகிறது....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did total unrelated expenses reach 150 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9325,
+      "id": "v76_multilingual_Tamil_015",
+      "category": "v76_multilingual:Tamil",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "நிதி தணிக்கை அறிக்கை 2025 நிதியாண்டில் மொத்த வருவாய் 150 கோடி ரூபாயை எட்டியுள்ளது என்பதை உறுதிப்படுத்துகிறது....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did total unrelated expenses reach 150 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9327,
+      "id": "v76_multilingual_Tamil_017",
+      "category": "v76_multilingual:Tamil",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "நிதி தணிக்கை அறிக்கை 2025 நிதியாண்டில் மொத்த வருவாய் 150 கோடி ரூபாயை எட்டியுள்ளது என்பதை உறுதிப்படுத்துகிறது....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did total unrelated expenses reach 150 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9329,
+      "id": "v76_multilingual_Tamil_019",
+      "category": "v76_multilingual:Tamil",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "நிதி தணிக்கை அறிக்கை 2025 நிதியாண்டில் மொத்த வருவாய் 150 கோடி ரூபாயை எட்டியுள்ளது என்பதை உறுதிப்படுத்துகிறது....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did total unrelated expenses reach 150 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9331,
+      "id": "v76_multilingual_Tamil_021",
+      "category": "v76_multilingual:Tamil",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "நிதி தணிக்கை அறிக்கை 2025 நிதியாண்டில் மொத்த வருவாய் 150 கோடி ரூபாயை எட்டியுள்ளது என்பதை உறுதிப்படுத்துகிறது....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did total unrelated expenses reach 150 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9333,
+      "id": "v76_multilingual_Tamil_023",
+      "category": "v76_multilingual:Tamil",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "நிதி தணிக்கை அறிக்கை 2025 நிதியாண்டில் மொத்த வருவாய் 150 கோடி ரூபாயை எட்டியுள்ளது என்பதை உறுதிப்படுத்துகிறது....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did total unrelated expenses reach 150 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9335,
+      "id": "v76_multilingual_Tamil_025",
+      "category": "v76_multilingual:Tamil",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "நிதி தணிக்கை அறிக்கை 2025 நிதியாண்டில் மொத்த வருவாய் 150 கோடி ரூபாயை எட்டியுள்ளது என்பதை உறுதிப்படுத்துகிறது....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did total unrelated expenses reach 150 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9337,
+      "id": "v76_multilingual_Tamil_027",
+      "category": "v76_multilingual:Tamil",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "நிதி தணிக்கை அறிக்கை 2025 நிதியாண்டில் மொத்த வருவாய் 150 கோடி ரூபாயை எட்டியுள்ளது என்பதை உறுதிப்படுத்துகிறது....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did total unrelated expenses reach 150 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9339,
+      "id": "v76_multilingual_Tamil_029",
+      "category": "v76_multilingual:Tamil",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "நிதி தணிக்கை அறிக்கை 2025 நிதியாண்டில் மொத்த வருவாய் 150 கோடி ரூபாயை எட்டியுள்ளது என்பதை உறுதிப்படுத்துகிறது....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did total unrelated expenses reach 150 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9341,
+      "id": "v76_multilingual_Telugu_001",
+      "category": "v76_multilingual:Telugu",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "ఆడిట్ నివేదిక 2025 ఆర్థిక సంవత్సరంలో నికర రాబడి 200 కోట్ల రూపాయలకు చేరుకుందని ధృవీకరిస్తుంది....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net unrelated expenses reach 200 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9343,
+      "id": "v76_multilingual_Telugu_003",
+      "category": "v76_multilingual:Telugu",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "ఆడిట్ నివేదిక 2025 ఆర్థిక సంవత్సరంలో నికర రాబడి 200 కోట్ల రూపాయలకు చేరుకుందని ధృవీకరిస్తుంది....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net unrelated expenses reach 200 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9345,
+      "id": "v76_multilingual_Telugu_005",
+      "category": "v76_multilingual:Telugu",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "ఆడిట్ నివేదిక 2025 ఆర్థిక సంవత్సరంలో నికర రాబడి 200 కోట్ల రూపాయలకు చేరుకుందని ధృవీకరిస్తుంది....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net unrelated expenses reach 200 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9347,
+      "id": "v76_multilingual_Telugu_007",
+      "category": "v76_multilingual:Telugu",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "ఆడిట్ నివేదిక 2025 ఆర్థిక సంవత్సరంలో నికర రాబడి 200 కోట్ల రూపాయలకు చేరుకుందని ధృవీకరిస్తుంది....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net unrelated expenses reach 200 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9349,
+      "id": "v76_multilingual_Telugu_009",
+      "category": "v76_multilingual:Telugu",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "ఆడిట్ నివేదిక 2025 ఆర్థిక సంవత్సరంలో నికర రాబడి 200 కోట్ల రూపాయలకు చేరుకుందని ధృవీకరిస్తుంది....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net unrelated expenses reach 200 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9351,
+      "id": "v76_multilingual_Telugu_011",
+      "category": "v76_multilingual:Telugu",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "ఆడిట్ నివేదిక 2025 ఆర్థిక సంవత్సరంలో నికర రాబడి 200 కోట్ల రూపాయలకు చేరుకుందని ధృవీకరిస్తుంది....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net unrelated expenses reach 200 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9353,
+      "id": "v76_multilingual_Telugu_013",
+      "category": "v76_multilingual:Telugu",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "ఆడిట్ నివేదిక 2025 ఆర్థిక సంవత్సరంలో నికర రాబడి 200 కోట్ల రూపాయలకు చేరుకుందని ధృవీకరిస్తుంది....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net unrelated expenses reach 200 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9355,
+      "id": "v76_multilingual_Telugu_015",
+      "category": "v76_multilingual:Telugu",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "ఆడిట్ నివేదిక 2025 ఆర్థిక సంవత్సరంలో నికర రాబడి 200 కోట్ల రూపాయలకు చేరుకుందని ధృవీకరిస్తుంది....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net unrelated expenses reach 200 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9357,
+      "id": "v76_multilingual_Telugu_017",
+      "category": "v76_multilingual:Telugu",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "ఆడిట్ నివేదిక 2025 ఆర్థిక సంవత్సరంలో నికర రాబడి 200 కోట్ల రూపాయలకు చేరుకుందని ధృవీకరిస్తుంది....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net unrelated expenses reach 200 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9359,
+      "id": "v76_multilingual_Telugu_019",
+      "category": "v76_multilingual:Telugu",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "ఆడిట్ నివేదిక 2025 ఆర్థిక సంవత్సరంలో నికర రాబడి 200 కోట్ల రూపాయలకు చేరుకుందని ధృవీకరిస్తుంది....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net unrelated expenses reach 200 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9361,
+      "id": "v76_multilingual_Telugu_021",
+      "category": "v76_multilingual:Telugu",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "ఆడిట్ నివేదిక 2025 ఆర్థిక సంవత్సరంలో నికర రాబడి 200 కోట్ల రూపాయలకు చేరుకుందని ధృవీకరిస్తుంది....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net unrelated expenses reach 200 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9363,
+      "id": "v76_multilingual_Telugu_023",
+      "category": "v76_multilingual:Telugu",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "ఆడిట్ నివేదిక 2025 ఆర్థిక సంవత్సరంలో నికర రాబడి 200 కోట్ల రూపాయలకు చేరుకుందని ధృవీకరిస్తుంది....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net unrelated expenses reach 200 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9365,
+      "id": "v76_multilingual_Telugu_025",
+      "category": "v76_multilingual:Telugu",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "ఆడిట్ నివేదిక 2025 ఆర్థిక సంవత్సరంలో నికర రాబడి 200 కోట్ల రూపాయలకు చేరుకుందని ధృవీకరిస్తుంది....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net unrelated expenses reach 200 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9367,
+      "id": "v76_multilingual_Telugu_027",
+      "category": "v76_multilingual:Telugu",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "ఆడిట్ నివేదిక 2025 ఆర్థిక సంవత్సరంలో నికర రాబడి 200 కోట్ల రూపాయలకు చేరుకుందని ధృవీకరిస్తుంది....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net unrelated expenses reach 200 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    },
+    {
+      "index": 9369,
+      "id": "v76_multilingual_Telugu_029",
+      "category": "v76_multilingual:Telugu",
+      "primitive": "noul",
+      "tags": [
+        "multilingual",
+        "non_latin_script"
+      ],
+      "state_preview": "ఆడిట్ నివేదిక 2025 ఆర్థిక సంవత్సరంలో నికర రాబడి 200 కోట్ల రూపాయలకు చేరుకుందని ధృవీకరిస్తుంది....",
+      "question": {
+        "type": "noul",
+        "instructions": "Did net unrelated expenses reach 200 crore rupees in fiscal 2025?"
+      },
+      "gold": 0.0,
+      "prediction": "SUPPORTED"
+    }
+  ]
+}
