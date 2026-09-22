@@ -25,6 +25,34 @@ client = ApexClient()
 result = client.noul("Paris is the capital of France.", "Paris is France's capital.")
 ```
 
+## Independent External Benchmark Suite
+
+ApexDecision includes a fully independent, reproducible benchmark suite in `benchmark/`:
+
+```bash
+# Run the complete external benchmark suite
+python -m benchmark.run_all
+
+# Run quick verification mode
+python -m benchmark.run_all --quick
+
+# Run specific evaluation suites
+python -m benchmark.run_all --suite core
+python -m benchmark.run_all --suite reasoning
+python -m benchmark.run_all --suite tools
+python -m benchmark.run_all --suite multilingual
+python -m benchmark.run_all --suite long_context
+python -m benchmark.run_all --suite performance
+```
+
+### Launch Gradio Benchmark UI & Telemetry Center
+
+```bash
+python benchmark/app.py
+```
+
+Runs an interactive dashboard on `http://127.0.0.1:7860` with real-time log streaming, system telemetry, and results downloads. Also containerized via `Dockerfile` for Hugging Face Docker Spaces.
+
 ## Security and limitations
 
 Set `APEX_API_KEY` to require the `X-API-Key` header on decision endpoints. Tool calls remain permission-gated and untrusted tool output is sanitized. ApexDecision is a decision aid; validate outputs before using them in high-impact workflows.
