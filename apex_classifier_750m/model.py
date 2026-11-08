@@ -8,6 +8,7 @@ from typing import Dict, Any, Optional, Tuple, List, Union
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+import torch.utils.checkpoint as checkpoint
 
 from .config import Apex748MConfig
 
@@ -297,7 +298,12 @@ class Apex748MClassifier(nn.Module):
         cos, sin = self.rotary(seq_len, x.device)
 
         for layer in self.tier1_layers:
-            x = layer(x, cos=cos, sin=sin, mask=mask)
+            if self.config.gradient_checkpointing and self.training:
+                def _layer_fwd(h, c, s, m):
+                    return layer(h, cos=c, sin=s, mask=m)
+                x = checkpoint.checkpoint(_layer_fwd, x, cos, sin, mask, use_reentrant=False)
+            else:
+                x = layer(x, cos=cos, sin=sin, mask=mask)
 
         mem_queries = self.memory_tokens.unsqueeze(0).expand(b, -1, -1)
         latents = self.memory_attn(query=mem_queries, key=x, value=x, mask=mask)
@@ -317,7 +323,12 @@ class Apex748MClassifier(nn.Module):
         q = self.memory_tokens[0:1].unsqueeze(0).expand(b, -1, -1)
 
         for layer in self.tier2_layers:
-            q = layer(q, context=memory_matrix)
+            if self.config.gradient_checkpointing and self.training:
+                def _layer_fwd_mem(h, ctx):
+                    return layer(h, context=ctx)
+                q = checkpoint.checkpoint(_layer_fwd_mem, q, memory_matrix, use_reentrant=False)
+            else:
+                q = layer(q, context=memory_matrix)
 
         h_out = q.squeeze(1)
         return h_out

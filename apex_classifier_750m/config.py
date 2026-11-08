@@ -36,3 +36,4 @@ class Apex748MConfig:
     init_std: float = 0.02
     initial_tau_choice: float = 39.1918  # sqrt(1536) ≈ 39.1918
     abstention_threshold: float = 0.65   # theta_abstain
+    gradient_checkpointing: bool = True
