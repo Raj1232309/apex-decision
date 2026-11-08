@@ -13,6 +13,7 @@ import time
 import shutil
 import argparse
 import hashlib
+import threading
 from dataclasses import asdict
 from typing import Dict, Any, Optional, Tuple, List
 
@@ -82,12 +83,36 @@ def build_optimizer(
         return torch.optim.AdamW(model.parameters(), lr=lr, weight_decay=0.01, foreach=False)
 
 
+def sync_checkpoint_to_hf(file_path: str, repo_id: str, token: Optional[str] = None):
+    """Asynchronous background push of latest checkpoint to Hugging Face Hub."""
+    def _upload():
+        try:
+            from huggingface_hub import HfApi
+            actual_token = token or os.environ.get("HF_TOKEN")
+            api = HfApi(token=actual_token)
+            api.create_repo(repo_id=repo_id, repo_type="model", exist_ok=True, private=True)
+            api.upload_file(
+                path_or_fileobj=file_path,
+                path_in_repo="apex748m_step_latest.pt",
+                repo_id=repo_id,
+                repo_type="model"
+            )
+            print(f"\n[Cloud Sync] Pushed latest checkpoint to Hugging Face: {repo_id}/apex748m_step_latest.pt")
+        except Exception as e:
+            print(f"\n[Cloud Sync Notice] Hugging Face push notice: {e}")
+
+    t = threading.Thread(target=_upload, daemon=True)
+    t.start()
+
+
 def save_portable_checkpoint(
     model: nn.Module,
     optimizer: torch.optim.Optimizer,
     step: int,
     save_dir: str = "./checkpoints",
-    max_to_keep: int = 2
+    max_to_keep: int = 2,
+    hf_repo: Optional[str] = None,
+    hf_token: Optional[str] = None
 ) -> str:
     """Saves portable checkpoint compatible across both TPU and NVIDIA GPU with disk rotation."""
     os.makedirs(save_dir, exist_ok=True)
@@ -161,6 +186,10 @@ def save_portable_checkpoint(
         except Exception as e:
             print(f"Warning: Checkpoint rotation error: {e}")
 
+        # Cloud Sync: Asynchronously push to Hugging Face if configured
+        if hf_repo and os.path.exists(latest_path):
+            sync_checkpoint_to_hf(latest_path, hf_repo, hf_token)
+
         print(f"Checkpoint saved: {target_path} | SHA-256: {hash_prefix} (latest updated)")
         return target_path
     except Exception as e:
@@ -178,10 +207,23 @@ def load_portable_checkpoint(
     checkpoint_path: str,
     model: nn.Module,
     optimizer: Optional[torch.optim.Optimizer] = None,
-    device: torch.device = torch.device("cpu")
+    device: torch.device = torch.device("cpu"),
+    hf_repo: Optional[str] = None,
+    hf_token: Optional[str] = None
 ) -> int:
     """Loads checkpoint onto the active device (TPU or GPU) regardless of where it was saved."""
-    if not os.path.exists(checkpoint_path):
+    # Cloud Sync: Fetch from Hugging Face if not found locally
+    if (not checkpoint_path or not os.path.exists(checkpoint_path)) and hf_repo:
+        try:
+            from huggingface_hub import hf_hub_download
+            actual_token = hf_token or os.environ.get("HF_TOKEN")
+            print(f"[Cloud Sync] Fetching latest checkpoint from Hugging Face: {hf_repo}...")
+            checkpoint_path = hf_hub_download(repo_id=hf_repo, filename="apex748m_step_latest.pt", token=actual_token)
+            print(f"[Cloud Sync] Downloaded: {checkpoint_path}")
+        except Exception as e:
+            print(f"[Cloud Sync Notice] Could not fetch from Hugging Face: {e}")
+
+    if not checkpoint_path or not os.path.exists(checkpoint_path):
         raise FileNotFoundError(f"Checkpoint not found: {checkpoint_path}")
 
     try:
@@ -353,6 +395,8 @@ def main():
     parser.add_argument("--max_checkpoints", type=int, default=2, help="Maximum number of intermediate checkpoints to retain (default: 2)")
     parser.add_argument("--lr", type=float, default=None, help="Learning rate (default: 1e-4 for sft, 5e-5 for rlvr)")
     parser.add_argument("--optimizer", type=str, default="auto", choices=["auto", "adafactor", "adamw8bit", "adamw"], help="Optimizer (default: auto -> Adafactor on CUDA)")
+    parser.add_argument("--hf_repo", type=str, default=None, help="Hugging Face repo (e.g. 'username/apex-748m') for automatic zero-friction cloud checkpoint sync")
+    parser.add_argument("--hf_token", type=str, default=None, help="Hugging Face token (optional, defaults to $HF_TOKEN)")
     parser.add_argument("--no_amp", action="store_true", help="Disable AMP (automatic mixed precision) on CUDA")
     args = parser.parse_args()
 
@@ -395,8 +439,15 @@ def main():
     optimizer = build_optimizer(model, lr=args.lr, optimizer_type=args.optimizer, is_tpu=is_tpu)
 
     start_step = 0
-    if args.resume:
-        start_step = load_portable_checkpoint(args.resume, model, optimizer, device=device)
+    if args.resume or args.hf_repo:
+        resume_target = args.resume or os.path.join(args.checkpoint_dir, "apex748m_step_latest.pt")
+        try:
+            start_step = load_portable_checkpoint(
+                resume_target, model, optimizer, device=device,
+                hf_repo=args.hf_repo, hf_token=args.hf_token
+            )
+        except Exception as e:
+            print(f"Notice: No previous checkpoint loaded ({e}); starting from step 0.")
 
     if args.steps is not None:
         target_step = start_step + args.steps
@@ -423,6 +474,8 @@ def main():
     print(f"Learning Rate      : {args.lr}")
     print(f"Save Directory     : {args.checkpoint_dir}")
     print(f"Checkpoint Every   : {args.checkpoint_every} steps (Max Kept: {args.max_checkpoints})")
+    if args.hf_repo:
+        print(f"Cloud Sync (HF)    : Active -> {args.hf_repo} (Automatic Cloud Backup)")
     print("=" * 70)
 
     dataset = SyntheticDecisionDataset(phase=args.phase, group_size=4)
@@ -467,7 +520,13 @@ def main():
 
         # Save checkpoint periodically
         if step % args.checkpoint_every == 0 or step == target_step:
-            save_portable_checkpoint(model, optimizer, step, save_dir=args.checkpoint_dir, max_to_keep=args.max_checkpoints)
+            save_portable_checkpoint(
+                model, optimizer, step,
+                save_dir=args.checkpoint_dir,
+                max_to_keep=args.max_checkpoints,
+                hf_repo=args.hf_repo,
+                hf_token=args.hf_token
+            )
 
     print("\nTraining completed successfully!")
 
