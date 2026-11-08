@@ -5,6 +5,9 @@ Supports Phase 1 (Deterministic SFT Warmup) and Phase 2 (RLVR with GRPO Group Sa
 """
 
 import os
+# Prevent CUDA memory fragmentation on memory-constrained GPUs (e.g. 16GB Tesla T4)
+os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
+
 import sys
 import time
 import shutil
@@ -43,6 +46,44 @@ def get_execution_device() -> Tuple[torch.device, str, bool]:
 
     # 3. Fallback to CPU
     return torch.device("cpu"), "CPU (Fallback)", False
+
+
+def build_optimizer(
+    model: nn.Module,
+    lr: float,
+    optimizer_type: str = "auto",
+    is_tpu: bool = False
+) -> torch.optim.Optimizer:
+    """
+    Builds a memory-efficient optimizer.
+    On CUDA with constrained VRAM (e.g. 16 GB Tesla T4), Adafactor or 8-bit AdamW
+    reduces optimizer state memory from ~6.0 GB down to ~0.15–1.5 GB, eliminating CUDA OOM.
+    """
+    if is_tpu:
+        print("Optimizer          : Standard AdamW (Optimized for Cloud TPU)")
+        return torch.optim.AdamW(model.parameters(), lr=lr, weight_decay=0.01)
+
+    if optimizer_type == "auto":
+        if torch.cuda.is_available():
+            try:
+                import bitsandbytes as bnb
+                print("Optimizer          : bitsandbytes 8-bit AdamW (State VRAM ~1.5 GB)")
+                return bnb.optim.AdamW8bit(model.parameters(), lr=lr, weight_decay=0.01)
+            except Exception:
+                print("Optimizer          : PyTorch Adafactor (Sublinear State VRAM ~0.15 GB)")
+                return torch.optim.Adafactor(model.parameters(), lr=lr, weight_decay=0.01)
+        else:
+            return torch.optim.AdamW(model.parameters(), lr=lr, weight_decay=0.01, foreach=False)
+    elif optimizer_type == "adafactor":
+        print("Optimizer          : PyTorch Adafactor (Sublinear State VRAM ~0.15 GB)")
+        return torch.optim.Adafactor(model.parameters(), lr=lr, weight_decay=0.01)
+    elif optimizer_type == "adamw8bit":
+        import bitsandbytes as bnb
+        print("Optimizer          : bitsandbytes 8-bit AdamW (State VRAM ~1.5 GB)")
+        return bnb.optim.AdamW8bit(model.parameters(), lr=lr, weight_decay=0.01)
+    else:
+        print("Optimizer          : PyTorch AdamW (foreach=False)")
+        return torch.optim.AdamW(model.parameters(), lr=lr, weight_decay=0.01, foreach=False)
 
 
 def save_portable_checkpoint(
@@ -119,7 +160,7 @@ def train_step_sft(
     optimizer: torch.optim.Optimizer,
     device: torch.device,
     is_tpu: bool,
-    scaler: Optional[torch.cuda.amp.GradScaler] = None
+    scaler: Optional[Any] = None
 ) -> float:
     """Phase 1: Deterministic Supervised Warmup Step (Cross-Entropy)."""
     optimizer.zero_grad()
@@ -134,7 +175,6 @@ def train_step_sft(
 
     # Autocast context for NVIDIA FP16 mixed precision
     with torch.autocast(device_type="cuda", dtype=torch.float16, enabled=use_cuda_amp):
-        # Uses top-level model forward pass (works seamlessly with DataParallel)
         preds = model(chunks.unsqueeze(0), candidate_tokens=cand_tokens)
 
         loss_noul = F.binary_cross_entropy_with_logits(preds["noul_logit"].squeeze(-1), noul_target)
@@ -164,7 +204,7 @@ def train_step_rlvr(
     optimizer: torch.optim.Optimizer,
     device: torch.device,
     is_tpu: bool,
-    scaler: Optional[torch.cuda.amp.GradScaler] = None
+    scaler: Optional[Any] = None
 ) -> Tuple[float, float]:
     """Phase 2: RLVR with GRPO Group Sampling (G=4) and Verifiable Rewards."""
     optimizer.zero_grad()
@@ -179,7 +219,6 @@ def train_step_rlvr(
             cand_tokens = item["choice_candidates"].unsqueeze(0).to(device)
             noul_target = item["noul_label"]
 
-            # Forward pass via model(input_ids, candidate_tokens=...)
             preds = model(chunks.unsqueeze(0), candidate_tokens=cand_tokens)
 
             # Policy distribution (Bernoulli probability for Noul)
@@ -192,7 +231,6 @@ def train_step_rlvr(
             r_total = r_symbolic + r_calib
             rewards.append(r_total)
 
-            # Log prob of the sampled action
             pred_prob_t = preds["noul_prob"].squeeze()
             log_p = torch.log(pred_prob_t if action == 1.0 else (1.0 - pred_prob_t) + 1e-8)
             log_probs.append(log_p)
@@ -230,6 +268,7 @@ def main():
     parser.add_argument("--checkpoint", "--resume", dest="resume", type=str, default=None, help="Path to checkpoint file to resume from")
     parser.add_argument("--checkpoint_every", type=int, default=250, help="Interval (in steps) to save checkpoints")
     parser.add_argument("--lr", type=float, default=None, help="Learning rate (default: 1e-4 for sft, 5e-5 for rlvr)")
+    parser.add_argument("--optimizer", type=str, default="auto", choices=["auto", "adafactor", "adamw8bit", "adamw"], help="Optimizer (auto chooses Adafactor/8-bit Adam on CUDA)")
     parser.add_argument("--no_amp", action="store_true", help="Disable AMP (automatic mixed precision) on CUDA")
     args = parser.parse_args()
 
@@ -243,7 +282,7 @@ def main():
         args.lr = 1e-4 if args.phase == "sft" else 5e-5
 
     # Determine total steps
-    tokens_per_step = args.batch_size * 512 * 4  # batch * chunk_len * max_chunks (≈ 32,768 tokens)
+    tokens_per_step = args.batch_size * 512 * 4  # batch * chunk_len * max_chunks (≈ 8,192 tokens per step at bsz=4)
     if args.steps is not None:
         total_steps = args.steps
     elif args.tokens is not None:
@@ -284,7 +323,8 @@ def main():
             scaler = torch.cuda.amp.GradScaler()
         print("Precision Mode     : FP16 Mixed Precision (AMP Enabled via Tensor Cores)")
 
-    optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr, weight_decay=0.01)
+    # Build memory-efficient optimizer
+    optimizer = build_optimizer(model, lr=args.lr, optimizer_type=args.optimizer, is_tpu=is_tpu)
 
     start_step = 0
     if args.resume:
@@ -292,6 +332,10 @@ def main():
 
     dataset = SyntheticDecisionDataset(phase=args.phase, group_size=4)
     data_iter = iter(dataset)
+
+    # Clean GPU cache before starting loop
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
 
     print("\nStarting training loop...")
     t0 = time.time()
