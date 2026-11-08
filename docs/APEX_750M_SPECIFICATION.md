@@ -126,7 +126,7 @@ At sequence length $L=512$, SwiGLU FFN operations dominate total layer compute:
 #### 512K FLOP Reduction Derivation
 * Dense full-length quadratic attention over 512,000 tokens requires $2 \cdot L^2 \cdot d = 2(512000^2)(1536) \approx 8.05 \times 10^{14}$ attention FLOPs.
 * Apex-748M chunked hierarchical attention processes 1,000 chunks of 512 tokens ($1000 \times 2(512^2)(1536) \approx 8.05 \times 10^{11}$ FLOPs) plus Tier-2 cross-attention over 4,000 memory latents ($2(4000^2)(1536) \approx 4.92 \times 10^{10}$ FLOPs), totaling $8.54 \times 10^{11}$ attention FLOPs — an **$\approx 942\times$ reduction in sequence-dependent attention compute**.
-* When taking into account total layer compute (including the parameter-dense SwiGLU FFN which evaluates all tokens), overall layer compute decreases from $\approx 2.45 \times 10^{15}$ FLOPs down to $\approx 3.95 \times 10^{13}$ FLOPs across 25 layers, delivering an **$\approx 62\times$ end-to-end compute reduction** compared to dense 512K quadratic transformers, while matching the $O(L \cdot d)$ linear complexity of state-space models (Mamba/RWKV) with zero recurrent state drift.
+* When taking into account total layer compute (including the parameter-dense SwiGLU FFN which evaluates all tokens), and assuming the identical 25-layer configuration on both sides, overall compute decreases from $\approx 2.45 \times 10^{15}$ FLOPs down to $\approx 3.95 \times 10^{13}$ FLOPs across the model, delivering an **$\approx 62\times$ end-to-end compute reduction** compared to dense 512K quadratic transformers.
 
 ### 4.2 Dense 512K Execution Math: Streaming Accumulation Path
 To evaluate 512K tokens without OOM or retrieval pruning:
@@ -140,14 +140,16 @@ To evaluate 512K tokens without OOM or retrieval pruning:
   * To evaluate all 1,000 chunks requires $\lceil 1000 / 256 \rceil = \mathbf{4\text{ rounds}}$ across the pod.
   * In a single-core environment, 1,000 chunks evaluated in batches of 32 requires $\lceil 1000 / 32 \rceil = \mathbf{32\text{ rounds}}$.
 
-#### Latency Targets (Warm XLA Execution)
-* Note: First-step execution involves PyTorch-XLA compilation overhead (several seconds).
-* Once XLA compilation graphs are cached, steady-state inference targets:
-  * Modeled theoretical compute floor for micro-batch 32 (based on TPU v3 memory bandwidth of 900 GB/s and matrix unit throughput): $\approx 4.8\text{ ms} - 6.0\text{ ms}$ per round.
-  * Tier 1 (4 rounds $\times$ ~6.0 ms/round on TPU v3-8): $\approx 24\text{ ms}$
-  * Tier 2 Cross-Attention pass over 4,000 latents: $\approx 8\text{ ms}$
-  * Heads + Deterministic Validation: $\approx 3\text{ ms}$
-  * **Warm Steady-State Pod Latency Target:** $\mathbf{\approx 35\text{ ms} - 50\text{ ms}}$.
+#### Rigorous Compute-Bound Latency Accounting
+Evaluating a 512,000-token context through a 746.8M parameter model is strictly compute-bound:
+* Total forward FLOPs: $512,000\text{ tokens} \times 2 \times 746.8 \times 10^6 \approx \mathbf{764.7\text{ TFLOPs}}$.
+* Per-round compute on 8 cores ($16,384\text{ tokens/core}$): $16,384 \times 2 \times 746.8 \times 10^6 \approx 24.47\text{ TFLOPs/core}$.
+* At sustained hardware throughput ($18.375\text{ TFLOPs/core}$ sustained on TPU v3-8 at 35% MFU):
+  * **Per-round wall-clock execution:** $24.47 / 18.375 \approx \mathbf{1.33\text{ seconds/round}}$.
+  * **Full dense 512K document evaluation (4 rounds):** $4 \times 1.33\text{s} \approx \mathbf{5.2\text{ - }5.3\text{ seconds}}$ on a TPU v3-8 pod ($\mathbf{\approx 1.8\text{ seconds}}$ at theoretical 100% peak 420 TFLOPs).
+  * **On a TPU v3-32 pod slice ($588\text{ TFLOPs}$ sustained):** $764.7 / 588 \approx \mathbf{1.30\text{ seconds}}$ per full 512K document pass.
+* **Interactive Local Chunk / Short Query Latency:**
+  * For local chunk reasoning or short queries ($512 - 2,048$ tokens), compute is only $0.76 - 3.06\text{ TFLOPs}$, yielding an interactive response latency of **$\mathbf{\approx 5.2\text{ ms} - 25\text{ ms}}$**.
 
 ---
 
@@ -170,8 +172,8 @@ $$\hat{p} = \sigma\left(\frac{z_{\text{noul}}}{T_{\text{noul}}}\right), \quad \t
 To ensure calibration across varying candidate set sizes without subset distortion:
 * **Candidate Representation ($c_i$):** Each candidate option $i \in \{1, \dots, K\}$ has a text string $x_i^{\text{cand}}$. Its tokens are passed through the shared token embedding layer, mean-pooled to vector $e_i \in \mathbb{R}^d$, and linearly projected:
   $$c_i = W_{\text{cand}} e_i \in \mathbb{R}^d, \quad W_{\text{cand}} \in \mathbb{R}^{d \times d} \quad (2,359,296\text{ params})$$
-* **Single-Scaled Logits:** Logits are scaled by temperature $\tau$ (initialized to $\sqrt{d}$):
-  $$s_i = \frac{h_{\text{out}} \cdot c_i}{\tau}$$
+* **Single-Scaled Logits:** Logits are scaled by temperature $\tau_{\text{choice}}$ (initialized to $\sqrt{d}$):
+  $$s_i = \frac{h_{\text{out}} \cdot c_i}{\tau_{\text{choice}}}$$
 * **Probability Distribution:** Normalized across all $K$ candidates via full softmax:
   $$p_i = \frac{\exp(s_i)}{\sum_{j=1}^K \exp(s_j)}$$
   This maintains calibrated, comparable probabilities for any candidate count $K \in [2, 255]$.
@@ -334,7 +336,7 @@ flowchart TD
 To prevent policy collapse from random initialization on 750M heads, training proceeds in two disciplined phases:
 
 #### Phase 1: Deterministic Supervised Warmup (SFT Seed)
-* **Token Budget:** 300M–500M tokens.
+* **Token Budget:** 300M–2.0B tokens (500M tokens for prototype seed, up to 2.0B tokens for full foundation run).
 * **Objective:** Standard Cross-Entropy trained directly on synthetically generated, 100% verified ground-truth data (AST-solved balance sheets, programmatic legal contracts, entity relation anchors).
 * **Zero Teacher LLM:** Ground-truth labels are generated programmatically by deterministic code compilers and arithmetic oracles, not LLMs.
 * **Role:** Establishes stable syntactic representations, initializes positional RoPE baselines, and freezes into the reference policy $\pi_{\text{ref}}$ to anchor the KL penalty during RLVR.
@@ -369,8 +371,8 @@ $$R = R_{\text{symbolic}} + R_{\text{invariance}} + R_{\text{calibration}}$$
 | **$R_{\text{calibration}}$ (Honest Confidence)** | Penalizes overconfident errors via strictly proper scoring (Brier penalty): $-(\hat{p} - \mathbb{I}(\text{correct}))^2$. | **$0.0 \to -1.0$** (Continuous) |
 
 #### Optimization vs. Post-Hoc Calibration Disambiguation
-* **During RLVR Training:** Temperatures are held fixed ($T_{\text{noul}} = 1.0, \tau = \sqrt{d}$). The Brier reward $R_{\text{calibration}}$ shapes the raw weight projections and logit margins directly inside $\pi_\theta$.
-* **Post-Hoc Verification & Deployment Gating:** After RLVR converges, all model weights $\theta$ are frozen. Scalar temperature scaling is fitted on a held-out validation split ($N \ge 10,000$ samples) solely to minimize residual global logit variance. **No post-hoc method guarantees out-of-distribution calibration.** Therefore, Expected Calibration Error (ECE) is reported across 10 uniform confidence bins on out-of-distribution evaluation sets, and automated deployment gating requires validation ECE $\le 0.03$ and selective prediction abstention when model uncertainty exceeds threshold $\tau_{\text{abstain}}$.
+* **During RLVR Training:** Temperatures are held fixed ($T_{\text{noul}} = 1.0, \tau_{\text{choice}} = \sqrt{d}$). The Brier reward $R_{\text{calibration}}$ shapes the raw weight projections and logit margins directly inside $\pi_\theta$.
+* **Post-Hoc Verification & Deployment Gating:** After RLVR converges, all model weights $\theta$ are frozen. Scalar temperature scaling is fitted on a held-out validation split ($N \ge 10,000$ samples) solely to minimize residual global logit variance. **No post-hoc method guarantees out-of-distribution calibration.** Therefore, Expected Calibration Error (ECE) is reported across 10 uniform confidence bins on out-of-distribution evaluation sets, and automated deployment gating requires validation ECE $\le 0.03$ and selective prediction abstention when model uncertainty exceeds threshold $\theta_{\text{abstain}}$.
 
 ### 7.5 Training Economics & Resumable Schedule (Accounting for GRPO Multiplier)
 
@@ -395,7 +397,7 @@ Standard supervised training requires $6N$ FLOPs per token ($2N$ forward $+ 4N$ 
 | Tier | Token Volume & Phase Breakdown | Compute Target | Use Case |
 | :--- | :--- | :--- | :--- |
 | **Tier 1: Colab RLVR Prototype** | **1.5 Billion Tokens Total**<br>• Phase 1: 500M SFT warmup tokens ($2.24\text{ exaFLOPs}$)<br>• Phase 2: 1.0B GRPO tokens ($19.42\text{ exaFLOPs}$, 26N cached)<br>• **Total: $21.66\text{ exaFLOPs}$** | **~40.9 hours on TPU v3-8**<br>(147 TFLOPs sustained at 35% MFU; resumable across 6–7 Colab Pro sessions via verified Google Drive checkpointing) | Verifies SFT warmup convergence, GRPO advantage stability with $G=4$, AST math oracle rewards, 512K context memory retention, and zero-token decision accuracy. |
-| **Tier 2: Production RLVR Foundation Run** | **10.0 Billion Tokens Total**<br>• Phase 1: 2.0B SFT warmup tokens ($8.96\text{ exaFLOPs}$)<br>• Phase 2: 8.0B GRPO tokens ($155.38\text{ exaFLOPs}$, 26N cached)<br>• **Total: $164.34\text{ exaFLOPs}$** | **~3.2 days on TPU v3-32 pod**<br>(4 hosts / 32 cores, 1,411 TFLOPs sustained at 35% MFU; or ~12.9 days on a dedicated single Cloud TPU v3-8 instance at 147 TFLOPs sustained) | Full from-scratch convergence reaching superhuman decision accuracy, proven mathematical robustness, and enterprise ECE deployment gating. |
+| **Tier 2: Production RLVR Foundation Run** | **10.0 Billion Tokens Total**<br>• Phase 1: 2.0B SFT warmup tokens ($8.96\text{ exaFLOPs}$)<br>• Phase 2: 8.0B GRPO tokens ($155.38\text{ exaFLOPs}$, 26N cached)<br>• **Total: $164.34\text{ exaFLOPs}$** | **~3.2 days on TPU v3-32 pod**<br>(4 hosts / 32 cores, 588 TFLOPs sustained at 35% MFU; or ~12.9 days on a dedicated single Cloud TPU v3-8 instance at 147 TFLOPs sustained) | Full from-scratch convergence reaching superhuman decision accuracy, proven mathematical robustness, and enterprise ECE deployment gating. |
 
 #### Empirical Evaluation Harness (JEV/CLEF Protocol)
 To evaluate the model objectively without unsubstantiated claims:
