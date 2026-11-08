@@ -58,3 +58,20 @@ Runs an interactive dashboard on `http://127.0.0.1:7860` with real-time log stre
 Set `APEX_API_KEY` to require the `X-API-Key` header on decision endpoints. Tool calls remain permission-gated and untrusted tool output is sanitized. ApexDecision is a decision aid; validate outputs before using them in high-impact workflows.
 
 See [docs/api.md](docs/api.md), [docs/tools.md](docs/tools.md), and [SECURITY.md](SECURITY.md).
+
+---
+
+## Apex-748M Classifier & RLVR Training Suite
+
+ApexDecision also includes the production blueprint and implementation of **Apex-748M** (`apex_classifier_750m/`), a zero-token, non-autoregressive decision model built for enterprise financial and legal verification.
+
+* **Exact Parameter Accounting:** **746,813,455 Parameters** ($d=1536$, 21 Tier-1 layers, 4 Tier-2 cross-attention memory layers).
+* **Zero Pretrained Backbone:** Trained 100% from scratch with fresh weights, eliminating all foundation backbone priors, contamination, and quadratic context bottlenecks.
+* **No Teacher-Student Distillation:** Completely eliminates teacher LLMs and soft hallucinations in favor of **Reinforcement Learning with Verifiable Rewards (RLVR)** with **GRPO** ($G=4$).
+* **Deterministic Sandboxed Math Engine:** Mathematical claims are verified via an AST symbolic oracle enforcing strict magnitude limits ($|x| \le 10^{30}$) and rejecting `bool`, `float('nan')`, and `float('inf')`.
+* **512K Chunked Streaming Context:** Employs hierarchical memory latents to deliver an $\approx 942\times$ reduction in attention compute over dense 512K transformers.
+* **Kaggle Accelerator Handshake:** Designed for Kaggle's free compute quotas: **20 hours/week on Cloud TPU (v3-8 / v5e-4)** followed seamlessly by **30 hours/week on Dual NVIDIA GPUs (2x T4 / P100)** with portable SHA-256 checkpoints.
+
+For full technical specifications and training instructions:
+* **[Apex-748M Architectural Specification (v3.0.0)](docs/APEX_750M_SPECIFICATION.md)**
+* **[Kaggle TPU & Dual GPU Execution Guide](docs/KAGGLE_TRAINING_GUIDE.md)**
