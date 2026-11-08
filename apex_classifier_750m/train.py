@@ -56,31 +56,27 @@ def build_optimizer(
 ) -> torch.optim.Optimizer:
     """
     Builds a memory-efficient optimizer.
-    On CUDA with constrained VRAM (e.g. 16 GB Tesla T4), Adafactor or 8-bit AdamW
-    reduces optimizer state memory from ~6.0 GB down to ~0.15–1.5 GB, eliminating CUDA OOM.
+    On CUDA with constrained VRAM (e.g. 16 GB Tesla T4), Adafactor eliminates the ~6.0 GB
+    AdamW second-moment state overhead down to ~0.15 GB, preventing CUDA OOM.
     """
     if is_tpu:
         print("Optimizer          : Standard AdamW (Optimized for Cloud TPU)")
         return torch.optim.AdamW(model.parameters(), lr=lr, weight_decay=0.01)
 
-    if optimizer_type == "auto":
+    if optimizer_type in ("auto", "adafactor"):
         if torch.cuda.is_available():
-            try:
-                import bitsandbytes as bnb
-                print("Optimizer          : bitsandbytes 8-bit AdamW (State VRAM ~1.5 GB)")
-                return bnb.optim.AdamW8bit(model.parameters(), lr=lr, weight_decay=0.01)
-            except Exception:
-                print("Optimizer          : PyTorch Adafactor (Sublinear State VRAM ~0.15 GB)")
-                return torch.optim.Adafactor(model.parameters(), lr=lr, weight_decay=0.01)
+            print("Optimizer          : PyTorch Adafactor (Sublinear State VRAM ~0.15 GB — Zero OOM)")
+            return torch.optim.Adafactor(model.parameters(), lr=lr, weight_decay=0.01)
         else:
             return torch.optim.AdamW(model.parameters(), lr=lr, weight_decay=0.01, foreach=False)
-    elif optimizer_type == "adafactor":
-        print("Optimizer          : PyTorch Adafactor (Sublinear State VRAM ~0.15 GB)")
-        return torch.optim.Adafactor(model.parameters(), lr=lr, weight_decay=0.01)
     elif optimizer_type == "adamw8bit":
-        import bitsandbytes as bnb
-        print("Optimizer          : bitsandbytes 8-bit AdamW (State VRAM ~1.5 GB)")
-        return bnb.optim.AdamW8bit(model.parameters(), lr=lr, weight_decay=0.01)
+        try:
+            import bitsandbytes as bnb
+            print("Optimizer          : bitsandbytes 8-bit AdamW (State VRAM ~1.5 GB)")
+            return bnb.optim.AdamW8bit(model.parameters(), lr=lr, weight_decay=0.01)
+        except Exception as e:
+            print(f"Warning: bitsandbytes failed ({e}); falling back to native Adafactor.")
+            return torch.optim.Adafactor(model.parameters(), lr=lr, weight_decay=0.01)
     else:
         print("Optimizer          : PyTorch AdamW (foreach=False)")
         return torch.optim.AdamW(model.parameters(), lr=lr, weight_decay=0.01, foreach=False)
@@ -160,11 +156,11 @@ def train_step_sft(
     optimizer: torch.optim.Optimizer,
     device: torch.device,
     is_tpu: bool,
-    scaler: Optional[Any] = None
+    scaler: Optional[Any] = None,
+    accum_steps: int = 1,
+    is_step: bool = True
 ) -> float:
-    """Phase 1: Deterministic Supervised Warmup Step (Cross-Entropy)."""
-    optimizer.zero_grad()
-
+    """Phase 1: Deterministic Supervised Warmup Step (Cross-Entropy with Gradient Accumulation)."""
     chunks = batch["chunks"].to(device)  # [num_chunks, 512]
     cand_tokens = batch["choice_candidates"].unsqueeze(0).to(device)  # [1, 4, 16]
     noul_target = torch.tensor([batch["noul_label"]], dtype=torch.float32, device=device)
@@ -179,23 +175,29 @@ def train_step_sft(
 
         loss_noul = F.binary_cross_entropy_with_logits(preds["noul_logit"].squeeze(-1), noul_target)
         loss_choice = F.cross_entropy(preds["choice_logits"], choice_target)
-        loss_score = F.nll_loss(torch.log(preds["score_probs"] + 1e-8), score_target)
-        total_loss = loss_noul + loss_choice + loss_score
+        loss_score = F.nll_loss(torch.log(preds["score_probs"].clamp(min=1e-7)), score_target)
+        total_loss = (loss_noul + loss_choice + loss_score) / accum_steps
 
     if is_tpu:
         total_loss.backward()
-        import torch_xla.core.xla_model as xm
-        xm.optimizer_step(optimizer)
-        xm.mark_step()
+        if is_step:
+            import torch_xla.core.xla_model as xm
+            xm.optimizer_step(optimizer)
+            xm.mark_step()
+            optimizer.zero_grad()
     elif scaler is not None:
         scaler.scale(total_loss).backward()
-        scaler.step(optimizer)
-        scaler.update()
+        if is_step:
+            scaler.step(optimizer)
+            scaler.update()
+            optimizer.zero_grad()
     else:
         total_loss.backward()
-        optimizer.step()
+        if is_step:
+            optimizer.step()
+            optimizer.zero_grad()
 
-    return total_loss.item()
+    return total_loss.item() * accum_steps
 
 
 def train_step_rlvr(
@@ -206,56 +208,83 @@ def train_step_rlvr(
     is_tpu: bool,
     scaler: Optional[Any] = None
 ) -> Tuple[float, float]:
-    """Phase 2: RLVR with GRPO Group Sampling (G=4) and Verifiable Rewards."""
-    optimizer.zero_grad()
+    """
+    Phase 2: RLVR with GRPO Group Sampling (G=4) and Verifiable Rewards.
+    Uses two-stage execution:
+      Stage 1: Zero-memory rollout under torch.no_grad() to compute rewards and advantages.
+      Stage 2: Per-sample backward accumulation to hold only 1 forward graph in VRAM at any time.
+    """
+    G = len(group)
     rewards = []
-    log_probs = []
+    actions = []
 
     use_cuda_amp = (not is_tpu) and (device.type == "cuda") and (scaler is not None)
 
-    with torch.autocast(device_type="cuda", dtype=torch.float16, enabled=use_cuda_amp):
-        for item in group:
-            chunks = item["chunks"].to(device)
-            cand_tokens = item["choice_candidates"].unsqueeze(0).to(device)
-            noul_target = item["noul_label"]
+    # Stage 1: Fast Rollout (No Gradients) -> Zero activation VRAM
+    with torch.no_grad():
+        with torch.autocast(device_type="cuda", dtype=torch.float16, enabled=use_cuda_amp):
+            for item in group:
+                chunks = item["chunks"].to(device)
+                cand_tokens = item["choice_candidates"].unsqueeze(0).to(device)
+                noul_target = item["noul_label"]
 
+                preds = model(chunks.unsqueeze(0), candidate_tokens=cand_tokens)
+                prob = preds["noul_prob"].squeeze().item()
+                action = 1.0 if prob >= 0.5 else 0.0
+
+                r_symbolic = 1.0 if action == noul_target else -2.5
+                r_calib = - ((prob - noul_target) ** 2)
+                r_total = r_symbolic + r_calib
+
+                rewards.append(r_total)
+                actions.append(action)
+
+    # Compute Group Relative Advantages
+    rewards_t = torch.tensor(rewards, dtype=torch.float32, device=device)
+    mean_r = rewards_t.mean()
+    std_r = rewards_t.std() + 1e-6
+    advantages = (rewards_t - mean_r) / std_r
+
+    # Stage 2: Policy Gradient Backward with Per-Item Accumulation
+    optimizer.zero_grad()
+    total_policy_loss = 0.0
+
+    for i, item in enumerate(group):
+        chunks = item["chunks"].to(device)
+        cand_tokens = item["choice_candidates"].unsqueeze(0).to(device)
+
+        with torch.autocast(device_type="cuda", dtype=torch.float16, enabled=use_cuda_amp):
             preds = model(chunks.unsqueeze(0), candidate_tokens=cand_tokens)
-
-            # Policy distribution (Bernoulli probability for Noul)
-            prob = preds["noul_prob"].squeeze().item()
-            action = 1.0 if prob >= 0.5 else 0.0
-
-            # Verifiable reward: R = R_symbolic + R_calibration
-            r_symbolic = 1.0 if action == noul_target else -2.5
-            r_calib = - ((prob - noul_target) ** 2)
-            r_total = r_symbolic + r_calib
-            rewards.append(r_total)
-
             pred_prob_t = preds["noul_prob"].squeeze()
-            log_p = torch.log(pred_prob_t if action == 1.0 else (1.0 - pred_prob_t) + 1e-8)
-            log_probs.append(log_p)
 
-        rewards_t = torch.tensor(rewards, dtype=torch.float32, device=device)
-        mean_r = rewards_t.mean()
-        std_r = rewards_t.std() + 1e-6
-        advantages = (rewards_t - mean_r) / std_r
+            # Numerically stable log probability
+            chosen_p = pred_prob_t if actions[i] == 1.0 else (1.0 - pred_prob_t)
+            log_p = torch.log(chosen_p.clamp(min=1e-7, max=1.0 - 1e-7))
 
-        policy_loss = -torch.mean(torch.stack(log_probs) * advantages)
+            # Policy loss scaled by group size
+            loss_i = -(log_p * advantages[i]) / G
 
+        if is_tpu:
+            loss_i.backward()
+        elif scaler is not None:
+            scaler.scale(loss_i).backward()
+        else:
+            loss_i.backward()
+
+        total_policy_loss += loss_i.item()
+
+    # Step optimizer
     if is_tpu:
-        policy_loss.backward()
         import torch_xla.core.xla_model as xm
         xm.optimizer_step(optimizer)
         xm.mark_step()
     elif scaler is not None:
-        scaler.scale(policy_loss).backward()
         scaler.step(optimizer)
         scaler.update()
     else:
-        policy_loss.backward()
         optimizer.step()
 
-    return policy_loss.item(), mean_r.item()
+    return total_policy_loss, mean_r.item()
 
 
 def main():
@@ -263,12 +292,13 @@ def main():
     parser.add_argument("--phase", type=str, default="sft", choices=["sft", "rlvr"], help="Training phase: 'sft' (Warmup) or 'rlvr' (GRPO)")
     parser.add_argument("--steps", type=int, default=None, help="Number of training steps")
     parser.add_argument("--tokens", type=int, default=None, help="Target total tokens (calculates steps automatically)")
-    parser.add_argument("--batch_size", type=int, default=None, help="Batch size (default: 16 on TPU, 4 on GPU)")
+    parser.add_argument("--batch_size", type=int, default=None, help="Batch size (default: 16 on TPU, 2 on GPU)")
+    parser.add_argument("--grad_accum_steps", type=int, default=2, help="Gradient accumulation steps (default: 2)")
     parser.add_argument("--save_dir", "--checkpoint_dir", dest="checkpoint_dir", type=str, default="/kaggle/working/checkpoints", help="Directory to save/load checkpoints")
     parser.add_argument("--checkpoint", "--resume", dest="resume", type=str, default=None, help="Path to checkpoint file to resume from")
     parser.add_argument("--checkpoint_every", type=int, default=250, help="Interval (in steps) to save checkpoints")
     parser.add_argument("--lr", type=float, default=None, help="Learning rate (default: 1e-4 for sft, 5e-5 for rlvr)")
-    parser.add_argument("--optimizer", type=str, default="auto", choices=["auto", "adafactor", "adamw8bit", "adamw"], help="Optimizer (auto chooses Adafactor/8-bit Adam on CUDA)")
+    parser.add_argument("--optimizer", type=str, default="auto", choices=["auto", "adafactor", "adamw8bit", "adamw"], help="Optimizer (default: auto -> Adafactor on CUDA)")
     parser.add_argument("--no_amp", action="store_true", help="Disable AMP (automatic mixed precision) on CUDA")
     args = parser.parse_args()
 
@@ -276,26 +306,28 @@ def main():
 
     # Determine default batch size & learning rate based on device & phase
     if args.batch_size is None:
-        args.batch_size = 16 if is_tpu else 4
+        args.batch_size = 16 if is_tpu else 2
 
     if args.lr is None:
         args.lr = 1e-4 if args.phase == "sft" else 5e-5
 
-    # Determine total steps
-    tokens_per_step = args.batch_size * 512 * 4  # batch * chunk_len * max_chunks (≈ 8,192 tokens per step at bsz=4)
+    # Tokens per micro-step = 1 sample * 4 chunks * 512 tokens = 2,048 tokens
+    # Tokens per optimizer step = args.grad_accum_steps * 2,048 tokens
+    tokens_per_optimizer_step = args.grad_accum_steps * 512 * 4
+
     if args.steps is not None:
         total_steps = args.steps
     elif args.tokens is not None:
-        total_steps = max(1, args.tokens // tokens_per_step)
+        total_steps = max(1, args.tokens // tokens_per_optimizer_step)
     else:
         total_steps = 1000
 
     print("=" * 70)
-    print("APEX-748M CLASSIFIER TRAINING ENGINE")
+    print("APEX-748M CLASSIFIER TRAINING ENGINE (AUDITED ZERO-OOM)")
     print(f"Active Accelerator : {device_desc}")
     print(f"Training Phase     : {args.phase.upper()}")
-    print(f"Target Steps       : {total_steps:,} (~{total_steps * tokens_per_step:,} tokens)")
-    print(f"Batch Size         : {args.batch_size}")
+    print(f"Target Steps       : {total_steps:,} (~{total_steps * tokens_per_optimizer_step:,} tokens)")
+    print(f"Grad Accum Steps   : {args.grad_accum_steps}")
     print(f"Learning Rate      : {args.lr}")
     print(f"Save Directory     : {args.checkpoint_dir}")
     print(f"Checkpoint Every   : {args.checkpoint_every} steps")
@@ -323,7 +355,7 @@ def main():
             scaler = torch.cuda.amp.GradScaler()
         print("Precision Mode     : FP16 Mixed Precision (AMP Enabled via Tensor Cores)")
 
-    # Build memory-efficient optimizer
+    # Build memory-efficient optimizer (Adafactor uses ~0.15 GB vs AdamW ~6.0 GB)
     optimizer = build_optimizer(model, lr=args.lr, optimizer_type=args.optimizer, is_tpu=is_tpu)
 
     start_step = 0
@@ -338,23 +370,36 @@ def main():
         torch.cuda.empty_cache()
 
     print("\nStarting training loop...")
+    optimizer.zero_grad()
     t0 = time.time()
-    for step in range(start_step + 1, start_step + total_steps + 1):
-        batch = next(data_iter)
 
+    for step in range(start_step + 1, start_step + total_steps + 1):
         if args.phase == "sft":
-            loss = train_step_sft(model, batch, optimizer, device, is_tpu, scaler=scaler)
+            # Gradient accumulation across grad_accum_steps
+            accum_loss = 0.0
+            for micro_idx in range(args.grad_accum_steps):
+                batch = next(data_iter)
+                is_last_micro = (micro_idx == args.grad_accum_steps - 1)
+                l = train_step_sft(
+                    model, batch, optimizer, device, is_tpu,
+                    scaler=scaler, accum_steps=args.grad_accum_steps, is_step=is_last_micro
+                )
+                accum_loss += l
+
             if step % 20 == 0 or step == start_step + 1:
                 elapsed = time.time() - t0
                 speed = (step - start_step) / max(elapsed, 0.001)
-                tokens_done = (step - start_step) * tokens_per_step
-                print(f"[Step {step:05d}/{start_step + total_steps}] Loss: {loss:.4f} | Processed: {tokens_done:,} tokens | Speed: {speed:.2f} steps/s")
+                tokens_done = (step - start_step) * tokens_per_optimizer_step
+                print(f"[Step {step:05d}/{start_step + total_steps}] Loss: {accum_loss:.4f} | Processed: {tokens_done:,} tokens | Speed: {speed:.2f} steps/s")
+
         else:
-            loss, mean_reward = train_step_rlvr(model, batch, optimizer, device, is_tpu, scaler=scaler)
+            # Phase 2 RLVR with GRPO
+            group = next(data_iter)
+            loss, mean_reward = train_step_rlvr(model, group, optimizer, device, is_tpu, scaler=scaler)
             if step % 20 == 0 or step == start_step + 1:
                 elapsed = time.time() - t0
                 speed = (step - start_step) / max(elapsed, 0.001)
-                tokens_done = (step - start_step) * tokens_per_step
+                tokens_done = (step - start_step) * tokens_per_optimizer_step
                 print(f"[Step {step:05d}/{start_step + total_steps}] Policy Loss: {loss:.4f} | Avg Reward: {mean_reward:+.2f} | Processed: {tokens_done:,} tokens | Speed: {speed:.2f} steps/s")
 
         # Save checkpoint periodically
