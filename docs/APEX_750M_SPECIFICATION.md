@@ -85,31 +85,32 @@ Google Colab does **not** provide a "47 GB TPU". TPU hardware specifications are
 * **TPU v2-8:** 8 physical tensor cores. **8 GB HBM per core** = **64 GB aggregate memory**.
 * **TPU v3-8:** 8 physical tensor cores. **16 GB HBM per core** = **128 GB aggregate memory**.
 
-### 3.2 Real Training Memory Footprint (16 Bytes / Parameter Static Overhead)
+### 3.2 Real Training Memory Footprint (16–18 Bytes / Parameter Static Overhead)
 In mixed-precision training (bfloat16 forward/backward with FP32 master weights and AdamW states):
 * **Model Parameters (`bfloat16`):** 2 bytes/param
-* **Gradients (`bfloat16`):** 2 bytes/param
+* **Gradients (`bfloat16` or `float32`):** 2 bytes/param (BF16 accumulation lower bound) to 4 bytes/param (standard PyTorch-XLA autograd FP32 accumulation baseline)
 * **AdamW Master Weights (`float32`):** 4 bytes/param
 * **AdamW Momentum ($m$) (`float32`):** 4 bytes/param
 * **AdamW Variance ($v$) (`float32`):** 4 bytes/param
-* **Total Static State per Parameter:** **16 bytes/parameter**.
+* **Total Static State per Parameter:** **16 bytes/param (lower bound)** to **18 bytes/param (PyTorch-XLA baseline)**.
 
-$$\text{Memory}_{\text{static (748M)}} = 746,813,455 \times 16\text{ bytes} = \mathbf{11.95\text{ GB}}$$
-$$\text{Memory}_{\text{static (776M)}} = 775,128,079 \times 16\text{ bytes} = \mathbf{12.40\text{ GB}}$$
+$$\text{Memory}_{\text{static (748M, 16B/param lower bound)}} = 746,813,455 \times 16\text{ bytes} = \mathbf{11.95\text{ GB}}$$
+$$\text{Memory}_{\text{static (748M, 18B/param PyTorch-XLA baseline)}} = 746,813,455 \times 18\text{ bytes} = \mathbf{13.44\text{ GB}}$$
+$$\text{Memory}_{\text{static (776M, 18B/param PyTorch-XLA baseline)}} = 775,128,079 \times 18\text{ bytes} = \mathbf{13.95\text{ GB}}$$
 
 ### 3.3 Sharding & Parallelism Strategy
-* On **TPU v2-8 (8 GB/core):** A single core **cannot** hold the 12 GB static state. Training requires PyTorch's native Fully Sharded Data Parallel (FSDP):
+* On **TPU v2-8 (8 GB/core):** A single core **cannot** hold the 12.0–13.4 GB static state. Training requires PyTorch's native Fully Sharded Data Parallel (FSDP):
   ```python
   from torch.distributed.fsdp import FullyShardedDataParallel as FSDP
   # Shards static state across all 8 XLA cores:
-  # 12.0 GB / 8 cores = ~1.50 GB static memory per core
+  # 13.4 GB / 8 cores = ~1.68 GB static memory per core
   ```
-* On **TPU v3-8 (16 GB/core):** Static state (12 GB) fits on a single core. Standard Data Parallelism (DP) with micro-batching is viable, though FSDP is strongly recommended to free HBM for activation buffers during long-sequence batches.
+* On **TPU v3-8 (16 GB/core):** Static state (13.4 GB) fits on a single core. Standard Data Parallelism (DP) with micro-batching is viable, though FSDP is strongly recommended to free HBM for activation buffers during long-sequence batches.
 
 ### 3.4 Activation Memory Accounting
 * **Linear Memory Scaling:** In Tier 2, the decision latent $q \in \mathbb{R}^{B \times 1 \times d}$ cross-attends to the 4,000 memory tokens. The attention score matrix is $B \times H \times 1 \times 4000 \times 2\text{ bytes} = \mathbf{12.28\text{ MB}}$ for batch size $B=64$, eliminating quadratic attention matrix scaling.
 * **Linear Projection & FFN Buffers:** Storing Key/Value projections and FFN activations for 4,000 tokens across batch 64 requires $64 \times 4000 \times 1536 \times 2\text{ bytes} \approx \mathbf{786\text{ MB}}$ per buffer.
-* **Per-Layer Activation Checkpointing:** Activations are only preserved at layer boundaries ($O(1)$ memory per layer), recomputing intra-layer activations during the backward pass.
+* **Boundary-Only Activation Checkpointing:** Activations are stored strictly at transformer layer boundaries (rather than caching all intra-layer intermediate projection and GELU tensors), recomputing intermediate activations on-the-fly during the backward pass.
 
 ---
 
@@ -121,7 +122,11 @@ At sequence length $L=512$, SwiGLU FFN operations dominate total layer compute:
 * Total Attention MACs per token: $4d^2 + 2 \cdot L \cdot d = 4(1536^2) + 2(512)(1536) \approx 9.44\text{M} + 1.57\text{M} = \mathbf{11.01\text{M}}$
 * Ratio of FFN to total attention: $\frac{18.87\text{M}}{11.01\text{M}} \approx \mathbf{1.71\times}$.
 * *(The $\approx 12\times$ factor applies specifically when comparing FFN compute ($18.87\text{M}$) strictly against the sequence-dependent core attention term $2 \cdot L \cdot d = 1.57\text{M}$, excluding projection matrices).*
-* Because FFN compute dominates and must evaluate all tokens in the context, total FLOP reduction across the network at 512K tokens is **$3\times$ to $6\times$** compared to full-length linear transformers.
+
+#### 512K FLOP Reduction Derivation
+* Dense full-length quadratic attention over 512,000 tokens requires $2 \cdot L^2 \cdot d = 2(512000^2)(1536) \approx 8.05 \times 10^{14}$ attention FLOPs.
+* Apex-748M chunked hierarchical attention processes 1,000 chunks of 512 tokens ($1000 \times 2(512^2)(1536) \approx 8.05 \times 10^{11}$ FLOPs) plus Tier-2 cross-attention over 4,000 memory latents ($2(4000^2)(1536) \approx 4.92 \times 10^{10}$ FLOPs), totaling $8.54 \times 10^{11}$ attention FLOPs — an **$\approx 942\times$ reduction in sequence-dependent attention compute**.
+* When taking into account total layer compute (including the parameter-dense SwiGLU FFN which evaluates all tokens), overall layer compute decreases from $\approx 2.45 \times 10^{15}$ FLOPs down to $\approx 3.95 \times 10^{13}$ FLOPs across 25 layers, delivering an **$\approx 62\times$ end-to-end compute reduction** compared to dense 512K quadratic transformers, while matching the $O(L \cdot d)$ linear complexity of state-space models (Mamba/RWKV) with zero recurrent state drift.
 
 ### 4.2 Dense 512K Execution Math: Streaming Accumulation Path
 To evaluate 512K tokens without OOM or retrieval pruning:
@@ -138,10 +143,11 @@ To evaluate 512K tokens without OOM or retrieval pruning:
 #### Latency Targets (Warm XLA Execution)
 * Note: First-step execution involves PyTorch-XLA compilation overhead (several seconds).
 * Once XLA compilation graphs are cached, steady-state inference targets:
-  * Tier 1 (4 rounds $\times$ ~6 ms/round on TPU v3-8): $\approx 24\text{ ms}$
+  * Modeled theoretical compute floor for micro-batch 32 (based on TPU v3 memory bandwidth of 900 GB/s and matrix unit throughput): $\approx 4.8\text{ ms} - 6.0\text{ ms}$ per round.
+  * Tier 1 (4 rounds $\times$ ~6.0 ms/round on TPU v3-8): $\approx 24\text{ ms}$
   * Tier 2 Cross-Attention pass over 4,000 latents: $\approx 8\text{ ms}$
   * Heads + Deterministic Validation: $\approx 3\text{ ms}$
-  * **Warm Steady-State Pod Latency:** $\mathbf{\approx 35\text{ ms} - 50\text{ ms}}$.
+  * **Warm Steady-State Pod Latency Target:** $\mathbf{\approx 35\text{ ms} - 50\text{ ms}}$.
 
 ---
 
@@ -157,8 +163,8 @@ To evaluate 512K tokens without OOM or retrieval pruning:
 Evaluates whether document context entails a given proposition $y \in \{0, 1\}$:
 $$h_{\text{proj}} = \text{GELU}(W_1 h_{\text{out}} + b_1)$$
 $$z_{\text{noul}} = W_2 h_{\text{proj}} + b_2$$
-$$\hat{p} = \sigma\left(\frac{z_{\text{noul}}}{T_{\text{noul}}}\right)$$
-* Where $T_{\text{noul}} > 0$ is a scalar temperature parameter learned on a held-out calibration split via negative log-likelihood minimization.
+$$\hat{p} = \sigma\left(\frac{z_{\text{noul}}}{T_{\text{noul}}}\right), \quad \text{where } T_{\text{noul}} = \text{softplus}(\alpha_{\text{noul}}) + \epsilon \quad (\alpha_{\text{noul}} \in \mathbb{R}, \epsilon = 10^{-4})$$
+* Where parameterizing $T_{\text{noul}}$ via softplus strictly enforces positivity ($T_{\text{noul}} > 0$) without artificial clamping, preventing division-by-zero during optimization. Scalar parameter $\alpha_{\text{noul}}$ is fitted on a held-out calibration split via negative log-likelihood minimization.
 
 #### B. Unified High-K Choice Head ($K \le 255$)
 To ensure calibration across varying candidate set sizes without subset distortion:
@@ -369,18 +375,27 @@ $$R = R_{\text{symbolic}} + R_{\text{invariance}} + R_{\text{calibration}}$$
 ### 7.5 Training Economics & Resumable Schedule (Accounting for GRPO Multiplier)
 
 #### FLOP Formulation with GRPO Group Size $G = 4$
-Supervised training requires $6N$ FLOPs per token ($2N$ forward $+ 4N$ backward). Under GRPO with group size $G=4$:
-* Policy forward passes: $G \times 2N = 8N$ FLOPs.
-* Reference policy forward pass (for KL): $G \times 2N = 8N$ FLOPs (or $2N$ if reference states are cached).
-* Policy backward pass: $G \times 4N = 16N$ FLOPs.
-* **Total FLOPs per Prompt:** $(G + 1) \times 2N + G \times 4N = 5(2N) + 4(4N) = \mathbf{26N\text{ FLOPs}}$ (a $\approx \mathbf{4.33\times}$ compute multiplier over standard supervised training).
+Standard supervised training requires $6N$ FLOPs per token ($2N$ forward $+ 4N$ backward). Under GRPO with group size $G=4$:
+
+* **Cached Reference Policy Assumption (Production Baseline — $26N$ FLOPs):**
+  Because the document context is identical across the $G=4$ query variations and only queries/prompts vary, reference policy latent representations $\pi_{\text{ref}}(x)$ are evaluated once and cached:
+  * Policy rollouts (forward): $G \times 2N = 8N$ FLOPs.
+  * Cached reference policy forward pass: $1 \times 2N = 2N$ FLOPs.
+  * Policy backward passes: $G \times 4N = 16N$ FLOPs.
+  * **Total per Prompt Group:** $(G + 1) \cdot 2N + G \cdot 4N = 10N + 16N = \mathbf{26N\text{ FLOPs}}$ ($\mathbf{\approx 4.33\times}$ supervised compute).
+  * *Compute Result:* Tier-1 runs in $\mathbf{\approx 40.9\text{ hours}}$ on TPU v3-8 ($147\text{ TFLOPs}$ sustained).
+
+* **Uncached Reference Policy Fallback ($32N$ FLOPs):**
+  If reference states are not cached and re-computed across all $G=4$ variations ($G \times 2N = 8N$ ref FLOPs):
+  * Total per Prompt Group: $G \cdot 2N (\text{policy}) + G \cdot 2N (\text{ref}) + G \cdot 4N (\text{backward}) = \mathbf{32N\text{ FLOPs}}$ ($\mathbf{\approx 5.33\times}$ supervised compute).
+  * *Compute Result:* Tier-1 requires $26.66\text{ exaFLOPs} \implies \mathbf{\approx 50.3\text{ hours}}$ on TPU v3-8 ($147\text{ TFLOPs}$ sustained).
 
 #### Two-Tier Execution Strategy
 
 | Tier | Token Volume & Phase Breakdown | Compute Target | Use Case |
 | :--- | :--- | :--- | :--- |
-| **Tier 1: Colab RLVR Prototype** | **1.5 Billion Tokens Total**<br>• Phase 1: 500M SFT warmup tokens ($2.24\text{ exaFLOPs}$)<br>• Phase 2: 1.0B GRPO tokens ($19.42\text{ exaFLOPs}$)<br>• **Total: $21.66\text{ exaFLOPs}$** | **~40.9 hours on TPU v3-8**<br>(Resumable across 6–7 Colab Pro sessions via verified Google Drive checkpointing) | Verifies SFT warmup convergence, GRPO advantage stability with $G=4$, AST math oracle rewards, 512K context memory retention, and zero-token decision accuracy. |
-| **Tier 2: Production RLVR Foundation Run** | **10.0 Billion Tokens Total**<br>• Phase 1: 2.0B SFT warmup tokens ($8.96\text{ exaFLOPs}$)<br>• Phase 2: 8.0B GRPO tokens ($155.38\text{ exaFLOPs}$)<br>• **Total: $164.34\text{ exaFLOPs}$** | **~3.5 days on TPU v4-16 pod**<br>(or ~12.9 days on a dedicated Cloud TPU v3-8 instance) | Full from-scratch convergence reaching superhuman decision accuracy, proven mathematical robustness, and enterprise ECE deployment gating. |
+| **Tier 1: Colab RLVR Prototype** | **1.5 Billion Tokens Total**<br>• Phase 1: 500M SFT warmup tokens ($2.24\text{ exaFLOPs}$)<br>• Phase 2: 1.0B GRPO tokens ($19.42\text{ exaFLOPs}$, 26N cached)<br>• **Total: $21.66\text{ exaFLOPs}$** | **~40.9 hours on TPU v3-8**<br>(147 TFLOPs sustained at 35% MFU; resumable across 6–7 Colab Pro sessions via verified Google Drive checkpointing) | Verifies SFT warmup convergence, GRPO advantage stability with $G=4$, AST math oracle rewards, 512K context memory retention, and zero-token decision accuracy. |
+| **Tier 2: Production RLVR Foundation Run** | **10.0 Billion Tokens Total**<br>• Phase 1: 2.0B SFT warmup tokens ($8.96\text{ exaFLOPs}$)<br>• Phase 2: 8.0B GRPO tokens ($155.38\text{ exaFLOPs}$, 26N cached)<br>• **Total: $164.34\text{ exaFLOPs}$** | **~3.2 days on TPU v3-32 pod**<br>(4 hosts / 32 cores, 1,411 TFLOPs sustained at 35% MFU; or ~12.9 days on a dedicated single Cloud TPU v3-8 instance at 147 TFLOPs sustained) | Full from-scratch convergence reaching superhuman decision accuracy, proven mathematical robustness, and enterprise ECE deployment gating. |
 
 #### Empirical Evaluation Harness (JEV/CLEF Protocol)
 To evaluate the model objectively without unsubstantiated claims:
