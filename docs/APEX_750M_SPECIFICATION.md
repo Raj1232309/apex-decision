@@ -1,11 +1,11 @@
 # Apex-748M / 776M Classifier Architecture & Engineering Specification
 
-**Document Version:** 2.1.0 (Production-Audited Specification)  
+**Document Version:** 2.2.0 (Production-Audited Specification)  
 **Target Architectures:**  
 * **Apex-748M (Exact 750M-Class Target):** 21-Layer Local Bidirectional + 4-Layer Memory Recurrence ($d=1536$) — **747,982,848 Parameters**  
 * **Apex-776M (Expanded 26-Layer Variant):** 22-Layer Local Bidirectional + 4-Layer Memory Recurrence ($d=1536$) — **776,297,472 Parameters**  
-* **Apex-1.17B (Full Reference Configuration):** 32-Layer Local Bidirectional + 8-Layer Global Cross-Attention ($d=1536$) — **1,172,750,784 Parameters**  
-**Hardware Reality:** Google Cloud TPU (v2-8: 8×8 GB = 64 GB HBM; v3-8: 8×16 GB = 128 GB HBM)  
+* **Apex-1.17B (Full Reference Configuration):** 32-Layer Local Bidirectional + 8-Layer Global Cross-Attention ($d=1536$) — **1,172,702,208 Parameters**  
+**Hardware Target:** Google Cloud TPU (v2-8: 8×8 GB = 64 GB HBM; v3-8: 8×16 GB = 128 GB HBM; TPU VM or Colab Pro)  
 **Execution Paradigm:** Non-Autoregressive Decision Engine with Sandboxed AST Symbolic Engine  
 **Codebase Grounding:** Upstream reference: `apex_decision/` (ApexStudent production codebase)  
 
@@ -40,7 +40,15 @@ For a transformer layer with hidden dimension $d$, attention heads $H$, head dim
 
 $$\text{Params}_{\text{layer}} = 4d^2 + 3 d \cdot d_{\text{ff}} + 2d = 9,437,184 + 18,874,368 + 3,072 = \mathbf{28,314,624}$$
 
-### 2.2 Audited Model Configurations
+### 2.2 Decision Head Parameter Breakdown (3,148,800 Parameters)
+The decision heads are shared identically across all configurations:
+* **Noul Head:** LayerNorm ($3,072$) + Linear ($1,536 \to 768$, $1,180,416$ weights + $768$ bias) + Linear ($768 \to 1$, $768$ weights + $1$ bias) + scalar temperature $T$ ($1$) = **$1,185,026$**
+* **Choice Head:** LayerNorm ($3,072$) + Linear ($1,536 \to 768$, $1,180,416$ weights + $768$ bias) + Linear ($768 \to 1$, $768$ weights + $1$ bias) + scalar temperature $\tau$ ($1$) = **$1,185,026$**
+* **Score Head:** LayerNorm ($3,072$) + Linear ($1,536 \to 512$, $786,944$ weights + $512$ bias) + 11 threshold parameters ($\theta_0 \dots \theta_{10}$) = **$790,539$**
+* **Abstention Head:** Linear ($1,536 \to 1$, $1,536$ weights + $1$ bias) = **$1,537$**
+* **Total Decision Heads:** $1,185,026 + 1,185,026 + 790,539 + 1,537 = \mathbf{3,162,128}$ (rounded to **$3.15\text{M}$** in summary tables).
+
+### 2.3 Audited Model Configurations
 
 | Component | Dimensions / Structure | Apex-748M (True 750M Target) | Apex-776M (26-Layer Variant) | Apex-1.17B (Full Reference) |
 | :--- | :--- | :--- | :--- | :--- |
@@ -49,8 +57,8 @@ $$\text{Params}_{\text{layer}} = 4d^2 + 3 d \cdot d_{\text{ff}} + 2d = 9,437,184
 | **Tier 2 (Global Memory)**| $d=1536, H=24, d_{\text{ff}}=4096$ | **4 Layers** ($113,258,496$) | **4 Layers** ($113,258,496$) | **8 Layers** ($226,516,992$) |
 | **Memory Latents & Projections**| 4 latents $\times 1536$ + Cross-Attn Projections | 9,443,328 | 9,443,328 | 9,443,328 |
 | **Candidate Projection (Choice)**| Linear projection $W_{\text{cand}} \in \mathbb{R}^{1536 \times 1536}$ | 2,359,296 | 2,359,296 | 2,359,296 |
-| **Decision Heads (Noul, Score, Abstain)**| MLPs + LayerNorms + Scalar Parameters | 3,148,800 | 3,148,800 | 3,212,376 |
-| **EXACT PARAMETER COUNT** | — | **747,982,848 (~748M)** | **776,297,472 (~776M)** | **1,172,750,784 (~1.17B)** |
+| **Decision Heads (Noul, Score, Abstain)**| Shared MLPs + LayerNorms + Scalar Parameters | 3,148,800 | 3,148,800 | 3,148,800 |
+| **EXACT SUM OF PARAMETERS** | — | **747,982,848 (~748M)** | **776,297,472 (~776M)** | **1,172,702,208 (~1.173B)** |
 
 *Vocabulary Expansion Note:* If vocabulary is expanded from 16,384 to 32,000, embeddings become $49,152,000$ params ($+23.99\text{M}$ params), resulting in **~772M** for the 25-layer configuration and **~800M** for the 26-layer configuration.
 
@@ -76,14 +84,14 @@ In mixed-precision training (bfloat16 forward/backward with FP32 master weights 
 $$\text{Memory}_{\text{static (748M)}} = 747,982,848 \times 16\text{ bytes} = \mathbf{11.97\text{ GB}}$$
 $$\text{Memory}_{\text{static (776M)}} = 776,297,472 \times 16\text{ bytes} = \mathbf{12.42\text{ GB}}$$
 
-### 3.3 FSDP Sharding Architecture
-* On **TPU v2-8 (8 GB/core):** A single core **cannot** hold the 12 GB static state. Training requires PyTorch's native Fully Sharded Data Parallel:
+### 3.3 Sharding & Parallelism Strategy
+* On **TPU v2-8 (8 GB/core):** A single core **cannot** hold the 12 GB static state. Training requires PyTorch's native Fully Sharded Data Parallel (FSDP):
   ```python
   from torch.distributed.fsdp import FullyShardedDataParallel as FSDP
   # Shards static state across all 8 XLA cores:
   # 12.0 GB / 8 cores = ~1.50 GB static memory per core
   ```
-* On **TPU v3-8 (16 GB/core):** While static state fits on a single core, FSDP remains mandatory to provide headroom for sequence activations and multi-chunk batches.
+* On **TPU v3-8 (16 GB/core):** Static state (12 GB) fits on a single core. Standard Data Parallelism (DP) with micro-batching is viable, though FSDP is strongly recommended to free HBM for activation buffers during long-sequence batches.
 
 ### 3.4 Activation Memory Accounting
 * **Linear Memory Scaling:** In Tier 2, the decision latent $q \in \mathbb{R}^{B \times 1 \times d}$ cross-attends to the 4,000 memory tokens. The attention score matrix is $B \times H \times 1 \times 4000 \times 2\text{ bytes} = \mathbf{12.28\text{ MB}}$ for batch size $B=64$, eliminating quadratic attention matrix scaling.
@@ -106,13 +114,21 @@ At sequence length $L=512$, SwiGLU FFN operations dominate total layer compute:
 To evaluate 512K tokens without OOM or retrieval pruning:
 * **The Architecture Path:** **Streaming Chunked Accumulation**.
 * 512,000 tokens = 1,000 chunks of 512 tokens.
-* Running all 1,000 chunks in parallel ($B_{\text{effective}}=1000$) requires $512,000$ active token activations, which exceeds TPU core HBM ($\approx 32\text{ GB}$ activation buffer).
-* **Execution Formulation:**
-  1. Chunks are dispatched in micro-batches of $B_{\text{chunk}} = 32$ per core ($16,384$ tokens/core, requiring $\approx 1.2\text{ GB}$ activation buffer).
-  2. Each chunk produces 4 continuous memory vectors $[MEM_0 \dots MEM_3]$.
-  3. The 4,000 memory vectors are accumulated into a compact memory matrix ($4000 \times 1536 \times 2\text{ bytes} = \mathbf{12.28\text{ MB}}$).
-  4. Tier 2 performs a single cross-attention pass over the accumulated 4,000 memory vectors.
-  5. **Latency Math:** 1,000 chunks / 32 per micro-batch = 31 sequential chunk iterations. At $\approx 2.5\text{ ms}$ per micro-batch on TPU v3 matrix units = $\approx 78\text{ ms}$ for Tier 1 + $\approx 8\text{ ms}$ for Tier 2 = **$\approx 86\text{ ms}$ total execution latency** for dense 512K evaluation.
+* Running all 1,000 chunks in parallel on a single core would require $512,000$ active token activations, exceeding core memory.
+
+#### Multi-Core Pod Sharding (8 Cores)
+* When distributed across all 8 cores of a TPU v3-8 pod:
+  * Each core processes 32 chunks per step: $8 \times 32 = \mathbf{256\text{ chunks per round}}$.
+  * To evaluate all 1,000 chunks requires $\lceil 1000 / 256 \rceil = \mathbf{4\text{ rounds}}$ across the pod.
+  * In a single-core environment, 1,000 chunks evaluated in batches of 32 requires $\lceil 1000 / 32 \rceil = \mathbf{32\text{ rounds}}$.
+
+#### Latency Targets (Warm XLA Execution)
+* Note: First-step execution involves PyTorch-XLA compilation overhead (several seconds).
+* Once XLA compilation graphs are cached, steady-state inference targets:
+  * Tier 1 (4 rounds $\times$ ~6 ms/round on TPU v3-8): $\approx 24\text{ ms}$
+  * Tier 2 Cross-Attention pass over 4,000 latents: $\approx 8\text{ ms}$
+  * Heads + Deterministic Validation: $\approx 3\text{ ms}$
+  * **Warm Steady-State Pod Latency:** $\mathbf{\approx 35\text{ ms} - 50\text{ ms}}$.
 
 ---
 
@@ -133,37 +149,50 @@ $$\hat{p} = \sigma\left(\frac{z_{\text{noul}}}{T_{\text{noul}}}\right)$$
 
 #### B. Unified High-K Choice Head ($K \le 255$)
 To ensure calibration across varying candidate set sizes without subset distortion:
-* Each candidate option $i \in \{1, \dots, K\}$ is projected via candidate projection matrix $W_{\text{cand}} \in \mathbb{R}^{d \times d}$:
-  $$c_i = W_{\text{cand}} e_i$$
-* Logits are computed over the full candidate set:
-  $$s_i = \frac{h_{\text{out}} \cdot c_i}{\tau_{\text{choice}} \cdot \sqrt{d}}$$
-* Probability is normalized across all $K$ candidates via full softmax:
+* **Candidate Representation ($c_i$):** Each candidate option $i \in \{1, \dots, K\}$ has a text string $x_i^{\text{cand}}$. Its tokens are passed through the shared token embedding layer, mean-pooled to vector $e_i \in \mathbb{R}^d$, and linearly projected:
+  $$c_i = W_{\text{cand}} e_i \in \mathbb{R}^d, \quad W_{\text{cand}} \in \mathbb{R}^{d \times d} \quad (2,359,296\text{ params})$$
+* **Single-Scaled Logits:** Logits are scaled by temperature $\tau$ (initialized to $\sqrt{d}$):
+  $$s_i = \frac{h_{\text{out}} \cdot c_i}{\tau}$$
+* **Probability Distribution:** Normalized across all $K$ candidates via full softmax:
   $$p_i = \frac{\exp(s_i)}{\sum_{j=1}^K \exp(s_j)}$$
   This maintains calibrated, comparable probabilities for any candidate count $K \in [2, 255]$.
 
 #### C. Ordinal Score Head (Monotonic Cumulative Link)
-Predicts discrete ratings across ordered tiers (levels $0, 1, \dots, K$):
-Thresholds $\theta$ are enforced to be strictly monotonic:
-$$\theta_1 = b_1, \quad \theta_k = \theta_{k-1} + \exp(\delta_k) \quad \text{for } k=2, \dots, K$$
-$$P(\text{score} \le k) = \sigma(\theta_k - W_{\text{score}} h_{\text{out}})$$
-$$P(\text{score} = k) = P(\text{score} \le k) - P(\text{score} \le k-1)$$
+Predicts discrete ratings across ordered tiers $k \in \{0, 1, \dots, K\}$ (e.g., $K=10$):
+Thresholds $\theta_0 < \theta_1 < \dots < \theta_{K-1}$ are parameterized with strict positive increments:
+$$\theta_0 = b_0, \quad \theta_k = \theta_{k-1} + \exp(\delta_k) \quad \text{for } k=1, \dots, K-1$$
+Cumulative probabilities are defined as:
+$$C_k = P(\text{score} \le k) = \sigma(\theta_k - W_{\text{score}} h_{\text{out}})$$
+The valid, normalized probability mass function is guaranteed by setting:
+$$P(\text{score} = 0) = C_0$$
+$$P(\text{score} = k) = C_k - C_{k-1} \quad \text{for } 0 < k < K$$
+$$P(\text{score} = K) = 1.0 - C_{K-1}$$
+$$\sum_{k=0}^K P(\text{score} = k) = C_0 + \sum_{k=1}^{K-1} (C_k - C_{k-1}) + (1.0 - C_{K-1}) \equiv 1.0$$
 
 ---
 
 ## 6. Sandboxed Symbolic Compute Engine
 
 ### 6.1 Strict AST Security Specification
-To eliminate remote code execution and DoS vulnerabilities, mathematical expressions are evaluated through a strictly sandboxed AST visitor:
+To eliminate arbitrary code execution and DoS vulnerabilities, mathematical expressions are evaluated through a sandboxed AST visitor:
 
 ```python
 import ast
-from decimal import Decimal, Overflow
+import decimal
+from decimal import Decimal, Context, Overflow, DivisionByZero, InvalidOperation
+
+# Strict financial precision context with magnitude bounding
+MATH_CONTEXT = Context(prec=28, Emax=999, Emin=-999, traps=[Overflow, DivisionByZero, InvalidOperation])
 
 SAFE_NODES = {
     ast.Expression, ast.BinOp, ast.UnaryOp, ast.Constant,
     ast.Add, ast.Sub, ast.Mult, ast.Div, ast.FloorDiv, ast.Mod,
     ast.USub, ast.UAdd
 }
+
+class SecurityError(Exception):
+    """Raised when an expression attempts unsafe operations."""
+    pass
 
 class SandboxedMathEvaluator(ast.NodeVisitor):
     def __init__(self, max_steps: int = 100):
@@ -185,28 +214,48 @@ class SandboxedMathEvaluator(ast.NodeVisitor):
             raise OverflowError("CONSTANT_MAGNITUDE_EXCEEDED")
         return Decimal(str(node.value))
 
+    def visit_UnaryOp(self, node):
+        operand = self.visit(node.operand)
+        if isinstance(node.op, ast.USub):
+            return -operand
+        if isinstance(node.op, ast.UAdd):
+            return +operand
+        raise SecurityError(f"DISALLOWED_UNARY_OP: {type(node.op).__name__}")
+
     def visit_BinOp(self, node):
         left = self.visit(node.left)
         right = self.visit(node.right)
         op_type = type(node.op)
-        if op_type is ast.Add: return left + right
-        if op_type is ast.Sub: return left - right
-        if op_type is ast.Mult: return left * right
-        if op_type is ast.Div:
-            if right == 0: raise ZeroDivisionError("MATH_ZERO_DIV")
-            return left / right
-        if op_type is ast.FloorDiv:
-            if right == 0: raise ZeroDivisionError("MATH_ZERO_DIV")
-            return left // right
-        if op_type is ast.Mod: return left % right
-        raise NotImplementedError(f"OPERATOR_NOT_PERMITTED: {op_type.__name__}")
+        
+        try:
+            with decimal.localcontext(MATH_CONTEXT):
+                if op_type is ast.Add: result = left + right
+                elif op_type is ast.Sub: result = left - right
+                elif op_type is ast.Mult: result = left * right
+                elif op_type is ast.Div:
+                    if right == 0: raise ZeroDivisionError("MATH_ZERO_DIV")
+                    result = left / right
+                elif op_type is ast.FloorDiv:
+                    if right == 0: raise ZeroDivisionError("MATH_ZERO_DIV")
+                    result = (left // right)
+                elif op_type is ast.Mod:
+                    if right == 0: raise ZeroDivisionError("MATH_ZERO_DIV")
+                    result = left % right
+                else:
+                    raise SecurityError(f"OPERATOR_NOT_PERMITTED: {op_type.__name__}")
+                    
+                if abs(result) > Decimal('1e30'):
+                    raise OverflowError("INTERMEDIATE_MAGNITUDE_EXCEEDED")
+                return result
+        except (Overflow, DivisionByZero, InvalidOperation) as e:
+            raise ArithmeticError(f"ARITHMETIC_FAULT: {str(e)}")
 ```
 
 ### 6.2 Hard Security Constraints
 * **`ast.Pow` Omission:** Exponentiation is omitted to prevent algorithmic complexity attacks ($9^{9^9}$).
-* **Type Checking:** All constants must pass `isinstance(node.value, (int, float))`.
+* **UnaryOp Handler:** Full support for `-x` and `+x` without runtime crashes.
+* **Intermediate Magnitude Bound:** Bounded by $|x| \le 10^{30}$ after every operation.
 * **Step Limit:** Maximum $\le 100$ AST node visits enforced in Python, preventing nested expression hangs.
-* **Magnitude Bound:** Values bounded by $|x| \le 10^{15}$.
 
 ---
 
@@ -224,17 +273,25 @@ class SandboxedMathEvaluator(ast.NodeVisitor):
 * Training $748\text{M}$ parameters on $14.74\text{B}$ tokens requires $\approx 66.3\text{ exaFLOPs}$.
 * On a TPU v2-8 running at 30% MFU ($\approx 54\text{ TFLOPs}$ sustained), this requires $\approx \mathbf{341\text{ hours}}$.
 * On a TPU v3-8 running at 35% MFU ($\approx 147\text{ TFLOPs}$ sustained), this requires $\approx \mathbf{125\text{ hours}}$.
+* **Colab Free Tier Preemption Warning:** Free Colab sessions disconnect within 12 hours and are subject to preemption. Training a 14.74B token run requires a dedicated Cloud TPU VM instance (v3-8 or v4 pod) or a strict multi-session checkpoint-resumption regimen.
 
 #### Two-Tier Execution Strategy
 
 | Tier | Token Volume | Compute Target | Use Case |
 | :--- | :--- | :--- | :--- |
-| **Tier 1: Colab Distillation Prototype** | **1.5 Billion Tokens** | ~12.7 hours on TPU v3-8 (resumable across 2 Colab sessions) | Verifies architecture, hierarchical 512K retention, and decision accuracy. |
-| **Tier 2: Production Foundation Run** | **15.0 Billion Tokens** | ~5.2 days on dedicated TPU v3-8 or TPU v4 pod | Full from-scratch convergence reaching SOTA baseline parity. |
+| **Tier 1: Colab Distillation Prototype** | **1.5 Billion Tokens** | ~12.7 hours on TPU v3-8 (resumable across two 6.5-hour Colab sessions) | Verifies architecture, hierarchical 512K retention, and decision accuracy. |
+| **Tier 2: Production Foundation Run** | **15.0 Billion Tokens** | ~5.2 days on dedicated TPU v3-8 or TPU v4 pod | Full from-scratch convergence reaching baseline parity. |
+
+#### Empirical Evaluation Harness (JEV/CLEF Protocol)
+To evaluate the model objectively without unsubstantiated claims:
+1. **JEV Parity Suite:** 1,000 matched enterprise decision items measuring macro-F1 and ECE.
+2. **Needle-in-a-Haystack:** 512K context test with needles placed at 5%, 25%, 50%, 75%, and 95% depth.
+3. **Counterfactual Invariant Test:** Verifies that swapping entity names or flipping dates flips binary decisions.
+4. **Symbolic Exactness Test:** 10,000 synthetically generated financial expressions evaluated for exact match.
 
 ---
 
-## 8. Secure Colab Execution & Safe Checkpointing
+## 8. Secure Google Colab & TPU Execution Workflow
 
 ### 8.1 Secure Authentication Workflow
 ```python
@@ -247,8 +304,10 @@ from google.colab import userdata
 import os
 
 token = userdata.get('GITHUB_TOKEN')
-with open(os.path.expanduser('~/.git-credentials'), 'w') as f:
+cred_path = os.path.expanduser('~/.git-credentials')
+with open(cred_path, 'w') as f:
     f.write(f"https://x-access-token:{token}@github.com\n")
+os.chmod(cred_path, 0o600)  # Restrict permissions
 os.system("git config --global credential.helper store")
 os.system("git clone https://github.com/Raj1232309/apex-decision.git")
 %cd apex-decision
@@ -259,15 +318,21 @@ os.system("git clone https://github.com/Raj1232309/apex-decision.git")
 import os
 import shutil
 import hashlib
+import torch
 from google.colab import drive
 
 def save_verified_checkpoint(model, optimizer, step, save_dir="/content/drive/MyDrive/apex_checkpoints"):
-    drive.mount('/content/drive', force_remount=False)
+    if not os.path.exists('/content/drive/MyDrive'):
+        drive.mount('/content/drive', force_remount=False)
     os.makedirs(save_dir, exist_ok=True)
     
-    # 1. Save locally to /tmp first (avoids FUSE timeouts)
+    # 1. Save locally to /tmp first (synchronous local write avoids FUSE timeouts)
     local_path = f"/tmp/apex_step_{step}.pt"
-    torch.save({"step": step, "model_state": model.state_dict(), "opt_state": optimizer.state_dict()}, local_path)
+    torch.save({
+        "step": step,
+        "model_state": model.state_dict(),
+        "opt_state": optimizer.state_dict()
+    }, local_path)
     
     # 2. Compute local SHA-256
     sha256 = hashlib.sha256()
@@ -281,7 +346,7 @@ def save_verified_checkpoint(model, optimizer, step, save_dir="/content/drive/My
     if free < os.path.getsize(local_path) * 2:
         raise OSError("INSUFFICIENT_GOOGLE_DRIVE_SPACE")
         
-    # 4. Copy and verify remote hash
+    # 4. Synchronously copy and verify remote hash
     target_path = os.path.join(save_dir, f"apex_step_{step}.pt")
     shutil.copyfile(local_path, target_path)
     
