@@ -12,5 +12,4 @@ build/
 results/
 *.obj
 .opencode/
-graphify-out/
 
