@@ -92,11 +92,27 @@ def save_portable_checkpoint(
     """Saves portable checkpoint compatible across both TPU and NVIDIA GPU with disk rotation."""
     os.makedirs(save_dir, exist_ok=True)
     target_path = os.path.join(save_dir, f"apex748m_step_{step}.pt")
+    tmp_target = os.path.join(save_dir, f"apex748m_step_{step}.pt.tmp")
     latest_path = os.path.join(save_dir, "apex748m_step_latest.pt")
     tmp_latest_path = os.path.join(save_dir, "apex748m_step_latest.pt.tmp")
 
     # Handle DataParallel wrapper
     raw_model = model.module if hasattr(model, "module") else model
+
+    # Proactive Disk Space Check (especially critical on Kaggle's 20 GB disk limit)
+    try:
+        _, _, free_bytes = shutil.disk_usage(save_dir)
+        free_gb = free_bytes / (1024 ** 3)
+        if free_gb < 4.0:
+            print(f"Notice: Low disk headroom ({free_gb:.1f} GB free). Purging older intermediate checkpoints...")
+            for fname in os.listdir(save_dir):
+                if fname.startswith("apex748m_step_") and fname.endswith(".pt") and fname != "apex748m_step_latest.pt":
+                    try:
+                        os.remove(os.path.join(save_dir, fname))
+                    except Exception:
+                        pass
+    except Exception:
+        pass
 
     state = {
         "step": step,
@@ -104,45 +120,58 @@ def save_portable_checkpoint(
         "opt_state": optimizer.state_dict(),
         "config": asdict(raw_model.config) if hasattr(raw_model.config, "__dataclass_fields__") else raw_model.config,
     }
-    torch.save(state, target_path)
 
-    # Compute SHA-256 hash for integrity
-    hasher = hashlib.sha256()
-    with open(target_path, "rb") as f:
-        while chunk := f.read(65536):
-            hasher.update(chunk)
-    hash_prefix = hasher.hexdigest()[:16]
-
-    # Atomically update 'latest' checkpoint for easy resumption
     try:
-        shutil.copyfile(target_path, tmp_latest_path)
-        os.replace(tmp_latest_path, latest_path)
-    except Exception:
+        # Atomic write to temporary file first so an interrupted write never corrupts valid checkpoints
+        torch.save(state, tmp_target)
+        os.replace(tmp_target, target_path)
+
+        # Compute SHA-256 hash for integrity
+        hasher = hashlib.sha256()
+        with open(target_path, "rb") as f:
+            while chunk := f.read(65536):
+                hasher.update(chunk)
+        hash_prefix = hasher.hexdigest()[:16]
+
+        # Atomically update 'latest' checkpoint for easy resumption
         try:
-            shutil.copyfile(target_path, latest_path)
+            shutil.copyfile(target_path, tmp_latest_path)
+            os.replace(tmp_latest_path, latest_path)
         except Exception:
-            pass
+            try:
+                shutil.copyfile(target_path, latest_path)
+            except Exception:
+                pass
 
-    # Disk Protection: Prune older numbered checkpoints to prevent Kaggle 20 GB disk overflow
-    try:
-        numbered_files = []
-        for fname in os.listdir(save_dir):
-            if fname.startswith("apex748m_step_") and fname.endswith(".pt") and fname not in ("apex748m_step_latest.pt", "apex748m_step_latest.pt.tmp"):
-                try:
-                    s = int(fname.split("_")[-1].replace(".pt", ""))
-                    numbered_files.append((s, os.path.join(save_dir, fname)))
-                except ValueError:
-                    pass
-        numbered_files.sort(key=lambda x: x[0])
-        while len(numbered_files) > max_to_keep:
-            old_step, old_path = numbered_files.pop(0)
-            if os.path.exists(old_path):
-                os.remove(old_path)
+        # Disk Protection: Prune older numbered checkpoints to prevent Kaggle 20 GB disk overflow
+        try:
+            numbered_files = []
+            for fname in os.listdir(save_dir):
+                if fname.startswith("apex748m_step_") and fname.endswith(".pt") and fname not in ("apex748m_step_latest.pt", "apex748m_step_latest.pt.tmp"):
+                    try:
+                        s = int(fname.split("_")[-1].replace(".pt", ""))
+                        numbered_files.append((s, os.path.join(save_dir, fname)))
+                    except ValueError:
+                        pass
+            numbered_files.sort(key=lambda x: x[0])
+            while len(numbered_files) > max_to_keep:
+                old_step, old_path = numbered_files.pop(0)
+                if os.path.exists(old_path):
+                    os.remove(old_path)
+        except Exception as e:
+            print(f"Warning: Checkpoint rotation error: {e}")
+
+        print(f"Checkpoint saved: {target_path} | SHA-256: {hash_prefix} (latest updated)")
+        return target_path
     except Exception as e:
-        print(f"Warning: Checkpoint rotation error: {e}")
-
-    print(f"Checkpoint saved: {target_path} | SHA-256: {hash_prefix} (latest updated)")
-    return target_path
+        print(f"Warning: Failed to save checkpoint at step {step} ({e}); continuing training safely.")
+        for p in (tmp_target, tmp_latest_path):
+            if os.path.exists(p):
+                try:
+                    os.remove(p)
+                except Exception:
+                    pass
+        return ""
 
 
 def load_portable_checkpoint(
