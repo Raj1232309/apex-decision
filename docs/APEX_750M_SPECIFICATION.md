@@ -194,6 +194,9 @@ $$P(\text{score} = k) = C_k - C_{k-1} \quad \text{for } 1 \le k \le K-1$$
 $$P(\text{score} = K) = 1.0 - C_{K-1}$$
 $$\sum_{k=0}^K P(\text{score} = k) = C_0 + \sum_{k=1}^{K-1} (C_k - C_{k-1}) + (1.0 - C_{K-1}) \equiv 1.0$$
 
+*Head Activation Note (GELU vs. Backbone SwiGLU):*
+While the transformer backbone employs SwiGLU for maximum capacity in wide FFN layers ($d_{\text{ff}} = 4096$), the decision heads project down to a scalar or continuous utility ($1536 \to 768 \to 1$ and $1536 \to 512 \to 1$). Standard GELU is chosen for the heads to avoid the $3\times$ matrix projection overhead of gated units in bottleneck layers, maintaining minimal parameter count and matching the production baseline in `apex_decision/models/apex_student/model.py`.
+
 ---
 
 ## 6. Sandboxed Symbolic Compute Engine
@@ -390,7 +393,7 @@ Standard supervised training requires $6N$ FLOPs per token ($2N$ forward $+ 4N$ 
 * **Uncached Reference Policy Fallback ($32N$ FLOPs):**
   If reference states are not cached and re-computed across all $G=4$ variations ($G \times 2N = 8N$ ref FLOPs):
   * Total per Prompt Group: $G \cdot 2N (\text{policy}) + G \cdot 2N (\text{ref}) + G \cdot 4N (\text{backward}) = \mathbf{32N\text{ FLOPs}}$ ($\mathbf{\approx 5.33\times}$ supervised compute).
-  * *Compute Result:* Tier-1 requires $26.66\text{ exaFLOPs} \implies \mathbf{\approx 50.3\text{ hours}}$ on TPU v3-8 ($147\text{ TFLOPs}$ sustained).
+  * *Compute Result:* Tier-1 requires $2.24\text{ exaFLOPs (SFT)} + 23.90\text{ exaFLOPs (GRPO)} = \mathbf{26.14\text{ exaFLOPs}} \implies \mathbf{\approx 49.4\text{ hours}}$ on TPU v3-8 ($147\text{ TFLOPs}$ sustained).
 
 #### Two-Tier Execution Strategy
 
