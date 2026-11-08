@@ -1,10 +1,10 @@
 # Apex-748M / 776M Classifier Architecture & Engineering Specification
 
-**Document Version:** 2.2.0 (Production-Audited Specification)  
+**Document Version:** 2.3.0 (Production-Audited Specification)  
 **Target Architectures:**  
-* **Apex-748M (Exact 750M-Class Target):** 21-Layer Local Bidirectional + 4-Layer Memory Recurrence ($d=1536$) — **747,982,848 Parameters**  
-* **Apex-776M (Expanded 26-Layer Variant):** 22-Layer Local Bidirectional + 4-Layer Memory Recurrence ($d=1536$) — **776,297,472 Parameters**  
-* **Apex-1.17B (Full Reference Configuration):** 32-Layer Local Bidirectional + 8-Layer Global Cross-Attention ($d=1536$) — **1,172,702,208 Parameters**  
+* **Apex-748M (Exact 750M-Class Target):** 21-Layer Local Bidirectional + 4-Layer Memory Recurrence ($d=1536$) — **746,813,455 Parameters**  
+* **Apex-776M (Expanded 26-Layer Variant):** 22-Layer Local Bidirectional + 4-Layer Memory Recurrence ($d=1536$) — **775,128,079 Parameters**  
+* **Apex-1.17B (Full Reference Configuration):** 32-Layer Local Bidirectional + 8-Layer Global Cross-Attention ($d=1536$) — **1,171,532,815 Parameters**  
 **Hardware Target:** Google Cloud TPU (v2-8: 8×8 GB = 64 GB HBM; v3-8: 8×16 GB = 128 GB HBM; TPU VM or Colab Pro)  
 **Execution Paradigm:** Non-Autoregressive Decision Engine with Sandboxed AST Symbolic Engine  
 **Codebase Grounding:** Upstream reference: `apex_decision/` (ApexStudent production codebase)  
@@ -40,27 +40,41 @@ For a transformer layer with hidden dimension $d$, attention heads $H$, head dim
 
 $$\text{Params}_{\text{layer}} = 4d^2 + 3 d \cdot d_{\text{ff}} + 2d = 9,437,184 + 18,874,368 + 3,072 = \mathbf{28,314,624}$$
 
-### 2.2 Decision Head Parameter Breakdown (3,148,800 Parameters)
+### 2.2 Decision Head Parameter Breakdown (1,979,407 Parameters)
 The decision heads are shared identically across all configurations:
-* **Noul Head:** LayerNorm ($3,072$) + Linear ($1,536 \to 768$, $1,180,416$ weights + $768$ bias) + Linear ($768 \to 1$, $768$ weights + $1$ bias) + scalar temperature $T$ ($1$) = **$1,185,026$**
-* **Choice Head:** LayerNorm ($3,072$) + Linear ($1,536 \to 768$, $1,180,416$ weights + $768$ bias) + Linear ($768 \to 1$, $768$ weights + $1$ bias) + scalar temperature $\tau$ ($1$) = **$1,185,026$**
-* **Score Head:** LayerNorm ($3,072$) + Linear ($1,536 \to 512$, $786,944$ weights + $512$ bias) + 11 threshold parameters ($\theta_0 \dots \theta_{10}$) = **$790,539$**
-* **Abstention Head:** Linear ($1,536 \to 1$, $1,536$ weights + $1$ bias) = **$1,537$**
-* **Total Decision Heads:** $1,185,026 + 1,185,026 + 790,539 + 1,537 = \mathbf{3,162,128}$ (rounded to **$3.15\text{M}$** in summary tables).
+* **Noul Head (Binary Entailment / Proposition Verification):**
+  * LayerNorm: $2 \times 1,536 = 3,072$
+  * Linear ($1,536 \to 768$): $1,536 \times 768\text{ weights} + 768\text{ bias} = 1,180,416$
+  * Linear ($768 \to 1$): $768 \times 1\text{ weights} + 1\text{ bias} = 769$
+  * Scalar temperature $T_{\text{noul}}$: $1$
+  * **Noul Subtotal:** $3,072 + 1,180,416 + 769 + 1 = \mathbf{1,184,258}$
+* **Score Head (Ordinal Cumulative Link for 11 tiers: $0 \dots 10$, $K=10$):**
+  * LayerNorm: $2 \times 1,536 = 3,072$
+  * Linear ($1,536 \to 512$): $1,536 \times 512\text{ weights} + 512\text{ bias} = 786,944$
+  * Linear ($512 \to 1$ latent utility $u$): $512 \times 1\text{ weights} + 1\text{ bias} = 513$
+  * 10 Cutpoint Thresholds ($\theta_0 = b_0$ and 9 positive increments $\delta_1 \dots \delta_9$ for tiers $0 \dots 10$): $10$
+  * **Score Subtotal:** $3,072 + 786,944 + 513 + 10 = \mathbf{790,539}$
+* **Choice Head (High-Cardinality Candidate Matching, $K \le 255$):**
+  * Candidates are encoded via candidate projection $W_{\text{cand}} \in \mathbb{R}^{1536 \times 1536}$ ($2,359,296$ parameters, budgeted in §2.3 Candidate Projection row).
+  * Candidate scoring operates via single-pass dot product $s_i = \frac{h_{\text{out}} \cdot c_i}{\tau}$, with no redundant intermediate MLP.
+  * Head parameters: Query LayerNorm ($3,072$) + scalar temperature $\tau$ ($1$) = **3,073**
+* **Abstention Head (Epistemic Uncertainty):**
+  * Linear ($1,536 \to 1$): $1,536\text{ weights} + 1\text{ bias} = \mathbf{1,537}$
+* **Total Decision Heads:** $1,184,258 + 790,539 + 3,073 + 1,537 = \mathbf{1,979,407}$ parameters.
 
 ### 2.3 Audited Model Configurations
 
-| Component | Dimensions / Structure | Apex-748M (True 750M Target) | Apex-776M (26-Layer Variant) | Apex-1.17B (Full Reference) |
+| Component | Dimensions / Structure | Apex-748M (Exact 750M Target) | Apex-776M (26-Layer Variant) | Apex-1.17B (Full Reference) |
 | :--- | :--- | :--- | :--- | :--- |
 | **Token Embeddings** | Vocab 16,384 $\times 1,536$ | 25,165,824 | 25,165,824 | 25,165,824 |
 | **Tier 1 (Local Encoder)** | $d=1536, H=24, d_{\text{ff}}=4096$ | **21 Layers** ($594,607,104$) | **22 Layers** ($622,921,728$) | **32 Layers** ($906,067,968$) |
 | **Tier 2 (Global Memory)**| $d=1536, H=24, d_{\text{ff}}=4096$ | **4 Layers** ($113,258,496$) | **4 Layers** ($113,258,496$) | **8 Layers** ($226,516,992$) |
 | **Memory Latents & Projections**| 4 latents $\times 1536$ + Cross-Attn Projections | 9,443,328 | 9,443,328 | 9,443,328 |
 | **Candidate Projection (Choice)**| Linear projection $W_{\text{cand}} \in \mathbb{R}^{1536 \times 1536}$ | 2,359,296 | 2,359,296 | 2,359,296 |
-| **Decision Heads (Noul, Score, Abstain)**| Shared MLPs + LayerNorms + Scalar Parameters | 3,148,800 | 3,148,800 | 3,148,800 |
-| **EXACT SUM OF PARAMETERS** | — | **747,982,848 (~748M)** | **776,297,472 (~776M)** | **1,172,702,208 (~1.173B)** |
+| **Decision Heads (Noul, Score, Choice, Abstain)**| Shared MLPs + LayerNorms + Scalar Parameters | 1,979,407 | 1,979,407 | 1,979,407 |
+| **EXACT SUM OF PARAMETERS** | — | **746,813,455 (~747M)** | **775,128,079 (~775M)** | **1,171,532,815 (~1.172B)** |
 
-*Vocabulary Expansion Note:* If vocabulary is expanded from 16,384 to 32,000, embeddings become $49,152,000$ params ($+23.99\text{M}$ params), resulting in **~772M** for the 25-layer configuration and **~800M** for the 26-layer configuration.
+*Vocabulary Expansion Note:* If vocabulary is expanded from 16,384 to 32,000, embeddings become $49,152,000$ params ($+23.99\text{M}$ params), resulting in **~771M** for the 25-layer configuration and **~799M** for the 26-layer configuration.
 
 ---
 
@@ -70,7 +84,6 @@ The decision heads are shared identically across all configurations:
 Google Colab does **not** provide a "47 GB TPU". TPU hardware specifications are fixed:
 * **TPU v2-8:** 8 physical tensor cores. **8 GB HBM per core** = **64 GB aggregate memory**.
 * **TPU v3-8:** 8 physical tensor cores. **16 GB HBM per core** = **128 GB aggregate memory**.
-*(The 47 GB figure in Colab corresponds to high-RAM CPU host systems or Nvidia A100 GPU instances).*
 
 ### 3.2 Real Training Memory Footprint (16 Bytes / Parameter Static Overhead)
 In mixed-precision training (bfloat16 forward/backward with FP32 master weights and AdamW states):
@@ -81,8 +94,8 @@ In mixed-precision training (bfloat16 forward/backward with FP32 master weights 
 * **AdamW Variance ($v$) (`float32`):** 4 bytes/param
 * **Total Static State per Parameter:** **16 bytes/parameter**.
 
-$$\text{Memory}_{\text{static (748M)}} = 747,982,848 \times 16\text{ bytes} = \mathbf{11.97\text{ GB}}$$
-$$\text{Memory}_{\text{static (776M)}} = 776,297,472 \times 16\text{ bytes} = \mathbf{12.42\text{ GB}}$$
+$$\text{Memory}_{\text{static (748M)}} = 746,813,455 \times 16\text{ bytes} = \mathbf{11.95\text{ GB}}$$
+$$\text{Memory}_{\text{static (776M)}} = 775,128,079 \times 16\text{ bytes} = \mathbf{12.40\text{ GB}}$$
 
 ### 3.3 Sharding & Parallelism Strategy
 * On **TPU v2-8 (8 GB/core):** A single core **cannot** hold the 12 GB static state. Training requires PyTorch's native Fully Sharded Data Parallel (FSDP):
@@ -158,14 +171,18 @@ To ensure calibration across varying candidate set sizes without subset distorti
   This maintains calibrated, comparable probabilities for any candidate count $K \in [2, 255]$.
 
 #### C. Ordinal Score Head (Monotonic Cumulative Link)
-Predicts discrete ratings across ordered tiers $k \in \{0, 1, \dots, K\}$ (e.g., $K=10$):
+Predicts discrete ratings across ordered tiers $k \in \{0, 1, \dots, K\}$ (e.g., 11 levels for $K=10$):
 Thresholds $\theta_0 < \theta_1 < \dots < \theta_{K-1}$ are parameterized with strict positive increments:
 $$\theta_0 = b_0, \quad \theta_k = \theta_{k-1} + \exp(\delta_k) \quad \text{for } k=1, \dots, K-1$$
+*(For an 11-level rating $0 \dots 10$, $K=10$, there are exactly $K=10$ cutpoint thresholds $\theta_0 \dots \theta_9$ delineating the intervals).*
+
+The latent continuous utility $u$ is projected through a 2-layer MLP:
+$$u = W_2 \cdot \text{GELU}(W_1 h_{\text{out}} + b_1) + b_2 \in \mathbb{R}$$
 Cumulative probabilities are defined as:
-$$C_k = P(\text{score} \le k) = \sigma(\theta_k - W_{\text{score}} h_{\text{out}})$$
+$$C_k = P(\text{score} \le k) = \sigma(\theta_k - u) \quad \text{for } k \in \{0, \dots, K-1\}$$
 The valid, normalized probability mass function is guaranteed by setting:
 $$P(\text{score} = 0) = C_0$$
-$$P(\text{score} = k) = C_k - C_{k-1} \quad \text{for } 0 < k < K$$
+$$P(\text{score} = k) = C_k - C_{k-1} \quad \text{for } 1 \le k \le K-1$$
 $$P(\text{score} = K) = 1.0 - C_{K-1}$$
 $$\sum_{k=0}^K P(\text{score} = k) = C_0 + \sum_{k=1}^{K-1} (C_k - C_{k-1}) + (1.0 - C_{K-1}) \equiv 1.0$$
 
@@ -178,6 +195,7 @@ To eliminate arbitrary code execution and DoS vulnerabilities, mathematical expr
 
 ```python
 import ast
+import math
 import decimal
 from decimal import Decimal, Context, Overflow, DivisionByZero, InvalidOperation
 
@@ -199,6 +217,13 @@ class SandboxedMathEvaluator(ast.NodeVisitor):
         self.steps = 0
         self.max_steps = max_steps
 
+    def evaluate(self, expr_str: str) -> Decimal:
+        """Parses and evaluates expression within a single context activation."""
+        self.steps = 0
+        parsed = ast.parse(expr_str, mode='eval')
+        with decimal.localcontext(MATH_CONTEXT):
+            return self.visit(parsed)
+
     def visit(self, node):
         self.steps += 1
         if self.steps > self.max_steps:
@@ -207,9 +232,17 @@ class SandboxedMathEvaluator(ast.NodeVisitor):
             raise SecurityError(f"DISALLOWED_NODE: {type(node).__name__}")
         return super().visit(node)
 
+    def visit_Expression(self, node):
+        return self.visit(node.body)
+
     def visit_Constant(self, node):
-        if not isinstance(node.value, (int, float)):
+        # 1. Reject bool (bool is a subclass of int in Python)
+        if isinstance(node.value, bool) or not isinstance(node.value, (int, float)):
             raise TypeError("DISALLOWED_CONSTANT_TYPE")
+        # 2. Reject NaN and Infinities
+        if not math.isfinite(node.value):
+            raise ValueError("NON_FINITE_NUMERIC_CONSTANT")
+        # 3. Reject oversized literals
         if abs(node.value) > 1e15:
             raise OverflowError("CONSTANT_MAGNITUDE_EXCEEDED")
         return Decimal(str(node.value))
@@ -228,34 +261,36 @@ class SandboxedMathEvaluator(ast.NodeVisitor):
         op_type = type(node.op)
         
         try:
-            with decimal.localcontext(MATH_CONTEXT):
-                if op_type is ast.Add: result = left + right
-                elif op_type is ast.Sub: result = left - right
-                elif op_type is ast.Mult: result = left * right
-                elif op_type is ast.Div:
-                    if right == 0: raise ZeroDivisionError("MATH_ZERO_DIV")
-                    result = left / right
-                elif op_type is ast.FloorDiv:
-                    if right == 0: raise ZeroDivisionError("MATH_ZERO_DIV")
-                    result = (left // right)
-                elif op_type is ast.Mod:
-                    if right == 0: raise ZeroDivisionError("MATH_ZERO_DIV")
-                    result = left % right
-                else:
-                    raise SecurityError(f"OPERATOR_NOT_PERMITTED: {op_type.__name__}")
-                    
-                if abs(result) > Decimal('1e30'):
-                    raise OverflowError("INTERMEDIATE_MAGNITUDE_EXCEEDED")
-                return result
+            if op_type is ast.Add: result = left + right
+            elif op_type is ast.Sub: result = left - right
+            elif op_type is ast.Mult: result = left * right
+            elif op_type is ast.Div:
+                if right == 0: raise ZeroDivisionError("MATH_ZERO_DIV")
+                result = left / right
+            elif op_type is ast.FloorDiv:
+                if right == 0: raise ZeroDivisionError("MATH_ZERO_DIV")
+                result = (left // right)
+            elif op_type is ast.Mod:
+                if right == 0: raise ZeroDivisionError("MATH_ZERO_DIV")
+                result = left % right
+            else:
+                raise SecurityError(f"OPERATOR_NOT_PERMITTED: {op_type.__name__}")
+                
+            if abs(result) > Decimal('1e30'):
+                raise OverflowError("INTERMEDIATE_MAGNITUDE_EXCEEDED")
+            return result
         except (Overflow, DivisionByZero, InvalidOperation) as e:
             raise ArithmeticError(f"ARITHMETIC_FAULT: {str(e)}")
 ```
 
-### 6.2 Hard Security Constraints
+### 6.2 Hard Security Constraints & Arithmetic Semantics
 * **`ast.Pow` Omission:** Exponentiation is omitted to prevent algorithmic complexity attacks ($9^{9^9}$).
+* **Type & Value Guards:** Explicit rejection of `bool`, `float('nan')`, `float('inf')`, and `-inf`.
 * **UnaryOp Handler:** Full support for `-x` and `+x` without runtime crashes.
 * **Intermediate Magnitude Bound:** Bounded by $|x| \le 10^{30}$ after every operation.
 * **Step Limit:** Maximum $\le 100$ AST node visits enforced in Python, preventing nested expression hangs.
+* **Division & Modulo Semantics Note (Financial Math):**
+  In native Python integer arithmetic, `//` floors towards negative infinity (e.g., `-7 // 3 == -3` and `-7 % 3 == 2`). In `decimal.Decimal` (IEEE-754 standard arithmetic), `//` truncates towards zero (e.g., `Decimal('-7') // Decimal('3') == Decimal('-2')` and `Decimal('-7') % Decimal('3') == Decimal('-1')`). For financial statements and accounting allocations (truncating integer dollar portions towards zero), Decimal's truncated division is standard; however, financial verification harnesses comparing against native Python integer math must account for negative operand differences.
 
 ---
 
