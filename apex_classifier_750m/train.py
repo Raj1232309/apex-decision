@@ -86,12 +86,14 @@ def save_portable_checkpoint(
     model: nn.Module,
     optimizer: torch.optim.Optimizer,
     step: int,
-    save_dir: str = "./checkpoints"
+    save_dir: str = "./checkpoints",
+    max_to_keep: int = 2
 ) -> str:
-    """Saves portable checkpoint compatible across both TPU and NVIDIA GPU."""
+    """Saves portable checkpoint compatible across both TPU and NVIDIA GPU with disk rotation."""
     os.makedirs(save_dir, exist_ok=True)
     target_path = os.path.join(save_dir, f"apex748m_step_{step}.pt")
     latest_path = os.path.join(save_dir, "apex748m_step_latest.pt")
+    tmp_latest_path = os.path.join(save_dir, "apex748m_step_latest.pt.tmp")
 
     # Handle DataParallel wrapper
     raw_model = model.module if hasattr(model, "module") else model
@@ -111,13 +113,35 @@ def save_portable_checkpoint(
             hasher.update(chunk)
     hash_prefix = hasher.hexdigest()[:16]
 
-    # Also update 'latest' checkpoint for easy resumption
+    # Atomically update 'latest' checkpoint for easy resumption
     try:
-        shutil.copyfile(target_path, latest_path)
+        shutil.copyfile(target_path, tmp_latest_path)
+        os.replace(tmp_latest_path, latest_path)
     except Exception:
-        pass
+        try:
+            shutil.copyfile(target_path, latest_path)
+        except Exception:
+            pass
 
-    print(f"Checkpoint saved: {target_path} | SHA-256: {hash_prefix}")
+    # Disk Protection: Prune older numbered checkpoints to prevent Kaggle 20 GB disk overflow
+    try:
+        numbered_files = []
+        for fname in os.listdir(save_dir):
+            if fname.startswith("apex748m_step_") and fname.endswith(".pt") and fname not in ("apex748m_step_latest.pt", "apex748m_step_latest.pt.tmp"):
+                try:
+                    s = int(fname.split("_")[-1].replace(".pt", ""))
+                    numbered_files.append((s, os.path.join(save_dir, fname)))
+                except ValueError:
+                    pass
+        numbered_files.sort(key=lambda x: x[0])
+        while len(numbered_files) > max_to_keep:
+            old_step, old_path = numbered_files.pop(0)
+            if os.path.exists(old_path):
+                os.remove(old_path)
+    except Exception as e:
+        print(f"Warning: Checkpoint rotation error: {e}")
+
+    print(f"Checkpoint saved: {target_path} | SHA-256: {hash_prefix} (latest updated)")
     return target_path
 
 
@@ -297,6 +321,7 @@ def main():
     parser.add_argument("--save_dir", "--checkpoint_dir", dest="checkpoint_dir", type=str, default="/kaggle/working/checkpoints", help="Directory to save/load checkpoints")
     parser.add_argument("--checkpoint", "--resume", dest="resume", type=str, default=None, help="Path to checkpoint file to resume from")
     parser.add_argument("--checkpoint_every", type=int, default=250, help="Interval (in steps) to save checkpoints")
+    parser.add_argument("--max_checkpoints", type=int, default=2, help="Maximum number of intermediate checkpoints to retain (default: 2)")
     parser.add_argument("--lr", type=float, default=None, help="Learning rate (default: 1e-4 for sft, 5e-5 for rlvr)")
     parser.add_argument("--optimizer", type=str, default="auto", choices=["auto", "adafactor", "adamw8bit", "adamw"], help="Optimizer (default: auto -> Adafactor on CUDA)")
     parser.add_argument("--no_amp", action="store_true", help="Disable AMP (automatic mixed precision) on CUDA")
@@ -314,24 +339,6 @@ def main():
     # Tokens per micro-step = 1 sample * 4 chunks * 512 tokens = 2,048 tokens
     # Tokens per optimizer step = args.grad_accum_steps * 2,048 tokens
     tokens_per_optimizer_step = args.grad_accum_steps * 512 * 4
-
-    if args.steps is not None:
-        total_steps = args.steps
-    elif args.tokens is not None:
-        total_steps = max(1, args.tokens // tokens_per_optimizer_step)
-    else:
-        total_steps = 1000
-
-    print("=" * 70)
-    print("APEX-748M CLASSIFIER TRAINING ENGINE (AUDITED ZERO-OOM)")
-    print(f"Active Accelerator : {device_desc}")
-    print(f"Training Phase     : {args.phase.upper()}")
-    print(f"Target Steps       : {total_steps:,} (~{total_steps * tokens_per_optimizer_step:,} tokens)")
-    print(f"Grad Accum Steps   : {args.grad_accum_steps}")
-    print(f"Learning Rate      : {args.lr}")
-    print(f"Save Directory     : {args.checkpoint_dir}")
-    print(f"Checkpoint Every   : {args.checkpoint_every} steps")
-    print("=" * 70)
 
     # Initialize model matching exact audited 746,813,455 parameters
     config = Apex748MConfig()
@@ -362,6 +369,33 @@ def main():
     if args.resume:
         start_step = load_portable_checkpoint(args.resume, model, optimizer, device=device)
 
+    if args.steps is not None:
+        target_step = start_step + args.steps
+    elif args.tokens is not None:
+        target_tokens_steps = max(1, args.tokens // tokens_per_optimizer_step)
+        if target_tokens_steps > start_step:
+            target_step = target_tokens_steps
+        else:
+            target_step = start_step + target_tokens_steps
+    else:
+        target_step = start_step + 1000
+
+    steps_to_run = target_step - start_step
+
+    print("=" * 70)
+    print("APEX-748M CLASSIFIER TRAINING ENGINE (AUDITED ZERO-OOM)")
+    print(f"Active Accelerator : {device_desc}")
+    print(f"Training Phase     : {args.phase.upper()}")
+    if start_step > 0:
+        print(f"Resume Status      : Resuming from Step {start_step:,} -> Target Step {target_step:,} ({steps_to_run:,} steps remaining)")
+    else:
+        print(f"Target Steps       : {target_step:,} (~{target_step * tokens_per_optimizer_step:,} tokens)")
+    print(f"Grad Accum Steps   : {args.grad_accum_steps}")
+    print(f"Learning Rate      : {args.lr}")
+    print(f"Save Directory     : {args.checkpoint_dir}")
+    print(f"Checkpoint Every   : {args.checkpoint_every} steps (Max Kept: {args.max_checkpoints})")
+    print("=" * 70)
+
     dataset = SyntheticDecisionDataset(phase=args.phase, group_size=4)
     data_iter = iter(dataset)
 
@@ -373,7 +407,7 @@ def main():
     optimizer.zero_grad()
     t0 = time.time()
 
-    for step in range(start_step + 1, start_step + total_steps + 1):
+    for step in range(start_step + 1, target_step + 1):
         if args.phase == "sft":
             # Gradient accumulation across grad_accum_steps
             accum_loss = 0.0
@@ -389,8 +423,8 @@ def main():
             if step % 20 == 0 or step == start_step + 1:
                 elapsed = time.time() - t0
                 speed = (step - start_step) / max(elapsed, 0.001)
-                tokens_done = (step - start_step) * tokens_per_optimizer_step
-                print(f"[Step {step:05d}/{start_step + total_steps}] Loss: {accum_loss:.4f} | Processed: {tokens_done:,} tokens | Speed: {speed:.2f} steps/s")
+                lifetime_tokens = step * tokens_per_optimizer_step
+                print(f"[Step {step:05d}/{target_step}] Loss: {accum_loss:.4f} | Processed: {lifetime_tokens:,} tokens | Speed: {speed:.2f} steps/s")
 
         else:
             # Phase 2 RLVR with GRPO
@@ -399,12 +433,12 @@ def main():
             if step % 20 == 0 or step == start_step + 1:
                 elapsed = time.time() - t0
                 speed = (step - start_step) / max(elapsed, 0.001)
-                tokens_done = (step - start_step) * tokens_per_optimizer_step
-                print(f"[Step {step:05d}/{start_step + total_steps}] Policy Loss: {loss:.4f} | Avg Reward: {mean_reward:+.2f} | Processed: {tokens_done:,} tokens | Speed: {speed:.2f} steps/s")
+                lifetime_tokens = step * tokens_per_optimizer_step
+                print(f"[Step {step:05d}/{target_step}] Policy Loss: {loss:.4f} | Avg Reward: {mean_reward:+.2f} | Processed: {lifetime_tokens:,} tokens | Speed: {speed:.2f} steps/s")
 
         # Save checkpoint periodically
-        if step % args.checkpoint_every == 0 or step == start_step + total_steps:
-            save_portable_checkpoint(model, optimizer, step, save_dir=args.checkpoint_dir)
+        if step % args.checkpoint_every == 0 or step == target_step:
+            save_portable_checkpoint(model, optimizer, step, save_dir=args.checkpoint_dir, max_to_keep=args.max_checkpoints)
 
     print("\nTraining completed successfully!")
 
