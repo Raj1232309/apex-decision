@@ -239,12 +239,12 @@ class SandboxedMathEvaluator(ast.NodeVisitor):
         # 1. Reject bool (bool is a subclass of int in Python)
         if isinstance(node.value, bool) or not isinstance(node.value, (int, float)):
             raise TypeError("DISALLOWED_CONSTANT_TYPE")
-        # 2. Reject NaN and Infinities
-        if not math.isfinite(node.value):
-            raise ValueError("NON_FINITE_NUMERIC_CONSTANT")
-        # 3. Reject oversized literals
+        # 2. Reject oversized literals first (prevents float overflow in math.isfinite for huge ints)
         if abs(node.value) > 1e15:
             raise OverflowError("CONSTANT_MAGNITUDE_EXCEEDED")
+        # 3. Reject NaN and Infinities (safe to call since abs(value) <= 1e15)
+        if not math.isfinite(node.value):
+            raise ValueError("NON_FINITE_NUMERIC_CONSTANT")
         return Decimal(str(node.value))
 
     def visit_UnaryOp(self, node):
@@ -320,25 +320,39 @@ flowchart TD
 
     Decision --> Env
     Env --> Reward["Objective Verifiable Reward R\n- Symbolic Correctness (+1.0 / -2.5)\n- Counterfactual Invariance (+1.0 / -3.0)\n- Probability Calibration Penalty"]
-    Reward --> PolicyGrad["GRPO Advantage Calculation & Gradient Update\n(No Critic Network Needed)"]
+    Reward --> PolicyGrad["GRPO Advantage Calculation & Gradient Update\n(Group Size G = 4, No Critic Network)"]
     PolicyGrad --> Enc
 ```
 
-### 7.2 Non-Autoregressive Policy & Group Relative Advantage (GRPO)
+### 7.2 Two-Phase Training Protocol: SFT Warmup & GRPO Policy Optimization
+To prevent policy collapse from random initialization on 750M heads, training proceeds in two disciplined phases:
+
+#### Phase 1: Deterministic Supervised Warmup (SFT Seed)
+* **Token Budget:** 300M–500M tokens.
+* **Objective:** Standard Cross-Entropy trained directly on synthetically generated, 100% verified ground-truth data (AST-solved balance sheets, programmatic legal contracts, entity relation anchors).
+* **Zero Teacher LLM:** Ground-truth labels are generated programmatically by deterministic code compilers and arithmetic oracles, not LLMs.
+* **Role:** Establishes stable syntactic representations, initializes positional RoPE baselines, and freezes into the reference policy $\pi_{\text{ref}}$ to anchor the KL penalty during RLVR.
+
+#### Phase 2: Group Relative Policy Optimization (GRPO)
 While traditional RLVR (e.g. DeepSeek-R1) optimizes sequential next-token probabilities, Apex-748M applies policy optimization over **categorical decision heads and continuous confidence estimates**:
 
 1. **Policy Distribution ($\pi_\theta$):**
    * For binary belief (Noul): Bernoulli policy $\pi_\theta(y | x, q) = \sigma(z_{\text{noul}})^y (1 - \sigma(z_{\text{noul}}))^{1-y}$.
    * For candidate choice: Categorical policy $\pi_\theta(i | x, \mathcal{C}) = \frac{\exp(s_i)}{\sum_{j=1}^K \exp(s_j)}$.
    * For ordinal scoring: Monotonic cumulative link PMF over discrete tiers $k \in \{0, \dots, K\}$.
-2. **Group Relative Policy Optimization (GRPO):**
-   To avoid the memory overhead of a separate 750M parameter value network (critic), advantages are computed across a group of $G$ mutated query variations, counterfactual perturbations, and distractors for the same context:
+2. **Group Sampling ($G = 4$):**
+   To avoid the memory overhead of a separate 750M parameter value network (critic), advantages are computed across a group of $G=4$ mutated variations per document context (1 baseline query, 1 counterfactual perturbation, 1 numerical distractor, 1 entity swap):
    $$A_i = \frac{R_i - \text{mean}(\{R_1 \dots R_G\})}{\text{std}(\{R_1 \dots R_G\}) + \epsilon}$$
 3. **Objective Function:**
    $$\mathcal{L}_{\text{RLVR}}(\theta) = -\mathbb{E} \left[ \log \pi_\theta(y_i | x) \cdot A_i \right] + \beta D_{\text{KL}}(\pi_\theta || \pi_{\text{ref}})$$
-   * Where $\pi_{\text{ref}}$ is initialized from warm-started supervised seed weights to maintain syntactic stability and prevent early policy collapse.
 
-### 7.3 Multi-Component Verifiable Reward Function
+### 7.3 Why RLVR Outperforms Supervised Cross-Entropy on Decision Heads
+Standard Cross-Entropy ($\mathcal{L}_{\text{CE}} = -\log p(y^*)$) pushes probability mass onto isolated targets while treating all incorrect distractors equally. RLVR with group sampling resolves three fundamental limitations of CE:
+1. **Multi-Constraint Verifiable Composition:** In enterprise compliance and financial analysis, a verdict requires both semantic entailment and exact arithmetic calculation. Standard CE rewards lucky guesses where the model produced an erroneous intermediate calculation. RLVR verifies the intermediate AST derivation and only awards positive reward when both the math and categorical verdict are provably sound.
+2. **Contrastive Margin over Counterfactuals:** Evaluating $G=4$ candidate permutations simultaneously forces the policy gradient to actively push down distractors that share surface keywords but violate causal rules, creating robust decision margins that prevent adversarial susceptibility.
+3. **Dynamic Calibration Shaping:** The continuous Brier reward directly penalizes overconfident errors during policy exploration, counteracting the well-known tendency of Cross-Entropy to produce overconfident, miscalibrated probability spikes.
+
+### 7.4 Multi-Component Verifiable Reward Function & Calibration Disambiguation
 The reward $R$ is strictly computed by programmatic oracles with zero human or LLM subjectivity:
 $$R = R_{\text{symbolic}} + R_{\text{invariance}} + R_{\text{calibration}}$$
 
@@ -348,23 +362,25 @@ $$R = R_{\text{symbolic}} + R_{\text{invariance}} + R_{\text{calibration}}$$
 | **$R_{\text{invariance}}$ (Causal Logic)** | Evaluated on paired counterfactual documents $(x^+, x^-)$. If surgical changes to dates/counterparties flip the decision as required by logic, reward is granted. If decision remains invariant to causal flips (lazy keyword matching), penalty is applied. | **$+1.0$** (Correct Flip)<br>**$-3.0$** (Invariant Failure) |
 | **$R_{\text{calibration}}$ (Honest Confidence)** | Penalizes overconfident errors via strictly proper scoring (Brier penalty): $-(\hat{p} - \mathbb{I}(\text{correct}))^2$. | **$0.0 \to -1.0$** (Continuous) |
 
-### 7.4 Post-Hoc Temperature Calibration & ECE Verification
-Following RLVR optimization, the encoder weights are frozen. The scalar temperature parameters ($T_{\text{noul}}$, $\tau$) are tuned on a held-out calibration split ($N \ge 10,000$ samples) by minimizing Negative Log-Likelihood (NLL). This guarantees that when the model reports $\ge 90\%$ confidence, its empirical accuracy is $\ge 90\%$ (ECE $\le 0.03$).
+#### Optimization vs. Post-Hoc Calibration Disambiguation
+* **During RLVR Training:** Temperatures are held fixed ($T_{\text{noul}} = 1.0, \tau = \sqrt{d}$). The Brier reward $R_{\text{calibration}}$ shapes the raw weight projections and logit margins directly inside $\pi_\theta$.
+* **Post-Hoc Verification & Deployment Gating:** After RLVR converges, all model weights $\theta$ are frozen. Scalar temperature scaling is fitted on a held-out validation split ($N \ge 10,000$ samples) solely to minimize residual global logit variance. **No post-hoc method guarantees out-of-distribution calibration.** Therefore, Expected Calibration Error (ECE) is reported across 10 uniform confidence bins on out-of-distribution evaluation sets, and automated deployment gating requires validation ECE $\le 0.03$ and selective prediction abstention when model uncertainty exceeds threshold $\tau_{\text{abstain}}$.
 
-### 7.5 Training Economics & Resumable Schedule
+### 7.5 Training Economics & Resumable Schedule (Accounting for GRPO Multiplier)
 
-#### Compute Reality for 14.74B Tokens
-* Training $748\text{M}$ parameters on $14.74\text{B}$ tokens requires $\approx 66.3\text{ exaFLOPs}$.
-* On a TPU v2-8 running at 30% MFU ($\approx 54\text{ TFLOPs}$ sustained), this requires $\approx \mathbf{341\text{ hours}}$.
-* On a TPU v3-8 running at 35% MFU ($\approx 147\text{ TFLOPs}$ sustained), this requires $\approx \mathbf{125\text{ hours}}$.
-* **Colab Free Tier Preemption Warning:** Free Colab sessions disconnect within 12 hours and are subject to preemption. Training a 14.74B token run requires a dedicated Cloud TPU VM instance (v3-8 or v4 pod) or a strict multi-session checkpoint-resumption regimen.
+#### FLOP Formulation with GRPO Group Size $G = 4$
+Supervised training requires $6N$ FLOPs per token ($2N$ forward $+ 4N$ backward). Under GRPO with group size $G=4$:
+* Policy forward passes: $G \times 2N = 8N$ FLOPs.
+* Reference policy forward pass (for KL): $G \times 2N = 8N$ FLOPs (or $2N$ if reference states are cached).
+* Policy backward pass: $G \times 4N = 16N$ FLOPs.
+* **Total FLOPs per Prompt:** $(G + 1) \times 2N + G \times 4N = 5(2N) + 4(4N) = \mathbf{26N\text{ FLOPs}}$ (a $\approx \mathbf{4.33\times}$ compute multiplier over standard supervised training).
 
 #### Two-Tier Execution Strategy
 
-| Tier | Token Volume | Compute Target | Use Case |
+| Tier | Token Volume & Phase Breakdown | Compute Target | Use Case |
 | :--- | :--- | :--- | :--- |
-| **Tier 1: Colab RLVR Prototype** | **1.5 Billion Tokens** | ~12.7 hours on TPU v3-8 (resumable across two 6.5-hour Colab sessions) | Verifies RLVR policy stability, AST math oracle rewards, 512K context memory retention, and zero-token decision accuracy. |
-| **Tier 2: Production RLVR Foundation Run** | **15.0 Billion Tokens** | ~5.2 days on dedicated TPU v3-8 or TPU v4 pod | Full from-scratch convergence reaching superhuman decision accuracy and calibrated confidence. |
+| **Tier 1: Colab RLVR Prototype** | **1.5 Billion Tokens Total**<br>• Phase 1: 500M SFT warmup tokens ($2.24\text{ exaFLOPs}$)<br>• Phase 2: 1.0B GRPO tokens ($19.42\text{ exaFLOPs}$)<br>• **Total: $21.66\text{ exaFLOPs}$** | **~40.9 hours on TPU v3-8**<br>(Resumable across 6–7 Colab Pro sessions via verified Google Drive checkpointing) | Verifies SFT warmup convergence, GRPO advantage stability with $G=4$, AST math oracle rewards, 512K context memory retention, and zero-token decision accuracy. |
+| **Tier 2: Production RLVR Foundation Run** | **10.0 Billion Tokens Total**<br>• Phase 1: 2.0B SFT warmup tokens ($8.96\text{ exaFLOPs}$)<br>• Phase 2: 8.0B GRPO tokens ($155.38\text{ exaFLOPs}$)<br>• **Total: $164.34\text{ exaFLOPs}$** | **~3.5 days on TPU v4-16 pod**<br>(or ~12.9 days on a dedicated Cloud TPU v3-8 instance) | Full from-scratch convergence reaching superhuman decision accuracy, proven mathematical robustness, and enterprise ECE deployment gating. |
 
 #### Empirical Evaluation Harness (JEV/CLEF Protocol)
 To evaluate the model objectively without unsubstantiated claims:
