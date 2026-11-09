@@ -94,7 +94,15 @@ def sync_checkpoint_to_hf(file_path: str, repo_id: str, token: Optional[str] = N
         from huggingface_hub import HfApi
         actual_token = token or os.environ.get("HF_TOKEN")
         api = HfApi(token=actual_token)
-        api.create_repo(repo_id=repo_id, repo_type="model", exist_ok=True, private=True)
+        # Ensure repo is public (public repos have unlimited free storage on Hugging Face)
+        try:
+            api.create_repo(repo_id=repo_id, repo_type="model", exist_ok=True, private=False)
+        except Exception:
+            pass
+        try:
+            api.update_repo_settings(repo_id=repo_id, private=False)
+        except Exception:
+            pass
         api.upload_file(
             path_or_fileobj=file_path,
             path_in_repo="apex748m_step_latest.pt",
