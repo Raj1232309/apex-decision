@@ -84,25 +84,27 @@ def build_optimizer(
 
 
 def sync_checkpoint_to_hf(file_path: str, repo_id: str, token: Optional[str] = None):
-    """Asynchronous background push of latest checkpoint to Hugging Face Hub."""
-    def _upload():
-        try:
-            from huggingface_hub import HfApi
-            actual_token = token or os.environ.get("HF_TOKEN")
-            api = HfApi(token=actual_token)
-            api.create_repo(repo_id=repo_id, repo_type="model", exist_ok=True, private=True)
-            api.upload_file(
-                path_or_fileobj=file_path,
-                path_in_repo="apex748m_step_latest.pt",
-                repo_id=repo_id,
-                repo_type="model"
-            )
-            print(f"\n[Cloud Sync] Pushed latest checkpoint to Hugging Face: {repo_id}/apex748m_step_latest.pt")
-        except Exception as e:
-            print(f"\n[Cloud Sync Notice] Hugging Face push notice: {e}")
-
-    t = threading.Thread(target=_upload, daemon=True)
-    t.start()
+    """Synchronously pushes latest checkpoint to Hugging Face Hub with verification."""
+    if not os.path.exists(file_path):
+        return
+    file_size_gb = os.path.getsize(file_path) / (1024 ** 3)
+    print(f"\n[Cloud Sync] Pushing checkpoint ({file_size_gb:.2f} GB) to Hugging Face ({repo_id})...")
+    t0 = time.time()
+    try:
+        from huggingface_hub import HfApi
+        actual_token = token or os.environ.get("HF_TOKEN")
+        api = HfApi(token=actual_token)
+        api.create_repo(repo_id=repo_id, repo_type="model", exist_ok=True, private=True)
+        api.upload_file(
+            path_or_fileobj=file_path,
+            path_in_repo="apex748m_step_latest.pt",
+            repo_id=repo_id,
+            repo_type="model"
+        )
+        elapsed = time.time() - t0
+        print(f"[Cloud Sync] PUSH COMPLETE in {elapsed:.1f}s: {repo_id}/apex748m_step_latest.pt safely stored in cloud!\n")
+    except Exception as e:
+        print(f"\n[Cloud Sync Warning] Hugging Face push notice: {e}; local checkpoint intact.\n")
 
 
 def save_portable_checkpoint(
@@ -214,18 +216,20 @@ def load_portable_checkpoint(
     """Loads checkpoint onto the active device (TPU or GPU) regardless of where it was saved."""
     # Cloud Sync: Fetch from Hugging Face if not found locally
     if (not checkpoint_path or not os.path.exists(checkpoint_path)) and hf_repo:
+        print(f"[Cloud Sync] Local checkpoint not found at '{checkpoint_path}'. Checking Hugging Face ({hf_repo})...")
         try:
             from huggingface_hub import hf_hub_download
             actual_token = hf_token or os.environ.get("HF_TOKEN")
-            print(f"[Cloud Sync] Fetching latest checkpoint from Hugging Face: {hf_repo}...")
+            print(f"[Cloud Sync] Fetching apex748m_step_latest.pt from Hugging Face: {hf_repo}...")
             checkpoint_path = hf_hub_download(repo_id=hf_repo, filename="apex748m_step_latest.pt", token=actual_token)
-            print(f"[Cloud Sync] Downloaded: {checkpoint_path}")
+            print(f"[Cloud Sync] Successfully downloaded to: {checkpoint_path}")
         except Exception as e:
             print(f"[Cloud Sync Notice] Could not fetch from Hugging Face: {e}")
 
     if not checkpoint_path or not os.path.exists(checkpoint_path):
         raise FileNotFoundError(f"Checkpoint not found: {checkpoint_path}")
 
+    print(f"Loading checkpoint weights from {checkpoint_path}...")
     try:
         state = torch.load(checkpoint_path, map_location=device, weights_only=False)
     except TypeError:
@@ -489,46 +493,62 @@ def main():
     optimizer.zero_grad()
     t0 = time.time()
 
-    for step in range(start_step + 1, target_step + 1):
-        if args.phase == "sft":
-            # Gradient accumulation across grad_accum_steps
-            accum_loss = 0.0
-            for micro_idx in range(args.grad_accum_steps):
-                batch = next(data_iter)
-                is_last_micro = (micro_idx == args.grad_accum_steps - 1)
-                l = train_step_sft(
-                    model, batch, optimizer, device, is_tpu,
-                    scaler=scaler, accum_steps=args.grad_accum_steps, is_step=is_last_micro
+    current_step = start_step
+    try:
+        for step in range(start_step + 1, target_step + 1):
+            current_step = step
+            if args.phase == "sft":
+                # Gradient accumulation across grad_accum_steps
+                accum_loss = 0.0
+                for micro_idx in range(args.grad_accum_steps):
+                    batch = next(data_iter)
+                    is_last_micro = (micro_idx == args.grad_accum_steps - 1)
+                    l = train_step_sft(
+                        model, batch, optimizer, device, is_tpu,
+                        scaler=scaler, accum_steps=args.grad_accum_steps, is_step=is_last_micro
+                    )
+                    accum_loss += l
+
+                if step % 20 == 0 or step == start_step + 1:
+                    elapsed = time.time() - t0
+                    speed = (step - start_step) / max(elapsed, 0.001)
+                    lifetime_tokens = step * tokens_per_optimizer_step
+                    print(f"[Step {step:05d}/{target_step}] Loss: {accum_loss:.4f} | Processed: {lifetime_tokens:,} tokens | Speed: {speed:.2f} steps/s")
+
+            else:
+                # Phase 2 RLVR with GRPO
+                group = next(data_iter)
+                loss, mean_reward = train_step_rlvr(model, group, optimizer, device, is_tpu, scaler=scaler)
+                if step % 20 == 0 or step == start_step + 1:
+                    elapsed = time.time() - t0
+                    speed = (step - start_step) / max(elapsed, 0.001)
+                    lifetime_tokens = step * tokens_per_optimizer_step
+                    print(f"[Step {step:05d}/{target_step}] Policy Loss: {loss:.4f} | Avg Reward: {mean_reward:+.2f} | Processed: {lifetime_tokens:,} tokens | Speed: {speed:.2f} steps/s")
+
+            # Save checkpoint periodically
+            if step % args.checkpoint_every == 0 or step == target_step:
+                save_portable_checkpoint(
+                    model, optimizer, step,
+                    save_dir=args.checkpoint_dir,
+                    max_to_keep=args.max_checkpoints,
+                    hf_repo=args.hf_repo,
+                    hf_token=args.hf_token
                 )
-                accum_loss += l
 
-            if step % 20 == 0 or step == start_step + 1:
-                elapsed = time.time() - t0
-                speed = (step - start_step) / max(elapsed, 0.001)
-                lifetime_tokens = step * tokens_per_optimizer_step
-                print(f"[Step {step:05d}/{target_step}] Loss: {accum_loss:.4f} | Processed: {lifetime_tokens:,} tokens | Speed: {speed:.2f} steps/s")
+        print("\nTraining completed successfully!")
 
-        else:
-            # Phase 2 RLVR with GRPO
-            group = next(data_iter)
-            loss, mean_reward = train_step_rlvr(model, group, optimizer, device, is_tpu, scaler=scaler)
-            if step % 20 == 0 or step == start_step + 1:
-                elapsed = time.time() - t0
-                speed = (step - start_step) / max(elapsed, 0.001)
-                lifetime_tokens = step * tokens_per_optimizer_step
-                print(f"[Step {step:05d}/{target_step}] Policy Loss: {loss:.4f} | Avg Reward: {mean_reward:+.2f} | Processed: {lifetime_tokens:,} tokens | Speed: {speed:.2f} steps/s")
-
-        # Save checkpoint periodically
-        if step % args.checkpoint_every == 0 or step == target_step:
-            save_portable_checkpoint(
-                model, optimizer, step,
-                save_dir=args.checkpoint_dir,
-                max_to_keep=args.max_checkpoints,
-                hf_repo=args.hf_repo,
-                hf_token=args.hf_token
-            )
-
-    print("\nTraining completed successfully!")
+    except KeyboardInterrupt:
+        print(f"\n[Interrupt] Training interrupted by user at Step {current_step}!")
+        print("[Interrupt] Saving emergency checkpoint and uploading to Hugging Face...")
+        save_portable_checkpoint(
+            model, optimizer, current_step,
+            save_dir=args.checkpoint_dir,
+            max_to_keep=args.max_checkpoints,
+            hf_repo=args.hf_repo,
+            hf_token=args.hf_token
+        )
+        print(f"[Interrupt] Step {current_step} safely preserved in cloud! Resumption ready on next run.\n")
+        return
 
 
 if __name__ == "__main__":

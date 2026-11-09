@@ -25,7 +25,7 @@ test = ["build>=1.2", "pytest>=8.0"]
 apex-decision = "apex_decision.api.server:start_server"
 
 [tool.setuptools.packages.find]
-include = ["apex_decision*"]
+include = ["apex_decision*", "apex_classifier_750m*"]
 
 [tool.setuptools.package-data]
 apex_decision = ["models/apex_student/scaling_checkpoints/*.pt", "models/apex_student/tokenizer_weights/*.json"]
