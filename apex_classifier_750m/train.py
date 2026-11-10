@@ -14,6 +14,13 @@ for _p in (_repo_dir, _this_dir):
     if _p not in sys.path:
         sys.path.insert(0, _p)
 
+# Unbuffered line-by-line output for immediate real-time progress visibility in Colab / Kaggle
+try:
+    sys.stdout.reconfigure(line_buffering=True)
+except Exception:
+    pass
+os.environ["PYTHONUNBUFFERED"] = "1"
+
 # Prevent CUDA memory fragmentation on memory-constrained GPUs (e.g. 16GB Tesla T4)
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 
@@ -534,6 +541,13 @@ def main():
     print("=" * 70)
     print("APEX-748M CLASSIFIER TRAINING ENGINE (AUDITED ZERO-OOM)")
     print(f"Active Accelerator : {device_desc}")
+    if not is_tpu and device.type == "cpu":
+        print("!" * 70)
+        print("⚠️  NOTICE: Running on CPU Fallback!")
+        print("    A 746.8M model takes ~1-2 min/step on CPU and consumes high system RAM.")
+        print("    Recommendation in Colab: Switch to 'Runtime' -> 'Change runtime type'")
+        print("    -> 'T4 GPU' (free, fast, FP16 Tensor Cores, ~0.5s/step).")
+        print("!" * 70)
     print(f"Training Phase     : {args.phase.upper()}")
     if start_step > 0:
         print(f"Resume Status      : Resuming from Step {start_step:,} -> Target Step {target_step:,} ({steps_to_run:,} steps remaining)")
