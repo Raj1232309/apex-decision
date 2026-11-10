@@ -55,16 +55,21 @@ except (ImportError, ValueError):
 
 
 def get_execution_device() -> Tuple[torch.device, str, bool]:
-    """Detects available accelerator: TPU (PyTorch-XLA), Multi-CUDA GPU, or CPU."""
-    # 1. Check for TPU (PyTorch-XLA)
+    """Detects available accelerator: TPU (PyTorch-XLA PJRT), Multi-CUDA GPU, or CPU."""
+    # 1. Check for TPU (PyTorch-XLA with modern PJRT runtime)
+    if "PJRT_DEVICE" not in os.environ:
+        os.environ["PJRT_DEVICE"] = "TPU"
+
     try:
         import torch_xla
         import torch_xla.core.xla_model as xm
         device = xm.xla_device()
         world_size = xm.xrt_world_size()
-        return device, f"TPU (PyTorch-XLA, World Size: {world_size})", True
-    except Exception:
-        pass
+        return device, f"TPU (PyTorch-XLA PJRT, Device: {device}, World Size: {world_size})", True
+    except Exception as e:
+        tpu_err = str(e)
+        if "torch_xla" in sys.modules or "PJRT" in tpu_err:
+            print(f"[Device Detection Notice] Cloud TPU initialization skipped: {tpu_err}")
 
     # 2. Check for NVIDIA CUDA GPUs
     if torch.cuda.is_available():
@@ -351,11 +356,11 @@ def train_step_sft(
 
     if is_tpu:
         total_loss.backward()
+        import torch_xla.core.xla_model as xm
         if is_step:
-            import torch_xla.core.xla_model as xm
             xm.optimizer_step(optimizer)
-            xm.mark_step()
             optimizer.zero_grad()
+        xm.mark_step()
     elif scaler is not None:
         scaler.scale(total_loss).backward()
         if is_step:
@@ -437,6 +442,8 @@ def train_step_rlvr(
 
         if is_tpu:
             loss_i.backward()
+            import torch_xla.core.xla_model as xm
+            xm.mark_step()
         elif scaler is not None:
             scaler.scale(loss_i).backward()
         else:
@@ -449,6 +456,7 @@ def train_step_rlvr(
         import torch_xla.core.xla_model as xm
         xm.optimizer_step(optimizer)
         xm.mark_step()
+        optimizer.zero_grad()
     elif scaler is not None:
         scaler.step(optimizer)
         scaler.update()
