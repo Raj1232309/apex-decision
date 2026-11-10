@@ -10,7 +10,13 @@ from decimal import Decimal
 import torch
 from torch.utils.data import IterableDataset
 
-from .ast_sandbox import SandboxedMathEvaluator
+try:
+    from .ast_sandbox import SandboxedMathEvaluator
+except (ImportError, ValueError):
+    try:
+        from apex_classifier_750m.ast_sandbox import SandboxedMathEvaluator
+    except (ImportError, ValueError):
+        from ast_sandbox import SandboxedMathEvaluator
 
 
 class SyntheticDecisionDataset(IterableDataset):

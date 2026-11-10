@@ -5,10 +5,18 @@ Supports Phase 1 (Deterministic SFT Warmup) and Phase 2 (RLVR with GRPO Group Sa
 """
 
 import os
+import sys
+
+# Auto-inject repository root and package directory into sys.path
+_this_dir = os.path.dirname(os.path.abspath(__file__))
+_repo_dir = os.path.dirname(_this_dir)
+for _p in (_repo_dir, _this_dir):
+    if _p not in sys.path:
+        sys.path.insert(0, _p)
+
 # Prevent CUDA memory fragmentation on memory-constrained GPUs (e.g. 16GB Tesla T4)
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 
-import sys
 import time
 import shutil
 import argparse
@@ -21,10 +29,22 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from .config import Apex748MConfig
-from .model import Apex748MClassifier
-from .dataset import SyntheticDecisionDataset
-from .ast_sandbox import SandboxedMathEvaluator
+try:
+    from .config import Apex748MConfig
+    from .model import Apex748MClassifier
+    from .dataset import SyntheticDecisionDataset
+    from .ast_sandbox import SandboxedMathEvaluator
+except (ImportError, ValueError):
+    try:
+        from apex_classifier_750m.config import Apex748MConfig
+        from apex_classifier_750m.model import Apex748MClassifier
+        from apex_classifier_750m.dataset import SyntheticDecisionDataset
+        from apex_classifier_750m.ast_sandbox import SandboxedMathEvaluator
+    except (ImportError, ValueError):
+        from config import Apex748MConfig
+        from model import Apex748MClassifier
+        from dataset import SyntheticDecisionDataset
+        from ast_sandbox import SandboxedMathEvaluator
 
 
 def get_execution_device() -> Tuple[torch.device, str, bool]:

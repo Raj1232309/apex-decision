@@ -10,7 +10,13 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.utils.checkpoint as checkpoint
 
-from .config import Apex748MConfig
+try:
+    from .config import Apex748MConfig
+except (ImportError, ValueError):
+    try:
+        from apex_classifier_750m.config import Apex748MConfig
+    except (ImportError, ValueError):
+        from config import Apex748MConfig
 
 
 class RMSNorm(nn.Module):
