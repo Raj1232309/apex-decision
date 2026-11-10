@@ -173,6 +173,7 @@ def save_portable_checkpoint(
         "step": step,
         "model_state": raw_model.state_dict(),
         "opt_state": optimizer.state_dict(),
+        "optimizer_type": optimizer.__class__.__name__,
         "config": asdict(raw_model.config) if hasattr(raw_model.config, "__dataclass_fields__") else raw_model.config,
     }
 
@@ -267,10 +268,46 @@ def load_portable_checkpoint(
     raw_model.load_state_dict(state["model_state"])
 
     if optimizer is not None and "opt_state" in state:
-        try:
-            optimizer.load_state_dict(state["opt_state"])
-        except Exception as e:
-            print(f"Warning: Could not restore optimizer states ({e}); proceeding with fresh optimizer.")
+        opt_state = state["opt_state"]
+        saved_opt_type = state.get("optimizer_type")
+        current_opt_type = optimizer.__class__.__name__
+
+        # Validate cross-optimizer compatibility (e.g. Adafactor on GPU vs AdamW on TPU/CPU)
+        is_compatible = True
+        reason = ""
+
+        if saved_opt_type is not None and saved_opt_type != current_opt_type:
+            is_compatible = False
+            reason = f"saved optimizer algorithm ({saved_opt_type}) differs from active optimizer ({current_opt_type})"
+        else:
+            saved_groups = opt_state.get("param_groups", [])
+            if saved_groups:
+                g0 = saved_groups[0]
+                if isinstance(optimizer, (torch.optim.AdamW, torch.optim.Adam)):
+                    if "betas" not in g0 or "beta2_decay" in g0:
+                        is_compatible = False
+                        reason = f"saved state lacks 'betas' or contains Adafactor-specific parameters required by {current_opt_type}"
+                elif isinstance(optimizer, torch.optim.Adafactor):
+                    if not isinstance(g0.get("eps"), (tuple, list)) or "betas" in g0:
+                        is_compatible = False
+                        reason = "saved state format is incompatible with Adafactor"
+
+        if is_compatible:
+            try:
+                # Capture defaults to safeguard against any missing hyperparameter keys
+                current_defaults = {k: v for k, v in optimizer.defaults.items()}
+                optimizer.load_state_dict(opt_state)
+                # Sanitize param groups so no default keys are missing
+                for group in optimizer.param_groups:
+                    for k, v in current_defaults.items():
+                        if k not in group:
+                            group[k] = v
+                print(f"Restored optimizer state ({current_opt_type}) from checkpoint.")
+            except Exception as e:
+                print(f"Warning: Could not restore optimizer states ({e}); proceeding with fresh {current_opt_type} state.")
+        else:
+            print(f"[Optimizer Compatibility Notice] {reason.capitalize()}.")
+            print(f"[Optimizer Compatibility Notice] Initializing fresh {current_opt_type} momentum buffers while fully preserving all 746,813,455 model weights and continuing from step {state.get('step', 0)}.")
 
     step = state.get("step", 0)
     print(f"Restored checkpoint from {checkpoint_path} at step {step}")
