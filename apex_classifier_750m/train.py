@@ -55,8 +55,19 @@ except (ImportError, ValueError):
 
 
 def get_execution_device() -> Tuple[torch.device, str, bool]:
-    """Detects available accelerator: TPU (PyTorch-XLA PJRT), Multi-CUDA GPU, or CPU."""
-    # 1. Check for TPU (PyTorch-XLA with modern PJRT runtime)
+    """Detects available accelerator: Native TorchTPU, PyTorch-XLA TPU, Multi-CUDA GPU, or CPU."""
+    # 1. Check for Modern Native TorchTPU (Google/Meta native PyTorch backend)
+    try:
+        import torch_tpu
+        device = torch.device("tpu")
+        _ = torch.zeros((1,), device=device)
+        return device, "Google Cloud TPU (Native torch_tpu backend)", True
+    except Exception as e:
+        tpu_err = str(e)
+        if "torch_tpu" in sys.modules:
+            print(f"[Device Detection Notice] Native torch_tpu initialization notice: {tpu_err}")
+
+    # 2. Check for PyTorch-XLA (Kaggle TPU / Classic Cloud TPU with PJRT)
     if "PJRT_DEVICE" not in os.environ:
         os.environ["PJRT_DEVICE"] = "TPU"
 
@@ -65,19 +76,19 @@ def get_execution_device() -> Tuple[torch.device, str, bool]:
         import torch_xla.core.xla_model as xm
         device = xm.xla_device()
         world_size = xm.xrt_world_size()
-        return device, f"TPU (PyTorch-XLA PJRT, Device: {device}, World Size: {world_size})", True
+        return device, f"Google Cloud TPU (PyTorch-XLA PJRT, Device: {device}, World Size: {world_size})", True
     except Exception as e:
         tpu_err = str(e)
         if "torch_xla" in sys.modules or "PJRT" in tpu_err:
             print(f"[Device Detection Notice] Cloud TPU initialization skipped: {tpu_err}")
 
-    # 2. Check for NVIDIA CUDA GPUs
+    # 3. Check for NVIDIA CUDA GPUs
     if torch.cuda.is_available():
         gpu_count = torch.cuda.device_count()
         device_names = [torch.cuda.get_device_name(i) for i in range(gpu_count)]
         return torch.device("cuda:0"), f"NVIDIA GPU ({gpu_count}x: {', '.join(device_names)})", False
 
-    # 3. Fallback to CPU
+    # 4. Fallback to CPU
     return torch.device("cpu"), "CPU (Fallback)", False
 
 
@@ -356,11 +367,18 @@ def train_step_sft(
 
     if is_tpu:
         total_loss.backward()
-        import torch_xla.core.xla_model as xm
         if is_step:
-            xm.optimizer_step(optimizer)
+            try:
+                import torch_xla.core.xla_model as xm
+                xm.optimizer_step(optimizer)
+            except Exception:
+                optimizer.step()
             optimizer.zero_grad()
-        xm.mark_step()
+        try:
+            import torch_xla.core.xla_model as xm
+            xm.mark_step()
+        except Exception:
+            pass
     elif scaler is not None:
         scaler.scale(total_loss).backward()
         if is_step:
@@ -442,8 +460,11 @@ def train_step_rlvr(
 
         if is_tpu:
             loss_i.backward()
-            import torch_xla.core.xla_model as xm
-            xm.mark_step()
+            try:
+                import torch_xla.core.xla_model as xm
+                xm.mark_step()
+            except Exception:
+                pass
         elif scaler is not None:
             scaler.scale(loss_i).backward()
         else:
@@ -453,9 +474,12 @@ def train_step_rlvr(
 
     # Step optimizer
     if is_tpu:
-        import torch_xla.core.xla_model as xm
-        xm.optimizer_step(optimizer)
-        xm.mark_step()
+        try:
+            import torch_xla.core.xla_model as xm
+            xm.optimizer_step(optimizer)
+            xm.mark_step()
+        except Exception:
+            optimizer.step()
         optimizer.zero_grad()
     elif scaler is not None:
         scaler.step(optimizer)
