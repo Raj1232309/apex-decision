@@ -490,7 +490,7 @@ def train_step_rlvr(
     return total_policy_loss, mean_r.item()
 
 
-def main():
+def main(argv: Optional[List[str]] = None):
     parser = argparse.ArgumentParser(description="Apex-748M Dual-Backend Trainer (TPU & NVIDIA GPU)")
     parser.add_argument("--phase", type=str, default="sft", choices=["sft", "rlvr"], help="Training phase: 'sft' (Warmup) or 'rlvr' (GRPO)")
     parser.add_argument("--steps", type=int, default=None, help="Number of training steps")
@@ -506,7 +506,7 @@ def main():
     parser.add_argument("--hf_repo", type=str, default=None, help="Hugging Face repo (e.g. 'username/apex-748m') for automatic zero-friction cloud checkpoint sync")
     parser.add_argument("--hf_token", type=str, default=None, help="Hugging Face token (optional, defaults to $HF_TOKEN)")
     parser.add_argument("--no_amp", action="store_true", help="Disable AMP (automatic mixed precision) on CUDA")
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
 
     device, device_desc, is_tpu = get_execution_device()
 
